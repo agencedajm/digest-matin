@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="theme-color" content="#F7F6F3">
+<title>Digest Matin — DAJM</title>
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --bg: #F7F6F3;
+    --card-bg: #FFFFFF;
+    --text: #1A1A1A;
+    --muted: #6B7280;
+    --border: #E5E5E5;
+    --shadow: 0 2px 8px rgba(0,0,0,0.07), 0 0 0 1px rgba(0,0,0,0.04);
+    --shadow-hover: 0 8px 24px rgba(0,0,0,0.12), 0 0 0 1px rgba(0,0,0,0.06);
+    --radius: 14px;
+  }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Segoe UI', sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    min-height: 100vh;
+    padding-bottom: max(env(safe-area-inset-bottom), 48px);
+  }
+
+  /* ── Header ── */
+  .site-header {
+    position: sticky; top: 0; z-index: 200;
+    background: rgba(247,246,243,0.9);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-bottom: 1px solid var(--border);
+    padding: 14px 16px;
+  }
+  .header-inner {
+    max-width: 1200px; margin: 0 auto;
+    display: flex; align-items: center; justify-content: space-between;
+  }
+  .logo { display: flex; align-items: center; gap: 10px; }
+  .logo-icon {
+    width: 34px; height: 34px; border-radius: 10px;
+    background: linear-gradient(135deg, #2E7D32, #1565C0);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 18px;
+  }
+  .logo-text { font-size: 16px; font-weight: 700; letter-spacing: -0.4px; color: var(--text); }
+  .header-right { text-align: right; }
+  .header-date { font-size: 12px; color: var(--muted); }
+  .header-count { font-size: 11px; color: #9CA3AF; }
+
+  /* ── Filtres ── */
+  .filters {
+    max-width: 1200px; margin: 0 auto;
+    padding: 14px 16px 4px;
+    display: flex; gap: 8px; flex-wrap: wrap;
+  }
+  .filter-btn {
+    border: 1.5px solid var(--border);
+    background: white; color: var(--muted);
+    font-size: 12px; font-weight: 600;
+    padding: 6px 14px; border-radius: 20px;
+    cursor: pointer; transition: all 0.15s;
+    font-family: inherit;
+  }
+  .filter-btn:hover { border-color: #9CA3AF; color: var(--text); }
+  .filter-btn.active { background: var(--text); color: white; border-color: var(--text); }
+
+  /* ── Grille masonry ── */
+  .pins-grid {
+    max-width: 1200px; margin: 0 auto;
+    padding: 16px;
+    columns: 2; column-gap: 12px;
+  }
+
+  /* ── Card ── */
+  .card {
+    break-inside: avoid;
+    background: var(--card-bg);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    margin-bottom: 12px;
+    overflow: hidden;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    position: relative;
+  }
+  .card:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-hover);
+  }
+
+  .new-badge {
+    position: absolute; top: 10px; right: 10px; z-index: 10;
+    background: #2E7D32; color: white;
+    font-size: 10px; font-weight: 700; letter-spacing: 0.5px;
+    padding: 2px 8px; border-radius: 20px;
+    text-transform: uppercase;
+  }
+
+  .card-img img {
+    width: 100%; height: 140px; object-fit: cover;
+    display: block;
+  }
+  .card-cover {
+    height: 80px;
+  }
+
+  .card-body { padding: 14px; }
+
+  .card-cat {
+    display: inline-block;
+    font-size: 10px; font-weight: 700;
+    letter-spacing: 0.6px; text-transform: uppercase;
+    padding: 3px 9px; border-radius: 20px;
+    margin-bottom: 9px;
+  }
+
+  .card-title {
+    font-size: 14px; font-weight: 700;
+    line-height: 1.35; color: var(--text);
+    letter-spacing: -0.2px;
+    margin-bottom: 6px;
+  }
+
+  .card-summary {
+    font-size: 12.5px; font-weight: 600;
+    color: #374151; line-height: 1.45;
+    margin-bottom: 6px;
+  }
+
+  .card-detail {
+    font-size: 12px; color: var(--muted);
+    line-height: 1.55; margin-bottom: 12px;
+  }
+
+  .card-link {
+    display: inline-flex; align-items: center; gap: 4px;
+    font-size: 12px; font-weight: 600;
+    color: var(--text); text-decoration: none;
+    border-bottom: 1.5px solid var(--border);
+    padding-bottom: 1px;
+    transition: border-color 0.15s, color 0.15s;
+  }
+  .card-link:hover { border-color: var(--text); }
+  .card-source-name {
+    font-size: 11px; color: #9CA3AF;
+  }
+
+  /* ── Footer ── */
+  .site-footer {
+    max-width: 1200px; margin: 0 auto;
+    padding: 32px 16px 48px;
+    border-top: 1px solid var(--border);
+    text-align: center;
+    font-size: 11px; color: #9CA3AF;
+    letter-spacing: 0.3px;
+  }
+
+  /* ── Desktop ── */
+  @media (min-width: 600px) {
+    .pins-grid { columns: 3; column-gap: 14px; padding: 20px; }
+    .card-img img { height: 160px; }
+  }
+  @media (min-width: 960px) {
+    .pins-grid { columns: 4; column-gap: 16px; }
+  }
+  @media (min-width: 1100px) {
+    .pins-grid { columns: 5; }
+  }
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="header-inner">
+    <div class="logo">
+      <div class="logo-icon">☀️</div>
+      <span class="logo-text">Digest Matin</span>
+    </div>
+    <div class="header-right">
+      <div class="header-date">Thursday 18 june 2026</div>
+      <div class="header-count">1 édition</div>
+    </div>
+  </div>
+</header>
+
+<div class="filters" id="filters">
+  <button class="filter-btn active" onclick="filterCards('all', this)">Tout</button>
+  <button class="filter-btn" onclick="filterCards('strategy', this)">📡 Stratégie</button>
+  <button class="filter-btn" onclick="filterCards('copywriting', this)">✍️ Copywriting</button>
+  <button class="filter-btn" onclick="filterCards('visuals', this)">🎨 Visuels</button>
+</div>
+
+<div class="pins-grid" id="grid">
+  
+    <div class="card">
+      <span class="new-badge">Nouveau</span>
+      <div class="card-cover" style="background:linear-gradient(135deg,#E8F5E9,#C8E6C9);"></div>
+      <div class="card-body">
+        <span class="card-cat" style="color:#1B5E20;background:#E8F5E9;">Stratégie com</span>
+        <h3 class="card-title">Le GEO remplace le SEO classique</h3>
+        <p class="card-summary">67% des consommateurs découvrent une marque via l'IA, imposant l'optimisation pour moteurs génératifs.</p>
+        <p class="card-detail">La visibilité des marques se joue désormais dans les réponses générées par l'IA, qui curent et recommandent directement. Une PME SaaS B2B refusant l'optimisation IA a vu son trafic organique chuter de 34% en six mois pendant que ses concurrents cités dans les AI Overviews gagnaient des parts.</p>
+        <a href="https://improvado.io/blog/ai-marketing-trends" target="_blank" rel="noopener" class="card-link">Lire la source <span>→</span></a>
+      </div>
+    </div>
+    <div class="card">
+      <span class="new-badge">Nouveau</span>
+      <div class="card-cover" style="background:linear-gradient(135deg,#E8F5E9,#C8E6C9);"></div>
+      <div class="card-body">
+        <span class="card-cat" style="color:#1B5E20;background:#E8F5E9;">Stratégie com</span>
+        <h3 class="card-title">L'authenticité brute, antidote au contenu IA</h3>
+        <p class="card-summary">Face à l'uniformisation des contenus IA, l'authenticité humaine devient le vrai différenciateur de marque.</p>
+        <p class="card-detail">Le contenu IA a explosé de +200% sur les réseaux, créant une tension avec le besoin d'humanité valorisé par 86% des consommateurs. Fin 2025, Léonie, caissière chez Carrefour, est devenue virale en créant du contenu brut sur le TikTok de la marque, prouvant qu'une marque vieillissante peut se réinventer en cassant les codes.</p>
+        <a href="https://www.thebboost.fr/tendances-marketing-2026/" target="_blank" rel="noopener" class="card-link">Lire la source <span>→</span></a>
+      </div>
+    </div>
+    <div class="card">
+      <span class="new-badge">Nouveau</span>
+      <div class="card-cover" style="background:linear-gradient(135deg,#E8F5E9,#C8E6C9);"></div>
+      <div class="card-body">
+        <span class="card-cat" style="color:#1B5E20;background:#E8F5E9;">Stratégie com</span>
+        <h3 class="card-title">Les agents IA orchestrent les campagnes</h3>
+        <p class="card-summary">Les super-agents IA passent de l'automatisation partielle à la gestion intégrale des campagnes marketing.</p>
+        <p class="card-detail">Ces agents autonomes orchestrent des workflows complets : génération de contenu, personnalisation, publication multicanal et analyse, avec un minimum d'intervention humaine. HubSpot a lancé en 2025 une suite IA permettant aux équipes de créer cinq fois plus de variations de campagnes tout en maintenant la cohérence de ton.</p>
+        <a href="https://www.altosor-communication.com/blog/tendances-marketing-digital-2026/" target="_blank" rel="noopener" class="card-link">Lire la source <span>→</span></a>
+      </div>
+    </div>
+    <div class="card">
+      <span class="new-badge">Nouveau</span>
+      <div class="card-cover" style="background:linear-gradient(135deg,#E8F5E9,#C8E6C9);"></div>
+      <div class="card-body">
+        <span class="card-cat" style="color:#1B5E20;background:#E8F5E9;">Stratégie com</span>
+        <h3 class="card-title">La pub dans ChatGPT bouleverse la confiance</h3>
+        <p class="card-summary">Le lancement des publicités dans ChatGPT force à distinguer recommandations organiques et payantes.</p>
+        <p class="card-detail">À mesure que les interfaces IA deviennent plus humaines, le marketing devient le premier point d'exposition éthique des marques. Le déploiement par OpenAI des publicités dans ChatGPT en février 2026 marque un tournant majeur dans le contrat de confiance avec l'IA, plaçant le marketing en première ligne de la responsabilité.</p>
+        <a href="https://www.adweek.com/brand-marketing/10-ai-marketing-trends-for-2026-agentic-ai-and-search-shifts/" target="_blank" rel="noopener" class="card-link">Lire la source <span>→</span></a>
+      </div>
+    </div>
+    <div class="card">
+      <span class="new-badge">Nouveau</span>
+      <div class="card-cover" style="background:linear-gradient(135deg,#E3F2FD,#BBDEFB);"></div>
+      <div class="card-body">
+        <span class="card-cat" style="color:#0D47A1;background:#E3F2FD;">Copywriting & Pub</span>
+        <h3 class="card-title">L'humain reste roi face à l'IA</h3>
+        <p class="card-summary">Face au contenu IA générique, la copy authentique et empathique devient l'arme de différenciation décisive.</p>
+        <p class="card-detail">En 2026, le copywriting gagnant n'est plus l'humain contre l'IA mais l'humain avec l'IA, utilisée pour amplifier le message sans le diluer. Dove a marqué le mouvement en s'engageant à ne jamais utiliser de femmes générées par IA dans ses publicités et en lançant son 'Real Beauty Prompt Playbook'.</p>
+        <a href="https://www.sharpinnovations.com/blog/2025/12/the-future-of-digital-marketing-5-trends-to-watch-in-2026/" target="_blank" rel="noopener" class="card-link">Lire la source <span>→</span></a>
+      </div>
+    </div>
+    <div class="card">
+      <span class="new-badge">Nouveau</span>
+      <div class="card-cover" style="background:linear-gradient(135deg,#E3F2FD,#BBDEFB);"></div>
+      <div class="card-body">
+        <span class="card-cat" style="color:#0D47A1;background:#E3F2FD;">Copywriting & Pub</span>
+        <h3 class="card-title">Le détournement de moments culturels</h3>
+        <p class="card-summary">Surfer sur une vague culturelle existante bat toute tentative de fabriquer la culture de zéro.</p>
+        <p class="card-detail">Les marques s'emparent de moments culturels chauds en temps réel plutôt que d'en créer artificiellement. Dunkin' a détourné le tube 'Espresso' de Sabrina Carpenter pendant son pic de streaming, générant 340 millions d'impressions et +34% de ventes.</p>
+        <a href="https://www.puntt.ai/blog/10-best-marketing-campaigns-of-2025" target="_blank" rel="noopener" class="card-link">Lire la source <span>→</span></a>
+      </div>
+    </div>
+    <div class="card">
+      <span class="new-badge">Nouveau</span>
+      <div class="card-cover" style="background:linear-gradient(135deg,#E3F2FD,#BBDEFB);"></div>
+      <div class="card-body">
+        <span class="card-cat" style="color:#0D47A1;background:#E3F2FD;">Copywriting & Pub</span>
+        <h3 class="card-title">Du spectateur au participant</h3>
+        <p class="card-summary">Les campagnes gagnantes n'arrosent plus l'audience : elles l'invitent à coécrire l'histoire.</p>
+        <p class="card-detail">Le succès est passé de la diffusion large à la participation active, conçue dans le langage natif des réseaux sociaux. La campagne 'Duo' de Duolingo a fait sentir aux spectateurs qu'ils influençaient l'issue, générant 1,7 milliard d'impressions et deux fois plus de conversations que les meilleures pubs du Super Bowl.</p>
+        <a href="https://www.pulse-advertising.com/resources/social-media-news/top-10-marketing-campaigns-of-2025/" target="_blank" rel="noopener" class="card-link">Lire la source <span>→</span></a>
+      </div>
+    </div>
+    <div class="card">
+      <span class="new-badge">Nouveau</span>
+      <div class="card-cover" style="background:linear-gradient(135deg,#E3F2FD,#BBDEFB);"></div>
+      <div class="card-body">
+        <span class="card-cat" style="color:#0D47A1;background:#E3F2FD;">Copywriting & Pub</span>
+        <h3 class="card-title">La persuasion, nouveau super-pouvoir SEO</h3>
+        <p class="card-summary">L'IA n'a pas tué le copywriting, elle a tué le SEO informationnel bas de gamme.</p>
+        <p class="card-detail">Avec l'IA répondant directement aux requêtes basiques, la persuasion, le cadrage des problèmes et le positionnement stratégique deviennent la compétence reine de la visibilité en 2026. Selon un rapport Search Engine Land, le copywriting redevient la compétence la plus importante du marketing digital.</p>
+        <a href="https://www.awai.com/2026/02/industry-declares-copywriting-the-2026-superpower/" target="_blank" rel="noopener" class="card-link">Lire la source <span>→</span></a>
+      </div>
+    </div>
+    <div class="card">
+      <span class="new-badge">Nouveau</span>
+      <div class="card-cover" style="background:linear-gradient(135deg,#F3E5F5,#E1BEE7);"></div>
+      <div class="card-body">
+        <span class="card-cat" style="color:#4A148C;background:#F3E5F5;">Tendances visuelles</span>
+        <h3 class="card-title">L'imperfection humaine assumée</h3>
+        <p class="card-summary">Face à l'IA, le fait-main, le grain et l'erreur deviennent des marqueurs d'authenticité.</p>
+        <p class="card-detail">En réaction directe à la perfection froide de l'IA, le design fait-main explose : illustrations naïves, traits tremblants, gribouillages spontanés et textures granuleuses. Des marques comme Heaven by Marc Jacobs adoptent cette esthétique imparfaite pour connecter avec la génération Z, et OpenAI a réimaginé ChatGPT en capturant des réalités humaines brutes sur pellicule 35mm.</p>
+        <a href="https://btg-communication.fr/communication/tendances-graphiques-2025/" target="_blank" rel="noopener" class="card-link">Lire la source <span>→</span></a>
+      </div>
+    </div>
+    <div class="card">
+      <span class="new-badge">Nouveau</span>
+      <div class="card-cover" style="background:linear-gradient(135deg,#F3E5F5,#E1BEE7);"></div>
+      <div class="card-body">
+        <span class="card-cat" style="color:#4A148C;background:#F3E5F5;">Tendances visuelles</span>
+        <h3 class="card-title">Le chaos créatif et la culture zine</h3>
+        <p class="card-summary">Mises en page éclatées, collages surréalistes et superpositions désordonnées racontent une histoire singulière.</p>
+        <p class="card-detail">On laisse le hasard guider le trait avec des collages bizarroïdes, des illusions d'optique et des effets psychédéliques. La campagne de Noël 2025 de Diesel « Call Her Santa » illustre cette esthétique brutalist et psychédélique, marquant aussi le retour du style « zine » inspiré des fanzines où chaque élément participe à la narration.</p>
+        <a href="https://blog.veoprint.com/les-tendances-design-et-graphisme-2026/" target="_blank" rel="noopener" class="card-link">Lire la source <span>→</span></a>
+      </div>
+    </div>
+    <div class="card">
+      <span class="new-badge">Nouveau</span>
+      <div class="card-cover" style="background:linear-gradient(135deg,#F3E5F5,#E1BEE7);"></div>
+      <div class="card-body">
+        <span class="card-cat" style="color:#4A148C;background:#F3E5F5;">Tendances visuelles</span>
+        <h3 class="card-title">L'hyperréalisme altéré et les espaces liminaux</h3>
+        <p class="card-summary">Des visuels oniriques brouillent les frontières entre réel et synthétique pour fasciner le regard.</p>
+        <p class="card-detail">Canva désigne cette « tendance phare de 2026 » misant sur l'hyperréalisme, les esthétiques étranges et les espaces de transition « ni tout à fait un lieu ni tout à fait un autre ». Les recherches liées aux esthétiques liminales ont bondi de 200 % en douze mois, reflétant l'influence de l'IA dans les processus créatifs.</p>
+        <a href="https://www.blogdumoderateur.com/canva-tendances-design-2026/" target="_blank" rel="noopener" class="card-link">Lire la source <span>→</span></a>
+      </div>
+    </div>
+    <div class="card">
+      <span class="new-badge">Nouveau</span>
+      <div class="card-cover" style="background:linear-gradient(135deg,#F3E5F5,#E1BEE7);"></div>
+      <div class="card-body">
+        <span class="card-cat" style="color:#4A148C;background:#F3E5F5;">Tendances visuelles</span>
+        <h3 class="card-title">Identités fluides et systèmes adaptatifs</h3>
+        <p class="card-summary">Les marques abandonnent le logo figé pour des langages visuels mouvants et réactifs.</p>
+        <p class="card-detail">L'identité visuelle dépasse le statique pour devenir adaptative, avec des logos fluides conçus pour s'ajuster aux plateformes et contextes, et des palettes de couleurs flexibles définissant une humeur plutôt qu'un jeu rigide. Le logotype « shape-shifter » de Monotype pour la marque de lingerie Chantelle Pulp étire ses lettres pour « célébrer toutes les formes et tailles ».</p>
+        <a href="https://www.itsnicethat.com/features/forward-thinking-graphic-trends-2026-graphic-design-120126" target="_blank" rel="noopener" class="card-link">Lire la source <span>→</span></a>
+      </div>
+    </div>
+</div>
+
+<footer class="site-footer">
+  DAJM · Digest Matin · Généré par Claude · Thursday 18 june 2026
+</footer>
+
+<script>
+function filterCards(cat, btn) {
+  document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  document.querySelectorAll('.card').forEach(c => {
+    c.style.display = (cat === 'all' || c.dataset.cat === cat) ? '' : 'none';
+  });
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,116 @@
+[
+  {
+    "date_iso": "2026-06-18",
+    "date_fr": "Thursday 18 june 2026",
+    "cards": [
+      {
+        "title": "Le GEO remplace le SEO classique",
+        "summary": "67% des consommateurs découvrent une marque via l'IA, imposant l'optimisation pour moteurs génératifs.",
+        "detail": "La visibilité des marques se joue désormais dans les réponses générées par l'IA, qui curent et recommandent directement. Une PME SaaS B2B refusant l'optimisation IA a vu son trafic organique chuter de 34% en six mois pendant que ses concurrents cités dans les AI Overviews gagnaient des parts.",
+        "source_name": "Improvado",
+        "source_url": "https://improvado.io/blog/ai-marketing-trends",
+        "agent_id": "strategy",
+        "og_image": ""
+      },
+      {
+        "title": "L'authenticité brute, antidote au contenu IA",
+        "summary": "Face à l'uniformisation des contenus IA, l'authenticité humaine devient le vrai différenciateur de marque.",
+        "detail": "Le contenu IA a explosé de +200% sur les réseaux, créant une tension avec le besoin d'humanité valorisé par 86% des consommateurs. Fin 2025, Léonie, caissière chez Carrefour, est devenue virale en créant du contenu brut sur le TikTok de la marque, prouvant qu'une marque vieillissante peut se réinventer en cassant les codes.",
+        "source_name": "TheBBoost",
+        "source_url": "https://www.thebboost.fr/tendances-marketing-2026/",
+        "agent_id": "strategy",
+        "og_image": ""
+      },
+      {
+        "title": "Les agents IA orchestrent les campagnes",
+        "summary": "Les super-agents IA passent de l'automatisation partielle à la gestion intégrale des campagnes marketing.",
+        "detail": "Ces agents autonomes orchestrent des workflows complets : génération de contenu, personnalisation, publication multicanal et analyse, avec un minimum d'intervention humaine. HubSpot a lancé en 2025 une suite IA permettant aux équipes de créer cinq fois plus de variations de campagnes tout en maintenant la cohérence de ton.",
+        "source_name": "Altosor Communication",
+        "source_url": "https://www.altosor-communication.com/blog/tendances-marketing-digital-2026/",
+        "agent_id": "strategy",
+        "og_image": ""
+      },
+      {
+        "title": "La pub dans ChatGPT bouleverse la confiance",
+        "summary": "Le lancement des publicités dans ChatGPT force à distinguer recommandations organiques et payantes.",
+        "detail": "À mesure que les interfaces IA deviennent plus humaines, le marketing devient le premier point d'exposition éthique des marques. Le déploiement par OpenAI des publicités dans ChatGPT en février 2026 marque un tournant majeur dans le contrat de confiance avec l'IA, plaçant le marketing en première ligne de la responsabilité.",
+        "source_name": "Adweek",
+        "source_url": "https://www.adweek.com/brand-marketing/10-ai-marketing-trends-for-2026-agentic-ai-and-search-shifts/",
+        "agent_id": "strategy",
+        "og_image": ""
+      },
+      {
+        "title": "L'humain reste roi face à l'IA",
+        "summary": "Face au contenu IA générique, la copy authentique et empathique devient l'arme de différenciation décisive.",
+        "detail": "En 2026, le copywriting gagnant n'est plus l'humain contre l'IA mais l'humain avec l'IA, utilisée pour amplifier le message sans le diluer. Dove a marqué le mouvement en s'engageant à ne jamais utiliser de femmes générées par IA dans ses publicités et en lançant son 'Real Beauty Prompt Playbook'.",
+        "source_name": "Sharp Innovations / Junglecommunications",
+        "source_url": "https://www.sharpinnovations.com/blog/2025/12/the-future-of-digital-marketing-5-trends-to-watch-in-2026/",
+        "agent_id": "copywriting",
+        "og_image": ""
+      },
+      {
+        "title": "Le détournement de moments culturels",
+        "summary": "Surfer sur une vague culturelle existante bat toute tentative de fabriquer la culture de zéro.",
+        "detail": "Les marques s'emparent de moments culturels chauds en temps réel plutôt que d'en créer artificiellement. Dunkin' a détourné le tube 'Espresso' de Sabrina Carpenter pendant son pic de streaming, générant 340 millions d'impressions et +34% de ventes.",
+        "source_name": "Puntt.ai",
+        "source_url": "https://www.puntt.ai/blog/10-best-marketing-campaigns-of-2025",
+        "agent_id": "copywriting",
+        "og_image": ""
+      },
+      {
+        "title": "Du spectateur au participant",
+        "summary": "Les campagnes gagnantes n'arrosent plus l'audience : elles l'invitent à coécrire l'histoire.",
+        "detail": "Le succès est passé de la diffusion large à la participation active, conçue dans le langage natif des réseaux sociaux. La campagne 'Duo' de Duolingo a fait sentir aux spectateurs qu'ils influençaient l'issue, générant 1,7 milliard d'impressions et deux fois plus de conversations que les meilleures pubs du Super Bowl.",
+        "source_name": "Pulse Advertising",
+        "source_url": "https://www.pulse-advertising.com/resources/social-media-news/top-10-marketing-campaigns-of-2025/",
+        "agent_id": "copywriting",
+        "og_image": ""
+      },
+      {
+        "title": "La persuasion, nouveau super-pouvoir SEO",
+        "summary": "L'IA n'a pas tué le copywriting, elle a tué le SEO informationnel bas de gamme.",
+        "detail": "Avec l'IA répondant directement aux requêtes basiques, la persuasion, le cadrage des problèmes et le positionnement stratégique deviennent la compétence reine de la visibilité en 2026. Selon un rapport Search Engine Land, le copywriting redevient la compétence la plus importante du marketing digital.",
+        "source_name": "AWAI / Search Engine Land",
+        "source_url": "https://www.awai.com/2026/02/industry-declares-copywriting-the-2026-superpower/",
+        "agent_id": "copywriting",
+        "og_image": ""
+      },
+      {
+        "title": "L'imperfection humaine assumée",
+        "summary": "Face à l'IA, le fait-main, le grain et l'erreur deviennent des marqueurs d'authenticité.",
+        "detail": "En réaction directe à la perfection froide de l'IA, le design fait-main explose : illustrations naïves, traits tremblants, gribouillages spontanés et textures granuleuses. Des marques comme Heaven by Marc Jacobs adoptent cette esthétique imparfaite pour connecter avec la génération Z, et OpenAI a réimaginé ChatGPT en capturant des réalités humaines brutes sur pellicule 35mm.",
+        "source_name": "Btg Communication",
+        "source_url": "https://btg-communication.fr/communication/tendances-graphiques-2025/",
+        "agent_id": "visuals",
+        "og_image": ""
+      },
+      {
+        "title": "Le chaos créatif et la culture zine",
+        "summary": "Mises en page éclatées, collages surréalistes et superpositions désordonnées racontent une histoire singulière.",
+        "detail": "On laisse le hasard guider le trait avec des collages bizarroïdes, des illusions d'optique et des effets psychédéliques. La campagne de Noël 2025 de Diesel « Call Her Santa » illustre cette esthétique brutalist et psychédélique, marquant aussi le retour du style « zine » inspiré des fanzines où chaque élément participe à la narration.",
+        "source_name": "Veoprint",
+        "source_url": "https://blog.veoprint.com/les-tendances-design-et-graphisme-2026/",
+        "agent_id": "visuals",
+        "og_image": ""
+      },
+      {
+        "title": "L'hyperréalisme altéré et les espaces liminaux",
+        "summary": "Des visuels oniriques brouillent les frontières entre réel et synthétique pour fasciner le regard.",
+        "detail": "Canva désigne cette « tendance phare de 2026 » misant sur l'hyperréalisme, les esthétiques étranges et les espaces de transition « ni tout à fait un lieu ni tout à fait un autre ». Les recherches liées aux esthétiques liminales ont bondi de 200 % en douze mois, reflétant l'influence de l'IA dans les processus créatifs.",
+        "source_name": "Blog du Modérateur (Canva)",
+        "source_url": "https://www.blogdumoderateur.com/canva-tendances-design-2026/",
+        "agent_id": "visuals",
+        "og_image": ""
+      },
+      {
+        "title": "Identités fluides et systèmes adaptatifs",
+        "summary": "Les marques abandonnent le logo figé pour des langages visuels mouvants et réactifs.",
+        "detail": "L'identité visuelle dépasse le statique pour devenir adaptative, avec des logos fluides conçus pour s'ajuster aux plateformes et contextes, et des palettes de couleurs flexibles définissant une humeur plutôt qu'un jeu rigide. Le logotype « shape-shifter » de Monotype pour la marque de lingerie Chantelle Pulp étire ses lettres pour « célébrer toutes les formes et tailles ».",
+        "source_name": "It's Nice That",
+        "source_url": "https://www.itsnicethat.com/features/forward-thinking-graphic-trends-2026-graphic-design-120126",
+        "agent_id": "visuals",
+        "og_image": ""
+      }
+    ]
+  }
+]
