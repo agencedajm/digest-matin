@@ -3,7 +3,7 @@ Digest Matin DAJM
 Design éditorial · 1 colonne · TLDR + expand · Expert insights
 """
 
-import smtplib, json, os, re, subprocess, urllib.request
+import smtplib, json, os, re, subprocess, urllib.request, html as _html
 from pathlib import Path
 from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
@@ -32,62 +32,113 @@ ANTHROPIC_KEY = os.environ.get("ANTHROPIC_API_KEY", "")
 FEED_WEB_URL  = os.environ.get("FEED_WEB_URL", "https://agencedajm.github.io/digest-matin/")
 TO_EMAIL      = "arnaud.dajm@gmail.com"
 
-now       = datetime.now()
-TODAY_ISO = now.strftime("%Y-%m-%d")
-TODAY_FR  = now.strftime("%A %d %B %Y").capitalize()
+_JOURS = ["Lundi","Mardi","Mercredi","Jeudi","Vendredi","Samedi","Dimanche"]
+_MOIS  = ["","Janvier","Février","Mars","Avril","Mai","Juin",
+           "Juillet","Août","Septembre","Octobre","Novembre","Décembre"]
+
+def date_fr(dt):
+    return f"{_JOURS[dt.weekday()]} {dt.day} {_MOIS[dt.month]} {dt.year}"
+
+now         = datetime.now()
+TODAY_ISO   = now.strftime("%Y-%m-%d")
+TODAY_FR    = date_fr(now)
 TODAY_SHORT = now.strftime("%d/%m/%Y")
 
 # ─── SVG illustrations ────────────────────────────────────────────────────────
 
 SVG = {
-"strategy": """<svg viewBox="0 0 680 260" xmlns="http://www.w3.org/2000/svg">
-<rect width="680" height="260" fill="#0A1628"/>
+# Réseau de nœuds — hiérarchie stratégique
+"strategy": """<svg viewBox="0 0 680 260" width="100%" height="100%" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
+<rect width="680" height="260" fill="#000"/>
 <circle cx="90" cy="130" r="7" fill="white" opacity=".9"/>
-<circle cx="230" cy="75" r="5" fill="white" opacity=".6"/>
-<circle cx="230" cy="185" r="5" fill="white" opacity=".6"/>
-<circle cx="380" cy="50" r="3.5" fill="white" opacity=".4"/>
-<circle cx="380" cy="130" r="7" fill="white" opacity=".85"/>
-<circle cx="380" cy="210" r="3.5" fill="white" opacity=".4"/>
-<circle cx="530" cy="95" r="5" fill="white" opacity=".6"/>
-<circle cx="530" cy="165" r="5" fill="white" opacity=".6"/>
-<circle cx="620" cy="130" r="8" fill="white"/>
-<line x1="90" y1="130" x2="230" y2="75" stroke="white" stroke-width="1.2" opacity=".18"/>
-<line x1="90" y1="130" x2="230" y2="185" stroke="white" stroke-width="1.2" opacity=".18"/>
-<line x1="230" y1="75" x2="380" y2="130" stroke="white" stroke-width="1.2" opacity=".2"/>
-<line x1="230" y1="185" x2="380" y2="130" stroke="white" stroke-width="1.2" opacity=".2"/>
-<line x1="380" y1="130" x2="530" y2="95" stroke="white" stroke-width="1.2" opacity=".2"/>
-<line x1="380" y1="130" x2="530" y2="165" stroke="white" stroke-width="1.2" opacity=".2"/>
-<line x1="530" y1="95" x2="620" y2="130" stroke="white" stroke-width="1.5" opacity=".35"/>
-<line x1="530" y1="165" x2="620" y2="130" stroke="white" stroke-width="1.5" opacity=".35"/>
+<circle cx="240" cy="72" r="5" fill="white" opacity=".65"/>
+<circle cx="240" cy="130" r="4" fill="white" opacity=".45"/>
+<circle cx="240" cy="188" r="5" fill="white" opacity=".65"/>
+<circle cx="390" cy="48" r="3.5" fill="white" opacity=".4"/>
+<circle cx="390" cy="105" r="6" fill="white" opacity=".8"/>
+<circle cx="390" cy="155" r="6" fill="white" opacity=".8"/>
+<circle cx="390" cy="212" r="3.5" fill="white" opacity=".4"/>
+<circle cx="540" cy="88" r="5" fill="white" opacity=".6"/>
+<circle cx="540" cy="130" r="8" fill="white"/>
+<circle cx="540" cy="172" r="5" fill="white" opacity=".6"/>
+<circle cx="630" cy="130" r="6" fill="white" opacity=".85"/>
+<line x1="90" y1="130" x2="240" y2="72" stroke="white" stroke-width="1" opacity=".2"/>
+<line x1="90" y1="130" x2="240" y2="130" stroke="white" stroke-width="1" opacity=".12"/>
+<line x1="90" y1="130" x2="240" y2="188" stroke="white" stroke-width="1" opacity=".2"/>
+<line x1="240" y1="72" x2="390" y2="105" stroke="white" stroke-width="1" opacity=".22"/>
+<line x1="240" y1="130" x2="390" y2="105" stroke="white" stroke-width="1" opacity=".15"/>
+<line x1="240" y1="188" x2="390" y2="155" stroke="white" stroke-width="1" opacity=".22"/>
+<line x1="390" y1="105" x2="540" y2="88" stroke="white" stroke-width="1.2" opacity=".28"/>
+<line x1="390" y1="105" x2="540" y2="130" stroke="white" stroke-width="1.2" opacity=".35"/>
+<line x1="390" y1="155" x2="540" y2="130" stroke="white" stroke-width="1.2" opacity=".35"/>
+<line x1="390" y1="155" x2="540" y2="172" stroke="white" stroke-width="1.2" opacity=".28"/>
+<line x1="540" y1="130" x2="630" y2="130" stroke="white" stroke-width="1.5" opacity=".45"/>
 </svg>""",
 
-"copywriting": """<svg viewBox="0 0 680 260" xmlns="http://www.w3.org/2000/svg">
-<rect width="680" height="260" fill="#FFF6F5"/>
-<text x="-20" y="250" font-size="310" font-weight="900" fill="#B91C1C" opacity=".055" font-family="Georgia,serif">AW</text>
-<rect x="52" y="105" width="200" height="8" rx="4" fill="#B91C1C"/>
-<rect x="52" y="129" width="140" height="8" rx="4" fill="#B91C1C" opacity=".35"/>
-<rect x="52" y="153" width="170" height="8" rx="4" fill="#B91C1C" opacity=".18"/>
-<rect x="52" y="177" width="100" height="8" rx="4" fill="#B91C1C" opacity=".1"/>
-<rect x="468" y="85" width="3" height="110" fill="#B91C1C" opacity=".15"/>
-<rect x="498" y="110" width="3" height="65" fill="#B91C1C" opacity=".1"/>
+# Rythme de points — cadence du copy, zéro lettre
+"copywriting": """<svg viewBox="0 0 680 260" width="100%" height="100%" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
+<rect width="680" height="260" fill="#000"/>
+<circle cx="52" cy="72" r="7" fill="white" opacity=".9"/>
+<circle cx="84" cy="72" r="3" fill="white" opacity=".45"/>
+<circle cx="104" cy="72" r="3" fill="white" opacity=".45"/>
+<circle cx="152" cy="72" r="7" fill="white" opacity=".9"/>
+<circle cx="204" cy="72" r="3" fill="white" opacity=".35"/>
+<circle cx="270" cy="72" r="7" fill="white" opacity=".9"/>
+<circle cx="300" cy="72" r="3" fill="white" opacity=".45"/>
+<circle cx="320" cy="72" r="3" fill="white" opacity=".45"/>
+<circle cx="400" cy="72" r="7" fill="white" opacity=".9"/>
+<circle cx="462" cy="72" r="3" fill="white" opacity=".35"/>
+<circle cx="524" cy="72" r="7" fill="white" opacity=".9"/>
+<circle cx="556" cy="72" r="3" fill="white" opacity=".45"/>
+<circle cx="608" cy="72" r="5" fill="white" opacity=".65"/>
+<circle cx="648" cy="72" r="3" fill="white" opacity=".35"/>
+<circle cx="52" cy="130" r="5" fill="white" opacity=".65"/>
+<circle cx="92" cy="130" r="5" fill="white" opacity=".65"/>
+<circle cx="180" cy="130" r="7" fill="white" opacity=".9"/>
+<circle cx="212" cy="130" r="3" fill="white" opacity=".45"/>
+<circle cx="232" cy="130" r="3" fill="white" opacity=".45"/>
+<circle cx="316" cy="130" r="5" fill="white" opacity=".65"/>
+<circle cx="414" cy="130" r="7" fill="white" opacity=".9"/>
+<circle cx="446" cy="130" r="3" fill="white" opacity=".35"/>
+<circle cx="536" cy="130" r="7" fill="white" opacity=".9"/>
+<circle cx="568" cy="130" r="3" fill="white" opacity=".45"/>
+<circle cx="590" cy="130" r="3" fill="white" opacity=".45"/>
+<circle cx="648" cy="130" r="5" fill="white" opacity=".65"/>
+<circle cx="98" cy="188" r="3" fill="white" opacity=".35"/>
+<circle cx="162" cy="188" r="7" fill="white" opacity=".9"/>
+<circle cx="194" cy="188" r="3" fill="white" opacity=".45"/>
+<circle cx="256" cy="188" r="5" fill="white" opacity=".65"/>
+<circle cx="354" cy="188" r="7" fill="white" opacity=".9"/>
+<circle cx="386" cy="188" r="3" fill="white" opacity=".35"/>
+<circle cx="408" cy="188" r="3" fill="white" opacity=".45"/>
+<circle cx="486" cy="188" r="5" fill="white" opacity=".65"/>
+<circle cx="576" cy="188" r="7" fill="white" opacity=".9"/>
+<circle cx="608" cy="188" r="3" fill="white" opacity=".45"/>
 </svg>""",
 
-"visuals": """<svg viewBox="0 0 680 260" xmlns="http://www.w3.org/2000/svg">
-<rect width="680" height="260" fill="#F6F5FF"/>
-<rect x="0" y="0" width="226" height="260" fill="#1E1B4B" opacity=".07"/>
-<rect x="226" y="0" width="228" height="130" fill="#1E1B4B" opacity=".12"/>
-<rect x="454" y="130" width="226" height="130" fill="#1E1B4B" opacity=".05"/>
-<circle cx="340" cy="130" r="95" fill="none" stroke="#1E1B4B" stroke-width="1.5" opacity=".12"/>
-<circle cx="340" cy="130" r="46" fill="#1E1B4B" opacity=".07"/>
-<circle cx="340" cy="130" r="13" fill="#1E1B4B" opacity=".2"/>
-<line x1="0" y1="130" x2="680" y2="130" stroke="#1E1B4B" stroke-width="1" opacity=".08"/>
-<line x1="340" y1="0" x2="340" y2="260" stroke="#1E1B4B" stroke-width="1" opacity=".08"/>
-<rect x="60" y="60" width="70" height="70" fill="none" stroke="#1E1B4B" stroke-width="1.5" opacity=".12" transform="rotate(18 95 95)"/>
-<rect x="554" y="148" width="52" height="52" fill="#1E1B4B" opacity=".08" transform="rotate(-12 580 174)"/>
+# Cadre composition — règle des tiers, points forts
+"visuals": """<svg viewBox="0 0 680 260" width="100%" height="100%" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
+<rect width="680" height="260" fill="#000"/>
+<rect x="32" y="20" width="616" height="220" fill="none" stroke="white" stroke-width="1.2" opacity=".28"/>
+<line x1="237" y1="20" x2="237" y2="240" stroke="white" stroke-width=".8" opacity=".14"/>
+<line x1="443" y1="20" x2="443" y2="240" stroke="white" stroke-width=".8" opacity=".14"/>
+<line x1="32" y1="93" x2="648" y2="93" stroke="white" stroke-width=".8" opacity=".14"/>
+<line x1="32" y1="167" x2="648" y2="167" stroke="white" stroke-width=".8" opacity=".14"/>
+<circle cx="237" cy="93" r="7" fill="white" opacity=".9"/>
+<circle cx="443" cy="93" r="5" fill="white" opacity=".6"/>
+<circle cx="237" cy="167" r="5" fill="white" opacity=".6"/>
+<circle cx="443" cy="167" r="7" fill="white" opacity=".9"/>
+<line x1="32" y1="20" x2="648" y2="240" stroke="white" stroke-width=".8" opacity=".07"/>
+<line x1="227" y1="83" x2="247" y2="83" stroke="white" stroke-width="1.5" opacity=".55"/>
+<line x1="237" y1="73" x2="237" y2="103" stroke="white" stroke-width="1.5" opacity=".55"/>
+<polyline points="32,40 32,20 52,20" stroke="white" stroke-width="2" fill="none" opacity=".55"/>
+<polyline points="628,20 648,20 648,40" stroke="white" stroke-width="2" fill="none" opacity=".55"/>
+<polyline points="32,220 32,240 52,240" stroke="white" stroke-width="2" fill="none" opacity=".55"/>
+<polyline points="628,240 648,240 648,220" stroke="white" stroke-width="2" fill="none" opacity=".55"/>
 </svg>""",
 }
 
-CHEVRON = '<svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 5L7 9L11 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>'
+ARROW = '<svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>'
 
 # ─── Agents experts ───────────────────────────────────────────────────────────
 
@@ -176,24 +227,22 @@ def add_entry(feed: list, cards: list) -> list:
 # ─── HTML ─────────────────────────────────────────────────────────────────────
 
 def render_card(card: dict, agent: dict, is_new: bool) -> str:
-    img = card.get("og_image", "")
-    url = card.get("source_url", "")
+    img    = card.get("og_image", "")
+    url    = card.get("source_url", "")
+    detail = _html.escape(card.get("detail", ""))
+    title  = _html.escape(card.get("title", ""))
 
-    # Barre colorée toujours présente en haut
-    bar = f'<div class="c-bar" style="background:{agent["cat_bg"]}"></div>'
+    bar = '<div class="c-bar"></div>'
 
-    # Media : photo OG ou SVG illustratif de la catégorie
     if img:
         media = f'<div class="c-media"><img src="{img}" alt="" loading="lazy" onerror="this.closest(\'.c-media\').remove()"></div>'
     else:
-        svg_raw = SVG.get(agent["id"], "")
-        media = f'<div class="c-svg">{svg_raw}</div>'
+        media = f'<div class="c-svg">{SVG.get(agent["id"],"")}</div>'
 
     new_badge = '<span class="badge-new">NOUVEAU</span>' if is_new else ""
-    src_btn = f'<a href="{url}" target="_blank" rel="noopener" class="btn-source">LIRE LA SOURCE</a>' if url else ""
 
     return f"""
-<article class="card" data-cat="{agent['id']}">
+<article class="card" data-cat="{agent['id']}" data-label="{agent['label'].upper()}" data-src="{url}" data-detail="{detail}" data-title="{title}">
   {bar}
   {media}
   <div class="c-body">
@@ -203,13 +252,9 @@ def render_card(card: dict, agent: dict, is_new: bool) -> str:
     </div>
     <h2 class="c-title">{card.get('title','')}</h2>
     <p class="c-tldr">{card.get('tldr','')}</p>
-    <button class="btn-expand" onclick="expand(this)">
-      APPROFONDIR {CHEVRON}
+    <button class="btn-expand" onclick="openModal(this.closest('.card'))">
+      APPROFONDIR {ARROW}
     </button>
-    <div class="c-detail">
-      <p class="c-detail-text">{card.get('detail','')}</p>
-      {src_btn}
-    </div>
   </div>
 </article>"""
 
@@ -351,6 +396,7 @@ a{{color:#0000FF}}
   background:#fff;
   overflow:hidden;
   border:3px solid #000;
+  display:flex;flex-direction:column;
   transition:transform .18s ease,box-shadow .18s ease;
   animation:fadeUp .35s ease both;
   animation-delay:calc(var(--ci,0)*.05s)
@@ -371,18 +417,15 @@ a{{color:#0000FF}}
   }}
 }}
 
-/* Barre colorée catégorie — toujours présente */
-.c-bar{{height:12px;width:100%;display:block}}
+/* Barre catégorie — noire, 12px, toujours présente */
+.c-bar{{height:12px;background:#000;width:100%;display:block}}
 
-/* Photo OG */
-.c-media{{width:100%;line-height:0}}
-.c-media img{{width:100%;aspect-ratio:16/9;object-fit:cover;display:block;border-bottom:3px solid #000}}
+/* Zone visuelle — même hauteur pour photo et SVG */
+.c-media,.c-svg{{width:100%;height:180px;overflow:hidden;border-bottom:3px solid #000;line-height:0}}
+.c-media img{{width:100%;height:100%;object-fit:cover;display:block}}
+.c-svg svg{{width:100%;height:100%;display:block}}
 
-/* SVG illustratif (fallback sans photo) */
-.c-svg{{width:100%;line-height:0;border-bottom:3px solid #000}}
-.c-svg svg{{width:100%;height:auto;display:block}}
-
-.c-body{{padding:16px}}
+.c-body{{padding:16px;display:flex;flex-direction:column;flex:1}}
 .c-meta{{display:flex;align-items:center;gap:8px;margin-bottom:12px;flex-wrap:wrap}}
 .c-cat{{
   font-family:'Space Mono',monospace;
@@ -405,10 +448,10 @@ a{{color:#0000FF}}
 .c-tldr{{
   font-size:16px;font-weight:400;
   line-height:1.6;color:#000;
-  margin-bottom:14px
+  margin-bottom:0;flex:1
 }}
 
-/* ── Bouton Approfondir ── */
+/* ── Bouton Approfondir — collé en bas ── */
 .btn-expand{{
   display:inline-flex;align-items:center;gap:8px;
   font-family:'Work Sans',sans-serif;
@@ -416,27 +459,51 @@ a{{color:#0000FF}}
   letter-spacing:2px;text-transform:uppercase;
   color:#000;background:#fff;
   border:3px solid #000;padding:8px 16px;
-  cursor:pointer;transition:background .1s,color .1s
+  cursor:pointer;transition:background .1s,color .1s;
+  margin-top:16px;align-self:flex-start
 }}
-.btn-expand:hover,.btn-expand.open{{background:#000;color:#fff}}
-.btn-expand svg{{transition:transform .2s ease}}
-.btn-expand.open svg{{transform:rotate(180deg)}}
+.btn-expand:hover{{background:#000;color:#fff}}
 
-/* ── Detail panel — transition max-height ── */
-.c-detail{{
-  max-height:0;
-  overflow:hidden;
-  transition:max-height .35s ease,padding .25s ease,margin .25s ease;
-  padding-top:0;margin-top:0;border-top:none
+/* ── Modal ── */
+.modal-ov{{
+  display:none;position:fixed;inset:0;z-index:300;
+  background:rgba(0,0,0,.82);
+  align-items:center;justify-content:center;
+  padding:24px
 }}
-.c-detail.open{{
-  max-height:600px;
-  padding-top:16px;margin-top:16px;
-  border-top:3px solid #000
+.modal-ov.show{{display:flex;animation:fadeUp .22s ease}}
+.modal-box{{
+  background:#fff;border:3px solid #000;
+  max-width:560px;width:100%;
+  padding:40px 40px 36px;
+  position:relative;
+  max-height:85vh;overflow-y:auto
 }}
-.c-detail-text{{
-  font-size:15px;line-height:1.6;color:#000;
-  margin-bottom:16px
+.modal-close{{
+  position:absolute;top:16px;right:16px;
+  background:#fff;color:#000;
+  border:3px solid #000;
+  width:36px;height:36px;
+  font-size:14px;font-weight:700;
+  cursor:pointer;display:flex;align-items:center;justify-content:center;
+  transition:background .1s,color .1s
+}}
+.modal-close:hover{{background:#000;color:#fff}}
+.modal-cat{{
+  font-family:'Space Mono',monospace;
+  font-size:10px;letter-spacing:1px;text-transform:uppercase;
+  padding:3px 8px;
+  background:#000;color:#fff;
+  display:inline-block;margin-bottom:16px
+}}
+.modal-title{{
+  font-family:'Archivo Black',sans-serif;
+  font-size:28px;line-height:1.1;
+  margin-bottom:20px
+}}
+.modal-detail{{
+  font-size:16px;line-height:1.7;color:#000;
+  margin-bottom:24px;padding-top:20px;border-top:3px solid #000
 }}
 
 /* ── Bouton Lire la source ── */
@@ -514,6 +581,16 @@ a{{color:#0000FF}}
   <div class="overlay-sub">Les agents travaillent... (~2 min)</div>
 </div>
 
+<div class="modal-ov" id="modal" onclick="mCloseOv(event)">
+  <div class="modal-box">
+    <button class="modal-close" onclick="mClose()">&#10005;</button>
+    <span class="modal-cat" id="m-cat"></span>
+    <h2 class="modal-title" id="m-title"></h2>
+    <p class="modal-detail" id="m-detail"></p>
+    <a class="btn-source" id="m-src" href="#" target="_blank" rel="noopener">LIRE LA SOURCE</a>
+  </div>
+</div>
+
 <script>
 var GH_REPO='agencedajm/digest-matin';
 var GH_WORKFLOW='digest.yml';
@@ -564,33 +641,46 @@ async function doRefresh(){{
   }}
 }}
 
-// Stagger index sur toutes les cartes
+// Stagger d'entrée sur toutes les cartes
 document.querySelectorAll('.card').forEach(function(c,i){{c.style.setProperty('--ci',i)}});
 
-function expand(btn){{
-  var panel=btn.nextElementSibling;
-  var open=panel.classList.contains('open');
-  panel.classList.toggle('open',!open);
-  btn.classList.toggle('open',!open);
-  btn.childNodes[0].textContent=open?'APPROFONDIR ':'REDUIRE ';
+// Modal
+function openModal(card){{
+  document.getElementById('m-cat').textContent=card.dataset.label||'';
+  document.getElementById('m-title').textContent=card.dataset.title||'';
+  document.getElementById('m-detail').textContent=card.dataset.detail||'';
+  var src=card.dataset.src||'';
+  var el=document.getElementById('m-src');
+  el.href=src;el.style.display=src?'inline-block':'none';
+  document.getElementById('modal').classList.add('show');
+  document.body.style.overflow='hidden';
 }}
+function mClose(){{
+  document.getElementById('modal').classList.remove('show');
+  document.body.style.overflow='';
+}}
+function mCloseOv(e){{if(e.target===document.getElementById('modal'))mClose();}}
+document.addEventListener('keydown',function(e){{if(e.key==='Escape')mClose();}});
 
+// Filtre avec fondu
 function fil(cat,btn){{
   document.querySelectorAll('.f').forEach(b=>b.classList.remove('on'));
   btn.classList.add('on');
-  document.querySelectorAll('.card').forEach(function(c,i){{
+  var visible=0;
+  document.querySelectorAll('.card').forEach(function(c){{
     var show=(cat==='all'||c.dataset.cat===cat);
     if(show){{
       c.style.display='';
-      c.style.opacity='0';c.style.transform='translateY(10px)';
+      var i=visible++;
+      c.style.opacity='0';c.style.transform='translateY(8px)';
       setTimeout(function(){{
-        c.style.transition='opacity .25s ease,transform .25s ease';
+        c.style.transition='opacity .22s ease,transform .22s ease';
         c.style.opacity='1';c.style.transform='';
-      }},i*30);
+      }},i*35);
     }}else{{
-      c.style.transition='opacity .15s ease';
+      c.style.transition='opacity .14s ease';
       c.style.opacity='0';
-      setTimeout(function(){{c.style.display='none';}},150);
+      setTimeout(function(){{c.style.display='none';}},140);
     }}
   }});
 }}
