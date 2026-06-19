@@ -1,0 +1,39 @@
+name: Digest Matin
+
+on:
+  workflow_dispatch:        # déclenchement manuel (bouton sur la page)
+  schedule:
+    - cron: '0 7 * * 1'    # chaque lundi à 7h UTC (9h Paris)
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Installer les dépendances
+        run: pip install anthropic
+
+      - name: Lancer la veille
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          GMAIL_APP_PASSWORD: ${{ secrets.GMAIL_APP_PASSWORD }}
+          FEED_WEB_URL: https://agencedajm.github.io/digest-matin/
+        run: python digest.py
+
+      - name: Publier sur GitHub Pages
+        run: |
+          git config user.name "Digest Bot"
+          git config user.email "bot@dajm.fr"
+          git add index.html feed.json
+          git diff --staged --quiet || git commit -m "Digest $(date +%Y-%m-%d)"
+          git push
