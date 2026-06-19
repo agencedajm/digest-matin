@@ -91,32 +91,9 @@ CHEVRON = '<svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="ht
 
 # ─── Agents experts ───────────────────────────────────────────────────────────
 
-RULES = """
-REGLE ABSOLUE : Aucune information deja repandue dans les newsletters marketing generalistes, les fils LinkedIn viraux, les rapports Hootsuite / HubSpot / Canva. Ces banalites n'ont aucune valeur.
-
-INTERDIT (exemples) :
-- "L'IA transforme le marketing" - evidence
-- "L'authenticite est importante" - tout le monde le sait
-- "Le SEO evolue" - trop generique
-
-ON VEUT (niveau d'exigence) :
-- Une etude primaire des 90 derniers jours avec chiffres precis et contre-intuitifs
-- Une decision strategique de marque peu mediatisee avec resultats mesurables
-- Un signal faible dans un marche de niche qui prefigure une rupture dans 18 mois
-- Une tactique que moins de 3% des professionnels utilisent, avec preuve
-
-FORMAT JSON STRICT, tableau de 4 objets, rien d'autre :
-[
-  {
-    "title": "Titre factuel percutant (max 10 mots, pas de question)",
-    "tldr": "1 phrase ultra-courte avec le fait cle et un chiffre si possible (max 18 mots)",
-    "detail": "Explication experte en 3 phrases avec nom de marque ou etude precise et resultats.",
-    "source_name": "Nom exact du media ou de l'institution",
-    "source_url": "URL directe vers l'article ou l'etude (reelle)"
-  }
-]
-REPONDS UNIQUEMENT AVEC LE JSON.
-"""
+RULES = """Pas de generalites connues. Uniquement des insights non-evidents : etudes recentes avec chiffres, decisions de marques peu mediatisees, signaux faibles.
+JSON strict, 3 objets, rien d'autre :
+[{"title":"max 8 mots","tldr":"1 phrase + 1 chiffre (max 15 mots)","detail":"2 phrases concretes avec source nommee","source_name":"media ou institution","source_url":"URL reelle"}]"""
 
 AGENTS = [
     {
@@ -124,21 +101,21 @@ AGENTS = [
         "label": "Strategie",
         "cat_bg": "#0A1628",
         "cat_fg": "#FFFFFF",
-        "prompt": f"Tu es directeur strategie dans un cabinet conseil premium — tu publies dans Harvard Business Review et Les Echos, tu refuses les evidences. Recherche en profondeur les 4 insights les plus pointus et inattendus en strategie de communication de marque publies dans les 90 derniers jours.\n\n{RULES}",
+        "prompt": f"Expert strategie de communication. Recherche web : 3 insights pointus et inattendus en strategie de marque (90 derniers jours).\n{RULES}",
     },
     {
         "id": "copywriting",
         "label": "Copywriting",
         "cat_bg": "#B91C1C",
         "cat_fg": "#FFFFFF",
-        "prompt": f"Tu es directeur de creation conception-redaction, tu as travaille chez Ogilvy et BETC, tu juges les Cannes Lions. Tu sais exactement ce qui fait performer un texte publicitaire au niveau metrologique. Recherche en profondeur les 4 insights les plus pointus en copywriting et mecanique de campagne publies dans les 90 derniers jours.\n\n{RULES}",
+        "prompt": f"Expert copywriting et publicite. Recherche web : 3 insights pointus sur les campagnes et mecaniques redactionnelles (90 derniers jours).\n{RULES}",
     },
     {
         "id": "visuals",
         "label": "Direction artistique",
         "cat_bg": "#1E1B4B",
         "cat_fg": "#FFFFFF",
-        "prompt": f"Tu es directeur artistique senior, tu distingues une vraie tendance d'un effet de mode Instagram, tu lis les travaux en psychologie de la perception visuelle. Recherche en profondeur les 4 directions artistiques les plus significatives en communication visuelle publiees dans les 90 derniers jours.\n\n{RULES}",
+        "prompt": f"Expert direction artistique. Recherche web : 3 tendances visuelles significatives et non-evidentes en communication (90 derniers jours).\n{RULES}",
     },
 ]
 
@@ -147,8 +124,8 @@ def research_agent(agent: dict) -> list:
     print(f"  {agent['label']}...")
     client = anthropic.Anthropic(api_key=ANTHROPIC_KEY)
     resp = client.messages.create(
-        model="claude-opus-4-8",
-        max_tokens=2500,
+        model="claude-haiku-4-5-20251001",
+        max_tokens=1200,
         tools=[{"type": "web_search_20250305", "name": "web_search"}],
         messages=[{"role": "user", "content": agent["prompt"]}],
     )
@@ -156,7 +133,7 @@ def research_agent(agent: dict) -> list:
     m = re.search(r'\[.*?\]', text, re.DOTALL)
     if m:
         try:
-            return [c for c in json.loads(m.group()) if isinstance(c, dict)][:4]
+            return [c for c in json.loads(m.group()) if isinstance(c, dict)][:3]
         except Exception:
             pass
     return [{"title": "Veille", "tldr": text[:100], "detail": text[:300], "source_name": "", "source_url": ""}]
