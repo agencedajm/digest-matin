@@ -1,5 +1,92 @@
 [
   {
+    "date_iso": "2026-06-19",
+    "date_fr": "Friday 19 june 2026",
+    "cards": [
+      {
+        "title": "Les avertissements anti-contrefaçon font acheter plus de faux",
+        "tldr": "Le langage de peur déclenche une réactance psychologique qui pousse les plus vulnérables à acheter davantage de contrefaçons.",
+        "detail": "Le rapport A-CAPP de Michigan State University (fév. 2026) a analysé 94 campagnes et près de 400 messages : la majorité s'appuie sur la peur et le langage de contrôle, qui induisent de la colère et réduisent l'attrait de la campagne, tandis que les techniques réductrices de réactance (récits, cadrage positif) restent sous-exploitées. Les secteurs pharma, électronique et outillage utilisent le plus d'éléments générateurs de réactance. Contre-intuitif : 74% des consommateurs ont acheté des contrefaçons et ceux qui se sentent le plus à risque sont aussi les plus enclins à acheter de faux médicaments, d'où la recommandation d'abandonner la peur au profit de messages d'empowerment.",
+        "source_name": "A-CAPP Center, Michigan State University",
+        "source_url": "https://a-capp.msu.edu/wp-content/uploads/2026/03/FINAL-When-Brands-Talk-FINAL2.23.26.pdf",
+        "agent_id": "strategy",
+        "og_image": ""
+      },
+      {
+        "title": "Les actifs de forme écrasent les couleurs en distinctivité",
+        "tldr": "Sur 1162 actifs analysés, logos et packaging atteignent 40% de notoriété et 71% d'exclusivité, loin devant la couleur.",
+        "detail": "Une étude de l'International Journal of Advertising (publiée le 5 mars 2026) a benchmarké 1162 actifs distinctifs sur 21 catégories, quatre pays et neuf ans, mesurés par Fame (lien à la marque) et Uniqueness (exclusivité). Les actifs basés sur la forme — logos et packaging — surperforment systématiquement (40% de Fame, 71% d'Uniqueness), invalidant l'obsession des directions marketing pour les codes couleur. Nuance stratégique inattendue : les actifs narratifs performent relativement mieux dans les industries de services, ce qui réoriente les arbitrages d'investissement selon le secteur.",
+        "source_name": "International Journal of Advertising (Taylor & Francis)",
+        "source_url": "https://www.tandfonline.com/doi/full/10.1080/02650487.2026.2637295",
+        "agent_id": "strategy",
+        "og_image": ""
+      },
+      {
+        "title": "Chaque association positive vaut 18% de dépenses supplémentaires",
+        "tldr": "Chez CVS Health, une association de marque positive ajoute +18% de dépense, une négative en retire -12%.",
+        "detail": "Une recherche publiée dans Harvard Business Review (8 avril 2026) par Vriens, Verhulst, Eggers et les dirigeants de CVS Health quantifie l'effet dollar de chaque association mentale. Chaque association positive (service serviable, emplacements pratiques) corrèle avec une hausse de dépense de 18%, tandis que chaque association négative entraîne un recul de 12%. L'asymétrie contre-intuitive : éliminer un irritant pèse moins lourd qu'on ne le croit face au coût d'une perception négative, ce qui réoriente les budgets vers la suppression ciblée des associations toxiques plutôt que l'empilement de messages positifs.",
+        "source_name": "Harvard Business Review",
+        "source_url": "https://hbr.org/2026/04/new-research-on-how-brand-associations-drive-customer-spending",
+        "agent_id": "strategy",
+        "og_image": ""
+      },
+      {
+        "title": "Le visiteur référé par IA convertit cinq fois mieux",
+        "tldr": "Les visiteurs venus de ChatGPT convertissent à 15,9% contre 1,76% pour le search organique classique.",
+        "detail": "Selon les données Seer Interactive reprises dans une synthèse de mai 2026, les visiteurs issus d'un LLM convertissent à 15,9% depuis ChatGPT et 10,5% depuis Perplexity, contre 1,76% pour le search organique. Ahrefs a constaté que le trafic IA générait 12,1% des inscriptions tout en ne pesant que 0,5% des visiteurs — un ratio de 24:1. Signal faible décisif : 92% des marketeurs disent vouloir optimiser pour la recherche IA mais seuls 40,6% le font réellement, créant une fenêtre d'avantage de premier entrant alors que les citations IA fluctuent de 40 à 60% d'un mois sur l'autre.",
+        "source_name": "Omnibound (synthèse Seer Interactive / Ahrefs)",
+        "source_url": "https://www.omnibound.ai/blog/generative-engine-optimization-statistics",
+        "agent_id": "strategy",
+        "og_image": ""
+      },
+      {
+        "title": "Les pubs IA battent les humains sur la persuasion, pas la personnalisation",
+        "tldr": "Étude n=800 : pubs générées par LLM préférées à 59,1% contre 40,9% pour l'humain sur les principes psychologiques.",
+        "detail": "Dans une étude en deux temps de l'University of Queensland, les pubs LLM atteignent la parité avec les experts humains sur la personnalisation par trait de personnalité (51,1% vs 48,9%, non significatif), mais les surpassent nettement sur les leviers de persuasion universels. <cite index=\"32-9\">Les pubs générées par IA ont surpassé significativement le contenu créé par des humains, atteignant un taux de préférence de 59,1% (vs 40,9%, p < 0,001), avec la meilleure performance sur les ressorts d'autorité (63,0%) et de consensus (62,5%).</cite> Contre-intuitif : <cite index=\"32-11\">même après application d'une pénalité de 21,2 points lorsque les participants identifiaient correctement l'origine IA, les pubs IA surpassaient encore les pubs humaines.</cite>",
+        "source_name": "arXiv (University of Queensland, Meguellati et al.)",
+        "source_url": "https://arxiv.org/abs/2512.03373",
+        "agent_id": "copywriting",
+        "og_image": ""
+      },
+      {
+        "title": "Le pause ad bat le standard sur le rappel pour zéro interaction",
+        "tldr": "Le pause ad génère +34% de rappel non assisté sans aucune interaction du spectateur.",
+        "detail": "Alors que l'industrie pousse l'interactivité par télécommande, les données EMARKETER citant BrightLine montrent que <cite index=\"49-4,49-5\">les pause ads, qui apparaissent quand le spectateur met en pause son contenu, délivrent un gain de 34% en rappel non assisté.</cite> Le levier réel n'est pas l'engagement mais le contexte de haute réceptivité d'une pause volontaire. Signal stratégique sous-médiatisé : <cite index=\"49-10\">à mesure que le CTV se fragmente entre plateformes, les pause ads représentent l'un des rares formats standardisables disponibles à travers les services.</cite>",
+        "source_name": "EMARKETER (données BrightLine)",
+        "source_url": "https://www.emarketer.com/content/faq-on-ctv-advertising--trends--formats--platforms-watch-2026",
+        "agent_id": "copywriting",
+        "og_image": ""
+      },
+      {
+        "title": "Le procès contre les Marketing Mix Models est statistiquement infondé",
+        "tldr": "Avec correction du biais de sélection, les élasticités publicitaires des MMM rejoignent celles des essais randomisés.",
+        "detail": "L'orthodoxie veut que les MMM surestiment systématiquement l'effet des pubs face aux essais randomisés (RCT), justifiant des budgets de mesure colossaux. Cette étude de l'International Journal of Research in Marketing renverse le consensus : <cite index=\"10-5,10-6\">des méta-analyses correctement menées, utilisant des techniques avancées de correction de biais, rapprochent fortement les élasticités MMM de celles des RCT ; les méta-analyses passées avaient échoué à corriger le biais de sélection de publication, gonflant les estimations.</cite> Conséquence pratique : <cite index=\"10-8\">plutôt que rejeter les MMM comme intrinsèquement défaillants, ils peuvent servir d'alternative viable et scalable aux RCT coûteux, tout en fournissant des estimations d'effets long terme que les expériences ne capturent pas.</cite>",
+        "source_name": "International Journal of Research in Marketing (Elsevier)",
+        "source_url": "https://www.sciencedirect.com/science/article/abs/pii/S016781162500028X",
+        "agent_id": "copywriting",
+        "og_image": ""
+      },
+      {
+        "title": "Le DSP Amazon atteint 40% des budgets pub Amazon",
+        "tldr": "Le DSP représente désormais 40% des budgets Amazon des annonceurs actifs à la fois sur Ad Console et DSP.",
+        "detail": "Le retail media bascule silencieusement du search vers le programmatique piloté par données d'achat, un virage peu commenté en dehors des cercles commerce. <cite index=\"40-10\">Sur Amazon, le DSP représente désormais 40% des budgets publicitaires totaux Amazon pour les annonceurs actifs à la fois sur Ad Console et DSP, soulignant son rôle de canal central et non d'ajout expérimental.</cite> Ce déplacement reconfigure la mécanique de campagne : <cite index=\"40-11,40-12,40-13\">il ouvre de nouveaux leviers — gestion de fréquence cross-canal, cadres créatifs cohérents, contrôle granulaire de l'application des signaux commerce — mais relève aussi les exigences de mesure, car sans analytique avancée il devient facile de double-compter les conversions ou de surévaluer les touches bas de funnel.</cite>",
+        "source_name": "Tinuiti",
+        "source_url": "https://tinuiti.com/blog/commerce/retail-media-trends/",
+        "agent_id": "copywriting",
+        "og_image": ""
+      },
+      {
+        "title": "Veille",
+        "tldr": "Je vais rechercher des informations récentes et pointues sur les directions artistiques en communica",
+        "detail": "Je vais rechercher des informations récentes et pointues sur les directions artistiques en communication visuelle.Les résultats de marques sont trop génériques. Je vais chercher des signaux plus pointus et récents.J'ai des pistes solides. Cherchons des signaux faibles dans des niches spécifiques et ",
+        "source_name": "",
+        "source_url": "",
+        "agent_id": "visuals",
+        "og_image": ""
+      }
+    ]
+  },
+  {
     "date_iso": "2026-06-18",
     "date_fr": "Thursday 18 june 2026",
     "cards": [
