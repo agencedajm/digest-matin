@@ -105,13 +105,23 @@ a{color:#0000FF}
 }
 @media(min-width:900px){.cards-grid{grid-template-columns:repeat(3,1fr)}}
 @media(min-width:1100px){.cards-grid{grid-template-columns:repeat(4,1fr)}}
-@media(min-width:1280px){.cards-grid{grid-template-columns:repeat(5,1fr)}}
 
 /* ── Card ── */
+@keyframes fadeUp{
+  from{opacity:0;transform:translateY(14px)}
+  to{opacity:1;transform:translateY(0)}
+}
 .card{
   background:#fff;
   overflow:hidden;
-  border:3px solid #000
+  border:3px solid #000;
+  transition:transform .18s ease,box-shadow .18s ease;
+  animation:fadeUp .35s ease both;
+  animation-delay:calc(var(--ci,0)*.05s)
+}
+.card:hover{
+  transform:translate(-3px,-3px);
+  box-shadow:3px 3px 0 0 #000
 }
 @media(min-width:600px){
   .card{
@@ -119,11 +129,22 @@ a{color:#0000FF}
     border-right:3px solid #000;
     border-bottom:3px solid #000
   }
+  .card:hover{
+    transform:translate(-2px,-2px);
+    box-shadow:2px 2px 0 0 #000
+  }
 }
 
+/* Barre colorée catégorie — toujours présente */
+.c-bar{height:12px;width:100%;display:block}
+
+/* Photo OG */
 .c-media{width:100%;line-height:0}
 .c-media img{width:100%;aspect-ratio:16/9;object-fit:cover;display:block;border-bottom:3px solid #000}
-.c-no-img{height:8px;background:#000}
+
+/* SVG illustratif (fallback sans photo) */
+.c-svg{width:100%;line-height:0;border-bottom:3px solid #000}
+.c-svg svg{width:100%;height:auto;display:block}
 
 .c-body{padding:16px}
 .c-meta{display:flex;align-items:center;gap:8px;margin-bottom:12px;flex-wrap:wrap}
@@ -165,10 +186,16 @@ a{color:#0000FF}
 .btn-expand svg{transition:transform .2s ease}
 .btn-expand.open svg{transform:rotate(180deg)}
 
-/* ── Detail panel ── */
+/* ── Detail panel — transition max-height ── */
 .c-detail{
-  margin-top:16px;
-  padding-top:16px;
+  max-height:0;
+  overflow:hidden;
+  transition:max-height .35s ease,padding .25s ease,margin .25s ease;
+  padding-top:0;margin-top:0;border-top:none
+}
+.c-detail.open{
+  max-height:600px;
+  padding-top:16px;margin-top:16px;
   border-top:3px solid #000
 }
 .c-detail-text{
@@ -250,7 +277,27 @@ a{color:#0000FF}
     </div>
     <div class="cards-grid">
 <article class="card" data-cat="strategy">
-  <div class="c-no-img"></div>
+  <div class="c-bar" style="background:#0A1628"></div>
+  <div class="c-svg"><svg viewBox="0 0 680 260" xmlns="http://www.w3.org/2000/svg">
+<rect width="680" height="260" fill="#0A1628"/>
+<circle cx="90" cy="130" r="7" fill="white" opacity=".9"/>
+<circle cx="230" cy="75" r="5" fill="white" opacity=".6"/>
+<circle cx="230" cy="185" r="5" fill="white" opacity=".6"/>
+<circle cx="380" cy="50" r="3.5" fill="white" opacity=".4"/>
+<circle cx="380" cy="130" r="7" fill="white" opacity=".85"/>
+<circle cx="380" cy="210" r="3.5" fill="white" opacity=".4"/>
+<circle cx="530" cy="95" r="5" fill="white" opacity=".6"/>
+<circle cx="530" cy="165" r="5" fill="white" opacity=".6"/>
+<circle cx="620" cy="130" r="8" fill="white"/>
+<line x1="90" y1="130" x2="230" y2="75" stroke="white" stroke-width="1.2" opacity=".18"/>
+<line x1="90" y1="130" x2="230" y2="185" stroke="white" stroke-width="1.2" opacity=".18"/>
+<line x1="230" y1="75" x2="380" y2="130" stroke="white" stroke-width="1.2" opacity=".2"/>
+<line x1="230" y1="185" x2="380" y2="130" stroke="white" stroke-width="1.2" opacity=".2"/>
+<line x1="380" y1="130" x2="530" y2="95" stroke="white" stroke-width="1.2" opacity=".2"/>
+<line x1="380" y1="130" x2="530" y2="165" stroke="white" stroke-width="1.2" opacity=".2"/>
+<line x1="530" y1="95" x2="620" y2="130" stroke="white" stroke-width="1.5" opacity=".35"/>
+<line x1="530" y1="165" x2="620" y2="130" stroke="white" stroke-width="1.5" opacity=".35"/>
+</svg></div>
   <div class="c-body">
     <div class="c-meta">
       <span class="c-cat">STRATEGIE</span>
@@ -261,14 +308,34 @@ a{color:#0000FF}
     <button class="btn-expand" onclick="expand(this)">
       APPROFONDIR <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 5L7 9L11 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
     </button>
-    <div class="c-detail" hidden>
+    <div class="c-detail">
       <p class="c-detail-text">Karen Anne Wallach (UAH) démontre dans le Journal of Consumer Research que sur huit expériences (café, matelas, voyages, recrutés via Prolific), un message d'exclusion explicite augmente l'engagement et l'intention d'achat chez les clients cibles tout en réduisant l'appétence des non-cibles. Le mécanisme : l'exclusion signale un ciblage précis, rendant l'offre plus pertinente pour ceux qui s'y reconnaissent. La première expérience l'a même validé sur de vraies Facebook Ads, contredisant le dogme de la persuasion directe.</p>
       <a href="https://academic.oup.com/jcr/advance-article/doi/10.1093/jcr/ucaf034/8158427" target="_blank" rel="noopener" class="btn-source">LIRE LA SOURCE</a>
     </div>
   </div>
 </article>
 <article class="card" data-cat="strategy">
-  <div class="c-no-img"></div>
+  <div class="c-bar" style="background:#0A1628"></div>
+  <div class="c-svg"><svg viewBox="0 0 680 260" xmlns="http://www.w3.org/2000/svg">
+<rect width="680" height="260" fill="#0A1628"/>
+<circle cx="90" cy="130" r="7" fill="white" opacity=".9"/>
+<circle cx="230" cy="75" r="5" fill="white" opacity=".6"/>
+<circle cx="230" cy="185" r="5" fill="white" opacity=".6"/>
+<circle cx="380" cy="50" r="3.5" fill="white" opacity=".4"/>
+<circle cx="380" cy="130" r="7" fill="white" opacity=".85"/>
+<circle cx="380" cy="210" r="3.5" fill="white" opacity=".4"/>
+<circle cx="530" cy="95" r="5" fill="white" opacity=".6"/>
+<circle cx="530" cy="165" r="5" fill="white" opacity=".6"/>
+<circle cx="620" cy="130" r="8" fill="white"/>
+<line x1="90" y1="130" x2="230" y2="75" stroke="white" stroke-width="1.2" opacity=".18"/>
+<line x1="90" y1="130" x2="230" y2="185" stroke="white" stroke-width="1.2" opacity=".18"/>
+<line x1="230" y1="75" x2="380" y2="130" stroke="white" stroke-width="1.2" opacity=".2"/>
+<line x1="230" y1="185" x2="380" y2="130" stroke="white" stroke-width="1.2" opacity=".2"/>
+<line x1="380" y1="130" x2="530" y2="95" stroke="white" stroke-width="1.2" opacity=".2"/>
+<line x1="380" y1="130" x2="530" y2="165" stroke="white" stroke-width="1.2" opacity=".2"/>
+<line x1="530" y1="95" x2="620" y2="130" stroke="white" stroke-width="1.5" opacity=".35"/>
+<line x1="530" y1="165" x2="620" y2="130" stroke="white" stroke-width="1.5" opacity=".35"/>
+</svg></div>
   <div class="c-body">
     <div class="c-meta">
       <span class="c-cat">STRATEGIE</span>
@@ -279,14 +346,15 @@ a{color:#0000FF}
     <button class="btn-expand" onclick="expand(this)">
       APPROFONDIR <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 5L7 9L11 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
     </button>
-    <div class="c-detail" hidden>
+    <div class="c-detail">
       <p class="c-detail-text">L'étude Fractl x Search Engine Land (1 008 consommateurs US, 150 marketeurs) révèle que la part de consommateurs déclarant qu'un usage intensif d'IA réduirait leur confiance est passée de 20% en 2025 à environ 40% en 2026. Contre-intuitivement, la Gen Z pénalise le plus durement (54% contre 32% des Boomers), et seuls 14% font davantage confiance à une marque qui l'utilise massivement. Pourtant 33% des organisations ne divulguent jamais leur usage d'IA, alors que 84 à 91% des consommateurs réclament un étiquetage obligatoire.</p>
       <a href="https://searchengineland.com/ai-search-adoption-rises-consumer-trust-declines-study-480338" target="_blank" rel="noopener" class="btn-source">LIRE LA SOURCE</a>
     </div>
   </div>
 </article>
 <article class="card" data-cat="strategy">
-  <div class="c-media"><img src="https://s3.amazonaws.com/media.mediapost.com/dam/cropped/2026/06/03/horizonchart222222_hjZ34bt_jhwJzha.png" alt="" loading="lazy"></div>
+  <div class="c-bar" style="background:#0A1628"></div>
+  <div class="c-media"><img src="https://s3.amazonaws.com/media.mediapost.com/dam/cropped/2026/06/03/horizonchart222222_hjZ34bt_jhwJzha.png" alt="" loading="lazy" onerror="this.closest('.c-media').remove()"></div>
   <div class="c-body">
     <div class="c-meta">
       <span class="c-cat">STRATEGIE</span>
@@ -297,14 +365,15 @@ a{color:#0000FF}
     <button class="btn-expand" onclick="expand(this)">
       APPROFONDIR <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 5L7 9L11 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
     </button>
-    <div class="c-detail" hidden>
+    <div class="c-detail">
       <p class="c-detail-text">L'étude Horizon Media (1 000 consommateurs US, mars 2026) quantifie une « Trust Tax » : 68% des consommateurs pensent qu'un agent IA d'achat n'agit pas dans leur intérêt, et une expérience automatisée négative survient 40% du temps. En croisant ces deux chiffres, Horizon estime que les marques précipitant l'automatisation menacent la fidélité long terme de plus de 27% de leurs clients. Le signal stratégique : optimiser pour la conversion algorithmique se paie en érosion silencieuse de la loyauté émotionnelle.</p>
       <a href="https://www.mediapost.com/publications/article/415524/horizon-shoppers-skeptical-that-ai-agents-act-in.html" target="_blank" rel="noopener" class="btn-source">LIRE LA SOURCE</a>
     </div>
   </div>
 </article>
 <article class="card" data-cat="strategy">
-  <div class="c-media"><img src="https://framerusercontent.com/images/lOzPsStJTtVUWPf7zVI7KuoQSQ.jpg?width=1536&amp;height=1024" alt="" loading="lazy"></div>
+  <div class="c-bar" style="background:#0A1628"></div>
+  <div class="c-media"><img src="https://framerusercontent.com/images/lOzPsStJTtVUWPf7zVI7KuoQSQ.jpg?width=1536&amp;height=1024" alt="" loading="lazy" onerror="this.closest('.c-media').remove()"></div>
   <div class="c-body">
     <div class="c-meta">
       <span class="c-cat">STRATEGIE</span>
@@ -315,14 +384,24 @@ a{color:#0000FF}
     <button class="btn-expand" onclick="expand(this)">
       APPROFONDIR <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 5L7 9L11 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
     </button>
-    <div class="c-detail" hidden>
+    <div class="c-detail">
       <p class="c-detail-text">Un signal faible émerge dans le design de marque : la « Naive Design » et l'esthétique anti-IA, où typographies tremblées et tracés manuels sont délibérément choisis comme preuve d'auteur humain — Radford Beauty a adopté en avril 2026 une typographie dessinée à la main sur verre dépoli pour signaler l'authenticité. Burger King a poussé la logique narrative avec une campagne sur les fringales post-partum en réalisme non filtré, sujet que la plupart des marques évitent. La rupture probable : à mesure que la perfection générée par IA se banalise, l'inefficacité visible (stop-motion, illustration manuelle) devient un marqueur de valeur premium.</p>
       <a href="https://www.bigeyeagency.com/insights/2026-design-trends-impact-on-consumer-brands" target="_blank" rel="noopener" class="btn-source">LIRE LA SOURCE</a>
     </div>
   </div>
 </article>
 <article class="card" data-cat="copywriting">
-  <div class="c-no-img"></div>
+  <div class="c-bar" style="background:#B91C1C"></div>
+  <div class="c-svg"><svg viewBox="0 0 680 260" xmlns="http://www.w3.org/2000/svg">
+<rect width="680" height="260" fill="#FFF6F5"/>
+<text x="-20" y="250" font-size="310" font-weight="900" fill="#B91C1C" opacity=".055" font-family="Georgia,serif">AW</text>
+<rect x="52" y="105" width="200" height="8" rx="4" fill="#B91C1C"/>
+<rect x="52" y="129" width="140" height="8" rx="4" fill="#B91C1C" opacity=".35"/>
+<rect x="52" y="153" width="170" height="8" rx="4" fill="#B91C1C" opacity=".18"/>
+<rect x="52" y="177" width="100" height="8" rx="4" fill="#B91C1C" opacity=".1"/>
+<rect x="468" y="85" width="3" height="110" fill="#B91C1C" opacity=".15"/>
+<rect x="498" y="110" width="3" height="65" fill="#B91C1C" opacity=".1"/>
+</svg></div>
   <div class="c-body">
     <div class="c-meta">
       <span class="c-cat">COPYWRITING</span>
@@ -333,14 +412,24 @@ a{color:#0000FF}
     <button class="btn-expand" onclick="expand(this)">
       APPROFONDIR <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 5L7 9L11 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
     </button>
-    <div class="c-detail" hidden>
+    <div class="c-detail">
       <p class="c-detail-text">L'etude Effie/System1 « The Creative Dividend » a analyse 1 265 campagnes (2007-2023) sur 139 milliards de dollars de part de marche, croisees aux reponses de plus de 200 000 personnes. Elle revele que la qualite creative et le support media expliquent ensemble 60,1% des resultats business, jusqu'a 98,3% dans certaines categories, et introduit l'indice ESOC (Excess Share of Creativity) montrant que le profit n'augmente pas lineairement mais s'accelere de facon exponentielle. Point contre-intuitif majeur : 61% des marketeurs americains classent le ciblage au-dessus de la qualite creative, alors que le ciblage ne delivre qu'un multiplicateur de profit de 1,1x contre 12x pour la creativite.</p>
       <a href="https://effie.org/insights/the-creative-dividend-advertising-that-pays-back/" target="_blank" rel="noopener" class="btn-source">LIRE LA SOURCE</a>
     </div>
   </div>
 </article>
 <article class="card" data-cat="copywriting">
-  <div class="c-no-img"></div>
+  <div class="c-bar" style="background:#B91C1C"></div>
+  <div class="c-svg"><svg viewBox="0 0 680 260" xmlns="http://www.w3.org/2000/svg">
+<rect width="680" height="260" fill="#FFF6F5"/>
+<text x="-20" y="250" font-size="310" font-weight="900" fill="#B91C1C" opacity=".055" font-family="Georgia,serif">AW</text>
+<rect x="52" y="105" width="200" height="8" rx="4" fill="#B91C1C"/>
+<rect x="52" y="129" width="140" height="8" rx="4" fill="#B91C1C" opacity=".35"/>
+<rect x="52" y="153" width="170" height="8" rx="4" fill="#B91C1C" opacity=".18"/>
+<rect x="52" y="177" width="100" height="8" rx="4" fill="#B91C1C" opacity=".1"/>
+<rect x="468" y="85" width="3" height="110" fill="#B91C1C" opacity=".15"/>
+<rect x="498" y="110" width="3" height="65" fill="#B91C1C" opacity=".1"/>
+</svg></div>
   <div class="c-body">
     <div class="c-meta">
       <span class="c-cat">COPYWRITING</span>
@@ -351,14 +440,24 @@ a{color:#0000FF}
     <button class="btn-expand" onclick="expand(this)">
       APPROFONDIR <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 5L7 9L11 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
     </button>
-    <div class="c-detail" hidden>
+    <div class="c-detail">
       <p class="c-detail-text">L'etude de Beth L. Fossen, Philip Kim et Inyoung Chae publiee au Journal of Marketing (vol. 90, n°3, 2026) compare micro-ads et publicites non-micro via une approche multimethode incluant une experimentation terrain sur reseaux sociaux. Les micro-ads et non-micro ont un impact direct comparable sur les ventes en ligne, mais les micro-ads augmentent indirectement les ventes davantage en generant plus de trafic et d'engagement. Le mecanisme avance est l'impatience du spectateur face aux formats longs, ce qui inverse l'intuition selon laquelle un format long « raconte mieux l'histoire ».</p>
       <a href="https://journals.sagepub.com/doi/10.1177/00222429251350657" target="_blank" rel="noopener" class="btn-source">LIRE LA SOURCE</a>
     </div>
   </div>
 </article>
 <article class="card" data-cat="copywriting">
-  <div class="c-no-img"></div>
+  <div class="c-bar" style="background:#B91C1C"></div>
+  <div class="c-svg"><svg viewBox="0 0 680 260" xmlns="http://www.w3.org/2000/svg">
+<rect width="680" height="260" fill="#FFF6F5"/>
+<text x="-20" y="250" font-size="310" font-weight="900" fill="#B91C1C" opacity=".055" font-family="Georgia,serif">AW</text>
+<rect x="52" y="105" width="200" height="8" rx="4" fill="#B91C1C"/>
+<rect x="52" y="129" width="140" height="8" rx="4" fill="#B91C1C" opacity=".35"/>
+<rect x="52" y="153" width="170" height="8" rx="4" fill="#B91C1C" opacity=".18"/>
+<rect x="52" y="177" width="100" height="8" rx="4" fill="#B91C1C" opacity=".1"/>
+<rect x="468" y="85" width="3" height="110" fill="#B91C1C" opacity=".15"/>
+<rect x="498" y="110" width="3" height="65" fill="#B91C1C" opacity=".1"/>
+</svg></div>
   <div class="c-body">
     <div class="c-meta">
       <span class="c-cat">COPYWRITING</span>
@@ -369,14 +468,15 @@ a{color:#0000FF}
     <button class="btn-expand" onclick="expand(this)">
       APPROFONDIR <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 5L7 9L11 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
     </button>
-    <div class="c-detail" hidden>
+    <div class="c-detail">
       <p class="c-detail-text">L'article « The Limits of Brand Heritage in Luxury Advertising » de Mia M. Birau et al., publie en open access au Journal of Advertising Research le 22 avril 2026, casse le dogme selon lequel l'heritage est toujours un levier creatif gagnant dans le luxe. Les auteurs identifient les conditions precises ou le storytelling patrimonial echoue pour certaines categories de produits de luxe, contredisant la doctrine generaliste qui presente l'heritage comme requis absolu en 2026. Signal faible exploitable : la rupture annoncee est l'abandon selectif de la narration patrimoniale au profit d'autres registres pour des sous-segments specifiques.</p>
       <a href="https://www.tandfonline.com/journals/ujar20/" target="_blank" rel="noopener" class="btn-source">LIRE LA SOURCE</a>
     </div>
   </div>
 </article>
 <article class="card" data-cat="copywriting">
-  <div class="c-media"><img src="https://ppc.land/content/images/size/w1200/2026/04/Test-Your-Ad.jpg" alt="" loading="lazy"></div>
+  <div class="c-bar" style="background:#B91C1C"></div>
+  <div class="c-media"><img src="https://ppc.land/content/images/size/w1200/2026/04/Test-Your-Ad.jpg" alt="" loading="lazy" onerror="this.closest('.c-media').remove()"></div>
   <div class="c-body">
     <div class="c-meta">
       <span class="c-cat">COPYWRITING</span>
@@ -387,14 +487,27 @@ a{color:#0000FF}
     <button class="btn-expand" onclick="expand(this)">
       APPROFONDIR <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 5L7 9L11 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
     </button>
-    <div class="c-detail" hidden>
+    <div class="c-detail">
       <p class="c-detail-text">Le 9 avril 2026, System1 a confirme le beta-test d'un outil de mesure creative predictive par IA entraine sur sa base Competitive Edge de plus de 100 000 ads, integre a la plateforme Test Your Ad sur des marches selectionnes. L'enjeu structurel : passer de la mesure post-production a la prediction avant engagement budgetaire, dans un contexte ou la pression sur la mesure creative s'intensifie. Tactique sous-utilisee (preuve concrete) : Xero a obtenu +1,4 etoile en re-testant sa creative apres ajout du logo dans les 3 premieres secondes et de « Xero » dans la piste musicale, avec plus de 90% des spectateurs identifiant correctement la marque.</p>
       <a href="https://ppc.land/system1-adds-ai-layer-to-test-your-ad-as-creative-measurement-race-heats-up/" target="_blank" rel="noopener" class="btn-source">LIRE LA SOURCE</a>
     </div>
   </div>
 </article>
 <article class="card" data-cat="visuals">
-  <div class="c-no-img"></div>
+  <div class="c-bar" style="background:#1E1B4B"></div>
+  <div class="c-svg"><svg viewBox="0 0 680 260" xmlns="http://www.w3.org/2000/svg">
+<rect width="680" height="260" fill="#F6F5FF"/>
+<rect x="0" y="0" width="226" height="260" fill="#1E1B4B" opacity=".07"/>
+<rect x="226" y="0" width="228" height="130" fill="#1E1B4B" opacity=".12"/>
+<rect x="454" y="130" width="226" height="130" fill="#1E1B4B" opacity=".05"/>
+<circle cx="340" cy="130" r="95" fill="none" stroke="#1E1B4B" stroke-width="1.5" opacity=".12"/>
+<circle cx="340" cy="130" r="46" fill="#1E1B4B" opacity=".07"/>
+<circle cx="340" cy="130" r="13" fill="#1E1B4B" opacity=".2"/>
+<line x1="0" y1="130" x2="680" y2="130" stroke="#1E1B4B" stroke-width="1" opacity=".08"/>
+<line x1="340" y1="0" x2="340" y2="260" stroke="#1E1B4B" stroke-width="1" opacity=".08"/>
+<rect x="60" y="60" width="70" height="70" fill="none" stroke="#1E1B4B" stroke-width="1.5" opacity=".12" transform="rotate(18 95 95)"/>
+<rect x="554" y="148" width="52" height="52" fill="#1E1B4B" opacity=".08" transform="rotate(-12 580 174)"/>
+</svg></div>
   <div class="c-body">
     <div class="c-meta">
       <span class="c-cat">DIRECTION ARTISTIQUE</span>
@@ -405,14 +518,27 @@ a{color:#0000FF}
     <button class="btn-expand" onclick="expand(this)">
       APPROFONDIR <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 5L7 9L11 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
     </button>
-    <div class="c-detail" hidden>
+    <div class="c-detail">
       <p class="c-detail-text">Publiée dans Psychology & Marketing (Liu, 2025-2026), cette recherche montre à travers cinq études et deux expériences supplémentaires qu'un contraste de couleur élevé entre produit et fond augmente systématiquement la taille perçue. L'effet tient pour des catégories variées (montres, canapés, valises, bains de bouche) et reste robuste quelle que soit la couleur du produit. Le mécanisme est une médiation séquentielle : le contraste clarifie la frontière du produit, ce qui améliore la fluence de traitement et gonfle la taille perçue.</p>
       <a href="https://onlinelibrary.wiley.com/doi/10.1002/mar.70082" target="_blank" rel="noopener" class="btn-source">LIRE LA SOURCE</a>
     </div>
   </div>
 </article>
 <article class="card" data-cat="visuals">
-  <div class="c-no-img"></div>
+  <div class="c-bar" style="background:#1E1B4B"></div>
+  <div class="c-svg"><svg viewBox="0 0 680 260" xmlns="http://www.w3.org/2000/svg">
+<rect width="680" height="260" fill="#F6F5FF"/>
+<rect x="0" y="0" width="226" height="260" fill="#1E1B4B" opacity=".07"/>
+<rect x="226" y="0" width="228" height="130" fill="#1E1B4B" opacity=".12"/>
+<rect x="454" y="130" width="226" height="130" fill="#1E1B4B" opacity=".05"/>
+<circle cx="340" cy="130" r="95" fill="none" stroke="#1E1B4B" stroke-width="1.5" opacity=".12"/>
+<circle cx="340" cy="130" r="46" fill="#1E1B4B" opacity=".07"/>
+<circle cx="340" cy="130" r="13" fill="#1E1B4B" opacity=".2"/>
+<line x1="0" y1="130" x2="680" y2="130" stroke="#1E1B4B" stroke-width="1" opacity=".08"/>
+<line x1="340" y1="0" x2="340" y2="260" stroke="#1E1B4B" stroke-width="1" opacity=".08"/>
+<rect x="60" y="60" width="70" height="70" fill="none" stroke="#1E1B4B" stroke-width="1.5" opacity=".12" transform="rotate(18 95 95)"/>
+<rect x="554" y="148" width="52" height="52" fill="#1E1B4B" opacity=".08" transform="rotate(-12 580 174)"/>
+</svg></div>
   <div class="c-body">
     <div class="c-meta">
       <span class="c-cat">DIRECTION ARTISTIQUE</span>
@@ -423,14 +549,27 @@ a{color:#0000FF}
     <button class="btn-expand" onclick="expand(this)">
       APPROFONDIR <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 5L7 9L11 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
     </button>
-    <div class="c-detail" hidden>
+    <div class="c-detail">
       <p class="c-detail-text">Le Journal of Eye Movement Research (mars 2026) a mené un quasi-expérimentation 2×2 avec Tobii Pro Glasses 2 sur des emballages de chocolat. La fenêtre transparente attire l'attention plus rapidement et soutient des fixations plus longues que l'image produit, avec des scores supérieurs de saveur attendue, qualité perçue et intention d'achat. Détail contre-intuitif : les petits formats unitaires ne génèrent davantage d'attention et d'évaluations favorables que lorsque le produit est directement visible à travers une fenêtre transparente.</p>
       <a href="https://doi.org/10.3390/jemr19020030" target="_blank" rel="noopener" class="btn-source">LIRE LA SOURCE</a>
     </div>
   </div>
 </article>
 <article class="card" data-cat="visuals">
-  <div class="c-no-img"></div>
+  <div class="c-bar" style="background:#1E1B4B"></div>
+  <div class="c-svg"><svg viewBox="0 0 680 260" xmlns="http://www.w3.org/2000/svg">
+<rect width="680" height="260" fill="#F6F5FF"/>
+<rect x="0" y="0" width="226" height="260" fill="#1E1B4B" opacity=".07"/>
+<rect x="226" y="0" width="228" height="130" fill="#1E1B4B" opacity=".12"/>
+<rect x="454" y="130" width="226" height="130" fill="#1E1B4B" opacity=".05"/>
+<circle cx="340" cy="130" r="95" fill="none" stroke="#1E1B4B" stroke-width="1.5" opacity=".12"/>
+<circle cx="340" cy="130" r="46" fill="#1E1B4B" opacity=".07"/>
+<circle cx="340" cy="130" r="13" fill="#1E1B4B" opacity=".2"/>
+<line x1="0" y1="130" x2="680" y2="130" stroke="#1E1B4B" stroke-width="1" opacity=".08"/>
+<line x1="340" y1="0" x2="340" y2="260" stroke="#1E1B4B" stroke-width="1" opacity=".08"/>
+<rect x="60" y="60" width="70" height="70" fill="none" stroke="#1E1B4B" stroke-width="1.5" opacity=".12" transform="rotate(18 95 95)"/>
+<rect x="554" y="148" width="52" height="52" fill="#1E1B4B" opacity=".08" transform="rotate(-12 580 174)"/>
+</svg></div>
   <div class="c-body">
     <div class="c-meta">
       <span class="c-cat">DIRECTION ARTISTIQUE</span>
@@ -441,14 +580,27 @@ a{color:#0000FF}
     <button class="btn-expand" onclick="expand(this)">
       APPROFONDIR <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 5L7 9L11 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
     </button>
-    <div class="c-detail" hidden>
+    <div class="c-detail">
       <p class="c-detail-text">Une recherche du Journal of Consumer Research (Mohsenin, consultée février 2026) montre qu'en situation de disfluence perceptive due à une police peu lisible, les participants choisissent plus souvent l'option à marque familière que lorsque la police est facile à lire. Les chercheurs observent aussi des taux de report de décision plus élevés dans ces conditions, suggérant que la difficulté de choix pilote les deux effets. Ces effets persistaient au-delà de la simple inattention, ce qui contredit l'orthodoxie du « tout doit être fluide » dominante chez les designers.</p>
       <a href="https://academic.oup.com/jcr/advance-article-pdf/doi/10.1093/jcr/ucaf062/65499786/ucaf062.pdf" target="_blank" rel="noopener" class="btn-source">LIRE LA SOURCE</a>
     </div>
   </div>
 </article>
 <article class="card" data-cat="visuals">
-  <div class="c-no-img"></div>
+  <div class="c-bar" style="background:#1E1B4B"></div>
+  <div class="c-svg"><svg viewBox="0 0 680 260" xmlns="http://www.w3.org/2000/svg">
+<rect width="680" height="260" fill="#F6F5FF"/>
+<rect x="0" y="0" width="226" height="260" fill="#1E1B4B" opacity=".07"/>
+<rect x="226" y="0" width="228" height="130" fill="#1E1B4B" opacity=".12"/>
+<rect x="454" y="130" width="226" height="130" fill="#1E1B4B" opacity=".05"/>
+<circle cx="340" cy="130" r="95" fill="none" stroke="#1E1B4B" stroke-width="1.5" opacity=".12"/>
+<circle cx="340" cy="130" r="46" fill="#1E1B4B" opacity=".07"/>
+<circle cx="340" cy="130" r="13" fill="#1E1B4B" opacity=".2"/>
+<line x1="0" y1="130" x2="680" y2="130" stroke="#1E1B4B" stroke-width="1" opacity=".08"/>
+<line x1="340" y1="0" x2="340" y2="260" stroke="#1E1B4B" stroke-width="1" opacity=".08"/>
+<rect x="60" y="60" width="70" height="70" fill="none" stroke="#1E1B4B" stroke-width="1.5" opacity=".12" transform="rotate(18 95 95)"/>
+<rect x="554" y="148" width="52" height="52" fill="#1E1B4B" opacity=".08" transform="rotate(-12 580 174)"/>
+</svg></div>
   <div class="c-body">
     <div class="c-meta">
       <span class="c-cat">DIRECTION ARTISTIQUE</span>
@@ -459,7 +611,7 @@ a{color:#0000FF}
     <button class="btn-expand" onclick="expand(this)">
       APPROFONDIR <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 5L7 9L11 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
     </button>
-    <div class="c-detail" hidden>
+    <div class="c-detail">
       <p class="c-detail-text">Une étude publiée dans Applied Sciences (Yuan, Wei, Chen, décembre 2025) a généré des versions dynamique/statique et couleur/N&B de trois affiches commerciales testées en eye-tracking sur 60 participants. Les affiches dynamiques surpassent significativement les statiques sur la durée totale et le nombre total de fixations, avec un F = 245,896, p < 0,001 confirmant l'avantage net du dynamique pour capter l'attention. Le protocole couvre trois domaines distincts (gastronomie, fast-food, jouets tendance) pour renforcer la validité écologique et tester la généralisabilité.</p>
       <a href="https://doi.org/10.3390/app16010291" target="_blank" rel="noopener" class="btn-source">LIRE LA SOURCE</a>
     </div>
@@ -474,7 +626,27 @@ a{color:#0000FF}
     </div>
     <div class="cards-grid">
 <article class="card" data-cat="strategy">
-  <div class="c-no-img"></div>
+  <div class="c-bar" style="background:#0A1628"></div>
+  <div class="c-svg"><svg viewBox="0 0 680 260" xmlns="http://www.w3.org/2000/svg">
+<rect width="680" height="260" fill="#0A1628"/>
+<circle cx="90" cy="130" r="7" fill="white" opacity=".9"/>
+<circle cx="230" cy="75" r="5" fill="white" opacity=".6"/>
+<circle cx="230" cy="185" r="5" fill="white" opacity=".6"/>
+<circle cx="380" cy="50" r="3.5" fill="white" opacity=".4"/>
+<circle cx="380" cy="130" r="7" fill="white" opacity=".85"/>
+<circle cx="380" cy="210" r="3.5" fill="white" opacity=".4"/>
+<circle cx="530" cy="95" r="5" fill="white" opacity=".6"/>
+<circle cx="530" cy="165" r="5" fill="white" opacity=".6"/>
+<circle cx="620" cy="130" r="8" fill="white"/>
+<line x1="90" y1="130" x2="230" y2="75" stroke="white" stroke-width="1.2" opacity=".18"/>
+<line x1="90" y1="130" x2="230" y2="185" stroke="white" stroke-width="1.2" opacity=".18"/>
+<line x1="230" y1="75" x2="380" y2="130" stroke="white" stroke-width="1.2" opacity=".2"/>
+<line x1="230" y1="185" x2="380" y2="130" stroke="white" stroke-width="1.2" opacity=".2"/>
+<line x1="380" y1="130" x2="530" y2="95" stroke="white" stroke-width="1.2" opacity=".2"/>
+<line x1="380" y1="130" x2="530" y2="165" stroke="white" stroke-width="1.2" opacity=".2"/>
+<line x1="530" y1="95" x2="620" y2="130" stroke="white" stroke-width="1.5" opacity=".35"/>
+<line x1="530" y1="165" x2="620" y2="130" stroke="white" stroke-width="1.5" opacity=".35"/>
+</svg></div>
   <div class="c-body">
     <div class="c-meta">
       <span class="c-cat">STRATEGIE</span>
@@ -485,14 +657,34 @@ a{color:#0000FF}
     <button class="btn-expand" onclick="expand(this)">
       APPROFONDIR <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 5L7 9L11 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
     </button>
-    <div class="c-detail" hidden>
+    <div class="c-detail">
       <p class="c-detail-text">L'étude RA: Unblocked menée par l'agence Bountiful Cow avec Ozone sur des éditeurs de presse premium britanniques (partenaires Hilltop Honey, Numan, The Body Coach) prouve en conditions réelles que retirer les filtres de brand safety génère plus d'efficacité. Les blocklists par mots-clés bloqueraient jusqu'à 40% des requêtes publicitaires sur les sites d'actualité, pénalisant les meilleurs environnements éditoriaux plutôt que les pires.</p>
       <a href="https://ozoneproject.com/blog/bountiful-cow-proves-ra-unblocked-drives-brand-impact-by-challenging-brand-safety-norms/" target="_blank" rel="noopener" class="btn-source">LIRE LA SOURCE</a>
     </div>
   </div>
 </article>
 <article class="card" data-cat="strategy">
-  <div class="c-no-img"></div>
+  <div class="c-bar" style="background:#0A1628"></div>
+  <div class="c-svg"><svg viewBox="0 0 680 260" xmlns="http://www.w3.org/2000/svg">
+<rect width="680" height="260" fill="#0A1628"/>
+<circle cx="90" cy="130" r="7" fill="white" opacity=".9"/>
+<circle cx="230" cy="75" r="5" fill="white" opacity=".6"/>
+<circle cx="230" cy="185" r="5" fill="white" opacity=".6"/>
+<circle cx="380" cy="50" r="3.5" fill="white" opacity=".4"/>
+<circle cx="380" cy="130" r="7" fill="white" opacity=".85"/>
+<circle cx="380" cy="210" r="3.5" fill="white" opacity=".4"/>
+<circle cx="530" cy="95" r="5" fill="white" opacity=".6"/>
+<circle cx="530" cy="165" r="5" fill="white" opacity=".6"/>
+<circle cx="620" cy="130" r="8" fill="white"/>
+<line x1="90" y1="130" x2="230" y2="75" stroke="white" stroke-width="1.2" opacity=".18"/>
+<line x1="90" y1="130" x2="230" y2="185" stroke="white" stroke-width="1.2" opacity=".18"/>
+<line x1="230" y1="75" x2="380" y2="130" stroke="white" stroke-width="1.2" opacity=".2"/>
+<line x1="230" y1="185" x2="380" y2="130" stroke="white" stroke-width="1.2" opacity=".2"/>
+<line x1="380" y1="130" x2="530" y2="95" stroke="white" stroke-width="1.2" opacity=".2"/>
+<line x1="380" y1="130" x2="530" y2="165" stroke="white" stroke-width="1.2" opacity=".2"/>
+<line x1="530" y1="95" x2="620" y2="130" stroke="white" stroke-width="1.5" opacity=".35"/>
+<line x1="530" y1="165" x2="620" y2="130" stroke="white" stroke-width="1.5" opacity=".35"/>
+</svg></div>
   <div class="c-body">
     <div class="c-meta">
       <span class="c-cat">STRATEGIE</span>
@@ -503,14 +695,34 @@ a{color:#0000FF}
     <button class="btn-expand" onclick="expand(this)">
       APPROFONDIR <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 5L7 9L11 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
     </button>
-    <div class="c-detail" hidden>
+    <div class="c-detail">
       <p class="c-detail-text">Une recherche de SparkToro (janvier 2026) souligne qu'aucune étude n'avait vérifié si les LLM recommandent des marques de façon assez cohérente pour générer des métriques fiables, alors que les entreprises investissent massivement dans ces outils de 'AI visibility'. Cette volatilité est confirmée par Verve, qui observe des fluctuations hebdomadaires majeures — les marques de fast fashion apparaissant dans 40% des réponses LLM, soit l'inverse de leur présence sur Google.</p>
       <a href="https://sparktoro.com/blog/new-research-ais-are-highly-inconsistent-when-recommending-brands-or-products-marketers-should-take-care-when-tracking-ai-visibility/" target="_blank" rel="noopener" class="btn-source">LIRE LA SOURCE</a>
     </div>
   </div>
 </article>
 <article class="card" data-cat="strategy">
-  <div class="c-no-img"></div>
+  <div class="c-bar" style="background:#0A1628"></div>
+  <div class="c-svg"><svg viewBox="0 0 680 260" xmlns="http://www.w3.org/2000/svg">
+<rect width="680" height="260" fill="#0A1628"/>
+<circle cx="90" cy="130" r="7" fill="white" opacity=".9"/>
+<circle cx="230" cy="75" r="5" fill="white" opacity=".6"/>
+<circle cx="230" cy="185" r="5" fill="white" opacity=".6"/>
+<circle cx="380" cy="50" r="3.5" fill="white" opacity=".4"/>
+<circle cx="380" cy="130" r="7" fill="white" opacity=".85"/>
+<circle cx="380" cy="210" r="3.5" fill="white" opacity=".4"/>
+<circle cx="530" cy="95" r="5" fill="white" opacity=".6"/>
+<circle cx="530" cy="165" r="5" fill="white" opacity=".6"/>
+<circle cx="620" cy="130" r="8" fill="white"/>
+<line x1="90" y1="130" x2="230" y2="75" stroke="white" stroke-width="1.2" opacity=".18"/>
+<line x1="90" y1="130" x2="230" y2="185" stroke="white" stroke-width="1.2" opacity=".18"/>
+<line x1="230" y1="75" x2="380" y2="130" stroke="white" stroke-width="1.2" opacity=".2"/>
+<line x1="230" y1="185" x2="380" y2="130" stroke="white" stroke-width="1.2" opacity=".2"/>
+<line x1="380" y1="130" x2="530" y2="95" stroke="white" stroke-width="1.2" opacity=".2"/>
+<line x1="380" y1="130" x2="530" y2="165" stroke="white" stroke-width="1.2" opacity=".2"/>
+<line x1="530" y1="95" x2="620" y2="130" stroke="white" stroke-width="1.5" opacity=".35"/>
+<line x1="530" y1="165" x2="620" y2="130" stroke="white" stroke-width="1.5" opacity=".35"/>
+</svg></div>
   <div class="c-body">
     <div class="c-meta">
       <span class="c-cat">STRATEGIE</span>
@@ -521,14 +733,34 @@ a{color:#0000FF}
     <button class="btn-expand" onclick="expand(this)">
       APPROFONDIR <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 5L7 9L11 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
     </button>
-    <div class="c-detail" hidden>
+    <div class="c-detail">
       <p class="c-detail-text">Le rapport EMARKETER/Publicis Commerce 'LLM Usage and Trust in the Shopping Journey' (mars 2026), basé sur 1 179 adultes américains ayant utilisé une IA pour rechercher un produit, quantifie un nouveau vecteur d'attrition: la recommandation algorithmique. En B2B le signal est encore plus fort — selon G2, 69% des acheteurs de logiciels ont choisi un autre fournisseur que prévu à cause d'un chatbot, et deux tiers ont acheté chez un vendeur jusque-là inconnu.</p>
       <a href="https://www.emarketer.com/content/ai-chatbot-recommends-different-brand--nearly-half-of-active-users-say-they-ll-try" target="_blank" rel="noopener" class="btn-source">LIRE LA SOURCE</a>
     </div>
   </div>
 </article>
 <article class="card" data-cat="strategy">
-  <div class="c-no-img"></div>
+  <div class="c-bar" style="background:#0A1628"></div>
+  <div class="c-svg"><svg viewBox="0 0 680 260" xmlns="http://www.w3.org/2000/svg">
+<rect width="680" height="260" fill="#0A1628"/>
+<circle cx="90" cy="130" r="7" fill="white" opacity=".9"/>
+<circle cx="230" cy="75" r="5" fill="white" opacity=".6"/>
+<circle cx="230" cy="185" r="5" fill="white" opacity=".6"/>
+<circle cx="380" cy="50" r="3.5" fill="white" opacity=".4"/>
+<circle cx="380" cy="130" r="7" fill="white" opacity=".85"/>
+<circle cx="380" cy="210" r="3.5" fill="white" opacity=".4"/>
+<circle cx="530" cy="95" r="5" fill="white" opacity=".6"/>
+<circle cx="530" cy="165" r="5" fill="white" opacity=".6"/>
+<circle cx="620" cy="130" r="8" fill="white"/>
+<line x1="90" y1="130" x2="230" y2="75" stroke="white" stroke-width="1.2" opacity=".18"/>
+<line x1="90" y1="130" x2="230" y2="185" stroke="white" stroke-width="1.2" opacity=".18"/>
+<line x1="230" y1="75" x2="380" y2="130" stroke="white" stroke-width="1.2" opacity=".2"/>
+<line x1="230" y1="185" x2="380" y2="130" stroke="white" stroke-width="1.2" opacity=".2"/>
+<line x1="380" y1="130" x2="530" y2="95" stroke="white" stroke-width="1.2" opacity=".2"/>
+<line x1="380" y1="130" x2="530" y2="165" stroke="white" stroke-width="1.2" opacity=".2"/>
+<line x1="530" y1="95" x2="620" y2="130" stroke="white" stroke-width="1.5" opacity=".35"/>
+<line x1="530" y1="165" x2="620" y2="130" stroke="white" stroke-width="1.5" opacity=".35"/>
+</svg></div>
   <div class="c-body">
     <div class="c-meta">
       <span class="c-cat">STRATEGIE</span>
@@ -539,14 +771,24 @@ a{color:#0000FF}
     <button class="btn-expand" onclick="expand(this)">
       APPROFONDIR <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 5L7 9L11 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
     </button>
-    <div class="c-detail" hidden>
+    <div class="c-detail">
       <p class="c-detail-text">Le rapport The Question Gap de Brandwatch (Cision, juin 2026) démontre, via l'analyse des questions d'acheteurs automobiles, que l'intelligence des moteurs de recherche révèle ce que les consommateurs veulent savoir, tandis que l'intelligence sociale révèle le contexte derrière leurs décisions. Croiser les deux comble un angle mort stratégique que la plupart des marques ignorent en traitant ces données séparément.</p>
       <a href="https://www.cision.com/about/press-releases/2026-press-releases/new-brandwatch-research-reveals-the-question-gap-between-search-intent-and-social-context-302789056/" target="_blank" rel="noopener" class="btn-source">LIRE LA SOURCE</a>
     </div>
   </div>
 </article>
 <article class="card" data-cat="copywriting">
-  <div class="c-no-img"></div>
+  <div class="c-bar" style="background:#B91C1C"></div>
+  <div class="c-svg"><svg viewBox="0 0 680 260" xmlns="http://www.w3.org/2000/svg">
+<rect width="680" height="260" fill="#FFF6F5"/>
+<text x="-20" y="250" font-size="310" font-weight="900" fill="#B91C1C" opacity=".055" font-family="Georgia,serif">AW</text>
+<rect x="52" y="105" width="200" height="8" rx="4" fill="#B91C1C"/>
+<rect x="52" y="129" width="140" height="8" rx="4" fill="#B91C1C" opacity=".35"/>
+<rect x="52" y="153" width="170" height="8" rx="4" fill="#B91C1C" opacity=".18"/>
+<rect x="52" y="177" width="100" height="8" rx="4" fill="#B91C1C" opacity=".1"/>
+<rect x="468" y="85" width="3" height="110" fill="#B91C1C" opacity=".15"/>
+<rect x="498" y="110" width="3" height="65" fill="#B91C1C" opacity=".1"/>
+</svg></div>
   <div class="c-body">
     <div class="c-meta">
       <span class="c-cat">COPYWRITING</span>
@@ -557,14 +799,24 @@ a{color:#0000FF}
     <button class="btn-expand" onclick="expand(this)">
       APPROFONDIR <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 5L7 9L11 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
     </button>
-    <div class="c-detail" hidden>
+    <div class="c-detail">
       <p class="c-detail-text">L'analyse Kantar de 'The Works' compare 35 campagnes gagnantes à 114 autres publicités : les gagnantes se classent dans le top 36% pour la facilité de compréhension, facteur directement lié à l'efficacité et à la confiance dans la marque. Contre l'orthodoxie créative qui valorise l'ambiguïté et le 'puzzle', la clarté narrative est un levier de vente sous-exploité.</p>
       <a href="https://www.marketingweek.com/confusing-ads-effectiveness-kantar/" target="_blank" rel="noopener" class="btn-source">LIRE LA SOURCE</a>
     </div>
   </div>
 </article>
 <article class="card" data-cat="copywriting">
-  <div class="c-no-img"></div>
+  <div class="c-bar" style="background:#B91C1C"></div>
+  <div class="c-svg"><svg viewBox="0 0 680 260" xmlns="http://www.w3.org/2000/svg">
+<rect width="680" height="260" fill="#FFF6F5"/>
+<text x="-20" y="250" font-size="310" font-weight="900" fill="#B91C1C" opacity=".055" font-family="Georgia,serif">AW</text>
+<rect x="52" y="105" width="200" height="8" rx="4" fill="#B91C1C"/>
+<rect x="52" y="129" width="140" height="8" rx="4" fill="#B91C1C" opacity=".35"/>
+<rect x="52" y="153" width="170" height="8" rx="4" fill="#B91C1C" opacity=".18"/>
+<rect x="52" y="177" width="100" height="8" rx="4" fill="#B91C1C" opacity=".1"/>
+<rect x="468" y="85" width="3" height="110" fill="#B91C1C" opacity=".15"/>
+<rect x="498" y="110" width="3" height="65" fill="#B91C1C" opacity=".1"/>
+</svg></div>
   <div class="c-body">
     <div class="c-meta">
       <span class="c-cat">COPYWRITING</span>
@@ -575,14 +827,24 @@ a{color:#0000FF}
     <button class="btn-expand" onclick="expand(this)">
       APPROFONDIR <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 5L7 9L11 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
     </button>
-    <div class="c-detail" hidden>
+    <div class="c-detail">
       <p class="c-detail-text">L'agence indépendante Bountiful Cow, avec Ozone, a testé en conditions réelles des inventaires bloqués par les filtres de brand safety pour Hilltop Honey, Numan et The Body Coach. Le contenu 'unsafe' a obtenu un indice d'attention de 126 contre 120, avec une hausse de 13,8% de l'intention d'action — alors que ~40% des requêtes pub sur les sites d'actualité premium sont bloquées par des blocklists de mots-clés.</p>
       <a href="https://uk.themedialeader.com/bountiful-cow-study-finds-all-news-is-brand-safe-with-unsafe-inventory-most-effective/" target="_blank" rel="noopener" class="btn-source">LIRE LA SOURCE</a>
     </div>
   </div>
 </article>
 <article class="card" data-cat="copywriting">
-  <div class="c-no-img"></div>
+  <div class="c-bar" style="background:#B91C1C"></div>
+  <div class="c-svg"><svg viewBox="0 0 680 260" xmlns="http://www.w3.org/2000/svg">
+<rect width="680" height="260" fill="#FFF6F5"/>
+<text x="-20" y="250" font-size="310" font-weight="900" fill="#B91C1C" opacity=".055" font-family="Georgia,serif">AW</text>
+<rect x="52" y="105" width="200" height="8" rx="4" fill="#B91C1C"/>
+<rect x="52" y="129" width="140" height="8" rx="4" fill="#B91C1C" opacity=".35"/>
+<rect x="52" y="153" width="170" height="8" rx="4" fill="#B91C1C" opacity=".18"/>
+<rect x="52" y="177" width="100" height="8" rx="4" fill="#B91C1C" opacity=".1"/>
+<rect x="468" y="85" width="3" height="110" fill="#B91C1C" opacity=".15"/>
+<rect x="498" y="110" width="3" height="65" fill="#B91C1C" opacity=".1"/>
+</svg></div>
   <div class="c-body">
     <div class="c-meta">
       <span class="c-cat">COPYWRITING</span>
@@ -593,14 +855,24 @@ a{color:#0000FF}
     <button class="btn-expand" onclick="expand(this)">
       APPROFONDIR <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 5L7 9L11 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
     </button>
-    <div class="c-detail" hidden>
+    <div class="c-detail">
       <p class="c-detail-text">L'étude fMRI de Hang-Yee Chan et coll. (Journal of Marketing Research, 113 participants) montre que l'émotion et la mémoire prédisent l'appréciation dès les trois premières secondes, mais que la prédictivité émotionnelle chute ensuite tandis que la cognition sociale — l'effort de comprendre le récit — prend le relais avec un schéma stable. Conclusion neuroscientifique : presser les boutons émotionnels sans narration soutenue (« feelings without meanings ») ne mène nulle part.</p>
       <a href="https://journals.sagepub.com/doi/10.1177/00222437231194319" target="_blank" rel="noopener" class="btn-source">LIRE LA SOURCE</a>
     </div>
   </div>
 </article>
 <article class="card" data-cat="copywriting">
-  <div class="c-no-img"></div>
+  <div class="c-bar" style="background:#B91C1C"></div>
+  <div class="c-svg"><svg viewBox="0 0 680 260" xmlns="http://www.w3.org/2000/svg">
+<rect width="680" height="260" fill="#FFF6F5"/>
+<text x="-20" y="250" font-size="310" font-weight="900" fill="#B91C1C" opacity=".055" font-family="Georgia,serif">AW</text>
+<rect x="52" y="105" width="200" height="8" rx="4" fill="#B91C1C"/>
+<rect x="52" y="129" width="140" height="8" rx="4" fill="#B91C1C" opacity=".35"/>
+<rect x="52" y="153" width="170" height="8" rx="4" fill="#B91C1C" opacity=".18"/>
+<rect x="52" y="177" width="100" height="8" rx="4" fill="#B91C1C" opacity=".1"/>
+<rect x="468" y="85" width="3" height="110" fill="#B91C1C" opacity=".15"/>
+<rect x="498" y="110" width="3" height="65" fill="#B91C1C" opacity=".1"/>
+</svg></div>
   <div class="c-body">
     <div class="c-meta">
       <span class="c-cat">COPYWRITING</span>
@@ -611,14 +883,27 @@ a{color:#0000FF}
     <button class="btn-expand" onclick="expand(this)">
       APPROFONDIR <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 5L7 9L11 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
     </button>
-    <div class="c-detail" hidden>
+    <div class="c-detail">
       <p class="c-detail-text">L'étude de Beth L. Fossen, Philip Kim et Inyoung Chae (Journal of Marketing, 2026) montre que les micro-ads ont un impact direct similaire sur les ventes en ligne mais surperforment indirectement en générant plus de trafic, confirmé par une expérience terrain sur réseaux sociaux. Le mécanisme plausible : l'impatience croissante des spectateurs face aux formats longs — un signal qui justifie de réallouer l'inventaire vers des unités ultra-courtes économiques.</p>
       <a href="https://journals.sagepub.com/doi/10.1177/00222429251350657" target="_blank" rel="noopener" class="btn-source">LIRE LA SOURCE</a>
     </div>
   </div>
 </article>
 <article class="card" data-cat="visuals">
-  <div class="c-no-img"></div>
+  <div class="c-bar" style="background:#1E1B4B"></div>
+  <div class="c-svg"><svg viewBox="0 0 680 260" xmlns="http://www.w3.org/2000/svg">
+<rect width="680" height="260" fill="#F6F5FF"/>
+<rect x="0" y="0" width="226" height="260" fill="#1E1B4B" opacity=".07"/>
+<rect x="226" y="0" width="228" height="130" fill="#1E1B4B" opacity=".12"/>
+<rect x="454" y="130" width="226" height="130" fill="#1E1B4B" opacity=".05"/>
+<circle cx="340" cy="130" r="95" fill="none" stroke="#1E1B4B" stroke-width="1.5" opacity=".12"/>
+<circle cx="340" cy="130" r="46" fill="#1E1B4B" opacity=".07"/>
+<circle cx="340" cy="130" r="13" fill="#1E1B4B" opacity=".2"/>
+<line x1="0" y1="130" x2="680" y2="130" stroke="#1E1B4B" stroke-width="1" opacity=".08"/>
+<line x1="340" y1="0" x2="340" y2="260" stroke="#1E1B4B" stroke-width="1" opacity=".08"/>
+<rect x="60" y="60" width="70" height="70" fill="none" stroke="#1E1B4B" stroke-width="1.5" opacity=".12" transform="rotate(18 95 95)"/>
+<rect x="554" y="148" width="52" height="52" fill="#1E1B4B" opacity=".08" transform="rotate(-12 580 174)"/>
+</svg></div>
   <div class="c-body">
     <div class="c-meta">
       <span class="c-cat">DIRECTION ARTISTIQUE</span>
@@ -629,14 +914,27 @@ a{color:#0000FF}
     <button class="btn-expand" onclick="expand(this)">
       APPROFONDIR <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 5L7 9L11 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
     </button>
-    <div class="c-detail" hidden>
+    <div class="c-detail">
       <p class="c-detail-text">Selon Fstoppers, photojournalisme, secteurs régulés et publicité à forte responsabilité juridique mènent l'inscription de clauses exigeant des images signées, l'authenticité passant de buzzword marketing à clause de responsabilité. Le marché se scinde en deux tiers : imagerie synthétique bon marché et imagerie humaine vérifiée à métadonnées C2PA, le milieu de gamme générique perdant toute position défendable. Implication DA : intégrer la chaîne de provenance dès le brief de production, pas en post-rationalisation.</p>
       <a href="https://fstoppers.com/opinion/11-predictions-photography-industry-2026-720319" target="_blank" rel="noopener" class="btn-source">LIRE LA SOURCE</a>
     </div>
   </div>
 </article>
 <article class="card" data-cat="visuals">
-  <div class="c-no-img"></div>
+  <div class="c-bar" style="background:#1E1B4B"></div>
+  <div class="c-svg"><svg viewBox="0 0 680 260" xmlns="http://www.w3.org/2000/svg">
+<rect width="680" height="260" fill="#F6F5FF"/>
+<rect x="0" y="0" width="226" height="260" fill="#1E1B4B" opacity=".07"/>
+<rect x="226" y="0" width="228" height="130" fill="#1E1B4B" opacity=".12"/>
+<rect x="454" y="130" width="226" height="130" fill="#1E1B4B" opacity=".05"/>
+<circle cx="340" cy="130" r="95" fill="none" stroke="#1E1B4B" stroke-width="1.5" opacity=".12"/>
+<circle cx="340" cy="130" r="46" fill="#1E1B4B" opacity=".07"/>
+<circle cx="340" cy="130" r="13" fill="#1E1B4B" opacity=".2"/>
+<line x1="0" y1="130" x2="680" y2="130" stroke="#1E1B4B" stroke-width="1" opacity=".08"/>
+<line x1="340" y1="0" x2="340" y2="260" stroke="#1E1B4B" stroke-width="1" opacity=".08"/>
+<rect x="60" y="60" width="70" height="70" fill="none" stroke="#1E1B4B" stroke-width="1.5" opacity=".12" transform="rotate(18 95 95)"/>
+<rect x="554" y="148" width="52" height="52" fill="#1E1B4B" opacity=".08" transform="rotate(-12 580 174)"/>
+</svg></div>
   <div class="c-body">
     <div class="c-meta">
       <span class="c-cat">DIRECTION ARTISTIQUE</span>
@@ -647,14 +945,27 @@ a{color:#0000FF}
     <button class="btn-expand" onclick="expand(this)">
       APPROFONDIR <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 5L7 9L11 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
     </button>
-    <div class="c-detail" hidden>
+    <div class="c-detail">
       <p class="c-detail-text">L'étude de Kirk et Givi parue au Journal of Business Research démontre que <cite index="39-3">lorsque les consommateurs croient qu'une communication marketing émotionnelle est écrite par une IA plutôt qu'un humain, le bouche-à-oreille positif et la fidélité diminuent</cite>. Le point contre-intuitif rarement commenté : <cite index="36-6">quand les consommateurs pensent qu'une communication est réutilisée et non écrite à l'origine par l'émetteur, l'effet s'inverse</cite>, l'IA paraissant alors plus authentique qu'un humain. Implication : la DA doit réserver l'humain visible aux registres émotionnels et accepter l'IA assumée sur le factuel ou le recyclé.</p>
       <a href="https://www.sciencedirect.com/science/article/abs/pii/S0148296324004880" target="_blank" rel="noopener" class="btn-source">LIRE LA SOURCE</a>
     </div>
   </div>
 </article>
 <article class="card" data-cat="visuals">
-  <div class="c-no-img"></div>
+  <div class="c-bar" style="background:#1E1B4B"></div>
+  <div class="c-svg"><svg viewBox="0 0 680 260" xmlns="http://www.w3.org/2000/svg">
+<rect width="680" height="260" fill="#F6F5FF"/>
+<rect x="0" y="0" width="226" height="260" fill="#1E1B4B" opacity=".07"/>
+<rect x="226" y="0" width="228" height="130" fill="#1E1B4B" opacity=".12"/>
+<rect x="454" y="130" width="226" height="130" fill="#1E1B4B" opacity=".05"/>
+<circle cx="340" cy="130" r="95" fill="none" stroke="#1E1B4B" stroke-width="1.5" opacity=".12"/>
+<circle cx="340" cy="130" r="46" fill="#1E1B4B" opacity=".07"/>
+<circle cx="340" cy="130" r="13" fill="#1E1B4B" opacity=".2"/>
+<line x1="0" y1="130" x2="680" y2="130" stroke="#1E1B4B" stroke-width="1" opacity=".08"/>
+<line x1="340" y1="0" x2="340" y2="260" stroke="#1E1B4B" stroke-width="1" opacity=".08"/>
+<rect x="60" y="60" width="70" height="70" fill="none" stroke="#1E1B4B" stroke-width="1.5" opacity=".12" transform="rotate(18 95 95)"/>
+<rect x="554" y="148" width="52" height="52" fill="#1E1B4B" opacity=".08" transform="rotate(-12 580 174)"/>
+</svg></div>
   <div class="c-body">
     <div class="c-meta">
       <span class="c-cat">DIRECTION ARTISTIQUE</span>
@@ -665,14 +976,27 @@ a{color:#0000FF}
     <button class="btn-expand" onclick="expand(this)">
       APPROFONDIR <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 5L7 9L11 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
     </button>
-    <div class="c-detail" hidden>
+    <div class="c-detail">
       <p class="c-detail-text">Dans Applied Sciences, Yuan, Wei et Chen ont testé trois affiches en versions dynamique/statique et couleur/N&B sur soixante participants. <cite index="42-9,42-10">Les affiches dynamiques ont nettement surpassé les statiques en durée et nombre de fixations, avec F = 245,896, p < 0,001, confirmant l'avantage du design dynamique pour capter l'attention.</cite> Le signal faible pour la DA : la variable forme/mouvement domine la variable chromatique, justifiant des systèmes visuels pensés motion-first plutôt que color-first, à rebours de l'obsession palette.</p>
       <a href="https://doi.org/10.3390/app16010291" target="_blank" rel="noopener" class="btn-source">LIRE LA SOURCE</a>
     </div>
   </div>
 </article>
 <article class="card" data-cat="visuals">
-  <div class="c-no-img"></div>
+  <div class="c-bar" style="background:#1E1B4B"></div>
+  <div class="c-svg"><svg viewBox="0 0 680 260" xmlns="http://www.w3.org/2000/svg">
+<rect width="680" height="260" fill="#F6F5FF"/>
+<rect x="0" y="0" width="226" height="260" fill="#1E1B4B" opacity=".07"/>
+<rect x="226" y="0" width="228" height="130" fill="#1E1B4B" opacity=".12"/>
+<rect x="454" y="130" width="226" height="130" fill="#1E1B4B" opacity=".05"/>
+<circle cx="340" cy="130" r="95" fill="none" stroke="#1E1B4B" stroke-width="1.5" opacity=".12"/>
+<circle cx="340" cy="130" r="46" fill="#1E1B4B" opacity=".07"/>
+<circle cx="340" cy="130" r="13" fill="#1E1B4B" opacity=".2"/>
+<line x1="0" y1="130" x2="680" y2="130" stroke="#1E1B4B" stroke-width="1" opacity=".08"/>
+<line x1="340" y1="0" x2="340" y2="260" stroke="#1E1B4B" stroke-width="1" opacity=".08"/>
+<rect x="60" y="60" width="70" height="70" fill="none" stroke="#1E1B4B" stroke-width="1.5" opacity=".12" transform="rotate(18 95 95)"/>
+<rect x="554" y="148" width="52" height="52" fill="#1E1B4B" opacity=".08" transform="rotate(-12 580 174)"/>
+</svg></div>
   <div class="c-body">
     <div class="c-meta">
       <span class="c-cat">DIRECTION ARTISTIQUE</span>
@@ -683,7 +1007,7 @@ a{color:#0000FF}
     <button class="btn-expand" onclick="expand(this)">
       APPROFONDIR <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 5L7 9L11 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
     </button>
-    <div class="c-detail" hidden>
+    <div class="c-detail">
       <p class="c-detail-text">Selon The Cut Fashion Academy, <cite index="29-7,29-8,29-9">Valentino a publié en décembre 2025 une vidéo IA clairement étiquetée pour son sac DeVain et a affronté le même rejet : les utilisateurs n'étaient pas confus sur la nature IA, ils étaient en colère que ce soit de l'IA</cite>. Aerie a capitalisé sur la rupture avec une campagne anti-IA portée par Pamela Anderson, concluant sur la formule <cite index="29-14">« You can't prompt this »</cite>. Le signal stratégique : la transparence ne suffit pas, c'est le geste créatif humain comme preuve de soin qui devient l'actif différenciant en haut de gamme.</p>
       <a href="https://www.thecutfashionacademy.com/blog/when-consumers-rage-against-ai-imagery" target="_blank" rel="noopener" class="btn-source">LIRE LA SOURCE</a>
     </div>
@@ -749,18 +1073,34 @@ async function doRefresh(){
   }
 }
 
+// Stagger index sur toutes les cartes
+document.querySelectorAll('.card').forEach(function(c,i){c.style.setProperty('--ci',i)});
+
 function expand(btn){
   var panel=btn.nextElementSibling;
-  var open=!panel.hidden;
-  panel.hidden=open;
+  var open=panel.classList.contains('open');
+  panel.classList.toggle('open',!open);
   btn.classList.toggle('open',!open);
   btn.childNodes[0].textContent=open?'APPROFONDIR ':'REDUIRE ';
 }
+
 function fil(cat,btn){
   document.querySelectorAll('.f').forEach(b=>b.classList.remove('on'));
   btn.classList.add('on');
-  document.querySelectorAll('.card').forEach(c=>{
-    c.style.display=(cat==='all'||c.dataset.cat===cat)?'':'none';
+  document.querySelectorAll('.card').forEach(function(c,i){
+    var show=(cat==='all'||c.dataset.cat===cat);
+    if(show){
+      c.style.display='';
+      c.style.opacity='0';c.style.transform='translateY(10px)';
+      setTimeout(function(){
+        c.style.transition='opacity .25s ease,transform .25s ease';
+        c.style.opacity='1';c.style.transform='';
+      },i*30);
+    }else{
+      c.style.transition='opacity .15s ease';
+      c.style.opacity='0';
+      setTimeout(function(){c.style.display='none';},150);
+    }
   });
 }
 </script>

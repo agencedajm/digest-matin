@@ -179,18 +179,23 @@ def render_card(card: dict, agent: dict, is_new: bool) -> str:
     img = card.get("og_image", "")
     url = card.get("source_url", "")
 
-    visual = (
-        f'<div class="c-media"><img src="{img}" alt="" loading="lazy"></div>'
-        if img else
-        '<div class="c-no-img"></div>'
-    )
+    # Barre colorée toujours présente en haut
+    bar = f'<div class="c-bar" style="background:{agent["cat_bg"]}"></div>'
+
+    # Media : photo OG ou SVG illustratif de la catégorie
+    if img:
+        media = f'<div class="c-media"><img src="{img}" alt="" loading="lazy" onerror="this.closest(\'.c-media\').remove()"></div>'
+    else:
+        svg_raw = SVG.get(agent["id"], "")
+        media = f'<div class="c-svg">{svg_raw}</div>'
 
     new_badge = '<span class="badge-new">NOUVEAU</span>' if is_new else ""
     src_btn = f'<a href="{url}" target="_blank" rel="noopener" class="btn-source">LIRE LA SOURCE</a>' if url else ""
 
     return f"""
 <article class="card" data-cat="{agent['id']}">
-  {visual}
+  {bar}
+  {media}
   <div class="c-body">
     <div class="c-meta">
       <span class="c-cat">{agent['label'].upper()}</span>
@@ -201,7 +206,7 @@ def render_card(card: dict, agent: dict, is_new: bool) -> str:
     <button class="btn-expand" onclick="expand(this)">
       APPROFONDIR {CHEVRON}
     </button>
-    <div class="c-detail" hidden>
+    <div class="c-detail">
       <p class="c-detail-text">{card.get('detail','')}</p>
       {src_btn}
     </div>
@@ -336,13 +341,23 @@ a{{color:#0000FF}}
 }}
 @media(min-width:900px){{.cards-grid{{grid-template-columns:repeat(3,1fr)}}}}
 @media(min-width:1100px){{.cards-grid{{grid-template-columns:repeat(4,1fr)}}}}
-@media(min-width:1280px){{.cards-grid{{grid-template-columns:repeat(5,1fr)}}}}
 
 /* ── Card ── */
+@keyframes fadeUp{{
+  from{{opacity:0;transform:translateY(14px)}}
+  to{{opacity:1;transform:translateY(0)}}
+}}
 .card{{
   background:#fff;
   overflow:hidden;
-  border:3px solid #000
+  border:3px solid #000;
+  transition:transform .18s ease,box-shadow .18s ease;
+  animation:fadeUp .35s ease both;
+  animation-delay:calc(var(--ci,0)*.05s)
+}}
+.card:hover{{
+  transform:translate(-3px,-3px);
+  box-shadow:3px 3px 0 0 #000
 }}
 @media(min-width:600px){{
   .card{{
@@ -350,11 +365,22 @@ a{{color:#0000FF}}
     border-right:3px solid #000;
     border-bottom:3px solid #000
   }}
+  .card:hover{{
+    transform:translate(-2px,-2px);
+    box-shadow:2px 2px 0 0 #000
+  }}
 }}
 
+/* Barre colorée catégorie — toujours présente */
+.c-bar{{height:12px;width:100%;display:block}}
+
+/* Photo OG */
 .c-media{{width:100%;line-height:0}}
 .c-media img{{width:100%;aspect-ratio:16/9;object-fit:cover;display:block;border-bottom:3px solid #000}}
-.c-no-img{{height:8px;background:#000}}
+
+/* SVG illustratif (fallback sans photo) */
+.c-svg{{width:100%;line-height:0;border-bottom:3px solid #000}}
+.c-svg svg{{width:100%;height:auto;display:block}}
 
 .c-body{{padding:16px}}
 .c-meta{{display:flex;align-items:center;gap:8px;margin-bottom:12px;flex-wrap:wrap}}
@@ -396,10 +422,16 @@ a{{color:#0000FF}}
 .btn-expand svg{{transition:transform .2s ease}}
 .btn-expand.open svg{{transform:rotate(180deg)}}
 
-/* ── Detail panel ── */
+/* ── Detail panel — transition max-height ── */
 .c-detail{{
-  margin-top:16px;
-  padding-top:16px;
+  max-height:0;
+  overflow:hidden;
+  transition:max-height .35s ease,padding .25s ease,margin .25s ease;
+  padding-top:0;margin-top:0;border-top:none
+}}
+.c-detail.open{{
+  max-height:600px;
+  padding-top:16px;margin-top:16px;
   border-top:3px solid #000
 }}
 .c-detail-text{{
@@ -532,18 +564,34 @@ async function doRefresh(){{
   }}
 }}
 
+// Stagger index sur toutes les cartes
+document.querySelectorAll('.card').forEach(function(c,i){{c.style.setProperty('--ci',i)}});
+
 function expand(btn){{
   var panel=btn.nextElementSibling;
-  var open=!panel.hidden;
-  panel.hidden=open;
+  var open=panel.classList.contains('open');
+  panel.classList.toggle('open',!open);
   btn.classList.toggle('open',!open);
   btn.childNodes[0].textContent=open?'APPROFONDIR ':'REDUIRE ';
 }}
+
 function fil(cat,btn){{
   document.querySelectorAll('.f').forEach(b=>b.classList.remove('on'));
   btn.classList.add('on');
-  document.querySelectorAll('.card').forEach(c=>{{
-    c.style.display=(cat==='all'||c.dataset.cat===cat)?'':'none';
+  document.querySelectorAll('.card').forEach(function(c,i){{
+    var show=(cat==='all'||c.dataset.cat===cat);
+    if(show){{
+      c.style.display='';
+      c.style.opacity='0';c.style.transform='translateY(10px)';
+      setTimeout(function(){{
+        c.style.transition='opacity .25s ease,transform .25s ease';
+        c.style.opacity='1';c.style.transform='';
+      }},i*30);
+    }}else{{
+      c.style.transition='opacity .15s ease';
+      c.style.opacity='0';
+      setTimeout(function(){{c.style.display='none';}},150);
+    }}
   }});
 }}
 </script>
