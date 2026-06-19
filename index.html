@@ -646,26 +646,51 @@ a{color:#0000FF}
 </div>
 
 <script>
-var _poll;
+var GH_REPO='agencedajm/digest-matin';
+var GH_WORKFLOW='digest.yml';
+var _pollRun;
+
 async function doRefresh(){
+  var token=localStorage.getItem('gh_pat');
+  if(!token){
+    token=prompt('Token GitHub (une seule fois) :\nGitHub → Settings → Developer settings → Fine-grained tokens\nPermission : Actions → Read & write sur digest-matin');
+    if(!token)return;
+    localStorage.setItem('gh_pat',token.trim());
+  }
   var btn=document.getElementById('btn-refresh');
-  btn.disabled=true;
-  btn.textContent='RECHERCHE...';
+  btn.disabled=true;btn.textContent='LANCEMENT...';
   document.getElementById('overlay').classList.add('show');
   try{
-    var r=await fetch('http://localhost:8765/refresh');
-    if(!r.ok)throw new Error();
-    _poll=setInterval(async function(){
+    var r=await fetch('https://api.github.com/repos/'+GH_REPO+'/actions/workflows/'+GH_WORKFLOW+'/dispatches',{
+      method:'POST',
+      headers:{'Authorization':'Bearer '+token,'Accept':'application/vnd.github+json','Content-Type':'application/json'},
+      body:JSON.stringify({ref:'main'})
+    });
+    if(r.status===401){
+      localStorage.removeItem('gh_pat');
+      document.getElementById('overlay').classList.remove('show');
+      btn.disabled=false;btn.textContent='TOKEN INVALIDE';
+      setTimeout(function(){btn.textContent='ACTUALISER';btn.disabled=false;},3000);
+      return;
+    }
+    if(!r.ok)throw new Error('HTTP '+r.status);
+    btn.textContent='EN COURS (~3 MIN)';
+    // Poll le dernier commit pour detecter la mise a jour
+    var initSha=null;
+    _pollRun=setInterval(async function(){
       try{
-        var s=await fetch('http://localhost:8765/status');
-        var d=await s.json();
-        if(!d.running){clearInterval(_poll);location.reload();}
+        var c=await fetch('https://api.github.com/repos/'+GH_REPO+'/commits/main',{headers:{'Authorization':'Bearer '+token}});
+        var d=await c.json();
+        if(!initSha){initSha=d.sha;return;}
+        if(d.sha!==initSha){
+          clearInterval(_pollRun);
+          location.reload();
+        }
       }catch(e){}
-    },5000);
+    },10000);
   }catch(e){
     document.getElementById('overlay').classList.remove('show');
-    btn.disabled=false;
-    btn.textContent='SERVEUR NON ACTIF';
+    btn.disabled=false;btn.textContent='ERREUR';
     setTimeout(function(){btn.textContent='ACTUALISER';btn.disabled=false;},3000);
   }
 }
