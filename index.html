@@ -3,134 +3,223 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0,viewport-fit=cover">
-<meta name="theme-color" content="#F5F4F0">
+<meta name="theme-color" content="#FFFFFF">
 <title>Digest Matin</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Work+Sans:wght@400;600&family=Space+Mono&display=swap" rel="stylesheet">
 <style>
-*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;border-radius:0!important;box-shadow:none!important}
 html{scroll-behavior:smooth}
 body{
-  font-family:-apple-system,BlinkMacSystemFont,'SF Pro Text','Segoe UI',sans-serif;
-  background:#F5F4F0;color:#111;
+  font-family:'Work Sans',sans-serif;
+  background:#fff;color:#000;
   -webkit-font-smoothing:antialiased;
-  padding-bottom:max(env(safe-area-inset-bottom),60px)
+  padding-bottom:max(env(safe-area-inset-bottom),64px)
 }
+a{color:#0000FF}
 
 /* ── Header ── */
 .hdr{
   position:sticky;top:0;z-index:100;
-  background:rgba(245,244,240,.9);
-  backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);
-  border-bottom:1px solid #E6E4DF
+  background:#fff;
+  border-bottom:3px solid #000
 }
 .hdr-inner{
   max-width:1280px;margin:0 auto;
-  height:56px;padding:0 20px;
+  height:64px;padding:0 24px;
   display:flex;align-items:center;justify-content:space-between;gap:16px
 }
-.hdr-name{font-size:15px;font-weight:700;letter-spacing:-.3px}
-.hdr-right{display:flex;align-items:center;gap:12px}
-.hdr-date{font-size:12px;color:#888;line-height:1.4;text-align:right}
-
-/* Bouton refresh — visible uniquement en local */
-.btn-refresh{
-  display:none;
-  font-family:inherit;font-size:13px;font-weight:600;
-  padding:8px 16px;border-radius:8px;cursor:pointer;
-  background:#111;color:#fff;border:none;
-  transition:opacity .15s;white-space:nowrap
+.hdr-name{
+  font-family:'Archivo Black',sans-serif;
+  font-size:24px;letter-spacing:-.5px
 }
-.btn-refresh:hover{opacity:.8}
-.btn-refresh:disabled{opacity:.5;cursor:default}
+.hdr-right{display:flex;align-items:center;gap:16px}
+.hdr-date{font-size:12px;color:#666;line-height:1.4;text-align:right;font-family:'Space Mono',monospace}
+
+/* ── Bouton Actualiser (toujours visible) ── */
+.btn-refresh{
+  font-family:'Work Sans',sans-serif;
+  font-size:12px;font-weight:600;
+  letter-spacing:2px;text-transform:uppercase;
+  padding:10px 24px;cursor:pointer;
+  background:#000;color:#fff;
+  border:3px solid #000;
+  transition:background .1s,color .1s;
+  white-space:nowrap
+}
+.btn-refresh:hover{background:#fff;color:#000}
+.btn-refresh:disabled{background:#fff;color:#000;border-color:#CCC;cursor:default}
 
 /* ── Filtres ── */
 .filters{
   max-width:1280px;margin:0 auto;
-  padding:12px 20px 6px;
-  display:flex;gap:8px;
+  padding:16px 24px 0;
+  display:flex;gap:0;
+  border-bottom:3px solid #000;
   overflow-x:auto;-webkit-overflow-scrolling:touch;scrollbar-width:none
 }
 .filters::-webkit-scrollbar{display:none}
 .f{
   flex-shrink:0;
-  font-family:inherit;font-size:13px;font-weight:600;
-  padding:7px 16px;border-radius:20px;cursor:pointer;
-  background:#fff;color:#737373;
-  border:1.5px solid #E6E4DF;
-  transition:all .15s ease;white-space:nowrap
+  font-family:'Work Sans',sans-serif;
+  font-size:10px;font-weight:600;
+  letter-spacing:1px;text-transform:uppercase;
+  padding:8px 20px;cursor:pointer;
+  background:#fff;color:#000;
+  border:none;border-right:3px solid #000;
+  transition:background .1s,color .1s;
+  white-space:nowrap
 }
-.f:hover{border-color:#aaa;color:#111}
-.f.on{background:#111;color:#fff;border-color:#111}
+.f:first-child{border-left:0}
+.f:last-child{border-right:0}
+.f:hover,.f.on{background:#000;color:#fff}
 
 /* ── Jour ── */
-.day-inner{max-width:1280px;margin:0 auto;padding:0 20px}
-.day-header{padding:24px 0 12px;border-top:1px solid #E6E4DF}
-.day:first-child .day-header{border-top:none;padding-top:16px}
-.day-label{font-size:11px;font-weight:700;letter-spacing:.8px;text-transform:uppercase;color:#999}
-.day-today{color:#166534}
+.day-inner{max-width:1280px;margin:0 auto;padding:0 24px}
+.day-header{
+  padding:32px 0 16px;
+  border-top:5px solid #000
+}
+.day:first-child .day-header{border-top:none;padding-top:24px}
+.day-label{
+  font-family:'Archivo Black',sans-serif;
+  font-size:32px;line-height:1.0;
+  letter-spacing:-.5px
+}
+.day-today{font-size:48px}
 
-/* ── Grille masonry ── */
-.cards-grid{columns:1;column-gap:14px}
-@media(min-width:600px){.cards-grid{columns:2}}
-@media(min-width:900px){.cards-grid{columns:3}}
-@media(min-width:1100px){.cards-grid{columns:4}}
-@media(min-width:1280px){.cards-grid{columns:5}}
+/* ── Grille 5 colonnes — 4 lignes max, flow en colonnes ── */
+.cards-grid{display:block}
+
+@media(min-width:600px){
+  .cards-grid{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    grid-template-rows:repeat(4,auto);
+    grid-auto-flow:column;
+    grid-auto-columns:1fr;
+    border-top:3px solid #000;
+    border-left:3px solid #000
+  }
+}
+@media(min-width:900px){.cards-grid{grid-template-columns:repeat(3,1fr)}}
+@media(min-width:1100px){.cards-grid{grid-template-columns:repeat(4,1fr)}}
+@media(min-width:1280px){.cards-grid{grid-template-columns:repeat(5,1fr)}}
 
 /* ── Card ── */
 .card{
-  break-inside:avoid;
-  background:#fff;border-radius:14px;
-  box-shadow:0 1px 3px rgba(0,0,0,.06),0 4px 14px rgba(0,0,0,.06);
-  overflow:hidden;margin-bottom:14px;
-  transition:transform .2s ease,box-shadow .2s ease
+  background:#fff;
+  overflow:hidden;
+  margin-bottom:3px
 }
-.card:hover{transform:translateY(-2px);box-shadow:0 4px 8px rgba(0,0,0,.08),0 14px 30px rgba(0,0,0,.10)}
+@media(min-width:600px){
+  .card{
+    margin-bottom:0;
+    border-right:3px solid #000;
+    border-bottom:3px solid #000
+  }
+}
 
 .c-media{width:100%;line-height:0}
-.c-media img{width:100%;aspect-ratio:16/9;object-fit:cover;display:block}
-.c-svg svg{width:100%;height:auto;display:block}
+.c-media img{width:100%;aspect-ratio:16/9;object-fit:cover;display:block;border-bottom:3px solid #000}
+.c-no-img{height:8px;background:#000}
 
-.c-body{padding:18px 18px 20px}
+.c-body{padding:16px}
 .c-meta{display:flex;align-items:center;gap:8px;margin-bottom:12px;flex-wrap:wrap}
-.c-cat{font-size:10px;font-weight:700;letter-spacing:.6px;text-transform:uppercase;padding:4px 10px;border-radius:20px}
-.badge-new{font-size:10px;font-weight:700;letter-spacing:.4px;text-transform:uppercase;padding:4px 9px;border-radius:20px;background:#DCFCE7;color:#166534}
-
-.c-title{font-size:22px;font-weight:800;line-height:1.18;letter-spacing:-.5px;color:#111;margin-bottom:10px}
-.c-tldr{font-size:16px;font-weight:500;line-height:1.45;color:#2D2D2D;margin-bottom:12px}
-
-.btn-expand{
-  display:inline-flex;align-items:center;gap:6px;
-  font-family:inherit;font-size:13px;font-weight:600;
-  color:#111;background:#F5F4F0;
-  border:1.5px solid #E6E4DF;padding:8px 14px;border-radius:8px;
-  cursor:pointer;transition:background .15s,border-color .15s
+.c-cat{
+  font-family:'Space Mono',monospace;
+  font-size:10px;letter-spacing:1px;text-transform:uppercase;
+  padding:3px 8px;
+  background:#000;color:#fff
 }
-.btn-expand:hover{background:#EDECE8;border-color:#CCCAC4}
-.btn-expand svg{transition:transform .25s ease}
+.badge-new{
+  font-family:'Space Mono',monospace;
+  font-size:10px;letter-spacing:1px;text-transform:uppercase;
+  padding:3px 8px;
+  border:2px solid #008000;color:#008000
+}
+
+.c-title{
+  font-family:'Archivo Black',sans-serif;
+  font-size:20px;line-height:1.1;
+  color:#000;margin-bottom:10px
+}
+.c-tldr{
+  font-size:16px;font-weight:400;
+  line-height:1.6;color:#000;
+  margin-bottom:14px
+}
+
+/* ── Bouton Approfondir ── */
+.btn-expand{
+  display:inline-flex;align-items:center;gap:8px;
+  font-family:'Work Sans',sans-serif;
+  font-size:11px;font-weight:600;
+  letter-spacing:2px;text-transform:uppercase;
+  color:#000;background:#fff;
+  border:3px solid #000;padding:8px 16px;
+  cursor:pointer;transition:background .1s,color .1s
+}
+.btn-expand:hover,.btn-expand.open{background:#000;color:#fff}
+.btn-expand svg{transition:transform .2s ease}
 .btn-expand.open svg{transform:rotate(180deg)}
 
-.c-detail{margin-top:14px;border-top:1px solid #F0EEE9;padding-top:14px}
-.c-detail-text{font-size:15px;line-height:1.65;color:#555;margin-bottom:16px}
-
-.btn-source{
-  display:inline-block;background:#111;color:#fff;
-  font-family:inherit;font-size:14px;font-weight:600;
-  padding:11px 20px;border-radius:8px;
-  text-decoration:none;letter-spacing:-.1px;transition:opacity .15s
+/* ── Detail panel ── */
+.c-detail{
+  margin-top:16px;
+  padding-top:16px;
+  border-top:3px solid #000
 }
-.btn-source:hover{opacity:.82}
+.c-detail-text{
+  font-size:15px;line-height:1.6;color:#000;
+  margin-bottom:16px
+}
 
-/* ── Desktop : grandes typos ── */
+/* ── Bouton Lire la source ── */
+.btn-source{
+  display:inline-block;
+  font-family:'Work Sans',sans-serif;
+  font-size:11px;font-weight:600;
+  letter-spacing:2px;text-transform:uppercase;
+  padding:10px 24px;
+  background:#000;color:#fff;
+  border:3px solid #000;
+  text-decoration:none;
+  transition:background .1s,color .1s
+}
+.btn-source:hover{background:#fff;color:#000}
+
+/* ── Desktop : titres plus grands ── */
 @media(min-width:1280px){
-  .c-title{font-size:26px}
-  .c-tldr{font-size:17px}
-  .c-body{padding:22px 22px 24px}
+  .c-title{font-size:22px}
+  .c-body{padding:20px}
+}
+
+/* ── Overlay loading ── */
+.overlay{
+  display:none;position:fixed;inset:0;z-index:200;
+  background:rgba(255,255,255,.92);
+  align-items:center;justify-content:center;
+  flex-direction:column;gap:16px
+}
+.overlay.show{display:flex}
+.overlay-text{
+  font-family:'Archivo Black',sans-serif;
+  font-size:32px;letter-spacing:-.5px
+}
+.overlay-sub{
+  font-family:'Space Mono',monospace;
+  font-size:12px;color:#666
 }
 
 /* ── Footer ── */
 .site-footer{
   max-width:1280px;margin:0 auto;
-  padding:30px 20px 48px;border-top:1px solid #E6E4DF;
-  font-size:11px;color:#B0B0B0;letter-spacing:.3px;text-align:center
+  padding:32px 24px 48px;
+  border-top:5px solid #000;
+  font-family:'Space Mono',monospace;
+  font-size:11px;color:#666;letter-spacing:.5px
 }
 </style>
 </head>
@@ -138,10 +227,10 @@ body{
 
 <header class="hdr">
   <div class="hdr-inner">
-    <span class="hdr-name">Digest Matin</span>
+    <span class="hdr-name">DIGEST MATIN</span>
     <div class="hdr-right">
       <button id="btn-refresh" class="btn-refresh" onclick="doRefresh()">Actualiser</button>
-      <div class="hdr-date">Friday 19 june 2026<br><span style="color:#C0C0C0">2 editions</span></div>
+      <div class="hdr-date">19/06/2026<br>2 EDITIONS</div>
     </div>
   </div>
 </header>
@@ -161,284 +250,160 @@ body{
     </div>
     <div class="cards-grid">
 <article class="card" data-cat="strategy">
-  <div class="c-media c-svg"><svg viewBox="0 0 680 260" xmlns="http://www.w3.org/2000/svg">
-<rect width="680" height="260" fill="#0A1628"/>
-<circle cx="90" cy="130" r="7" fill="white" opacity=".9"/>
-<circle cx="230" cy="75" r="5" fill="white" opacity=".6"/>
-<circle cx="230" cy="185" r="5" fill="white" opacity=".6"/>
-<circle cx="380" cy="50" r="3.5" fill="white" opacity=".4"/>
-<circle cx="380" cy="130" r="7" fill="white" opacity=".85"/>
-<circle cx="380" cy="210" r="3.5" fill="white" opacity=".4"/>
-<circle cx="530" cy="95" r="5" fill="white" opacity=".6"/>
-<circle cx="530" cy="165" r="5" fill="white" opacity=".6"/>
-<circle cx="620" cy="130" r="8" fill="white"/>
-<line x1="90" y1="130" x2="230" y2="75" stroke="white" stroke-width="1.2" opacity=".18"/>
-<line x1="90" y1="130" x2="230" y2="185" stroke="white" stroke-width="1.2" opacity=".18"/>
-<line x1="230" y1="75" x2="380" y2="130" stroke="white" stroke-width="1.2" opacity=".2"/>
-<line x1="230" y1="185" x2="380" y2="130" stroke="white" stroke-width="1.2" opacity=".2"/>
-<line x1="380" y1="130" x2="530" y2="95" stroke="white" stroke-width="1.2" opacity=".2"/>
-<line x1="380" y1="130" x2="530" y2="165" stroke="white" stroke-width="1.2" opacity=".2"/>
-<line x1="530" y1="95" x2="620" y2="130" stroke="white" stroke-width="1.5" opacity=".35"/>
-<line x1="530" y1="165" x2="620" y2="130" stroke="white" stroke-width="1.5" opacity=".35"/>
-</svg></div>
+  <div class="c-no-img"></div>
   <div class="c-body">
     <div class="c-meta">
-      <span class="c-cat" style="background:#0A1628;color:#FFFFFF;">Strategie</span>
-      <span class="badge-new">Nouveau</span>
+      <span class="c-cat">STRATEGIE</span>
+      <span class="badge-new">NOUVEAU</span>
     </div>
     <h2 class="c-title">Les avertissements anti-contrefaçon font acheter plus de faux</h2>
     <p class="c-tldr">Le langage de peur déclenche une réactance psychologique qui pousse les plus vulnérables à acheter davantage de contrefaçons.</p>
     <button class="btn-expand" onclick="expand(this)">
-      Approfondir <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 5L7 9L11 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      APPROFONDIR <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 5L7 9L11 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
     </button>
     <div class="c-detail" hidden>
       <p class="c-detail-text">Le rapport A-CAPP de Michigan State University (fév. 2026) a analysé 94 campagnes et près de 400 messages : la majorité s'appuie sur la peur et le langage de contrôle, qui induisent de la colère et réduisent l'attrait de la campagne, tandis que les techniques réductrices de réactance (récits, cadrage positif) restent sous-exploitées. Les secteurs pharma, électronique et outillage utilisent le plus d'éléments générateurs de réactance. Contre-intuitif : 74% des consommateurs ont acheté des contrefaçons et ceux qui se sentent le plus à risque sont aussi les plus enclins à acheter de faux médicaments, d'où la recommandation d'abandonner la peur au profit de messages d'empowerment.</p>
-      <a href="https://a-capp.msu.edu/wp-content/uploads/2026/03/FINAL-When-Brands-Talk-FINAL2.23.26.pdf" target="_blank" rel="noopener" class="btn-source">Lire la source</a>
+      <a href="https://a-capp.msu.edu/wp-content/uploads/2026/03/FINAL-When-Brands-Talk-FINAL2.23.26.pdf" target="_blank" rel="noopener" class="btn-source">LIRE LA SOURCE</a>
     </div>
   </div>
 </article>
 <article class="card" data-cat="strategy">
-  <div class="c-media c-svg"><svg viewBox="0 0 680 260" xmlns="http://www.w3.org/2000/svg">
-<rect width="680" height="260" fill="#0A1628"/>
-<circle cx="90" cy="130" r="7" fill="white" opacity=".9"/>
-<circle cx="230" cy="75" r="5" fill="white" opacity=".6"/>
-<circle cx="230" cy="185" r="5" fill="white" opacity=".6"/>
-<circle cx="380" cy="50" r="3.5" fill="white" opacity=".4"/>
-<circle cx="380" cy="130" r="7" fill="white" opacity=".85"/>
-<circle cx="380" cy="210" r="3.5" fill="white" opacity=".4"/>
-<circle cx="530" cy="95" r="5" fill="white" opacity=".6"/>
-<circle cx="530" cy="165" r="5" fill="white" opacity=".6"/>
-<circle cx="620" cy="130" r="8" fill="white"/>
-<line x1="90" y1="130" x2="230" y2="75" stroke="white" stroke-width="1.2" opacity=".18"/>
-<line x1="90" y1="130" x2="230" y2="185" stroke="white" stroke-width="1.2" opacity=".18"/>
-<line x1="230" y1="75" x2="380" y2="130" stroke="white" stroke-width="1.2" opacity=".2"/>
-<line x1="230" y1="185" x2="380" y2="130" stroke="white" stroke-width="1.2" opacity=".2"/>
-<line x1="380" y1="130" x2="530" y2="95" stroke="white" stroke-width="1.2" opacity=".2"/>
-<line x1="380" y1="130" x2="530" y2="165" stroke="white" stroke-width="1.2" opacity=".2"/>
-<line x1="530" y1="95" x2="620" y2="130" stroke="white" stroke-width="1.5" opacity=".35"/>
-<line x1="530" y1="165" x2="620" y2="130" stroke="white" stroke-width="1.5" opacity=".35"/>
-</svg></div>
+  <div class="c-no-img"></div>
   <div class="c-body">
     <div class="c-meta">
-      <span class="c-cat" style="background:#0A1628;color:#FFFFFF;">Strategie</span>
-      <span class="badge-new">Nouveau</span>
+      <span class="c-cat">STRATEGIE</span>
+      <span class="badge-new">NOUVEAU</span>
     </div>
     <h2 class="c-title">Les actifs de forme écrasent les couleurs en distinctivité</h2>
     <p class="c-tldr">Sur 1162 actifs analysés, logos et packaging atteignent 40% de notoriété et 71% d'exclusivité, loin devant la couleur.</p>
     <button class="btn-expand" onclick="expand(this)">
-      Approfondir <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 5L7 9L11 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      APPROFONDIR <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 5L7 9L11 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
     </button>
     <div class="c-detail" hidden>
       <p class="c-detail-text">Une étude de l'International Journal of Advertising (publiée le 5 mars 2026) a benchmarké 1162 actifs distinctifs sur 21 catégories, quatre pays et neuf ans, mesurés par Fame (lien à la marque) et Uniqueness (exclusivité). Les actifs basés sur la forme — logos et packaging — surperforment systématiquement (40% de Fame, 71% d'Uniqueness), invalidant l'obsession des directions marketing pour les codes couleur. Nuance stratégique inattendue : les actifs narratifs performent relativement mieux dans les industries de services, ce qui réoriente les arbitrages d'investissement selon le secteur.</p>
-      <a href="https://www.tandfonline.com/doi/full/10.1080/02650487.2026.2637295" target="_blank" rel="noopener" class="btn-source">Lire la source</a>
+      <a href="https://www.tandfonline.com/doi/full/10.1080/02650487.2026.2637295" target="_blank" rel="noopener" class="btn-source">LIRE LA SOURCE</a>
     </div>
   </div>
 </article>
 <article class="card" data-cat="strategy">
-  <div class="c-media c-svg"><svg viewBox="0 0 680 260" xmlns="http://www.w3.org/2000/svg">
-<rect width="680" height="260" fill="#0A1628"/>
-<circle cx="90" cy="130" r="7" fill="white" opacity=".9"/>
-<circle cx="230" cy="75" r="5" fill="white" opacity=".6"/>
-<circle cx="230" cy="185" r="5" fill="white" opacity=".6"/>
-<circle cx="380" cy="50" r="3.5" fill="white" opacity=".4"/>
-<circle cx="380" cy="130" r="7" fill="white" opacity=".85"/>
-<circle cx="380" cy="210" r="3.5" fill="white" opacity=".4"/>
-<circle cx="530" cy="95" r="5" fill="white" opacity=".6"/>
-<circle cx="530" cy="165" r="5" fill="white" opacity=".6"/>
-<circle cx="620" cy="130" r="8" fill="white"/>
-<line x1="90" y1="130" x2="230" y2="75" stroke="white" stroke-width="1.2" opacity=".18"/>
-<line x1="90" y1="130" x2="230" y2="185" stroke="white" stroke-width="1.2" opacity=".18"/>
-<line x1="230" y1="75" x2="380" y2="130" stroke="white" stroke-width="1.2" opacity=".2"/>
-<line x1="230" y1="185" x2="380" y2="130" stroke="white" stroke-width="1.2" opacity=".2"/>
-<line x1="380" y1="130" x2="530" y2="95" stroke="white" stroke-width="1.2" opacity=".2"/>
-<line x1="380" y1="130" x2="530" y2="165" stroke="white" stroke-width="1.2" opacity=".2"/>
-<line x1="530" y1="95" x2="620" y2="130" stroke="white" stroke-width="1.5" opacity=".35"/>
-<line x1="530" y1="165" x2="620" y2="130" stroke="white" stroke-width="1.5" opacity=".35"/>
-</svg></div>
+  <div class="c-no-img"></div>
   <div class="c-body">
     <div class="c-meta">
-      <span class="c-cat" style="background:#0A1628;color:#FFFFFF;">Strategie</span>
-      <span class="badge-new">Nouveau</span>
+      <span class="c-cat">STRATEGIE</span>
+      <span class="badge-new">NOUVEAU</span>
     </div>
     <h2 class="c-title">Chaque association positive vaut 18% de dépenses supplémentaires</h2>
     <p class="c-tldr">Chez CVS Health, une association de marque positive ajoute +18% de dépense, une négative en retire -12%.</p>
     <button class="btn-expand" onclick="expand(this)">
-      Approfondir <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 5L7 9L11 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      APPROFONDIR <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 5L7 9L11 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
     </button>
     <div class="c-detail" hidden>
       <p class="c-detail-text">Une recherche publiée dans Harvard Business Review (8 avril 2026) par Vriens, Verhulst, Eggers et les dirigeants de CVS Health quantifie l'effet dollar de chaque association mentale. Chaque association positive (service serviable, emplacements pratiques) corrèle avec une hausse de dépense de 18%, tandis que chaque association négative entraîne un recul de 12%. L'asymétrie contre-intuitive : éliminer un irritant pèse moins lourd qu'on ne le croit face au coût d'une perception négative, ce qui réoriente les budgets vers la suppression ciblée des associations toxiques plutôt que l'empilement de messages positifs.</p>
-      <a href="https://hbr.org/2026/04/new-research-on-how-brand-associations-drive-customer-spending" target="_blank" rel="noopener" class="btn-source">Lire la source</a>
+      <a href="https://hbr.org/2026/04/new-research-on-how-brand-associations-drive-customer-spending" target="_blank" rel="noopener" class="btn-source">LIRE LA SOURCE</a>
     </div>
   </div>
 </article>
 <article class="card" data-cat="strategy">
-  <div class="c-media c-svg"><svg viewBox="0 0 680 260" xmlns="http://www.w3.org/2000/svg">
-<rect width="680" height="260" fill="#0A1628"/>
-<circle cx="90" cy="130" r="7" fill="white" opacity=".9"/>
-<circle cx="230" cy="75" r="5" fill="white" opacity=".6"/>
-<circle cx="230" cy="185" r="5" fill="white" opacity=".6"/>
-<circle cx="380" cy="50" r="3.5" fill="white" opacity=".4"/>
-<circle cx="380" cy="130" r="7" fill="white" opacity=".85"/>
-<circle cx="380" cy="210" r="3.5" fill="white" opacity=".4"/>
-<circle cx="530" cy="95" r="5" fill="white" opacity=".6"/>
-<circle cx="530" cy="165" r="5" fill="white" opacity=".6"/>
-<circle cx="620" cy="130" r="8" fill="white"/>
-<line x1="90" y1="130" x2="230" y2="75" stroke="white" stroke-width="1.2" opacity=".18"/>
-<line x1="90" y1="130" x2="230" y2="185" stroke="white" stroke-width="1.2" opacity=".18"/>
-<line x1="230" y1="75" x2="380" y2="130" stroke="white" stroke-width="1.2" opacity=".2"/>
-<line x1="230" y1="185" x2="380" y2="130" stroke="white" stroke-width="1.2" opacity=".2"/>
-<line x1="380" y1="130" x2="530" y2="95" stroke="white" stroke-width="1.2" opacity=".2"/>
-<line x1="380" y1="130" x2="530" y2="165" stroke="white" stroke-width="1.2" opacity=".2"/>
-<line x1="530" y1="95" x2="620" y2="130" stroke="white" stroke-width="1.5" opacity=".35"/>
-<line x1="530" y1="165" x2="620" y2="130" stroke="white" stroke-width="1.5" opacity=".35"/>
-</svg></div>
+  <div class="c-no-img"></div>
   <div class="c-body">
     <div class="c-meta">
-      <span class="c-cat" style="background:#0A1628;color:#FFFFFF;">Strategie</span>
-      <span class="badge-new">Nouveau</span>
+      <span class="c-cat">STRATEGIE</span>
+      <span class="badge-new">NOUVEAU</span>
     </div>
     <h2 class="c-title">Le visiteur référé par IA convertit cinq fois mieux</h2>
     <p class="c-tldr">Les visiteurs venus de ChatGPT convertissent à 15,9% contre 1,76% pour le search organique classique.</p>
     <button class="btn-expand" onclick="expand(this)">
-      Approfondir <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 5L7 9L11 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      APPROFONDIR <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 5L7 9L11 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
     </button>
     <div class="c-detail" hidden>
       <p class="c-detail-text">Selon les données Seer Interactive reprises dans une synthèse de mai 2026, les visiteurs issus d'un LLM convertissent à 15,9% depuis ChatGPT et 10,5% depuis Perplexity, contre 1,76% pour le search organique. Ahrefs a constaté que le trafic IA générait 12,1% des inscriptions tout en ne pesant que 0,5% des visiteurs — un ratio de 24:1. Signal faible décisif : 92% des marketeurs disent vouloir optimiser pour la recherche IA mais seuls 40,6% le font réellement, créant une fenêtre d'avantage de premier entrant alors que les citations IA fluctuent de 40 à 60% d'un mois sur l'autre.</p>
-      <a href="https://www.omnibound.ai/blog/generative-engine-optimization-statistics" target="_blank" rel="noopener" class="btn-source">Lire la source</a>
+      <a href="https://www.omnibound.ai/blog/generative-engine-optimization-statistics" target="_blank" rel="noopener" class="btn-source">LIRE LA SOURCE</a>
     </div>
   </div>
 </article>
 <article class="card" data-cat="copywriting">
-  <div class="c-media c-svg"><svg viewBox="0 0 680 260" xmlns="http://www.w3.org/2000/svg">
-<rect width="680" height="260" fill="#FFF6F5"/>
-<text x="-20" y="250" font-size="310" font-weight="900" fill="#B91C1C" opacity=".055" font-family="Georgia,serif">AW</text>
-<rect x="52" y="105" width="200" height="8" rx="4" fill="#B91C1C"/>
-<rect x="52" y="129" width="140" height="8" rx="4" fill="#B91C1C" opacity=".35"/>
-<rect x="52" y="153" width="170" height="8" rx="4" fill="#B91C1C" opacity=".18"/>
-<rect x="52" y="177" width="100" height="8" rx="4" fill="#B91C1C" opacity=".1"/>
-<rect x="468" y="85" width="3" height="110" fill="#B91C1C" opacity=".15"/>
-<rect x="498" y="110" width="3" height="65" fill="#B91C1C" opacity=".1"/>
-</svg></div>
+  <div class="c-no-img"></div>
   <div class="c-body">
     <div class="c-meta">
-      <span class="c-cat" style="background:#B91C1C;color:#FFFFFF;">Copywriting</span>
-      <span class="badge-new">Nouveau</span>
+      <span class="c-cat">COPYWRITING</span>
+      <span class="badge-new">NOUVEAU</span>
     </div>
     <h2 class="c-title">Les pubs IA battent les humains sur la persuasion, pas la personnalisation</h2>
     <p class="c-tldr">Étude n=800 : pubs générées par LLM préférées à 59,1% contre 40,9% pour l'humain sur les principes psychologiques.</p>
     <button class="btn-expand" onclick="expand(this)">
-      Approfondir <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 5L7 9L11 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      APPROFONDIR <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 5L7 9L11 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
     </button>
     <div class="c-detail" hidden>
       <p class="c-detail-text">Dans une étude en deux temps de l'University of Queensland, les pubs LLM atteignent la parité avec les experts humains sur la personnalisation par trait de personnalité (51,1% vs 48,9%, non significatif), mais les surpassent nettement sur les leviers de persuasion universels. <cite index="32-9">Les pubs générées par IA ont surpassé significativement le contenu créé par des humains, atteignant un taux de préférence de 59,1% (vs 40,9%, p < 0,001), avec la meilleure performance sur les ressorts d'autorité (63,0%) et de consensus (62,5%).</cite> Contre-intuitif : <cite index="32-11">même après application d'une pénalité de 21,2 points lorsque les participants identifiaient correctement l'origine IA, les pubs IA surpassaient encore les pubs humaines.</cite></p>
-      <a href="https://arxiv.org/abs/2512.03373" target="_blank" rel="noopener" class="btn-source">Lire la source</a>
+      <a href="https://arxiv.org/abs/2512.03373" target="_blank" rel="noopener" class="btn-source">LIRE LA SOURCE</a>
     </div>
   </div>
 </article>
 <article class="card" data-cat="copywriting">
-  <div class="c-media c-svg"><svg viewBox="0 0 680 260" xmlns="http://www.w3.org/2000/svg">
-<rect width="680" height="260" fill="#FFF6F5"/>
-<text x="-20" y="250" font-size="310" font-weight="900" fill="#B91C1C" opacity=".055" font-family="Georgia,serif">AW</text>
-<rect x="52" y="105" width="200" height="8" rx="4" fill="#B91C1C"/>
-<rect x="52" y="129" width="140" height="8" rx="4" fill="#B91C1C" opacity=".35"/>
-<rect x="52" y="153" width="170" height="8" rx="4" fill="#B91C1C" opacity=".18"/>
-<rect x="52" y="177" width="100" height="8" rx="4" fill="#B91C1C" opacity=".1"/>
-<rect x="468" y="85" width="3" height="110" fill="#B91C1C" opacity=".15"/>
-<rect x="498" y="110" width="3" height="65" fill="#B91C1C" opacity=".1"/>
-</svg></div>
+  <div class="c-no-img"></div>
   <div class="c-body">
     <div class="c-meta">
-      <span class="c-cat" style="background:#B91C1C;color:#FFFFFF;">Copywriting</span>
-      <span class="badge-new">Nouveau</span>
+      <span class="c-cat">COPYWRITING</span>
+      <span class="badge-new">NOUVEAU</span>
     </div>
     <h2 class="c-title">Le pause ad bat le standard sur le rappel pour zéro interaction</h2>
     <p class="c-tldr">Le pause ad génère +34% de rappel non assisté sans aucune interaction du spectateur.</p>
     <button class="btn-expand" onclick="expand(this)">
-      Approfondir <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 5L7 9L11 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      APPROFONDIR <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 5L7 9L11 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
     </button>
     <div class="c-detail" hidden>
       <p class="c-detail-text">Alors que l'industrie pousse l'interactivité par télécommande, les données EMARKETER citant BrightLine montrent que <cite index="49-4,49-5">les pause ads, qui apparaissent quand le spectateur met en pause son contenu, délivrent un gain de 34% en rappel non assisté.</cite> Le levier réel n'est pas l'engagement mais le contexte de haute réceptivité d'une pause volontaire. Signal stratégique sous-médiatisé : <cite index="49-10">à mesure que le CTV se fragmente entre plateformes, les pause ads représentent l'un des rares formats standardisables disponibles à travers les services.</cite></p>
-      <a href="https://www.emarketer.com/content/faq-on-ctv-advertising--trends--formats--platforms-watch-2026" target="_blank" rel="noopener" class="btn-source">Lire la source</a>
+      <a href="https://www.emarketer.com/content/faq-on-ctv-advertising--trends--formats--platforms-watch-2026" target="_blank" rel="noopener" class="btn-source">LIRE LA SOURCE</a>
     </div>
   </div>
 </article>
 <article class="card" data-cat="copywriting">
-  <div class="c-media c-svg"><svg viewBox="0 0 680 260" xmlns="http://www.w3.org/2000/svg">
-<rect width="680" height="260" fill="#FFF6F5"/>
-<text x="-20" y="250" font-size="310" font-weight="900" fill="#B91C1C" opacity=".055" font-family="Georgia,serif">AW</text>
-<rect x="52" y="105" width="200" height="8" rx="4" fill="#B91C1C"/>
-<rect x="52" y="129" width="140" height="8" rx="4" fill="#B91C1C" opacity=".35"/>
-<rect x="52" y="153" width="170" height="8" rx="4" fill="#B91C1C" opacity=".18"/>
-<rect x="52" y="177" width="100" height="8" rx="4" fill="#B91C1C" opacity=".1"/>
-<rect x="468" y="85" width="3" height="110" fill="#B91C1C" opacity=".15"/>
-<rect x="498" y="110" width="3" height="65" fill="#B91C1C" opacity=".1"/>
-</svg></div>
+  <div class="c-no-img"></div>
   <div class="c-body">
     <div class="c-meta">
-      <span class="c-cat" style="background:#B91C1C;color:#FFFFFF;">Copywriting</span>
-      <span class="badge-new">Nouveau</span>
+      <span class="c-cat">COPYWRITING</span>
+      <span class="badge-new">NOUVEAU</span>
     </div>
     <h2 class="c-title">Le procès contre les Marketing Mix Models est statistiquement infondé</h2>
     <p class="c-tldr">Avec correction du biais de sélection, les élasticités publicitaires des MMM rejoignent celles des essais randomisés.</p>
     <button class="btn-expand" onclick="expand(this)">
-      Approfondir <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 5L7 9L11 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      APPROFONDIR <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 5L7 9L11 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
     </button>
     <div class="c-detail" hidden>
       <p class="c-detail-text">L'orthodoxie veut que les MMM surestiment systématiquement l'effet des pubs face aux essais randomisés (RCT), justifiant des budgets de mesure colossaux. Cette étude de l'International Journal of Research in Marketing renverse le consensus : <cite index="10-5,10-6">des méta-analyses correctement menées, utilisant des techniques avancées de correction de biais, rapprochent fortement les élasticités MMM de celles des RCT ; les méta-analyses passées avaient échoué à corriger le biais de sélection de publication, gonflant les estimations.</cite> Conséquence pratique : <cite index="10-8">plutôt que rejeter les MMM comme intrinsèquement défaillants, ils peuvent servir d'alternative viable et scalable aux RCT coûteux, tout en fournissant des estimations d'effets long terme que les expériences ne capturent pas.</cite></p>
-      <a href="https://www.sciencedirect.com/science/article/abs/pii/S016781162500028X" target="_blank" rel="noopener" class="btn-source">Lire la source</a>
+      <a href="https://www.sciencedirect.com/science/article/abs/pii/S016781162500028X" target="_blank" rel="noopener" class="btn-source">LIRE LA SOURCE</a>
     </div>
   </div>
 </article>
 <article class="card" data-cat="copywriting">
-  <div class="c-media c-svg"><svg viewBox="0 0 680 260" xmlns="http://www.w3.org/2000/svg">
-<rect width="680" height="260" fill="#FFF6F5"/>
-<text x="-20" y="250" font-size="310" font-weight="900" fill="#B91C1C" opacity=".055" font-family="Georgia,serif">AW</text>
-<rect x="52" y="105" width="200" height="8" rx="4" fill="#B91C1C"/>
-<rect x="52" y="129" width="140" height="8" rx="4" fill="#B91C1C" opacity=".35"/>
-<rect x="52" y="153" width="170" height="8" rx="4" fill="#B91C1C" opacity=".18"/>
-<rect x="52" y="177" width="100" height="8" rx="4" fill="#B91C1C" opacity=".1"/>
-<rect x="468" y="85" width="3" height="110" fill="#B91C1C" opacity=".15"/>
-<rect x="498" y="110" width="3" height="65" fill="#B91C1C" opacity=".1"/>
-</svg></div>
+  <div class="c-no-img"></div>
   <div class="c-body">
     <div class="c-meta">
-      <span class="c-cat" style="background:#B91C1C;color:#FFFFFF;">Copywriting</span>
-      <span class="badge-new">Nouveau</span>
+      <span class="c-cat">COPYWRITING</span>
+      <span class="badge-new">NOUVEAU</span>
     </div>
     <h2 class="c-title">Le DSP Amazon atteint 40% des budgets pub Amazon</h2>
     <p class="c-tldr">Le DSP représente désormais 40% des budgets Amazon des annonceurs actifs à la fois sur Ad Console et DSP.</p>
     <button class="btn-expand" onclick="expand(this)">
-      Approfondir <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 5L7 9L11 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      APPROFONDIR <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 5L7 9L11 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
     </button>
     <div class="c-detail" hidden>
       <p class="c-detail-text">Le retail media bascule silencieusement du search vers le programmatique piloté par données d'achat, un virage peu commenté en dehors des cercles commerce. <cite index="40-10">Sur Amazon, le DSP représente désormais 40% des budgets publicitaires totaux Amazon pour les annonceurs actifs à la fois sur Ad Console et DSP, soulignant son rôle de canal central et non d'ajout expérimental.</cite> Ce déplacement reconfigure la mécanique de campagne : <cite index="40-11,40-12,40-13">il ouvre de nouveaux leviers — gestion de fréquence cross-canal, cadres créatifs cohérents, contrôle granulaire de l'application des signaux commerce — mais relève aussi les exigences de mesure, car sans analytique avancée il devient facile de double-compter les conversions ou de surévaluer les touches bas de funnel.</cite></p>
-      <a href="https://tinuiti.com/blog/commerce/retail-media-trends/" target="_blank" rel="noopener" class="btn-source">Lire la source</a>
+      <a href="https://tinuiti.com/blog/commerce/retail-media-trends/" target="_blank" rel="noopener" class="btn-source">LIRE LA SOURCE</a>
     </div>
   </div>
 </article>
 <article class="card" data-cat="visuals">
-  <div class="c-media c-svg"><svg viewBox="0 0 680 260" xmlns="http://www.w3.org/2000/svg">
-<rect width="680" height="260" fill="#F6F5FF"/>
-<rect x="0" y="0" width="226" height="260" fill="#1E1B4B" opacity=".07"/>
-<rect x="226" y="0" width="228" height="130" fill="#1E1B4B" opacity=".12"/>
-<rect x="454" y="130" width="226" height="130" fill="#1E1B4B" opacity=".05"/>
-<circle cx="340" cy="130" r="95" fill="none" stroke="#1E1B4B" stroke-width="1.5" opacity=".12"/>
-<circle cx="340" cy="130" r="46" fill="#1E1B4B" opacity=".07"/>
-<circle cx="340" cy="130" r="13" fill="#1E1B4B" opacity=".2"/>
-<line x1="0" y1="130" x2="680" y2="130" stroke="#1E1B4B" stroke-width="1" opacity=".08"/>
-<line x1="340" y1="0" x2="340" y2="260" stroke="#1E1B4B" stroke-width="1" opacity=".08"/>
-<rect x="60" y="60" width="70" height="70" fill="none" stroke="#1E1B4B" stroke-width="1.5" opacity=".12" transform="rotate(18 95 95)"/>
-<rect x="554" y="148" width="52" height="52" fill="#1E1B4B" opacity=".08" transform="rotate(-12 580 174)"/>
-</svg></div>
+  <div class="c-no-img"></div>
   <div class="c-body">
     <div class="c-meta">
-      <span class="c-cat" style="background:#1E1B4B;color:#FFFFFF;">Direction artistique</span>
-      <span class="badge-new">Nouveau</span>
+      <span class="c-cat">DIRECTION ARTISTIQUE</span>
+      <span class="badge-new">NOUVEAU</span>
     </div>
     <h2 class="c-title">Veille</h2>
     <p class="c-tldr">Je vais rechercher des informations récentes et pointues sur les directions artistiques en communica</p>
     <button class="btn-expand" onclick="expand(this)">
-      Approfondir <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 5L7 9L11 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      APPROFONDIR <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 5L7 9L11 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
     </button>
     <div class="c-detail" hidden>
       <p class="c-detail-text">Je vais rechercher des informations récentes et pointues sur les directions artistiques en communication visuelle.Les résultats de marques sont trop génériques. Je vais chercher des signaux plus pointus et récents.J'ai des pistes solides. Cherchons des signaux faibles dans des niches spécifiques et </p>
@@ -455,408 +420,253 @@ body{
     </div>
     <div class="cards-grid">
 <article class="card" data-cat="strategy">
-  <div class="c-media c-svg"><svg viewBox="0 0 680 260" xmlns="http://www.w3.org/2000/svg">
-<rect width="680" height="260" fill="#0A1628"/>
-<circle cx="90" cy="130" r="7" fill="white" opacity=".9"/>
-<circle cx="230" cy="75" r="5" fill="white" opacity=".6"/>
-<circle cx="230" cy="185" r="5" fill="white" opacity=".6"/>
-<circle cx="380" cy="50" r="3.5" fill="white" opacity=".4"/>
-<circle cx="380" cy="130" r="7" fill="white" opacity=".85"/>
-<circle cx="380" cy="210" r="3.5" fill="white" opacity=".4"/>
-<circle cx="530" cy="95" r="5" fill="white" opacity=".6"/>
-<circle cx="530" cy="165" r="5" fill="white" opacity=".6"/>
-<circle cx="620" cy="130" r="8" fill="white"/>
-<line x1="90" y1="130" x2="230" y2="75" stroke="white" stroke-width="1.2" opacity=".18"/>
-<line x1="90" y1="130" x2="230" y2="185" stroke="white" stroke-width="1.2" opacity=".18"/>
-<line x1="230" y1="75" x2="380" y2="130" stroke="white" stroke-width="1.2" opacity=".2"/>
-<line x1="230" y1="185" x2="380" y2="130" stroke="white" stroke-width="1.2" opacity=".2"/>
-<line x1="380" y1="130" x2="530" y2="95" stroke="white" stroke-width="1.2" opacity=".2"/>
-<line x1="380" y1="130" x2="530" y2="165" stroke="white" stroke-width="1.2" opacity=".2"/>
-<line x1="530" y1="95" x2="620" y2="130" stroke="white" stroke-width="1.5" opacity=".35"/>
-<line x1="530" y1="165" x2="620" y2="130" stroke="white" stroke-width="1.5" opacity=".35"/>
-</svg></div>
+  <div class="c-no-img"></div>
   <div class="c-body">
     <div class="c-meta">
-      <span class="c-cat" style="background:#0A1628;color:#FFFFFF;">Strategie</span>
+      <span class="c-cat">STRATEGIE</span>
       
     </div>
     <h2 class="c-title">Le contenu jugé 'brand-unsafe' surperforme le contenu sûr</h2>
     <p class="c-tldr"></p>
     <button class="btn-expand" onclick="expand(this)">
-      Approfondir <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 5L7 9L11 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      APPROFONDIR <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 5L7 9L11 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
     </button>
     <div class="c-detail" hidden>
       <p class="c-detail-text">L'étude RA: Unblocked menée par l'agence Bountiful Cow avec Ozone sur des éditeurs de presse premium britanniques (partenaires Hilltop Honey, Numan, The Body Coach) prouve en conditions réelles que retirer les filtres de brand safety génère plus d'efficacité. Les blocklists par mots-clés bloqueraient jusqu'à 40% des requêtes publicitaires sur les sites d'actualité, pénalisant les meilleurs environnements éditoriaux plutôt que les pires.</p>
-      <a href="https://ozoneproject.com/blog/bountiful-cow-proves-ra-unblocked-drives-brand-impact-by-challenging-brand-safety-norms/" target="_blank" rel="noopener" class="btn-source">Lire la source</a>
+      <a href="https://ozoneproject.com/blog/bountiful-cow-proves-ra-unblocked-drives-brand-impact-by-challenging-brand-safety-norms/" target="_blank" rel="noopener" class="btn-source">LIRE LA SOURCE</a>
     </div>
   </div>
 </article>
 <article class="card" data-cat="strategy">
-  <div class="c-media c-svg"><svg viewBox="0 0 680 260" xmlns="http://www.w3.org/2000/svg">
-<rect width="680" height="260" fill="#0A1628"/>
-<circle cx="90" cy="130" r="7" fill="white" opacity=".9"/>
-<circle cx="230" cy="75" r="5" fill="white" opacity=".6"/>
-<circle cx="230" cy="185" r="5" fill="white" opacity=".6"/>
-<circle cx="380" cy="50" r="3.5" fill="white" opacity=".4"/>
-<circle cx="380" cy="130" r="7" fill="white" opacity=".85"/>
-<circle cx="380" cy="210" r="3.5" fill="white" opacity=".4"/>
-<circle cx="530" cy="95" r="5" fill="white" opacity=".6"/>
-<circle cx="530" cy="165" r="5" fill="white" opacity=".6"/>
-<circle cx="620" cy="130" r="8" fill="white"/>
-<line x1="90" y1="130" x2="230" y2="75" stroke="white" stroke-width="1.2" opacity=".18"/>
-<line x1="90" y1="130" x2="230" y2="185" stroke="white" stroke-width="1.2" opacity=".18"/>
-<line x1="230" y1="75" x2="380" y2="130" stroke="white" stroke-width="1.2" opacity=".2"/>
-<line x1="230" y1="185" x2="380" y2="130" stroke="white" stroke-width="1.2" opacity=".2"/>
-<line x1="380" y1="130" x2="530" y2="95" stroke="white" stroke-width="1.2" opacity=".2"/>
-<line x1="380" y1="130" x2="530" y2="165" stroke="white" stroke-width="1.2" opacity=".2"/>
-<line x1="530" y1="95" x2="620" y2="130" stroke="white" stroke-width="1.5" opacity=".35"/>
-<line x1="530" y1="165" x2="620" y2="130" stroke="white" stroke-width="1.5" opacity=".35"/>
-</svg></div>
+  <div class="c-no-img"></div>
   <div class="c-body">
     <div class="c-meta">
-      <span class="c-cat" style="background:#0A1628;color:#FFFFFF;">Strategie</span>
+      <span class="c-cat">STRATEGIE</span>
       
     </div>
     <h2 class="c-title">Les LLM sont trop inconsistants pour mesurer la visibilité de marque</h2>
     <p class="c-tldr"></p>
     <button class="btn-expand" onclick="expand(this)">
-      Approfondir <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 5L7 9L11 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      APPROFONDIR <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 5L7 9L11 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
     </button>
     <div class="c-detail" hidden>
       <p class="c-detail-text">Une recherche de SparkToro (janvier 2026) souligne qu'aucune étude n'avait vérifié si les LLM recommandent des marques de façon assez cohérente pour générer des métriques fiables, alors que les entreprises investissent massivement dans ces outils de 'AI visibility'. Cette volatilité est confirmée par Verve, qui observe des fluctuations hebdomadaires majeures — les marques de fast fashion apparaissant dans 40% des réponses LLM, soit l'inverse de leur présence sur Google.</p>
-      <a href="https://sparktoro.com/blog/new-research-ais-are-highly-inconsistent-when-recommending-brands-or-products-marketers-should-take-care-when-tracking-ai-visibility/" target="_blank" rel="noopener" class="btn-source">Lire la source</a>
+      <a href="https://sparktoro.com/blog/new-research-ais-are-highly-inconsistent-when-recommending-brands-or-products-marketers-should-take-care-when-tracking-ai-visibility/" target="_blank" rel="noopener" class="btn-source">LIRE LA SOURCE</a>
     </div>
   </div>
 </article>
 <article class="card" data-cat="strategy">
-  <div class="c-media c-svg"><svg viewBox="0 0 680 260" xmlns="http://www.w3.org/2000/svg">
-<rect width="680" height="260" fill="#0A1628"/>
-<circle cx="90" cy="130" r="7" fill="white" opacity=".9"/>
-<circle cx="230" cy="75" r="5" fill="white" opacity=".6"/>
-<circle cx="230" cy="185" r="5" fill="white" opacity=".6"/>
-<circle cx="380" cy="50" r="3.5" fill="white" opacity=".4"/>
-<circle cx="380" cy="130" r="7" fill="white" opacity=".85"/>
-<circle cx="380" cy="210" r="3.5" fill="white" opacity=".4"/>
-<circle cx="530" cy="95" r="5" fill="white" opacity=".6"/>
-<circle cx="530" cy="165" r="5" fill="white" opacity=".6"/>
-<circle cx="620" cy="130" r="8" fill="white"/>
-<line x1="90" y1="130" x2="230" y2="75" stroke="white" stroke-width="1.2" opacity=".18"/>
-<line x1="90" y1="130" x2="230" y2="185" stroke="white" stroke-width="1.2" opacity=".18"/>
-<line x1="230" y1="75" x2="380" y2="130" stroke="white" stroke-width="1.2" opacity=".2"/>
-<line x1="230" y1="185" x2="380" y2="130" stroke="white" stroke-width="1.2" opacity=".2"/>
-<line x1="380" y1="130" x2="530" y2="95" stroke="white" stroke-width="1.2" opacity=".2"/>
-<line x1="380" y1="130" x2="530" y2="165" stroke="white" stroke-width="1.2" opacity=".2"/>
-<line x1="530" y1="95" x2="620" y2="130" stroke="white" stroke-width="1.5" opacity=".35"/>
-<line x1="530" y1="165" x2="620" y2="130" stroke="white" stroke-width="1.5" opacity=".35"/>
-</svg></div>
+  <div class="c-no-img"></div>
   <div class="c-body">
     <div class="c-meta">
-      <span class="c-cat" style="background:#0A1628;color:#FFFFFF;">Strategie</span>
+      <span class="c-cat">STRATEGIE</span>
       
     </div>
     <h2 class="c-title">Près d'un client sur deux change de marque sur conseil d'un chatbot</h2>
     <p class="c-tldr"></p>
     <button class="btn-expand" onclick="expand(this)">
-      Approfondir <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 5L7 9L11 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      APPROFONDIR <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 5L7 9L11 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
     </button>
     <div class="c-detail" hidden>
       <p class="c-detail-text">Le rapport EMARKETER/Publicis Commerce 'LLM Usage and Trust in the Shopping Journey' (mars 2026), basé sur 1 179 adultes américains ayant utilisé une IA pour rechercher un produit, quantifie un nouveau vecteur d'attrition: la recommandation algorithmique. En B2B le signal est encore plus fort — selon G2, 69% des acheteurs de logiciels ont choisi un autre fournisseur que prévu à cause d'un chatbot, et deux tiers ont acheté chez un vendeur jusque-là inconnu.</p>
-      <a href="https://www.emarketer.com/content/ai-chatbot-recommends-different-brand--nearly-half-of-active-users-say-they-ll-try" target="_blank" rel="noopener" class="btn-source">Lire la source</a>
+      <a href="https://www.emarketer.com/content/ai-chatbot-recommends-different-brand--nearly-half-of-active-users-say-they-ll-try" target="_blank" rel="noopener" class="btn-source">LIRE LA SOURCE</a>
     </div>
   </div>
 </article>
 <article class="card" data-cat="strategy">
-  <div class="c-media c-svg"><svg viewBox="0 0 680 260" xmlns="http://www.w3.org/2000/svg">
-<rect width="680" height="260" fill="#0A1628"/>
-<circle cx="90" cy="130" r="7" fill="white" opacity=".9"/>
-<circle cx="230" cy="75" r="5" fill="white" opacity=".6"/>
-<circle cx="230" cy="185" r="5" fill="white" opacity=".6"/>
-<circle cx="380" cy="50" r="3.5" fill="white" opacity=".4"/>
-<circle cx="380" cy="130" r="7" fill="white" opacity=".85"/>
-<circle cx="380" cy="210" r="3.5" fill="white" opacity=".4"/>
-<circle cx="530" cy="95" r="5" fill="white" opacity=".6"/>
-<circle cx="530" cy="165" r="5" fill="white" opacity=".6"/>
-<circle cx="620" cy="130" r="8" fill="white"/>
-<line x1="90" y1="130" x2="230" y2="75" stroke="white" stroke-width="1.2" opacity=".18"/>
-<line x1="90" y1="130" x2="230" y2="185" stroke="white" stroke-width="1.2" opacity=".18"/>
-<line x1="230" y1="75" x2="380" y2="130" stroke="white" stroke-width="1.2" opacity=".2"/>
-<line x1="230" y1="185" x2="380" y2="130" stroke="white" stroke-width="1.2" opacity=".2"/>
-<line x1="380" y1="130" x2="530" y2="95" stroke="white" stroke-width="1.2" opacity=".2"/>
-<line x1="380" y1="130" x2="530" y2="165" stroke="white" stroke-width="1.2" opacity=".2"/>
-<line x1="530" y1="95" x2="620" y2="130" stroke="white" stroke-width="1.5" opacity=".35"/>
-<line x1="530" y1="165" x2="620" y2="130" stroke="white" stroke-width="1.5" opacity=".35"/>
-</svg></div>
+  <div class="c-no-img"></div>
   <div class="c-body">
     <div class="c-meta">
-      <span class="c-cat" style="background:#0A1628;color:#FFFFFF;">Strategie</span>
+      <span class="c-cat">STRATEGIE</span>
       
     </div>
     <h2 class="c-title">Le 'Question Gap' entre intention de recherche et contexte social</h2>
     <p class="c-tldr"></p>
     <button class="btn-expand" onclick="expand(this)">
-      Approfondir <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 5L7 9L11 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      APPROFONDIR <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 5L7 9L11 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
     </button>
     <div class="c-detail" hidden>
       <p class="c-detail-text">Le rapport The Question Gap de Brandwatch (Cision, juin 2026) démontre, via l'analyse des questions d'acheteurs automobiles, que l'intelligence des moteurs de recherche révèle ce que les consommateurs veulent savoir, tandis que l'intelligence sociale révèle le contexte derrière leurs décisions. Croiser les deux comble un angle mort stratégique que la plupart des marques ignorent en traitant ces données séparément.</p>
-      <a href="https://www.cision.com/about/press-releases/2026-press-releases/new-brandwatch-research-reveals-the-question-gap-between-search-intent-and-social-context-302789056/" target="_blank" rel="noopener" class="btn-source">Lire la source</a>
+      <a href="https://www.cision.com/about/press-releases/2026-press-releases/new-brandwatch-research-reveals-the-question-gap-between-search-intent-and-social-context-302789056/" target="_blank" rel="noopener" class="btn-source">LIRE LA SOURCE</a>
     </div>
   </div>
 </article>
 <article class="card" data-cat="copywriting">
-  <div class="c-media c-svg"><svg viewBox="0 0 680 260" xmlns="http://www.w3.org/2000/svg">
-<rect width="680" height="260" fill="#FFF6F5"/>
-<text x="-20" y="250" font-size="310" font-weight="900" fill="#B91C1C" opacity=".055" font-family="Georgia,serif">AW</text>
-<rect x="52" y="105" width="200" height="8" rx="4" fill="#B91C1C"/>
-<rect x="52" y="129" width="140" height="8" rx="4" fill="#B91C1C" opacity=".35"/>
-<rect x="52" y="153" width="170" height="8" rx="4" fill="#B91C1C" opacity=".18"/>
-<rect x="52" y="177" width="100" height="8" rx="4" fill="#B91C1C" opacity=".1"/>
-<rect x="468" y="85" width="3" height="110" fill="#B91C1C" opacity=".15"/>
-<rect x="498" y="110" width="3" height="65" fill="#B91C1C" opacity=".1"/>
-</svg></div>
+  <div class="c-no-img"></div>
   <div class="c-body">
     <div class="c-meta">
-      <span class="c-cat" style="background:#B91C1C;color:#FFFFFF;">Copywriting</span>
+      <span class="c-cat">COPYWRITING</span>
       
     </div>
     <h2 class="c-title">Les pubs incompréhensibles tuent l'efficacité selon Kantar</h2>
     <p class="c-tldr"></p>
     <button class="btn-expand" onclick="expand(this)">
-      Approfondir <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 5L7 9L11 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      APPROFONDIR <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 5L7 9L11 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
     </button>
     <div class="c-detail" hidden>
       <p class="c-detail-text">L'analyse Kantar de 'The Works' compare 35 campagnes gagnantes à 114 autres publicités : les gagnantes se classent dans le top 36% pour la facilité de compréhension, facteur directement lié à l'efficacité et à la confiance dans la marque. Contre l'orthodoxie créative qui valorise l'ambiguïté et le 'puzzle', la clarté narrative est un levier de vente sous-exploité.</p>
-      <a href="https://www.marketingweek.com/confusing-ads-effectiveness-kantar/" target="_blank" rel="noopener" class="btn-source">Lire la source</a>
+      <a href="https://www.marketingweek.com/confusing-ads-effectiveness-kantar/" target="_blank" rel="noopener" class="btn-source">LIRE LA SOURCE</a>
     </div>
   </div>
 </article>
 <article class="card" data-cat="copywriting">
-  <div class="c-media c-svg"><svg viewBox="0 0 680 260" xmlns="http://www.w3.org/2000/svg">
-<rect width="680" height="260" fill="#FFF6F5"/>
-<text x="-20" y="250" font-size="310" font-weight="900" fill="#B91C1C" opacity=".055" font-family="Georgia,serif">AW</text>
-<rect x="52" y="105" width="200" height="8" rx="4" fill="#B91C1C"/>
-<rect x="52" y="129" width="140" height="8" rx="4" fill="#B91C1C" opacity=".35"/>
-<rect x="52" y="153" width="170" height="8" rx="4" fill="#B91C1C" opacity=".18"/>
-<rect x="52" y="177" width="100" height="8" rx="4" fill="#B91C1C" opacity=".1"/>
-<rect x="468" y="85" width="3" height="110" fill="#B91C1C" opacity=".15"/>
-<rect x="498" y="110" width="3" height="65" fill="#B91C1C" opacity=".1"/>
-</svg></div>
+  <div class="c-no-img"></div>
   <div class="c-body">
     <div class="c-meta">
-      <span class="c-cat" style="background:#B91C1C;color:#FFFFFF;">Copywriting</span>
+      <span class="c-cat">COPYWRITING</span>
       
     </div>
     <h2 class="c-title">Le contenu 'brand-unsafe' surperforme les inventaires sécurisés</h2>
     <p class="c-tldr"></p>
     <button class="btn-expand" onclick="expand(this)">
-      Approfondir <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 5L7 9L11 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      APPROFONDIR <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 5L7 9L11 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
     </button>
     <div class="c-detail" hidden>
       <p class="c-detail-text">L'agence indépendante Bountiful Cow, avec Ozone, a testé en conditions réelles des inventaires bloqués par les filtres de brand safety pour Hilltop Honey, Numan et The Body Coach. Le contenu 'unsafe' a obtenu un indice d'attention de 126 contre 120, avec une hausse de 13,8% de l'intention d'action — alors que ~40% des requêtes pub sur les sites d'actualité premium sont bloquées par des blocklists de mots-clés.</p>
-      <a href="https://uk.themedialeader.com/bountiful-cow-study-finds-all-news-is-brand-safe-with-unsafe-inventory-most-effective/" target="_blank" rel="noopener" class="btn-source">Lire la source</a>
+      <a href="https://uk.themedialeader.com/bountiful-cow-study-finds-all-news-is-brand-safe-with-unsafe-inventory-most-effective/" target="_blank" rel="noopener" class="btn-source">LIRE LA SOURCE</a>
     </div>
   </div>
 </article>
 <article class="card" data-cat="copywriting">
-  <div class="c-media c-svg"><svg viewBox="0 0 680 260" xmlns="http://www.w3.org/2000/svg">
-<rect width="680" height="260" fill="#FFF6F5"/>
-<text x="-20" y="250" font-size="310" font-weight="900" fill="#B91C1C" opacity=".055" font-family="Georgia,serif">AW</text>
-<rect x="52" y="105" width="200" height="8" rx="4" fill="#B91C1C"/>
-<rect x="52" y="129" width="140" height="8" rx="4" fill="#B91C1C" opacity=".35"/>
-<rect x="52" y="153" width="170" height="8" rx="4" fill="#B91C1C" opacity=".18"/>
-<rect x="52" y="177" width="100" height="8" rx="4" fill="#B91C1C" opacity=".1"/>
-<rect x="468" y="85" width="3" height="110" fill="#B91C1C" opacity=".15"/>
-<rect x="498" y="110" width="3" height="65" fill="#B91C1C" opacity=".1"/>
-</svg></div>
+  <div class="c-no-img"></div>
   <div class="c-body">
     <div class="c-meta">
-      <span class="c-cat" style="background:#B91C1C;color:#FFFFFF;">Copywriting</span>
+      <span class="c-cat">COPYWRITING</span>
       
     </div>
     <h2 class="c-title">L'émotion ne convainc que les trois premières secondes</h2>
     <p class="c-tldr"></p>
     <button class="btn-expand" onclick="expand(this)">
-      Approfondir <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 5L7 9L11 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      APPROFONDIR <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 5L7 9L11 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
     </button>
     <div class="c-detail" hidden>
       <p class="c-detail-text">L'étude fMRI de Hang-Yee Chan et coll. (Journal of Marketing Research, 113 participants) montre que l'émotion et la mémoire prédisent l'appréciation dès les trois premières secondes, mais que la prédictivité émotionnelle chute ensuite tandis que la cognition sociale — l'effort de comprendre le récit — prend le relais avec un schéma stable. Conclusion neuroscientifique : presser les boutons émotionnels sans narration soutenue (« feelings without meanings ») ne mène nulle part.</p>
-      <a href="https://journals.sagepub.com/doi/10.1177/00222437231194319" target="_blank" rel="noopener" class="btn-source">Lire la source</a>
+      <a href="https://journals.sagepub.com/doi/10.1177/00222437231194319" target="_blank" rel="noopener" class="btn-source">LIRE LA SOURCE</a>
     </div>
   </div>
 </article>
 <article class="card" data-cat="copywriting">
-  <div class="c-media c-svg"><svg viewBox="0 0 680 260" xmlns="http://www.w3.org/2000/svg">
-<rect width="680" height="260" fill="#FFF6F5"/>
-<text x="-20" y="250" font-size="310" font-weight="900" fill="#B91C1C" opacity=".055" font-family="Georgia,serif">AW</text>
-<rect x="52" y="105" width="200" height="8" rx="4" fill="#B91C1C"/>
-<rect x="52" y="129" width="140" height="8" rx="4" fill="#B91C1C" opacity=".35"/>
-<rect x="52" y="153" width="170" height="8" rx="4" fill="#B91C1C" opacity=".18"/>
-<rect x="52" y="177" width="100" height="8" rx="4" fill="#B91C1C" opacity=".1"/>
-<rect x="468" y="85" width="3" height="110" fill="#B91C1C" opacity=".15"/>
-<rect x="498" y="110" width="3" height="65" fill="#B91C1C" opacity=".1"/>
-</svg></div>
+  <div class="c-no-img"></div>
   <div class="c-body">
     <div class="c-meta">
-      <span class="c-cat" style="background:#B91C1C;color:#FFFFFF;">Copywriting</span>
+      <span class="c-cat">COPYWRITING</span>
       
     </div>
     <h2 class="c-title">Les micro-pubs battent les formats longs sur le trafic</h2>
     <p class="c-tldr"></p>
     <button class="btn-expand" onclick="expand(this)">
-      Approfondir <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 5L7 9L11 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      APPROFONDIR <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 5L7 9L11 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
     </button>
     <div class="c-detail" hidden>
       <p class="c-detail-text">L'étude de Beth L. Fossen, Philip Kim et Inyoung Chae (Journal of Marketing, 2026) montre que les micro-ads ont un impact direct similaire sur les ventes en ligne mais surperforment indirectement en générant plus de trafic, confirmé par une expérience terrain sur réseaux sociaux. Le mécanisme plausible : l'impatience croissante des spectateurs face aux formats longs — un signal qui justifie de réallouer l'inventaire vers des unités ultra-courtes économiques.</p>
-      <a href="https://journals.sagepub.com/doi/10.1177/00222429251350657" target="_blank" rel="noopener" class="btn-source">Lire la source</a>
+      <a href="https://journals.sagepub.com/doi/10.1177/00222429251350657" target="_blank" rel="noopener" class="btn-source">LIRE LA SOURCE</a>
     </div>
   </div>
 </article>
 <article class="card" data-cat="visuals">
-  <div class="c-media c-svg"><svg viewBox="0 0 680 260" xmlns="http://www.w3.org/2000/svg">
-<rect width="680" height="260" fill="#F6F5FF"/>
-<rect x="0" y="0" width="226" height="260" fill="#1E1B4B" opacity=".07"/>
-<rect x="226" y="0" width="228" height="130" fill="#1E1B4B" opacity=".12"/>
-<rect x="454" y="130" width="226" height="130" fill="#1E1B4B" opacity=".05"/>
-<circle cx="340" cy="130" r="95" fill="none" stroke="#1E1B4B" stroke-width="1.5" opacity=".12"/>
-<circle cx="340" cy="130" r="46" fill="#1E1B4B" opacity=".07"/>
-<circle cx="340" cy="130" r="13" fill="#1E1B4B" opacity=".2"/>
-<line x1="0" y1="130" x2="680" y2="130" stroke="#1E1B4B" stroke-width="1" opacity=".08"/>
-<line x1="340" y1="0" x2="340" y2="260" stroke="#1E1B4B" stroke-width="1" opacity=".08"/>
-<rect x="60" y="60" width="70" height="70" fill="none" stroke="#1E1B4B" stroke-width="1.5" opacity=".12" transform="rotate(18 95 95)"/>
-<rect x="554" y="148" width="52" height="52" fill="#1E1B4B" opacity=".08" transform="rotate(-12 580 174)"/>
-</svg></div>
+  <div class="c-no-img"></div>
   <div class="c-body">
     <div class="c-meta">
-      <span class="c-cat" style="background:#1E1B4B;color:#FFFFFF;">Direction artistique</span>
+      <span class="c-cat">DIRECTION ARTISTIQUE</span>
       
     </div>
     <h2 class="c-title">La provenance cryptographique devient clause contractuelle, pas argument marketing</h2>
     <p class="c-tldr"></p>
     <button class="btn-expand" onclick="expand(this)">
-      Approfondir <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 5L7 9L11 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      APPROFONDIR <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 5L7 9L11 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
     </button>
     <div class="c-detail" hidden>
       <p class="c-detail-text">Selon Fstoppers, photojournalisme, secteurs régulés et publicité à forte responsabilité juridique mènent l'inscription de clauses exigeant des images signées, l'authenticité passant de buzzword marketing à clause de responsabilité. Le marché se scinde en deux tiers : imagerie synthétique bon marché et imagerie humaine vérifiée à métadonnées C2PA, le milieu de gamme générique perdant toute position défendable. Implication DA : intégrer la chaîne de provenance dès le brief de production, pas en post-rationalisation.</p>
-      <a href="https://fstoppers.com/opinion/11-predictions-photography-industry-2026-720319" target="_blank" rel="noopener" class="btn-source">Lire la source</a>
+      <a href="https://fstoppers.com/opinion/11-predictions-photography-industry-2026-720319" target="_blank" rel="noopener" class="btn-source">LIRE LA SOURCE</a>
     </div>
   </div>
 </article>
 <article class="card" data-cat="visuals">
-  <div class="c-media c-svg"><svg viewBox="0 0 680 260" xmlns="http://www.w3.org/2000/svg">
-<rect width="680" height="260" fill="#F6F5FF"/>
-<rect x="0" y="0" width="226" height="260" fill="#1E1B4B" opacity=".07"/>
-<rect x="226" y="0" width="228" height="130" fill="#1E1B4B" opacity=".12"/>
-<rect x="454" y="130" width="226" height="130" fill="#1E1B4B" opacity=".05"/>
-<circle cx="340" cy="130" r="95" fill="none" stroke="#1E1B4B" stroke-width="1.5" opacity=".12"/>
-<circle cx="340" cy="130" r="46" fill="#1E1B4B" opacity=".07"/>
-<circle cx="340" cy="130" r="13" fill="#1E1B4B" opacity=".2"/>
-<line x1="0" y1="130" x2="680" y2="130" stroke="#1E1B4B" stroke-width="1" opacity=".08"/>
-<line x1="340" y1="0" x2="340" y2="260" stroke="#1E1B4B" stroke-width="1" opacity=".08"/>
-<rect x="60" y="60" width="70" height="70" fill="none" stroke="#1E1B4B" stroke-width="1.5" opacity=".12" transform="rotate(18 95 95)"/>
-<rect x="554" y="148" width="52" height="52" fill="#1E1B4B" opacity=".08" transform="rotate(-12 580 174)"/>
-</svg></div>
+  <div class="c-no-img"></div>
   <div class="c-body">
     <div class="c-meta">
-      <span class="c-cat" style="background:#1E1B4B;color:#FFFFFF;">Direction artistique</span>
+      <span class="c-cat">DIRECTION ARTISTIQUE</span>
       
     </div>
     <h2 class="c-title">L'effet AI-authorship inverse la valeur perçue selon le contexte</h2>
     <p class="c-tldr"></p>
     <button class="btn-expand" onclick="expand(this)">
-      Approfondir <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 5L7 9L11 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      APPROFONDIR <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 5L7 9L11 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
     </button>
     <div class="c-detail" hidden>
       <p class="c-detail-text">L'étude de Kirk et Givi parue au Journal of Business Research démontre que <cite index="39-3">lorsque les consommateurs croient qu'une communication marketing émotionnelle est écrite par une IA plutôt qu'un humain, le bouche-à-oreille positif et la fidélité diminuent</cite>. Le point contre-intuitif rarement commenté : <cite index="36-6">quand les consommateurs pensent qu'une communication est réutilisée et non écrite à l'origine par l'émetteur, l'effet s'inverse</cite>, l'IA paraissant alors plus authentique qu'un humain. Implication : la DA doit réserver l'humain visible aux registres émotionnels et accepter l'IA assumée sur le factuel ou le recyclé.</p>
-      <a href="https://www.sciencedirect.com/science/article/abs/pii/S0148296324004880" target="_blank" rel="noopener" class="btn-source">Lire la source</a>
+      <a href="https://www.sciencedirect.com/science/article/abs/pii/S0148296324004880" target="_blank" rel="noopener" class="btn-source">LIRE LA SOURCE</a>
     </div>
   </div>
 </article>
 <article class="card" data-cat="visuals">
-  <div class="c-media c-svg"><svg viewBox="0 0 680 260" xmlns="http://www.w3.org/2000/svg">
-<rect width="680" height="260" fill="#F6F5FF"/>
-<rect x="0" y="0" width="226" height="260" fill="#1E1B4B" opacity=".07"/>
-<rect x="226" y="0" width="228" height="130" fill="#1E1B4B" opacity=".12"/>
-<rect x="454" y="130" width="226" height="130" fill="#1E1B4B" opacity=".05"/>
-<circle cx="340" cy="130" r="95" fill="none" stroke="#1E1B4B" stroke-width="1.5" opacity=".12"/>
-<circle cx="340" cy="130" r="46" fill="#1E1B4B" opacity=".07"/>
-<circle cx="340" cy="130" r="13" fill="#1E1B4B" opacity=".2"/>
-<line x1="0" y1="130" x2="680" y2="130" stroke="#1E1B4B" stroke-width="1" opacity=".08"/>
-<line x1="340" y1="0" x2="340" y2="260" stroke="#1E1B4B" stroke-width="1" opacity=".08"/>
-<rect x="60" y="60" width="70" height="70" fill="none" stroke="#1E1B4B" stroke-width="1.5" opacity=".12" transform="rotate(18 95 95)"/>
-<rect x="554" y="148" width="52" height="52" fill="#1E1B4B" opacity=".08" transform="rotate(-12 580 174)"/>
-</svg></div>
+  <div class="c-no-img"></div>
   <div class="c-body">
     <div class="c-meta">
-      <span class="c-cat" style="background:#1E1B4B;color:#FFFFFF;">Direction artistique</span>
+      <span class="c-cat">DIRECTION ARTISTIQUE</span>
       
     </div>
     <h2 class="c-title">Le noir et blanc reprend l'avantage attentionnel sur la couleur dynamique</h2>
     <p class="c-tldr"></p>
     <button class="btn-expand" onclick="expand(this)">
-      Approfondir <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 5L7 9L11 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      APPROFONDIR <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 5L7 9L11 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
     </button>
     <div class="c-detail" hidden>
       <p class="c-detail-text">Dans Applied Sciences, Yuan, Wei et Chen ont testé trois affiches en versions dynamique/statique et couleur/N&B sur soixante participants. <cite index="42-9,42-10">Les affiches dynamiques ont nettement surpassé les statiques en durée et nombre de fixations, avec F = 245,896, p < 0,001, confirmant l'avantage du design dynamique pour capter l'attention.</cite> Le signal faible pour la DA : la variable forme/mouvement domine la variable chromatique, justifiant des systèmes visuels pensés motion-first plutôt que color-first, à rebours de l'obsession palette.</p>
-      <a href="https://doi.org/10.3390/app16010291" target="_blank" rel="noopener" class="btn-source">Lire la source</a>
+      <a href="https://doi.org/10.3390/app16010291" target="_blank" rel="noopener" class="btn-source">LIRE LA SOURCE</a>
     </div>
   </div>
 </article>
 <article class="card" data-cat="visuals">
-  <div class="c-media c-svg"><svg viewBox="0 0 680 260" xmlns="http://www.w3.org/2000/svg">
-<rect width="680" height="260" fill="#F6F5FF"/>
-<rect x="0" y="0" width="226" height="260" fill="#1E1B4B" opacity=".07"/>
-<rect x="226" y="0" width="228" height="130" fill="#1E1B4B" opacity=".12"/>
-<rect x="454" y="130" width="226" height="130" fill="#1E1B4B" opacity=".05"/>
-<circle cx="340" cy="130" r="95" fill="none" stroke="#1E1B4B" stroke-width="1.5" opacity=".12"/>
-<circle cx="340" cy="130" r="46" fill="#1E1B4B" opacity=".07"/>
-<circle cx="340" cy="130" r="13" fill="#1E1B4B" opacity=".2"/>
-<line x1="0" y1="130" x2="680" y2="130" stroke="#1E1B4B" stroke-width="1" opacity=".08"/>
-<line x1="340" y1="0" x2="340" y2="260" stroke="#1E1B4B" stroke-width="1" opacity=".08"/>
-<rect x="60" y="60" width="70" height="70" fill="none" stroke="#1E1B4B" stroke-width="1.5" opacity=".12" transform="rotate(18 95 95)"/>
-<rect x="554" y="148" width="52" height="52" fill="#1E1B4B" opacity=".08" transform="rotate(-12 580 174)"/>
-</svg></div>
+  <div class="c-no-img"></div>
   <div class="c-body">
     <div class="c-meta">
-      <span class="c-cat" style="background:#1E1B4B;color:#FFFFFF;">Direction artistique</span>
+      <span class="c-cat">DIRECTION ARTISTIQUE</span>
       
     </div>
     <h2 class="c-title">Le luxe sanctionne l'IA visible alors qu'il l'industrialise en coulisses</h2>
     <p class="c-tldr"></p>
     <button class="btn-expand" onclick="expand(this)">
-      Approfondir <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 5L7 9L11 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      APPROFONDIR <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 5L7 9L11 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
     </button>
     <div class="c-detail" hidden>
       <p class="c-detail-text">Selon The Cut Fashion Academy, <cite index="29-7,29-8,29-9">Valentino a publié en décembre 2025 une vidéo IA clairement étiquetée pour son sac DeVain et a affronté le même rejet : les utilisateurs n'étaient pas confus sur la nature IA, ils étaient en colère que ce soit de l'IA</cite>. Aerie a capitalisé sur la rupture avec une campagne anti-IA portée par Pamela Anderson, concluant sur la formule <cite index="29-14">« You can't prompt this »</cite>. Le signal stratégique : la transparence ne suffit pas, c'est le geste créatif humain comme preuve de soin qui devient l'actif différenciant en haut de gamme.</p>
-      <a href="https://www.thecutfashionacademy.com/blog/when-consumers-rage-against-ai-imagery" target="_blank" rel="noopener" class="btn-source">Lire la source</a>
+      <a href="https://www.thecutfashionacademy.com/blog/when-consumers-rage-against-ai-imagery" target="_blank" rel="noopener" class="btn-source">LIRE LA SOURCE</a>
     </div>
   </div>
 </article></div>
   </div>
 </section>
 
-<footer class="site-footer">DAJM &middot; Digest Matin &middot; Friday 19 june 2026</footer>
+<footer class="site-footer">DAJM &middot; DIGEST MATIN &middot; FRIDAY 19 JUNE 2026</footer>
+
+<div class="overlay" id="overlay">
+  <div class="overlay-text">RECHERCHE EN COURS</div>
+  <div class="overlay-sub">Les agents travaillent... (~2 min)</div>
+</div>
 
 <script>
-// Refresh button visible uniquement en local
-if(location.hostname==='localhost'||location.hostname==='127.0.0.1'){
-  document.getElementById('btn-refresh').style.display='';
-}
-
 var _poll;
 async function doRefresh(){
   var btn=document.getElementById('btn-refresh');
-  btn.disabled=true;btn.textContent='Recherche...';
+  btn.disabled=true;
+  btn.textContent='RECHERCHE...';
+  document.getElementById('overlay').classList.add('show');
   try{
-    await fetch('http://localhost:8765/refresh');
+    var r=await fetch('http://localhost:8765/refresh');
+    if(!r.ok)throw new Error();
     _poll=setInterval(async function(){
       try{
-        var r=await fetch('http://localhost:8765/status');
-        var d=await r.json();
+        var s=await fetch('http://localhost:8765/status');
+        var d=await s.json();
         if(!d.running){clearInterval(_poll);location.reload();}
       }catch(e){}
     },5000);
   }catch(e){
-    btn.disabled=false;btn.textContent='Serveur non actif';
-    setTimeout(function(){btn.textContent='Actualiser';btn.disabled=false;},3000);
+    document.getElementById('overlay').classList.remove('show');
+    btn.disabled=false;
+    btn.textContent='SERVEUR NON ACTIF';
+    setTimeout(function(){btn.textContent='ACTUALISER';btn.disabled=false;},3000);
   }
 }
 
@@ -865,7 +675,7 @@ function expand(btn){
   var open=!panel.hidden;
   panel.hidden=open;
   btn.classList.toggle('open',!open);
-  btn.childNodes[0].textContent=open?'Approfondir ':'Reduire ';
+  btn.childNodes[0].textContent=open?'APPROFONDIR ':'REDUIRE ';
 }
 function fil(cat,btn){
   document.querySelectorAll('.f').forEach(b=>b.classList.remove('on'));
