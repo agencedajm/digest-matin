@@ -76,19 +76,37 @@ SVG = {
 <line x1="545" y1="130" x2="628" y2="130" stroke="white" stroke-width="1.5" opacity=".5"/>
 </svg>""",
 
-# COPYWRITING — fond rouge — hiérarchie typographique abstraite
+# COPYWRITING — fond rouge — ondes concentriques (message qui se propage)
 "copywriting": """<svg viewBox="0 0 680 260" width="100%" height="100%" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
 <rect width="680" height="260" fill="#FF0000"/>
-<rect x="52" y="46" width="480" height="22" fill="white"/>
-<rect x="52" y="84" width="300" height="13" fill="white" opacity=".85"/>
-<rect x="52" y="114" width="558" height="6" fill="white" opacity=".55"/>
-<rect x="52" y="126" width="476" height="6" fill="white" opacity=".55"/>
-<rect x="52" y="138" width="518" height="6" fill="white" opacity=".55"/>
-<rect x="52" y="150" width="260" height="6" fill="white" opacity=".55"/>
-<rect x="52" y="172" width="558" height="6" fill="white" opacity=".38"/>
-<rect x="52" y="184" width="410" height="6" fill="white" opacity=".38"/>
-<rect x="52" y="196" width="490" height="6" fill="white" opacity=".38"/>
-<rect x="52" y="220" width="196" height="20" fill="white"/>
+<circle cx="340" cy="130" r="16" fill="white"/>
+<circle cx="340" cy="130" r="52" fill="none" stroke="white" stroke-width="1.5" opacity=".75"/>
+<circle cx="340" cy="130" r="96" fill="none" stroke="white" stroke-width="1.2" opacity=".52"/>
+<circle cx="340" cy="130" r="148" fill="none" stroke="white" stroke-width="1" opacity=".32"/>
+<circle cx="340" cy="130" r="210" fill="none" stroke="white" stroke-width=".8" opacity=".18"/>
+<circle cx="392" cy="130" r="5" fill="white" opacity=".9"/>
+<circle cx="366" cy="85" r="5" fill="white" opacity=".9"/>
+<circle cx="314" cy="85" r="5" fill="white" opacity=".9"/>
+<circle cx="288" cy="130" r="5" fill="white" opacity=".9"/>
+<circle cx="314" cy="175" r="5" fill="white" opacity=".9"/>
+<circle cx="366" cy="175" r="5" fill="white" opacity=".9"/>
+<circle cx="436" cy="130" r="6" fill="white" opacity=".68"/>
+<circle cx="396" cy="47" r="5" fill="white" opacity=".68"/>
+<circle cx="244" cy="82" r="5" fill="white" opacity=".68"/>
+<circle cx="244" cy="178" r="5" fill="white" opacity=".68"/>
+<circle cx="396" cy="213" r="5" fill="white" opacity=".68"/>
+<circle cx="488" cy="130" r="5" fill="white" opacity=".45"/>
+<circle cx="448" cy="20" r="4" fill="white" opacity=".4"/>
+<circle cx="192" cy="130" r="5" fill="white" opacity=".45"/>
+<circle cx="232" cy="20" r="4" fill="white" opacity=".4"/>
+<circle cx="232" cy="240" r="4" fill="white" opacity=".4"/>
+<circle cx="448" cy="240" r="4" fill="white" opacity=".4"/>
+<line x1="340" y1="130" x2="392" y2="130" stroke="white" stroke-width="1" opacity=".18"/>
+<line x1="340" y1="130" x2="366" y2="85" stroke="white" stroke-width="1" opacity=".18"/>
+<line x1="340" y1="130" x2="314" y2="85" stroke="white" stroke-width="1" opacity=".18"/>
+<line x1="340" y1="130" x2="288" y2="130" stroke="white" stroke-width="1" opacity=".18"/>
+<line x1="340" y1="130" x2="314" y2="175" stroke="white" stroke-width="1" opacity=".18"/>
+<line x1="340" y1="130" x2="366" y2="175" stroke="white" stroke-width="1" opacity=".18"/>
 </svg>""",
 
 # DIRECTION ARTISTIQUE — fond bleu — cadre composition règle des tiers
