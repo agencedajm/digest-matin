@@ -47,94 +47,69 @@ TODAY_SHORT = now.strftime("%d/%m/%Y")
 # ─── SVG illustrations ────────────────────────────────────────────────────────
 
 SVG = {
-# Réseau de nœuds — hiérarchie stratégique
+# STRATÉGIE — fond noir — réseau de nœuds hiérarchique
 "strategy": """<svg viewBox="0 0 680 260" width="100%" height="100%" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
-<rect width="680" height="260" fill="#000"/>
-<circle cx="90" cy="130" r="7" fill="white" opacity=".9"/>
-<circle cx="240" cy="72" r="5" fill="white" opacity=".65"/>
-<circle cx="240" cy="130" r="4" fill="white" opacity=".45"/>
-<circle cx="240" cy="188" r="5" fill="white" opacity=".65"/>
-<circle cx="390" cy="48" r="3.5" fill="white" opacity=".4"/>
-<circle cx="390" cy="105" r="6" fill="white" opacity=".8"/>
-<circle cx="390" cy="155" r="6" fill="white" opacity=".8"/>
-<circle cx="390" cy="212" r="3.5" fill="white" opacity=".4"/>
-<circle cx="540" cy="88" r="5" fill="white" opacity=".6"/>
-<circle cx="540" cy="130" r="8" fill="white"/>
-<circle cx="540" cy="172" r="5" fill="white" opacity=".6"/>
-<circle cx="630" cy="130" r="6" fill="white" opacity=".85"/>
-<line x1="90" y1="130" x2="240" y2="72" stroke="white" stroke-width="1" opacity=".2"/>
-<line x1="90" y1="130" x2="240" y2="130" stroke="white" stroke-width="1" opacity=".12"/>
-<line x1="90" y1="130" x2="240" y2="188" stroke="white" stroke-width="1" opacity=".2"/>
-<line x1="240" y1="72" x2="390" y2="105" stroke="white" stroke-width="1" opacity=".22"/>
-<line x1="240" y1="130" x2="390" y2="105" stroke="white" stroke-width="1" opacity=".15"/>
-<line x1="240" y1="188" x2="390" y2="155" stroke="white" stroke-width="1" opacity=".22"/>
-<line x1="390" y1="105" x2="540" y2="88" stroke="white" stroke-width="1.2" opacity=".28"/>
-<line x1="390" y1="105" x2="540" y2="130" stroke="white" stroke-width="1.2" opacity=".35"/>
-<line x1="390" y1="155" x2="540" y2="130" stroke="white" stroke-width="1.2" opacity=".35"/>
-<line x1="390" y1="155" x2="540" y2="172" stroke="white" stroke-width="1.2" opacity=".28"/>
-<line x1="540" y1="130" x2="630" y2="130" stroke="white" stroke-width="1.5" opacity=".45"/>
+<rect width="680" height="260" fill="#000000"/>
+<circle cx="90" cy="130" r="8" fill="white"/>
+<circle cx="250" cy="68" r="5" fill="white" opacity=".7"/>
+<circle cx="250" cy="130" r="4" fill="white" opacity=".45"/>
+<circle cx="250" cy="192" r="5" fill="white" opacity=".7"/>
+<circle cx="400" cy="44" r="3.5" fill="white" opacity=".4"/>
+<circle cx="400" cy="100" r="6" fill="white" opacity=".85"/>
+<circle cx="400" cy="160" r="6" fill="white" opacity=".85"/>
+<circle cx="400" cy="216" r="3.5" fill="white" opacity=".4"/>
+<circle cx="545" cy="82" r="5" fill="white" opacity=".6"/>
+<circle cx="545" cy="130" r="9" fill="white"/>
+<circle cx="545" cy="178" r="5" fill="white" opacity=".6"/>
+<circle cx="628" cy="130" r="6" fill="white" opacity=".8"/>
+<line x1="90" y1="130" x2="250" y2="68" stroke="white" stroke-width="1" opacity=".22"/>
+<line x1="90" y1="130" x2="250" y2="130" stroke="white" stroke-width="1" opacity=".12"/>
+<line x1="90" y1="130" x2="250" y2="192" stroke="white" stroke-width="1" opacity=".22"/>
+<line x1="250" y1="68" x2="400" y2="100" stroke="white" stroke-width="1" opacity=".25"/>
+<line x1="250" y1="130" x2="400" y2="100" stroke="white" stroke-width="1" opacity=".14"/>
+<line x1="250" y1="130" x2="400" y2="160" stroke="white" stroke-width="1" opacity=".14"/>
+<line x1="250" y1="192" x2="400" y2="160" stroke="white" stroke-width="1" opacity=".25"/>
+<line x1="400" y1="100" x2="545" y2="82" stroke="white" stroke-width="1.2" opacity=".3"/>
+<line x1="400" y1="100" x2="545" y2="130" stroke="white" stroke-width="1.2" opacity=".38"/>
+<line x1="400" y1="160" x2="545" y2="130" stroke="white" stroke-width="1.2" opacity=".38"/>
+<line x1="400" y1="160" x2="545" y2="178" stroke="white" stroke-width="1.2" opacity=".3"/>
+<line x1="545" y1="130" x2="628" y2="130" stroke="white" stroke-width="1.5" opacity=".5"/>
 </svg>""",
 
-# Rythme de points — cadence du copy, zéro lettre
+# COPYWRITING — fond rouge — hiérarchie typographique abstraite
 "copywriting": """<svg viewBox="0 0 680 260" width="100%" height="100%" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
-<rect width="680" height="260" fill="#000"/>
-<circle cx="52" cy="72" r="7" fill="white" opacity=".9"/>
-<circle cx="84" cy="72" r="3" fill="white" opacity=".45"/>
-<circle cx="104" cy="72" r="3" fill="white" opacity=".45"/>
-<circle cx="152" cy="72" r="7" fill="white" opacity=".9"/>
-<circle cx="204" cy="72" r="3" fill="white" opacity=".35"/>
-<circle cx="270" cy="72" r="7" fill="white" opacity=".9"/>
-<circle cx="300" cy="72" r="3" fill="white" opacity=".45"/>
-<circle cx="320" cy="72" r="3" fill="white" opacity=".45"/>
-<circle cx="400" cy="72" r="7" fill="white" opacity=".9"/>
-<circle cx="462" cy="72" r="3" fill="white" opacity=".35"/>
-<circle cx="524" cy="72" r="7" fill="white" opacity=".9"/>
-<circle cx="556" cy="72" r="3" fill="white" opacity=".45"/>
-<circle cx="608" cy="72" r="5" fill="white" opacity=".65"/>
-<circle cx="648" cy="72" r="3" fill="white" opacity=".35"/>
-<circle cx="52" cy="130" r="5" fill="white" opacity=".65"/>
-<circle cx="92" cy="130" r="5" fill="white" opacity=".65"/>
-<circle cx="180" cy="130" r="7" fill="white" opacity=".9"/>
-<circle cx="212" cy="130" r="3" fill="white" opacity=".45"/>
-<circle cx="232" cy="130" r="3" fill="white" opacity=".45"/>
-<circle cx="316" cy="130" r="5" fill="white" opacity=".65"/>
-<circle cx="414" cy="130" r="7" fill="white" opacity=".9"/>
-<circle cx="446" cy="130" r="3" fill="white" opacity=".35"/>
-<circle cx="536" cy="130" r="7" fill="white" opacity=".9"/>
-<circle cx="568" cy="130" r="3" fill="white" opacity=".45"/>
-<circle cx="590" cy="130" r="3" fill="white" opacity=".45"/>
-<circle cx="648" cy="130" r="5" fill="white" opacity=".65"/>
-<circle cx="98" cy="188" r="3" fill="white" opacity=".35"/>
-<circle cx="162" cy="188" r="7" fill="white" opacity=".9"/>
-<circle cx="194" cy="188" r="3" fill="white" opacity=".45"/>
-<circle cx="256" cy="188" r="5" fill="white" opacity=".65"/>
-<circle cx="354" cy="188" r="7" fill="white" opacity=".9"/>
-<circle cx="386" cy="188" r="3" fill="white" opacity=".35"/>
-<circle cx="408" cy="188" r="3" fill="white" opacity=".45"/>
-<circle cx="486" cy="188" r="5" fill="white" opacity=".65"/>
-<circle cx="576" cy="188" r="7" fill="white" opacity=".9"/>
-<circle cx="608" cy="188" r="3" fill="white" opacity=".45"/>
+<rect width="680" height="260" fill="#FF0000"/>
+<rect x="52" y="46" width="480" height="22" fill="white"/>
+<rect x="52" y="84" width="300" height="13" fill="white" opacity=".85"/>
+<rect x="52" y="114" width="558" height="6" fill="white" opacity=".55"/>
+<rect x="52" y="126" width="476" height="6" fill="white" opacity=".55"/>
+<rect x="52" y="138" width="518" height="6" fill="white" opacity=".55"/>
+<rect x="52" y="150" width="260" height="6" fill="white" opacity=".55"/>
+<rect x="52" y="172" width="558" height="6" fill="white" opacity=".38"/>
+<rect x="52" y="184" width="410" height="6" fill="white" opacity=".38"/>
+<rect x="52" y="196" width="490" height="6" fill="white" opacity=".38"/>
+<rect x="52" y="220" width="196" height="20" fill="white"/>
 </svg>""",
 
-# Cadre composition — règle des tiers, points forts
+# DIRECTION ARTISTIQUE — fond bleu — cadre composition règle des tiers
 "visuals": """<svg viewBox="0 0 680 260" width="100%" height="100%" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
-<rect width="680" height="260" fill="#000"/>
-<rect x="32" y="20" width="616" height="220" fill="none" stroke="white" stroke-width="1.2" opacity=".28"/>
-<line x1="237" y1="20" x2="237" y2="240" stroke="white" stroke-width=".8" opacity=".14"/>
-<line x1="443" y1="20" x2="443" y2="240" stroke="white" stroke-width=".8" opacity=".14"/>
-<line x1="32" y1="93" x2="648" y2="93" stroke="white" stroke-width=".8" opacity=".14"/>
-<line x1="32" y1="167" x2="648" y2="167" stroke="white" stroke-width=".8" opacity=".14"/>
-<circle cx="237" cy="93" r="7" fill="white" opacity=".9"/>
+<rect width="680" height="260" fill="#0000FF"/>
+<rect x="32" y="20" width="616" height="220" fill="none" stroke="white" stroke-width="1.5" opacity=".35"/>
+<line x1="237" y1="20" x2="237" y2="240" stroke="white" stroke-width="1" opacity=".18"/>
+<line x1="443" y1="20" x2="443" y2="240" stroke="white" stroke-width="1" opacity=".18"/>
+<line x1="32" y1="93" x2="648" y2="93" stroke="white" stroke-width="1" opacity=".18"/>
+<line x1="32" y1="167" x2="648" y2="167" stroke="white" stroke-width="1" opacity=".18"/>
+<circle cx="237" cy="93" r="8" fill="white" opacity=".95"/>
 <circle cx="443" cy="93" r="5" fill="white" opacity=".6"/>
 <circle cx="237" cy="167" r="5" fill="white" opacity=".6"/>
-<circle cx="443" cy="167" r="7" fill="white" opacity=".9"/>
-<line x1="32" y1="20" x2="648" y2="240" stroke="white" stroke-width=".8" opacity=".07"/>
-<line x1="227" y1="83" x2="247" y2="83" stroke="white" stroke-width="1.5" opacity=".55"/>
-<line x1="237" y1="73" x2="237" y2="103" stroke="white" stroke-width="1.5" opacity=".55"/>
-<polyline points="32,40 32,20 52,20" stroke="white" stroke-width="2" fill="none" opacity=".55"/>
-<polyline points="628,20 648,20 648,40" stroke="white" stroke-width="2" fill="none" opacity=".55"/>
-<polyline points="32,220 32,240 52,240" stroke="white" stroke-width="2" fill="none" opacity=".55"/>
-<polyline points="628,240 648,240 648,220" stroke="white" stroke-width="2" fill="none" opacity=".55"/>
+<circle cx="443" cy="167" r="8" fill="white" opacity=".95"/>
+<line x1="32" y1="20" x2="648" y2="240" stroke="white" stroke-width="1" opacity=".1"/>
+<line x1="226" y1="82" x2="248" y2="82" stroke="white" stroke-width="2" opacity=".7"/>
+<line x1="237" y1="71" x2="237" y2="105" stroke="white" stroke-width="2" opacity=".7"/>
+<polyline points="32,44 32,20 56,20" stroke="white" stroke-width="2.5" fill="none" opacity=".65"/>
+<polyline points="624,20 648,20 648,44" stroke="white" stroke-width="2.5" fill="none" opacity=".65"/>
+<polyline points="32,216 32,240 56,240" stroke="white" stroke-width="2.5" fill="none" opacity=".65"/>
+<polyline points="624,240 648,240 648,216" stroke="white" stroke-width="2.5" fill="none" opacity=".65"/>
 </svg>""",
 }
 
@@ -150,21 +125,21 @@ AGENTS = [
     {
         "id": "strategy",
         "label": "Strategie",
-        "cat_bg": "#0A1628",
+        "cat_bg": "#000000",
         "cat_fg": "#FFFFFF",
         "prompt": f"Expert strategie de communication. Recherche web : 3 insights pointus et inattendus en strategie de marque (90 derniers jours).\n{RULES}",
     },
     {
         "id": "copywriting",
         "label": "Copywriting",
-        "cat_bg": "#B91C1C",
+        "cat_bg": "#FF0000",
         "cat_fg": "#FFFFFF",
         "prompt": f"Expert copywriting et publicite. Recherche web : 3 insights pointus sur les campagnes et mecaniques redactionnelles (90 derniers jours).\n{RULES}",
     },
     {
         "id": "visuals",
         "label": "Direction artistique",
-        "cat_bg": "#1E1B4B",
+        "cat_bg": "#0000FF",
         "cat_fg": "#FFFFFF",
         "prompt": f"Expert direction artistique. Recherche web : 3 tendances visuelles significatives et non-evidentes en communication (90 derniers jours).\n{RULES}",
     },
@@ -232,7 +207,8 @@ def render_card(card: dict, agent: dict, is_new: bool) -> str:
     detail = _html.escape(card.get("detail", ""))
     title  = _html.escape(card.get("title", ""))
 
-    bar = '<div class="c-bar"></div>'
+    color = agent["cat_bg"]
+    bar   = f'<div class="c-bar" style="background:{color}"></div>'
 
     if img:
         media = f'<div class="c-media"><img src="{img}" alt="" loading="lazy" onerror="this.closest(\'.c-media\').remove()"></div>'
@@ -247,7 +223,7 @@ def render_card(card: dict, agent: dict, is_new: bool) -> str:
   {media}
   <div class="c-body">
     <div class="c-meta">
-      <span class="c-cat">{agent['label'].upper()}</span>
+      <span class="c-cat" style="background:{color}">{agent['label'].upper()}</span>
       {new_badge}
     </div>
     <h2 class="c-title">{card.get('title','')}</h2>
@@ -645,8 +621,13 @@ async function doRefresh(){{
 document.querySelectorAll('.card').forEach(function(c,i){{c.style.setProperty('--ci',i)}});
 
 // Modal
+var CAT_COLORS={{'strategy':'#000000','copywriting':'#FF0000','visuals':'#0000FF'}};
 function openModal(card){{
-  document.getElementById('m-cat').textContent=card.dataset.label||'';
+  var cat=card.dataset.cat||'strategy';
+  var color=CAT_COLORS[cat]||'#000';
+  var catEl=document.getElementById('m-cat');
+  catEl.textContent=card.dataset.label||'';
+  catEl.style.background=color;
   document.getElementById('m-title').textContent=card.dataset.title||'';
   document.getElementById('m-detail').textContent=card.dataset.detail||'';
   var src=card.dataset.src||'';
