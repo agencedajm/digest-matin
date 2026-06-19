@@ -89,16 +89,16 @@ a{color:#0000FF}
 }
 .day-today{font-size:48px}
 
-/* ── Grille 5 colonnes — 4 lignes max, flow en colonnes ── */
-.cards-grid{display:block}
-
+/* ── Grille ── */
+.cards-grid{
+  display:grid;
+  grid-template-columns:1fr;
+  gap:16px
+}
 @media(min-width:600px){
   .cards-grid{
-    display:grid;
     grid-template-columns:repeat(2,1fr);
-    grid-template-rows:repeat(4,auto);
-    grid-auto-flow:column;
-    grid-auto-columns:1fr;
+    gap:0;
     border-top:3px solid #000;
     border-left:3px solid #000
   }
@@ -111,11 +111,11 @@ a{color:#0000FF}
 .card{
   background:#fff;
   overflow:hidden;
-  margin-bottom:3px
+  border:3px solid #000
 }
 @media(min-width:600px){
   .card{
-    margin-bottom:0;
+    border:none;
     border-right:3px solid #000;
     border-bottom:3px solid #000
   }

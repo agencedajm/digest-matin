@@ -89,16 +89,16 @@ a{color:#0000FF}
 }
 .day-today{font-size:48px}
 
-/* ── Grille 5 colonnes — 4 lignes max, flow en colonnes ── */
-.cards-grid{display:block}
-
+/* ── Grille ── */
+.cards-grid{
+  display:grid;
+  grid-template-columns:1fr;
+  gap:16px
+}
 @media(min-width:600px){
   .cards-grid{
-    display:grid;
     grid-template-columns:repeat(2,1fr);
-    grid-template-rows:repeat(4,auto);
-    grid-auto-flow:column;
-    grid-auto-columns:1fr;
+    gap:0;
     border-top:3px solid #000;
     border-left:3px solid #000
   }
@@ -111,11 +111,11 @@ a{color:#0000FF}
 .card{
   background:#fff;
   overflow:hidden;
-  margin-bottom:3px
+  border:3px solid #000
 }
 @media(min-width:600px){
   .card{
-    margin-bottom:0;
+    border:none;
     border-right:3px solid #000;
     border-bottom:3px solid #000
   }
@@ -256,14 +256,14 @@ a{color:#0000FF}
       <span class="c-cat">STRATEGIE</span>
       <span class="badge-new">NOUVEAU</span>
     </div>
-    <h2 class="c-title">Les avertissements anti-contrefaçon font acheter plus de faux</h2>
-    <p class="c-tldr">Le langage de peur déclenche une réactance psychologique qui pousse les plus vulnérables à acheter davantage de contrefaçons.</p>
+    <h2 class="c-title">Le « dissuasive framing » surperforme la persuasion directe</h2>
+    <p class="c-tldr">Dire « ce produit n'est pas pour vous » augmente l'intérêt des clients cibles dans 8 expériences sur 8.</p>
     <button class="btn-expand" onclick="expand(this)">
       APPROFONDIR <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 5L7 9L11 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
     </button>
     <div class="c-detail" hidden>
-      <p class="c-detail-text">Le rapport A-CAPP de Michigan State University (fév. 2026) a analysé 94 campagnes et près de 400 messages : la majorité s'appuie sur la peur et le langage de contrôle, qui induisent de la colère et réduisent l'attrait de la campagne, tandis que les techniques réductrices de réactance (récits, cadrage positif) restent sous-exploitées. Les secteurs pharma, électronique et outillage utilisent le plus d'éléments générateurs de réactance. Contre-intuitif : 74% des consommateurs ont acheté des contrefaçons et ceux qui se sentent le plus à risque sont aussi les plus enclins à acheter de faux médicaments, d'où la recommandation d'abandonner la peur au profit de messages d'empowerment.</p>
-      <a href="https://a-capp.msu.edu/wp-content/uploads/2026/03/FINAL-When-Brands-Talk-FINAL2.23.26.pdf" target="_blank" rel="noopener" class="btn-source">LIRE LA SOURCE</a>
+      <p class="c-detail-text">Karen Anne Wallach (UAH) démontre dans le Journal of Consumer Research que sur huit expériences (café, matelas, voyages, recrutés via Prolific), un message d'exclusion explicite augmente l'engagement et l'intention d'achat chez les clients cibles tout en réduisant l'appétence des non-cibles. Le mécanisme : l'exclusion signale un ciblage précis, rendant l'offre plus pertinente pour ceux qui s'y reconnaissent. La première expérience l'a même validé sur de vraies Facebook Ads, contredisant le dogme de la persuasion directe.</p>
+      <a href="https://academic.oup.com/jcr/advance-article/doi/10.1093/jcr/ucaf034/8158427" target="_blank" rel="noopener" class="btn-source">LIRE LA SOURCE</a>
     </div>
   </div>
 </article>
@@ -274,50 +274,50 @@ a{color:#0000FF}
       <span class="c-cat">STRATEGIE</span>
       <span class="badge-new">NOUVEAU</span>
     </div>
-    <h2 class="c-title">Les actifs de forme écrasent les couleurs en distinctivité</h2>
-    <p class="c-tldr">Sur 1162 actifs analysés, logos et packaging atteignent 40% de notoriété et 71% d'exclusivité, loin devant la couleur.</p>
+    <h2 class="c-title">L'usage intensif d'IA est devenu un passif de confiance</h2>
+    <p class="c-tldr">La défiance face à une marque utilisant massivement l'IA a doublé en un an, passant de 20% à 40%.</p>
     <button class="btn-expand" onclick="expand(this)">
       APPROFONDIR <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 5L7 9L11 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
     </button>
     <div class="c-detail" hidden>
-      <p class="c-detail-text">Une étude de l'International Journal of Advertising (publiée le 5 mars 2026) a benchmarké 1162 actifs distinctifs sur 21 catégories, quatre pays et neuf ans, mesurés par Fame (lien à la marque) et Uniqueness (exclusivité). Les actifs basés sur la forme — logos et packaging — surperforment systématiquement (40% de Fame, 71% d'Uniqueness), invalidant l'obsession des directions marketing pour les codes couleur. Nuance stratégique inattendue : les actifs narratifs performent relativement mieux dans les industries de services, ce qui réoriente les arbitrages d'investissement selon le secteur.</p>
-      <a href="https://www.tandfonline.com/doi/full/10.1080/02650487.2026.2637295" target="_blank" rel="noopener" class="btn-source">LIRE LA SOURCE</a>
+      <p class="c-detail-text">L'étude Fractl x Search Engine Land (1 008 consommateurs US, 150 marketeurs) révèle que la part de consommateurs déclarant qu'un usage intensif d'IA réduirait leur confiance est passée de 20% en 2025 à environ 40% en 2026. Contre-intuitivement, la Gen Z pénalise le plus durement (54% contre 32% des Boomers), et seuls 14% font davantage confiance à une marque qui l'utilise massivement. Pourtant 33% des organisations ne divulguent jamais leur usage d'IA, alors que 84 à 91% des consommateurs réclament un étiquetage obligatoire.</p>
+      <a href="https://searchengineland.com/ai-search-adoption-rises-consumer-trust-declines-study-480338" target="_blank" rel="noopener" class="btn-source">LIRE LA SOURCE</a>
     </div>
   </div>
 </article>
 <article class="card" data-cat="strategy">
-  <div class="c-no-img"></div>
+  <div class="c-media"><img src="https://s3.amazonaws.com/media.mediapost.com/dam/cropped/2026/06/03/horizonchart222222_hjZ34bt_jhwJzha.png" alt="" loading="lazy"></div>
   <div class="c-body">
     <div class="c-meta">
       <span class="c-cat">STRATEGIE</span>
       <span class="badge-new">NOUVEAU</span>
     </div>
-    <h2 class="c-title">Chaque association positive vaut 18% de dépenses supplémentaires</h2>
-    <p class="c-tldr">Chez CVS Health, une association de marque positive ajoute +18% de dépense, une négative en retire -12%.</p>
+    <h2 class="c-title">La « Trust Tax » : le commerce agentique érode la fidélité</h2>
+    <p class="c-tldr">Le shopping piloté par IA met en risque la fidélité de plus de 27% de la base client d'une marque.</p>
     <button class="btn-expand" onclick="expand(this)">
       APPROFONDIR <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 5L7 9L11 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
     </button>
     <div class="c-detail" hidden>
-      <p class="c-detail-text">Une recherche publiée dans Harvard Business Review (8 avril 2026) par Vriens, Verhulst, Eggers et les dirigeants de CVS Health quantifie l'effet dollar de chaque association mentale. Chaque association positive (service serviable, emplacements pratiques) corrèle avec une hausse de dépense de 18%, tandis que chaque association négative entraîne un recul de 12%. L'asymétrie contre-intuitive : éliminer un irritant pèse moins lourd qu'on ne le croit face au coût d'une perception négative, ce qui réoriente les budgets vers la suppression ciblée des associations toxiques plutôt que l'empilement de messages positifs.</p>
-      <a href="https://hbr.org/2026/04/new-research-on-how-brand-associations-drive-customer-spending" target="_blank" rel="noopener" class="btn-source">LIRE LA SOURCE</a>
+      <p class="c-detail-text">L'étude Horizon Media (1 000 consommateurs US, mars 2026) quantifie une « Trust Tax » : 68% des consommateurs pensent qu'un agent IA d'achat n'agit pas dans leur intérêt, et une expérience automatisée négative survient 40% du temps. En croisant ces deux chiffres, Horizon estime que les marques précipitant l'automatisation menacent la fidélité long terme de plus de 27% de leurs clients. Le signal stratégique : optimiser pour la conversion algorithmique se paie en érosion silencieuse de la loyauté émotionnelle.</p>
+      <a href="https://www.mediapost.com/publications/article/415524/horizon-shoppers-skeptical-that-ai-agents-act-in.html" target="_blank" rel="noopener" class="btn-source">LIRE LA SOURCE</a>
     </div>
   </div>
 </article>
 <article class="card" data-cat="strategy">
-  <div class="c-no-img"></div>
+  <div class="c-media"><img src="https://framerusercontent.com/images/lOzPsStJTtVUWPf7zVI7KuoQSQ.jpg?width=1536&amp;height=1024" alt="" loading="lazy"></div>
   <div class="c-body">
     <div class="c-meta">
       <span class="c-cat">STRATEGIE</span>
       <span class="badge-new">NOUVEAU</span>
     </div>
-    <h2 class="c-title">Le visiteur référé par IA convertit cinq fois mieux</h2>
-    <p class="c-tldr">Les visiteurs venus de ChatGPT convertissent à 15,9% contre 1,76% pour le search organique classique.</p>
+    <h2 class="c-title">L'imperfection délibérée comme signal anti-IA en packaging</h2>
+    <p class="c-tldr">Des marques foregroundent le « fait-main » imparfait comme preuve de provenance humaine face au visuel IA.</p>
     <button class="btn-expand" onclick="expand(this)">
       APPROFONDIR <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 5L7 9L11 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
     </button>
     <div class="c-detail" hidden>
-      <p class="c-detail-text">Selon les données Seer Interactive reprises dans une synthèse de mai 2026, les visiteurs issus d'un LLM convertissent à 15,9% depuis ChatGPT et 10,5% depuis Perplexity, contre 1,76% pour le search organique. Ahrefs a constaté que le trafic IA générait 12,1% des inscriptions tout en ne pesant que 0,5% des visiteurs — un ratio de 24:1. Signal faible décisif : 92% des marketeurs disent vouloir optimiser pour la recherche IA mais seuls 40,6% le font réellement, créant une fenêtre d'avantage de premier entrant alors que les citations IA fluctuent de 40 à 60% d'un mois sur l'autre.</p>
-      <a href="https://www.omnibound.ai/blog/generative-engine-optimization-statistics" target="_blank" rel="noopener" class="btn-source">LIRE LA SOURCE</a>
+      <p class="c-detail-text">Un signal faible émerge dans le design de marque : la « Naive Design » et l'esthétique anti-IA, où typographies tremblées et tracés manuels sont délibérément choisis comme preuve d'auteur humain — Radford Beauty a adopté en avril 2026 une typographie dessinée à la main sur verre dépoli pour signaler l'authenticité. Burger King a poussé la logique narrative avec une campagne sur les fringales post-partum en réalisme non filtré, sujet que la plupart des marques évitent. La rupture probable : à mesure que la perfection générée par IA se banalise, l'inefficacité visible (stop-motion, illustration manuelle) devient un marqueur de valeur premium.</p>
+      <a href="https://www.bigeyeagency.com/insights/2026-design-trends-impact-on-consumer-brands" target="_blank" rel="noopener" class="btn-source">LIRE LA SOURCE</a>
     </div>
   </div>
 </article>
@@ -328,14 +328,14 @@ a{color:#0000FF}
       <span class="c-cat">COPYWRITING</span>
       <span class="badge-new">NOUVEAU</span>
     </div>
-    <h2 class="c-title">Les pubs IA battent les humains sur la persuasion, pas la personnalisation</h2>
-    <p class="c-tldr">Étude n=800 : pubs générées par LLM préférées à 59,1% contre 40,9% pour l'humain sur les principes psychologiques.</p>
+    <h2 class="c-title">Le ciblage rapporte 1,1x, la creation 12x en profit</h2>
+    <p class="c-tldr">Etude de 1 265 campagnes : 61% des marketeurs US priorisent le ciblage malgre un multiplicateur de profit inferieur a la creation.</p>
     <button class="btn-expand" onclick="expand(this)">
       APPROFONDIR <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 5L7 9L11 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
     </button>
     <div class="c-detail" hidden>
-      <p class="c-detail-text">Dans une étude en deux temps de l'University of Queensland, les pubs LLM atteignent la parité avec les experts humains sur la personnalisation par trait de personnalité (51,1% vs 48,9%, non significatif), mais les surpassent nettement sur les leviers de persuasion universels. <cite index="32-9">Les pubs générées par IA ont surpassé significativement le contenu créé par des humains, atteignant un taux de préférence de 59,1% (vs 40,9%, p < 0,001), avec la meilleure performance sur les ressorts d'autorité (63,0%) et de consensus (62,5%).</cite> Contre-intuitif : <cite index="32-11">même après application d'une pénalité de 21,2 points lorsque les participants identifiaient correctement l'origine IA, les pubs IA surpassaient encore les pubs humaines.</cite></p>
-      <a href="https://arxiv.org/abs/2512.03373" target="_blank" rel="noopener" class="btn-source">LIRE LA SOURCE</a>
+      <p class="c-detail-text">L'etude Effie/System1 « The Creative Dividend » a analyse 1 265 campagnes (2007-2023) sur 139 milliards de dollars de part de marche, croisees aux reponses de plus de 200 000 personnes. Elle revele que la qualite creative et le support media expliquent ensemble 60,1% des resultats business, jusqu'a 98,3% dans certaines categories, et introduit l'indice ESOC (Excess Share of Creativity) montrant que le profit n'augmente pas lineairement mais s'accelere de facon exponentielle. Point contre-intuitif majeur : 61% des marketeurs americains classent le ciblage au-dessus de la qualite creative, alors que le ciblage ne delivre qu'un multiplicateur de profit de 1,1x contre 12x pour la creativite.</p>
+      <a href="https://effie.org/insights/the-creative-dividend-advertising-that-pays-back/" target="_blank" rel="noopener" class="btn-source">LIRE LA SOURCE</a>
     </div>
   </div>
 </article>
@@ -346,14 +346,14 @@ a{color:#0000FF}
       <span class="c-cat">COPYWRITING</span>
       <span class="badge-new">NOUVEAU</span>
     </div>
-    <h2 class="c-title">Le pause ad bat le standard sur le rappel pour zéro interaction</h2>
-    <p class="c-tldr">Le pause ad génère +34% de rappel non assisté sans aucune interaction du spectateur.</p>
+    <h2 class="c-title">Les micro-ads battent les formats longs sur le trafic</h2>
+    <p class="c-tldr">Une experimentation terrain montre que les micro-ads generent plus de trafic web et d'engagement social que les formats longs.</p>
     <button class="btn-expand" onclick="expand(this)">
       APPROFONDIR <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 5L7 9L11 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
     </button>
     <div class="c-detail" hidden>
-      <p class="c-detail-text">Alors que l'industrie pousse l'interactivité par télécommande, les données EMARKETER citant BrightLine montrent que <cite index="49-4,49-5">les pause ads, qui apparaissent quand le spectateur met en pause son contenu, délivrent un gain de 34% en rappel non assisté.</cite> Le levier réel n'est pas l'engagement mais le contexte de haute réceptivité d'une pause volontaire. Signal stratégique sous-médiatisé : <cite index="49-10">à mesure que le CTV se fragmente entre plateformes, les pause ads représentent l'un des rares formats standardisables disponibles à travers les services.</cite></p>
-      <a href="https://www.emarketer.com/content/faq-on-ctv-advertising--trends--formats--platforms-watch-2026" target="_blank" rel="noopener" class="btn-source">LIRE LA SOURCE</a>
+      <p class="c-detail-text">L'etude de Beth L. Fossen, Philip Kim et Inyoung Chae publiee au Journal of Marketing (vol. 90, n°3, 2026) compare micro-ads et publicites non-micro via une approche multimethode incluant une experimentation terrain sur reseaux sociaux. Les micro-ads et non-micro ont un impact direct comparable sur les ventes en ligne, mais les micro-ads augmentent indirectement les ventes davantage en generant plus de trafic et d'engagement. Le mecanisme avance est l'impatience du spectateur face aux formats longs, ce qui inverse l'intuition selon laquelle un format long « raconte mieux l'histoire ».</p>
+      <a href="https://journals.sagepub.com/doi/10.1177/00222429251350657" target="_blank" rel="noopener" class="btn-source">LIRE LA SOURCE</a>
     </div>
   </div>
 </article>
@@ -364,32 +364,32 @@ a{color:#0000FF}
       <span class="c-cat">COPYWRITING</span>
       <span class="badge-new">NOUVEAU</span>
     </div>
-    <h2 class="c-title">Le procès contre les Marketing Mix Models est statistiquement infondé</h2>
-    <p class="c-tldr">Avec correction du biais de sélection, les élasticités publicitaires des MMM rejoignent celles des essais randomisés.</p>
+    <h2 class="c-title">Le storytelling patrimonial echoue sur certains produits de luxe</h2>
+    <p class="c-tldr">Une etude academique demontre que le storytelling base sur l'heritage peut nuire a la performance de certains produits de luxe.</p>
     <button class="btn-expand" onclick="expand(this)">
       APPROFONDIR <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 5L7 9L11 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
     </button>
     <div class="c-detail" hidden>
-      <p class="c-detail-text">L'orthodoxie veut que les MMM surestiment systématiquement l'effet des pubs face aux essais randomisés (RCT), justifiant des budgets de mesure colossaux. Cette étude de l'International Journal of Research in Marketing renverse le consensus : <cite index="10-5,10-6">des méta-analyses correctement menées, utilisant des techniques avancées de correction de biais, rapprochent fortement les élasticités MMM de celles des RCT ; les méta-analyses passées avaient échoué à corriger le biais de sélection de publication, gonflant les estimations.</cite> Conséquence pratique : <cite index="10-8">plutôt que rejeter les MMM comme intrinsèquement défaillants, ils peuvent servir d'alternative viable et scalable aux RCT coûteux, tout en fournissant des estimations d'effets long terme que les expériences ne capturent pas.</cite></p>
-      <a href="https://www.sciencedirect.com/science/article/abs/pii/S016781162500028X" target="_blank" rel="noopener" class="btn-source">LIRE LA SOURCE</a>
+      <p class="c-detail-text">L'article « The Limits of Brand Heritage in Luxury Advertising » de Mia M. Birau et al., publie en open access au Journal of Advertising Research le 22 avril 2026, casse le dogme selon lequel l'heritage est toujours un levier creatif gagnant dans le luxe. Les auteurs identifient les conditions precises ou le storytelling patrimonial echoue pour certaines categories de produits de luxe, contredisant la doctrine generaliste qui presente l'heritage comme requis absolu en 2026. Signal faible exploitable : la rupture annoncee est l'abandon selectif de la narration patrimoniale au profit d'autres registres pour des sous-segments specifiques.</p>
+      <a href="https://www.tandfonline.com/journals/ujar20/" target="_blank" rel="noopener" class="btn-source">LIRE LA SOURCE</a>
     </div>
   </div>
 </article>
 <article class="card" data-cat="copywriting">
-  <div class="c-no-img"></div>
+  <div class="c-media"><img src="https://ppc.land/content/images/size/w1200/2026/04/Test-Your-Ad.jpg" alt="" loading="lazy"></div>
   <div class="c-body">
     <div class="c-meta">
       <span class="c-cat">COPYWRITING</span>
       <span class="badge-new">NOUVEAU</span>
     </div>
-    <h2 class="c-title">Le DSP Amazon atteint 40% des budgets pub Amazon</h2>
-    <p class="c-tldr">Le DSP représente désormais 40% des budgets Amazon des annonceurs actifs à la fois sur Ad Console et DSP.</p>
+    <h2 class="c-title">La mesure creative predictive par IA entre en beta</h2>
+    <p class="c-tldr">System1 teste un outil IA predictif entraine sur plus de 100 000 ads, signalant la pre-validation de creative avant tout budget.</p>
     <button class="btn-expand" onclick="expand(this)">
       APPROFONDIR <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 5L7 9L11 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
     </button>
     <div class="c-detail" hidden>
-      <p class="c-detail-text">Le retail media bascule silencieusement du search vers le programmatique piloté par données d'achat, un virage peu commenté en dehors des cercles commerce. <cite index="40-10">Sur Amazon, le DSP représente désormais 40% des budgets publicitaires totaux Amazon pour les annonceurs actifs à la fois sur Ad Console et DSP, soulignant son rôle de canal central et non d'ajout expérimental.</cite> Ce déplacement reconfigure la mécanique de campagne : <cite index="40-11,40-12,40-13">il ouvre de nouveaux leviers — gestion de fréquence cross-canal, cadres créatifs cohérents, contrôle granulaire de l'application des signaux commerce — mais relève aussi les exigences de mesure, car sans analytique avancée il devient facile de double-compter les conversions ou de surévaluer les touches bas de funnel.</cite></p>
-      <a href="https://tinuiti.com/blog/commerce/retail-media-trends/" target="_blank" rel="noopener" class="btn-source">LIRE LA SOURCE</a>
+      <p class="c-detail-text">Le 9 avril 2026, System1 a confirme le beta-test d'un outil de mesure creative predictive par IA entraine sur sa base Competitive Edge de plus de 100 000 ads, integre a la plateforme Test Your Ad sur des marches selectionnes. L'enjeu structurel : passer de la mesure post-production a la prediction avant engagement budgetaire, dans un contexte ou la pression sur la mesure creative s'intensifie. Tactique sous-utilisee (preuve concrete) : Xero a obtenu +1,4 etoile en re-testant sa creative apres ajout du logo dans les 3 premieres secondes et de « Xero » dans la piste musicale, avec plus de 90% des spectateurs identifiant correctement la marque.</p>
+      <a href="https://ppc.land/system1-adds-ai-layer-to-test-your-ad-as-creative-measurement-race-heats-up/" target="_blank" rel="noopener" class="btn-source">LIRE LA SOURCE</a>
     </div>
   </div>
 </article>
@@ -400,14 +400,68 @@ a{color:#0000FF}
       <span class="c-cat">DIRECTION ARTISTIQUE</span>
       <span class="badge-new">NOUVEAU</span>
     </div>
-    <h2 class="c-title">Veille</h2>
-    <p class="c-tldr">Je vais rechercher des informations récentes et pointues sur les directions artistiques en communica</p>
+    <h2 class="c-title">Le contraste produit-fond augmente la taille perçue</h2>
+    <p class="c-tldr">Cinq études confirment qu'un fort contraste produit-arrière-plan fait paraître un produit plus grand, via la fluence de traitement.</p>
     <button class="btn-expand" onclick="expand(this)">
       APPROFONDIR <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 5L7 9L11 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
     </button>
     <div class="c-detail" hidden>
-      <p class="c-detail-text">Je vais rechercher des informations récentes et pointues sur les directions artistiques en communication visuelle.Les résultats de marques sont trop génériques. Je vais chercher des signaux plus pointus et récents.J'ai des pistes solides. Cherchons des signaux faibles dans des niches spécifiques et </p>
-      
+      <p class="c-detail-text">Publiée dans Psychology & Marketing (Liu, 2025-2026), cette recherche montre à travers cinq études et deux expériences supplémentaires qu'un contraste de couleur élevé entre produit et fond augmente systématiquement la taille perçue. L'effet tient pour des catégories variées (montres, canapés, valises, bains de bouche) et reste robuste quelle que soit la couleur du produit. Le mécanisme est une médiation séquentielle : le contraste clarifie la frontière du produit, ce qui améliore la fluence de traitement et gonfle la taille perçue.</p>
+      <a href="https://onlinelibrary.wiley.com/doi/10.1002/mar.70082" target="_blank" rel="noopener" class="btn-source">LIRE LA SOURCE</a>
+    </div>
+  </div>
+</article>
+<article class="card" data-cat="visuals">
+  <div class="c-no-img"></div>
+  <div class="c-body">
+    <div class="c-meta">
+      <span class="c-cat">DIRECTION ARTISTIQUE</span>
+      <span class="badge-new">NOUVEAU</span>
+    </div>
+    <h2 class="c-title">Fenêtre transparente bat l'image produit en rayon</h2>
+    <p class="c-tldr">Sur 160 sujets, la fenêtre transparente capte le regard plus vite et plus longtemps que l'image imprimée, surtout en petit format.</p>
+    <button class="btn-expand" onclick="expand(this)">
+      APPROFONDIR <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 5L7 9L11 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </button>
+    <div class="c-detail" hidden>
+      <p class="c-detail-text">Le Journal of Eye Movement Research (mars 2026) a mené un quasi-expérimentation 2×2 avec Tobii Pro Glasses 2 sur des emballages de chocolat. La fenêtre transparente attire l'attention plus rapidement et soutient des fixations plus longues que l'image produit, avec des scores supérieurs de saveur attendue, qualité perçue et intention d'achat. Détail contre-intuitif : les petits formats unitaires ne génèrent davantage d'attention et d'évaluations favorables que lorsque le produit est directement visible à travers une fenêtre transparente.</p>
+      <a href="https://doi.org/10.3390/jemr19020030" target="_blank" rel="noopener" class="btn-source">LIRE LA SOURCE</a>
+    </div>
+  </div>
+</article>
+<article class="card" data-cat="visuals">
+  <div class="c-no-img"></div>
+  <div class="c-body">
+    <div class="c-meta">
+      <span class="c-cat">DIRECTION ARTISTIQUE</span>
+      <span class="badge-new">NOUVEAU</span>
+    </div>
+    <h2 class="c-title">La disfluence typographique pousse vers les marques familières</h2>
+    <p class="c-tldr">Une police difficile à lire fait choisir plus souvent une marque familière et augmente le report de décision.</p>
+    <button class="btn-expand" onclick="expand(this)">
+      APPROFONDIR <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 5L7 9L11 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </button>
+    <div class="c-detail" hidden>
+      <p class="c-detail-text">Une recherche du Journal of Consumer Research (Mohsenin, consultée février 2026) montre qu'en situation de disfluence perceptive due à une police peu lisible, les participants choisissent plus souvent l'option à marque familière que lorsque la police est facile à lire. Les chercheurs observent aussi des taux de report de décision plus élevés dans ces conditions, suggérant que la difficulté de choix pilote les deux effets. Ces effets persistaient au-delà de la simple inattention, ce qui contredit l'orthodoxie du « tout doit être fluide » dominante chez les designers.</p>
+      <a href="https://academic.oup.com/jcr/advance-article-pdf/doi/10.1093/jcr/ucaf062/65499786/ucaf062.pdf" target="_blank" rel="noopener" class="btn-source">LIRE LA SOURCE</a>
+    </div>
+  </div>
+</article>
+<article class="card" data-cat="visuals">
+  <div class="c-no-img"></div>
+  <div class="c-body">
+    <div class="c-meta">
+      <span class="c-cat">DIRECTION ARTISTIQUE</span>
+      <span class="badge-new">NOUVEAU</span>
+    </div>
+    <h2 class="c-title">Affiche dynamique : avantage massif d'attention mesuré</h2>
+    <p class="c-tldr">Eye-tracking sur 60 sujets : les affiches dynamiques écrasent les statiques en durée de fixation (F=245,896, p<0,001).</p>
+    <button class="btn-expand" onclick="expand(this)">
+      APPROFONDIR <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 5L7 9L11 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </button>
+    <div class="c-detail" hidden>
+      <p class="c-detail-text">Une étude publiée dans Applied Sciences (Yuan, Wei, Chen, décembre 2025) a généré des versions dynamique/statique et couleur/N&B de trois affiches commerciales testées en eye-tracking sur 60 participants. Les affiches dynamiques surpassent significativement les statiques sur la durée totale et le nombre total de fixations, avec un F = 245,896, p < 0,001 confirmant l'avantage net du dynamique pour capter l'attention. Le protocole couvre trois domaines distincts (gastronomie, fast-food, jouets tendance) pour renforcer la validité écologique et tester la généralisabilité.</p>
+      <a href="https://doi.org/10.3390/app16010291" target="_blank" rel="noopener" class="btn-source">LIRE LA SOURCE</a>
     </div>
   </div>
 </article></div>
@@ -646,26 +700,51 @@ a{color:#0000FF}
 </div>
 
 <script>
-var _poll;
+var GH_REPO='agencedajm/digest-matin';
+var GH_WORKFLOW='digest.yml';
+var _pollRun;
+
 async function doRefresh(){
+  var token=localStorage.getItem('gh_pat');
+  if(!token){
+    token=prompt('Token GitHub (une seule fois) :\nGitHub → Settings → Developer settings → Fine-grained tokens\nPermission : Actions → Read & write sur digest-matin');
+    if(!token)return;
+    localStorage.setItem('gh_pat',token.trim());
+  }
   var btn=document.getElementById('btn-refresh');
-  btn.disabled=true;
-  btn.textContent='RECHERCHE...';
+  btn.disabled=true;btn.textContent='LANCEMENT...';
   document.getElementById('overlay').classList.add('show');
   try{
-    var r=await fetch('http://localhost:8765/refresh');
-    if(!r.ok)throw new Error();
-    _poll=setInterval(async function(){
+    var r=await fetch('https://api.github.com/repos/'+GH_REPO+'/actions/workflows/'+GH_WORKFLOW+'/dispatches',{
+      method:'POST',
+      headers:{'Authorization':'Bearer '+token,'Accept':'application/vnd.github+json','Content-Type':'application/json'},
+      body:JSON.stringify({ref:'main'})
+    });
+    if(r.status===401){
+      localStorage.removeItem('gh_pat');
+      document.getElementById('overlay').classList.remove('show');
+      btn.disabled=false;btn.textContent='TOKEN INVALIDE';
+      setTimeout(function(){btn.textContent='ACTUALISER';btn.disabled=false;},3000);
+      return;
+    }
+    if(!r.ok)throw new Error('HTTP '+r.status);
+    btn.textContent='EN COURS (~3 MIN)';
+    // Poll le dernier commit pour detecter la mise a jour
+    var initSha=null;
+    _pollRun=setInterval(async function(){
       try{
-        var s=await fetch('http://localhost:8765/status');
-        var d=await s.json();
-        if(!d.running){clearInterval(_poll);location.reload();}
+        var c=await fetch('https://api.github.com/repos/'+GH_REPO+'/commits/main',{headers:{'Authorization':'Bearer '+token}});
+        var d=await c.json();
+        if(!initSha){initSha=d.sha;return;}
+        if(d.sha!==initSha){
+          clearInterval(_pollRun);
+          location.reload();
+        }
       }catch(e){}
-    },5000);
+    },10000);
   }catch(e){
     document.getElementById('overlay').classList.remove('show');
-    btn.disabled=false;
-    btn.textContent='SERVEUR NON ACTIF';
+    btn.disabled=false;btn.textContent='ERREUR';
     setTimeout(function(){btn.textContent='ACTUALISER';btn.disabled=false;},3000);
   }
 }
