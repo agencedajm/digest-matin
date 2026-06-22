@@ -240,8 +240,8 @@ def add_entry(feed: list, cards: list) -> list:
 def render_card(card: dict, agent: dict, is_new: bool) -> str:
     img    = card.get("og_image", "")
     url    = card.get("source_url", "")
-    detail = _html.escape(card.get("detail", ""))
-    title  = _html.escape(card.get("title", ""))
+    detail = _html.escape(clean_text(card.get("detail", "")))
+    title  = _html.escape(clean_text(card.get("title", "")))
 
     color = agent["cat_bg"]
     bar   = f'<div class="c-bar" style="background:{color}"></div>'
@@ -262,8 +262,8 @@ def render_card(card: dict, agent: dict, is_new: bool) -> str:
       <span class="c-cat" style="background:{color}">{agent['label'].upper()}</span>
       {new_badge}
     </div>
-    <h2 class="c-title">{card.get('title','')}</h2>
-    <p class="c-tldr">{card.get('tldr','')}</p>
+    <h2 class="c-title">{clean_text(card.get('title',''))}</h2>
+    <p class="c-tldr">{clean_text(card.get('tldr',''))}</p>
     <button class="btn-expand" onclick="openModal(this.closest('.card'))">
       APPROFONDIR {ARROW}
     </button>
