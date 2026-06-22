@@ -135,9 +135,10 @@ ARROW = '<svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http
 
 # ─── Agents experts ───────────────────────────────────────────────────────────
 
-RULES = """Pas de generalites connues. Uniquement des insights non-evidents : etudes recentes avec chiffres, decisions de marques peu mediatisees, signaux faibles.
+RULES = """Reponds UNIQUEMENT en francais. Pas de generalites connues. Uniquement des insights non-evidents : etudes recentes avec chiffres, decisions de marques peu mediatisees, signaux faibles.
+Aucune balise HTML. Aucun markdown. Aucun caractere d'echappement. Du texte brut uniquement, des phrases completes et naturelles.
 JSON strict, 3 objets, rien d'autre :
-[{"title":"max 8 mots","tldr":"1 phrase + 1 chiffre (max 15 mots)","detail":"2 phrases concretes avec source nommee","source_name":"media ou institution","source_url":"URL reelle"}]"""
+[{"title":"max 8 mots, phrase nominale","tldr":"1 phrase affirmative complete + 1 chiffre cle (max 15 mots)","detail":"2 phrases concretes et lisibles avec la source nommee a la fin","source_name":"nom du media ou de l'institution","source_url":"URL reelle et accessible"}]"""
 
 AGENTS = [
     {
@@ -164,6 +165,19 @@ AGENTS = [
 ]
 
 
+def clean_text(t: str) -> str:
+    if not isinstance(t, str):
+        return ""
+    t = re.sub(r'<[^>]+>', '', t)
+    t = re.sub(r'\*{1,2}([^*]+)\*{1,2}', r'\1', t)
+    t = re.sub(r'`([^`]+)`', r'\1', t)
+    t = re.sub(r'\[([^\]]+)\]\([^)]+\)', r'\1', t)
+    t = t.replace('&amp;', '&').replace('&lt;', '<').replace('&gt;', '>') \
+         .replace('&quot;', '"').replace('&#39;', "'").replace('&nbsp;', ' ')
+    t = re.sub(r'\s+', ' ', t).strip()
+    return t
+
+
 def research_agent(agent: dict) -> list:
     print(f"  {agent['label']}...")
     client = anthropic.Anthropic(api_key=ANTHROPIC_KEY)
@@ -177,10 +191,14 @@ def research_agent(agent: dict) -> list:
     m = re.search(r'\[.*?\]', text, re.DOTALL)
     if m:
         try:
-            return [c for c in json.loads(m.group()) if isinstance(c, dict)][:3]
+            cards = [c for c in json.loads(m.group()) if isinstance(c, dict)][:3]
+            for c in cards:
+                for key in ("title", "tldr", "detail", "source_name"):
+                    c[key] = clean_text(c.get(key, ""))
+            return cards
         except Exception:
             pass
-    return [{"title": "Veille", "tldr": text[:100], "detail": text[:300], "source_name": "", "source_url": ""}]
+    return [{"title": "Veille", "tldr": clean_text(text[:120]), "detail": clean_text(text[:300]), "source_name": "", "source_url": ""}]
 
 
 def fetch_image(url: str) -> str:
@@ -462,14 +480,13 @@ a{{color:#0000FF}}
 .modal-ov{{
   display:none;position:fixed;inset:0;z-index:300;
   background:rgba(0,0,0,.82);
-  align-items:center;justify-content:center;
-  padding:24px
+  align-items:center;justify-content:center
 }}
-.modal-ov.show{{display:flex;animation:fadeUp .22s ease}}
+.modal-ov.show{{display:flex;animation:fadeUp .22s ease;padding:16px}}
 .modal-box{{
   background:#fff;border:3px solid #000;
   max-width:560px;width:100%;
-  padding:40px 40px 36px;
+  padding:33px 16px 16px;
   position:relative;
   max-height:85vh;overflow-y:auto
 }}
