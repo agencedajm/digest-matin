@@ -1,5 +1,92 @@
 [
   {
+    "date_iso": "2026-06-22",
+    "date_fr": "Lundi 22 Juin 2026",
+    "cards": [
+      {
+        "title": "Adaptabilité organisationnelle surpasse innovation",
+        "tldr": "<cite index=\"2-1\">La capacité à repenser les modèles métier tout en préservant l'identité de marque prédit mieux la pérennité que tout autre facteur singulier</cite>.",
+        "detail": "<cite index=\"2-21,2-23\">Les données révèlent que l'adaptabilité organisationnelle - spécifiquement la capacité à repenser fondamentalement les modèles métier tout en conservant l'identité core de la marque - prédicteur de longévité bien supérieur à l'innovation ou la part de marché. Cela s'appelle « adaptive capacity » : le muscle organisationnel permettant des pivots stratégiques substantiels sans perdre son essence</cite>.",
+        "source_name": "Success Magazine",
+        "source_url": "https://www.success.com/brand-success-factors-what-makes-companies-win-in-2026",
+        "agent_id": "strategy",
+        "og_image": "https://www.success.com/media/images/brand-success-factors-what-makes-companies-win-in-2026-0cbae37a.jpeg"
+      },
+      {
+        "title": "Attribution IA invisible : le trou de 18-34%",
+        "tldr": "<cite index=\"30-7\">Pages classées top-3 Google connaissent chutes CTR de 18-34% dès apparition réponses IA sans perte de classement</cite>.",
+        "detail": "<cite index=\"30-7,30-11,30-15\">Recherche sur 50 mots-clés B2B SaaS Q1 2026 : pages top-3 Google voient déclines click-through rate 18-34% une fois réponses générées IA au-dessus du pli, rankings/impressions stables. Google a supprimé avril 2026 la méthode tracking clics provenant résultats AI Overview : c'est un problème structural, pas technique</cite>.",
+        "source_name": "B2The7",
+        "source_url": "https://www.b2the7.com/news-blog/marketing-trends-june-2026-ai-search-chatgpt-ads-meta",
+        "agent_id": "strategy",
+        "og_image": "http://static1.squarespace.com/static/685980dacde84276d9287832/t/6a19b96aa016681fc8c06cb4/1780070762730/trendingtopic_06012026.jpg?format=1500w"
+      },
+      {
+        "title": "Créateurs humains deviennent assets de découverte IA",
+        "tldr": "<cite index=\"26-17\">37% utilisateurs IA actifs cherchent dans moteurs génératifs plutôt que barre recherche ; YouTube surpasse Reddit en signaux autorité</cite>.",
+        "detail": "<cite index=\"26-10,26-15,26-18\">Moteurs IA lisent massivement contenu créateurs (surtout vidéo) pour juger crédibilité marques. YouTube surpasse Reddit signal social codant autorité IA search ; contenu LinkedIn dépasse sites entreprise pour réponses B2B. Budget créateurs contenu atteint $44B 2026 vs $37B 2025 : SEO devient AEO (Answer Engine Optimization)</cite>.",
+        "source_name": "Newengen",
+        "source_url": "https://newengen.com/insights/influencer-marketing-trends-june-2026/",
+        "agent_id": "strategy",
+        "og_image": ""
+      },
+      {
+        "title": "Meta sémantique : au-delà du texte littéral",
+        "tldr": "<cite index=\"14-1,14-17\">Enforcement par analyse sémantique de l'intention implicite, pas juste du contenu textuel</cite>. Mars 2026 : +détection précision.",
+        "detail": "<cite index=\"14-17,14-18\">Le système Meta évalue désormais le sens implicite de la copie publicitaire. Une headline « Voir les résultats en 7 jours » avec une image before/after est traitée comme une fausse affirmation même sans le mot « garantie »</cite>. <cite index=\"14-14\">Les systèmes d'application multimodaux pilotés par l'IA ont été mis à jour majeur au Q1 2026 avec augmentation drastique de la précision et vitesse d'exécution</cite>.",
+        "source_name": "Audit Socials",
+        "source_url": "https://www.auditsocials.com/blog/meta-ad-policy-updates-2026-guide",
+        "agent_id": "copywriting",
+        "og_image": "https://www.auditsocials.com/blog/meta-ad-policy-updates-2026-guide/opengraph-image?89a01e9621248f34"
+      },
+      {
+        "title": "Collateral distribution : le vrai goulot PMM 2026",
+        "tldr": "<cite index=\"24-26\">Seulement 22% des assets ateignent les reps en 30j ; production n'est plus la limite</cite>.",
+        "detail": "<cite index=\"24-1\">Battlecards (67%) et formation interne (52%) franchissent le seuil ; decks de lancement (28%), stories clients (41%), win-loss (24%) ne l'atteint pas</cite>. <cite index=\"24-12,24-13\">Le vrai problème n'est plus la production mais la distribution. Le PMM gagnant ressemblera moins à une salle d'écriture qu'à un moteur d'activation avec des métriques reach-rep au centre</cite>.",
+        "source_name": "Digital Applied",
+        "source_url": "https://www.digitalapplied.com/blog/product-marketing-statistics-2026-launch-positioning-data",
+        "agent_id": "copywriting",
+        "og_image": "https://www.digitalapplied.com/blog/product-marketing-statistics-2026-launch-positioning-data/article-image"
+      },
+      {
+        "title": "TikTok Spark Ads : 2.4x CTR vs ads standards",
+        "tldr": "<cite index=\"26-16\">Spark Ads (organic posts amplifiés) dépassent les ads standards : 2.4x click-through et conversion +40%</cite>.",
+        "detail": "<cite index=\"26-13,26-14\">TikTok CPM varie $4.80-$9 selon campagne. Cost-per-click $0.35-$1 avec engagement 3.85-4.90% vs Facebook 0.8%</cite>. <cite index=\"26-16\">Spark Ads amplifiant posts organiques existants battent les ads standards avec roughly 2.4x click-through et 40%+ meilleures conversions</cite>.",
+        "source_name": "The Growth Syndicate",
+        "source_url": "https://www.thegrowthsyndicate.com/resources/what-is-performance-marketing-2026",
+        "agent_id": "copywriting",
+        "og_image": "https://cdn.prod.website-files.com/66b4b90abb54e3af8e25e2b8/6a33d130faf78994254cf96e_Frame%202085666308.png"
+      },
+      {
+        "title": "Aesthetic des espaces liminaux sature les plateformes",
+        "tldr": "Liminal spaces +200% recherches ; 2M+ vues Canva en 6 mois.",
+        "detail": "Canva rapporte une augmentation de plus de 200% des recherches liées aux esthétiques « liminales » et « univers étranges » depuis 2025, générant plus de deux millions de vues. Cette obsession pour les espaces de transition (ni lieu, ni non-lieu) reflète une fascination croissante pour l'inattendu et brouille volontairement les frontières réel/synthétique via l'IA.",
+        "source_name": "Canva Design Trends 2026",
+        "source_url": "https://www.influencia.net/design-2026-chic-desorganise-appel-de-la-matiere-esthetique-theatralisee-7-tendances-qui-vont-compter-cette-annee/",
+        "agent_id": "visuals",
+        "og_image": "https://www.influencia.net/app/uploads/2025/12/France-Designs-et-tendances-Hero-asset.png"
+      },
+      {
+        "title": "Typographie bold devient élément d'authentification anti-IA",
+        "tldr": "30% hausse requêtes hand-drawn ; distinctivité typographique = signal humain.",
+        "detail": "Search data révèle +30% augmentation pour éléments dessinés à main levée. Les marques adoptent typographies oversized, bulbous, et distorted comme signature défensive contre la généricité IA. Cette stratégie transforme la lettre en illustration autonome plutôt qu'en simple support textuel.",
+        "source_name": "Young Mind Interactive / Canva",
+        "source_url": "https://youngmindinteractive.com/graphic-design-trends-2026/",
+        "agent_id": "visuals",
+        "og_image": "https://youngmindinteractive.com/wp-content/uploads/2026/04/Graphic-Design-Trends3.jpg"
+      },
+      {
+        "title": "Décision UX : humain reste arbitre éthique malgré IA (80%)",
+        "tldr": "Rapport Maze : jugement humain tranche 80% dilemmes éthiques/valeurs.",
+        "detail": "Le rapport Maze 2026 documente que dans 80% des cas critiques, c'est le jugement humain pur (non algorithme) qui prend relais. L'IA agit comme processeur tendances, incapable de trancher questions de valeurs. UX Researchers deviennent garants de « boussole morale » des entreprises, redéfinissant leur rôle de stratégique à éthique.",
+        "source_name": "La grande Ourse / Rapport Maze",
+        "source_url": "https://lagrandeourse.design/blog/actualites/lux-research-en-2026-decryptage-du-rapport-maze-et-les-cles-pour-garder-lavantage-concurrentiel/",
+        "agent_id": "visuals",
+        "og_image": "https://lagrandeourse.design/wp-content/uploads/2026/05/maze-rapport.png"
+      }
+    ]
+  },
+  {
     "date_iso": "2026-06-19",
     "date_fr": "Friday 19 june 2026",
     "cards": [
