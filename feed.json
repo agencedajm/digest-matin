@@ -1,5 +1,92 @@
 [
   {
+    "date_iso": "2026-06-29",
+    "date_fr": "Lundi 29 Juin 2026",
+    "cards": [
+      {
+        "title": "Apathie massive envers les marques, pas la communication",
+        "tldr": "92 % des Français pourraient voir disparaître leur marque préférée sans être affectés, révèle Havas Meaningful Brands 2025-2026.",
+        "detail": "Selon l'étude Meaningful Brands 2025-2026 d'Havas menée auprès de 10500 Français, le Meaningful Brand Index a chuté de 1,5 point et 85 % des marques sont en recul. Le souvenir publicitaire a baissé de 7,3 % à 6 % en cinq ans et le buzz de 5,4 % à 4,4 %. Cette apathie ne se résout pas par plus de messages ou de créativité, mais par l'intégration dans la vie médiatique des consommateurs et la détection de signaux faibles pour s'adapter rapidement. Source Influencia, Havas Meaningful Brands 2025-2026.",
+        "source_name": "Influencia et Havas",
+        "source_url": "https://www.influencia.net/meaningful-brands-2025-2026-pourquoi-les-francais-necoutent-plus-les-marques-et-comment-les-regagner/",
+        "agent_id": "strategy",
+        "og_image": "https://www.influencia.net/app/uploads/2025/12/b793dc56-250d-45ef-b32a-ae35e2fe8df6-copie.png"
+      },
+      {
+        "title": "Contenu généré par utilisateurs surpasse contenu de marque 4 fois",
+        "tldr": "L'UGC génère 4 fois plus de clics et 93% des marketeurs le jugent plus performant que le contenu de marque traditionnel.",
+        "detail": "Selon le rapport Brandwatch Digital Marketing Trends 2026 basé sur une enquête de plus de 1000 marketeurs, le User-Generated Content obtient un taux de clic 4 fois supérieur aux autres contenus et 75 % des consommateurs le jugent plus authentique. Parallèlement, les mentions du terme slop (contenu médiocre généré par IA) ont augmenté de 200 % en 2025, révélant une saturation et un rejet des contenus standardisés IA. Source Brandwatch 2026 et rapport e-marketing.",
+        "source_name": "Brandwatch et e-marketing.fr",
+        "source_url": "https://www.e-marketing.fr/search-1294/contenu-2230/comment-integrer-une-strategie-de-brand-content-et-de-marque-en-2026-171119",
+        "agent_id": "strategy",
+        "og_image": ""
+      },
+      {
+        "title": "Recherche conversationnelle marginalise SEO classique sans cannibaliser budgets",
+        "tldr": "28 % des Français utilisent l'IA générative pour guider leurs achats ; chez les 18-24 ans, ce taux atteint 58 % en 12 mois.",
+        "detail": "Selon le rapport Meaningful Brands 2025-2026 d'Havas cité par Influencia, les LLM et IA generative deviennent des interfaces de recherche alternatives à Google. Klarna, la fintech suédoise, a déployé un assistant IA traitant deux tiers de ses conversations client et réduisant le temps de résolution de 11 à moins de 2 minutes avec un impact estimé à 40 millions de dollars annuels. Les marques doivent optimiser pour le Generative Engine Optimization plutôt que simplement l'SEO traditionnel. Source Havas et Apsodia.",
+        "source_name": "Havas et Apsodia",
+        "source_url": "https://www.apsodia.com/blog/tendances-marketing-2026-ce-qui-attend-les-responsables-marketing",
+        "agent_id": "strategy",
+        "og_image": "https://cdn.prod.website-files.com/6877abdd005c1d4c13a2d964/69b2c3f23ac0eac92d8edbcc_tendances-marketing-2026-ce-qui-attend-les-responsables-marketing.webp"
+      },
+      {
+        "title": "Campagnes plateforme durable plutot qu une seule",
+        "tldr": "Construire une identité visuelle et narrative reconnaissable dans le temps plutot que de repartir de zero. 72 pourcent des marques mondiales utilisent au minimum un outil IA pour les campagnes.",
+        "detail": "Magnum et Puget montrent qu une deuxieme campagne capitalise mieux quand elle reprend l identite etablie precedemment plutot que de reinventer. Celio a genere 40 millions d impressions cross plateforme en utilisant la meme mecanique creative sur tous les medias sans perdre son ADN (source Vingt Deux, mai 2026).",
+        "source_name": "Vingt Deux",
+        "source_url": "https://vingtdeux.fr/campagnes-publicitaires-2026/",
+        "agent_id": "copywriting",
+        "og_image": "https://vingtdeux.fr/wp-content/uploads/2026/04/IKEA_TOP-CHEF_VISUEL_1.jpg"
+      },
+      {
+        "title": "Copywriting simplifie face a la saturation de contenu IA",
+        "tldr": "La clarte du message devient une arme differenciante quand les algorithmes generes dominent. 76 pourcent des marketeurs utilisent l IA pour la creation de contenu en 2026.",
+        "detail": "Avec les AI Overviews et les moteurs conversationnels intermediaires entre marques et acheteurs, le copywriting revient aux bases : probleme, urgence et solution directe. Le contenu genere en masse a detruit le modele informatif, revalorant la reedaction persuasive qui fait de vraies decisions (source Search Engine Land, janvier 2026).",
+        "source_name": "Search Engine Land",
+        "source_url": "https://searchengineland.com/why-copywriting-is-the-new-superpower-in-2026-467281",
+        "agent_id": "copywriting",
+        "og_image": ""
+      },
+      {
+        "title": "Video et contenu authentique non genere dominent",
+        "tldr": "58 pourcent des marketeurs B2B jugent la video le format le plus efficace. Le contenu 100 pourcent IA sans touch humain endommage la conversion.",
+        "detail": "Billie prouve l impact sensoriel avec des affiches olfactives imprimees en physique, zero budget digital. L Oreal a remporte le Grand Prix Cannes Lions 2025 en diffusant un documentaire de 17 minutes plutot qu une publicite directe, generant de la credibilite culturelle authentique avant que le spectateur realise voir une campagne (source Insitis, mai 2026).",
+        "source_name": "Insitis",
+        "source_url": "https://www.insitis.com/nos-actualites/top-10-meilleures-campagnes-publicitaires",
+        "agent_id": "copywriting",
+        "og_image": ""
+      },
+      {
+        "title": "Typographie animée comme signature identitaire",
+        "tldr": "Les marques adoptent la typographie en mouvement comme élément identitaire distinct au lieu d'accessoire graphique. 78 % des agences rapportent une augmentation des commandes en motion type.",
+        "detail": "En 2026, les mots se déplacent, rebondissent et s'étirent sur les supports numériques. Les fontes customisées deviennent aussi fortes qu'un logo, renforçant la singularité d'une marque dans un contexte où l'IA produit trop vite des contenus standards. BRASSART signale une émergence des alphabets modulaires comme symbole de différenciation stratégique face à l'homogénéisation visuelle.",
+        "source_name": "École BRASSART",
+        "source_url": "https://www.brassart.fr/ecole/actualites/graphisme-communication-visuelle-les-tendances-creatives-a-suivre-en-2026",
+        "agent_id": "visuals",
+        "og_image": "https://www.brassart.fr/data/news/389/listing.1764152719.png"
+      },
+      {
+        "title": "Authenticité viscérale contre perfection synthétique",
+        "tldr": "Les audiences rejettent massivement les contenus lisses et générés. Les marques qui performent activent le contenu brut et non scripté plutôt que les productions ultra-léchées.",
+        "detail": "Une fatigue synthétique s'installe face aux visuels trop parfaits issus d'outils IA. Les contenus générés par utilisateurs non filtrés, les coulisses sans retouche et les témoignages spontanés retrouvent une force d'impact déterminante. CBC 35 et Capital Image décrivent ce phénomène comme un rejet structurel de l'homogénéisation des contenus au profit de l'imperfection tangible et incarnée.",
+        "source_name": "CBC 35 et Capital Image",
+        "source_url": "https://www.cbc35.fr/blog/les-5-tendances-de-la-communication-et-du-marketing-en-2026/",
+        "agent_id": "visuals",
+        "og_image": "https://www.cbc35.fr/wp-content/uploads/2025/12/nik-n32zxqamesy-unsplash-scaled.jpg"
+      },
+      {
+        "title": "Communication réactive temps réel et dialogale",
+        "tldr": "Les marques qui performent sont celles qui vivent en dialogue direct avec leur audience plutôt que de diffuser des plans de 6 mois. Les contenus réactifs et incarnés surpassent les productions planifiées.",
+        "detail": "Fini les plans figés : c'est la communication agile et adaptée en temps réel qui fonctionne. Les formats chauds comme les face-cam et les stories prennent le dessus, où les marques rebondissent, répondent et créent des rendez-vous plutôt que des monologues. Oh Medias et Talent Mana notent que le courage stratégique remplace la maîtrise technique seule comme critère de différenciation.",
+        "source_name": "Oh Medias et Talent Mana",
+        "source_url": "https://ohmedias.com/reflexions/quelles-sont-les-tendances-2026-en-communication-web-graphisme-marketing/",
+        "agent_id": "visuals",
+        "og_image": ""
+      }
+    ]
+  },
+  {
     "date_iso": "2026-06-22",
     "date_fr": "Lundi 22 Juin 2026",
     "cards": [
