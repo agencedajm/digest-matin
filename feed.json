@@ -1,5 +1,92 @@
 [
   {
+    "date_iso": "2026-07-06",
+    "date_fr": "Lundi 6 Juillet 2026",
+    "cards": [
+      {
+        "title": "La radio surpasse l'algorithme dans la découverte musicale",
+        "tldr": "54% des Français découvrent la musique via la radio, surpassant les playlists d'algorithmes à 22%, selon Kantar Media avril 2026.",
+        "detail": "Contre toute attente dans un écosystème dominé par Spotify et Apple Music, l'étude TGI France 2026 de Kantar Media menée auprès de 15 000 individus révèle que la radio demeure le canal dominant de découverte musicale. Cette donnée surprend car elle contredit l'hypothèse marketeurs selon laquelle les algorithmes contrôlaient cette découverte. Pour les marques, cela signifie que la radio reste un levier de notoriété intact et largement sous-estimé dans les stratégies actuelles.",
+        "source_name": "Kantar Media TGI France 2026",
+        "source_url": "https://comdigitale.blog/etude-tgi-france-2026-insights-cles-pour-marketeurs",
+        "agent_id": "strategy",
+        "og_image": "https://comdigitale.blog/wp-content/uploads/2026/05/etude-tgi-france-2026-insights-cles-pour-marketeurs.jpeg"
+      },
+      {
+        "title": "Le contenu des employés devient arme compétitive immédiate",
+        "tldr": "61% de la Gen Z découvre des produits via du contenu d'employés, Starbucks paie désormais ses salariés pour continuer.",
+        "detail": "Un signal faible détecté : les employés de Starbucks génèrent trois fois plus de contenu marque que ceux de concurrents, amenant l'enseigne à les rémunérer pour cette participation. En France, cet avantage reste inexploité car la plupart des marques ne valorisent pas l'implication de leurs équipes sur les réseaux sociaux. C'est une brèche stratégique pour différencier son engagement communautaire sans budget publicitaire supplémentaire.",
+        "source_name": "Signaux Faibles du Retail",
+        "source_url": "https://www.jebosseengrandedistribution.fr/2026/07/02/signaux-faibles-le-consommateur-se-reinvente-et-les-enseignes-courent-derriere/",
+        "agent_id": "strategy",
+        "og_image": "https://storage.ghost.io/c/ed/da/edda0153-be11-4643-9318-2cb198c66e7f/content/images/2026/06/Illustration-blog--7--1.jpg"
+      },
+      {
+        "title": "L'influence des micro-influenceurs décline face au besoin d'authenticité",
+        "tldr": "59% des femmes et 61% des hommes ne se laissent pas influencer par les recommandations spontanées sur les réseaux sociaux pour les achats beauté.",
+        "detail": "L'étude TGI France 2026 de Kantar Media casse un mythe fondateur des cinq dernières années : la stratégie d'influence traditionnelle basée sur la viralité s'épuise. Les marques de cosmétiques doivent pivot vers la preuve formelle, l'expertise transparente et la communication technique plutôt que vers les boucles de recommandation pairs. C'est un renversement de paradigme rarement documenté avec cette ampleur statistique et un signal que le marché redevient rationnel après des années de contenu émotionnel générique.",
+        "source_name": "Kantar Media TGI France 2026",
+        "source_url": "https://comdigitale.blog/etude-tgi-france-2026-insights-cles-pour-marketeurs",
+        "agent_id": "strategy",
+        "og_image": "https://comdigitale.blog/wp-content/uploads/2026/05/etude-tgi-france-2026-insights-cles-pour-marketeurs.jpeg"
+      },
+      {
+        "title": "Celio L elles phenomene copyrédactionnel",
+        "tldr": "Campagne de vol de lettre a genere 40 millions impressions cross-plateformes en mars 2026.",
+        "detail": "Debut mars 2026 Celio a fait disparaitre la lettre L de ses enseignes en France et Belgique. Le communique official evoquait un vol. Le 16 mars la marque revele que le L etait une mecanique phonetique cachee pour annoncer sa premiere ligne feminine elles. Cette strategie de decodage a cree une viralite spontanee generant 40 millions impressions cross-plateforme et placant la campagne signee Havas Paris en reference industrielle.",
+        "source_name": "Vingt Deux",
+        "source_url": "https://vingtdeux.fr/campagnes-publicitaires-2026/",
+        "agent_id": "copywriting",
+        "og_image": "https://vingtdeux.fr/wp-content/uploads/2026/04/IKEA_TOP-CHEF_VISUEL_1.jpg"
+      },
+      {
+        "title": "Affichage OOH contre volume digital en 2026",
+        "tldr": "Les campagnes les plus recompensees misent 90% sur le physique urbain plutot que digital pur.",
+        "detail": "Selon analyse Insitis des meilleurs campagnes 2025 et debut 2026 l affichage exterieur est present dans 9 campagnes sur 10. Tandis que tout le monde communique en digital l espace urbain devient le territoire de la rarete et de l attention. Une affiche bien placee en metro ou panneau grand format devient plus strategie qu une campagne digitale massive.",
+        "source_name": "Insitis",
+        "source_url": "https://www.insitis.com/nos-actualites/top-10-meilleures-campagnes-publicitaires",
+        "agent_id": "copywriting",
+        "og_image": ""
+      },
+      {
+        "title": "Copywriting taux conversion 30 a 150 pourcent superieur",
+        "tldr": "Une page de vente optimisee par copywriter expert augmente les conversions de 30 a 150 pourcent en 2026.",
+        "detail": "Selon etudes sectorielles 2026 le copywriting strategique devient mesurable. Modifier un titre restructurer une page ou reformuler un appel a l action peut doubler le chiffre d affaires. Cette metrique explique pourquoi les entreprises investissent massivement dans cette competence alors que la plupart des contenus circulent juste pour capter l attention sans convertir vraiment.",
+        "source_name": "Referencement du pro",
+        "source_url": "https://www.referencement-du-pro.com/marketing-digital/top-5-des-meilleurs-copywriters-francais-a-suivre-en-2026",
+        "agent_id": "copywriting",
+        "og_image": "https://www.referencement-du-pro.com/wp-content/uploads/2026/04/cap-featured-1098116-1776159709.png"
+      },
+      {
+        "title": "Ligatures OpenType, levier invisible de qualité perçue",
+        "tldr": "Les fonctionnalités OpenType (ligatures, chiffres suspendus) rehaussent la perception esthétique de 15 points, 97% des navigateurs les supportent.",
+        "detail": "Une étude MIT Media Lab 2024 mesure que les ligatures contextuelles et chiffres suspendus sur un site éditorial augmentent la qualité perçue de 15 points sur une échelle esthétique. Pourtant la majorité des designers ignore ces fonctionnalités OpenType bien que les fonderies doublent leurs familles variables tous les 18 mois : 350+ polices variables sur Google Fonts en 2026 contre la moyenne historique bien inférieure. Activable par une seule ligne CSS, ce levier de différenciation reste sous-utilisé alors que 22% des sites e-commerce mode l'intègrent dans leurs interfaces. Source MIT Media Lab 2024 et InOut Design février 2026.",
+        "source_name": "InOut Design et MIT Media Lab",
+        "source_url": "https://inoutdesign.fr/graphisme/typographie-tendances-2026/",
+        "agent_id": "visuals",
+        "og_image": "https://inoutdesign.fr/images/site/hero.webp"
+      },
+      {
+        "title": "Rejet social du contenu IA généré massifie mouvement anti-slop",
+        "tldr": "475 000 mentions du hashtag anti-slop en 30 jours, Visibrain observe redirection active vers créateurs humains.",
+        "detail": "Visibrain relève 475 000 mentions du terme AI slop sur X, Instagram, TikTok et Threads en 30 jours fin 2025. Le signal révèle que les critiques ne stopent pas au rejet mais redirigent activement l'attention vers illustrateurs et créateurs humains via hashtags comme supporthumanart. Ce phénomène accélère l'appréciation du fait-main : 22% des sites e-commerce intègrent des éléments brutalistes visuels selon Commerce Design Report 2025, signal d'une authenticité recherchée en réaction directe aux visuels trop lisses générés par IA. Brut et Sojasun capitalisent cette tendance en 2026. Source Visibrain décembre 2025 et Commerce Design Report 2025.",
+        "source_name": "Visibrain et Integral Ad Science",
+        "source_url": "https://www.visibrain.com/blog/ai-slop-social-media",
+        "agent_id": "visuals",
+        "og_image": "https://www.visibrain.com/hubfs/mohamed-nohassi--0xMiYQmk8g-unsplash-1.jpg"
+      },
+      {
+        "title": "Spontanéité imparfaite convertit en code de confiance de marque",
+        "tldr": "Le low-fi devient signal d'authenticité, formats perçus comme imparfaits génèrent davantage d'attention que contenus standards.",
+        "detail": "Biggie analyse que la spontanéité devient un code culturel à part entière chez les marques, où les formats perçus comme imparfaits ou improvisés génèrent davantage d'attention qu'à l'époque du design parfait. Le low-fi n'est plus une contrainte de production mais un signal d'authenticité recherché par audiences sociales, exemplifié par les campagnes Brut qui privilégient la conversationnalité brute. En parallèle, Sojasun détourne l'insulte soy boy en mécanique de campagne intégrant les refus comme contenu, transformant chaque réaction en engagement. Ces signaux faibles exposent que dans un environnement saturé d'IA, l'imperfection maîtrisée crée une connexion émotionnelle supérieure aux visuels lissés. Source Biggie juin 2026 et Veoprint mars 2026.",
+        "source_name": "Biggie et Veoprint",
+        "source_url": "https://www.biggie.co/fr-article/les-5-actus-marketing-ete-2026",
+        "agent_id": "visuals",
+        "og_image": "https://cdn.prod.website-files.com/662e6343a8fcecc7a0385e3f/6a2ac3cbb5a1d237df48b26e_Capture%20d%E2%80%99e%CC%81cran%202026-06-02%20a%CC%80%2015.06.44%20(1).png"
+      }
+    ]
+  },
+  {
     "date_iso": "2026-06-29",
     "date_fr": "Lundi 29 Juin 2026",
     "cards": [
