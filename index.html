@@ -4,6 +4,13 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0,viewport-fit=cover">
 <meta name="theme-color" content="#FFFFFF">
+<meta property="og:title" content="Digest Matin">
+<meta property="og:description" content="Veille stratégique quotidienne — Stratégie, Copywriting, Direction artistique">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Digest Matin">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Digest Matin">
+<meta name="twitter:description" content="Veille stratégique quotidienne — Stratégie, Copywriting, Direction artistique">
 <title>Digest Matin</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -23,7 +30,8 @@ a{color:#0000FF}
 .hdr{
   position:sticky;top:0;z-index:100;
   background:#fff;
-  border-bottom:3px solid #000
+  border-bottom:3px solid #000;
+  display:flex;align-items:center
 }
 .hdr-inner{
   max-width:1280px;margin:0 auto;
@@ -55,7 +63,7 @@ a{color:#0000FF}
 .filters{
   max-width:1280px;margin:0 auto;
   padding:16px 24px 0;
-  display:flex;gap:0;
+  display:flex;align-items:center;gap:0;
   border-bottom:3px solid #000;
   overflow-x:auto;-webkit-overflow-scrolling:touch;scrollbar-width:none
 }
@@ -161,11 +169,12 @@ a{color:#0000FF}
 
 .c-title{
   font-family:'Archivo Black',sans-serif;
-  font-size:20px;line-height:1.1;
-  color:#000;margin-bottom:10px
+  font-size:2rem;line-height:1.1;
+  color:#000;margin-bottom:10px;
+  width:100%
 }
 .c-tldr{
-  font-size:16px;font-weight:400;
+  font-size:1rem;font-weight:400;
   line-height:1.6;color:#000;
   margin-bottom:0;flex:1
 }
@@ -238,9 +247,8 @@ a{color:#0000FF}
 }
 .btn-source:hover{background:#fff;color:#000}
 
-/* ── Desktop : titres plus grands ── */
+/* ── Desktop : padding agrandi ── */
 @media(min-width:1280px){
-  .c-title{font-size:22px}
   .c-body{padding:20px}
 }
 
