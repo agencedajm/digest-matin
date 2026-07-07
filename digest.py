@@ -29,7 +29,7 @@ load_env()
 GMAIL_USER    = "arnaud.dajm@gmail.com"
 GMAIL_PASS    = os.environ.get("GMAIL_APP_PASSWORD", "")
 ANTHROPIC_KEY = os.environ.get("ANTHROPIC_API_KEY", "")
-FEED_WEB_URL  = os.environ.get("FEED_WEB_URL", "https://agencedajm.github.io/digest-matin/")
+FEED_WEB_URL  = os.environ.get("FEED_WEB_URL", "https://mellifluous-crostata-69725a.netlify.app/")
 TO_EMAIL      = "arnaud.dajm@gmail.com"
 
 _JOURS = ["Lundi","Mardi","Mercredi","Jeudi","Vendredi","Samedi","Dimanche"]
