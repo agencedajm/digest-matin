@@ -1,5 +1,92 @@
 [
   {
+    "date_iso": "2026-07-08",
+    "date_fr": "Mercredi 8 Juillet 2026",
+    "cards": [
+      {
+        "title": "Influenceurs sans expertise perdent crédibilité",
+        "tldr": "59% des femmes refusent les conseils beauté d'influenceurs en ligne, marquant l'effondrement des stratégies d'influence traditionnelles.",
+        "detail": "L'étude TGI France 2026 de Kantar Media révèle que 59% des femmes et 61% des hommes ne se laissent pas influencer par les recommandations d'autres utilisateurs sur les réseaux pour l'achat de produits beauté. Cela signifie la fin annoncée de l'ère des influenceurs sans réelle expertise, forçant les marques à miser sur des preuves tangibles et une communication transparente basée sur l'expertise plutôt que la popularité.",
+        "source_name": "Kantar Media / Comdigitale Blog",
+        "source_url": "https://comdigitale.blog/etude-tgi-france-2026-insights-cles-pour-marketeurs",
+        "agent_id": "strategy",
+        "og_image": ""
+      },
+      {
+        "title": "Nostalgie dépasse 43 millions conversations",
+        "tldr": "Les discussions autour de la nostalgie ont bondi de 18% en 2025 pour devenir un levier stratégique mesurable et non symbolique.",
+        "detail": "Selon l'analyse Brandwatch de plus de 18 millions de conversations en ligne, les mentions de thématiques nostalgiques dépassent 43 millions d'échanges, tous les âges confondus. Cette tendance reflète une quête de réassurance des consommateurs et représente une opportunité branding concrète quand elle est activée avec justesse, à condition d'éviter la simple réédition pour privilégier le remixage stratégique.",
+        "source_name": "Brandwatch Digital Marketing Trends 2026",
+        "source_url": "https://comarketing-news.fr/marketing-2026-la-marque-dernier-rempart-face-au-slop/",
+        "agent_id": "strategy",
+        "og_image": ""
+      },
+      {
+        "title": "Contenus IA dénommés slop rejetés massivement",
+        "tldr": "Les mentions négatives du terme slop ont explosé de 200% en 2025, dont 82% exprimées sur registre hostile.",
+        "detail": "L'étude Brandwatch interrogeant plus de 1000 marketeurs constate que le rejet des contenus générés par IA s'est cristallisé autour du terme slop. Cet indicateur révèle un basculement comportemental : l'audience repère désormais l'IA basique et sanctionne l'automtisation sans valeur ajoutée, forçant les marques à réinvestir sur l'authenticité et l'imperfection comme avantages compétitifs plutôt que sur le volume de production.",
+        "source_name": "Brandwatch / Comarketing-News",
+        "source_url": "https://www.e-marketing.fr/marques-1296/strategie-de-marque-2250/comment-integrer-une-strategie-de-brand-content-et-de-marque-en-2026-2-171719",
+        "agent_id": "strategy",
+        "og_image": ""
+      },
+      {
+        "title": "La plateforme, mecanisme de valeur recurente",
+        "tldr": "Construire l'annee N+1 en paralysie. Les marques capitalistes sur des identites installees (Magnum, Nespresso) generent 8 a 12x plus de resultats.",
+        "detail": "Celio a genere 40 millions d'impressions avec une simple disparition de lettre signifiante, validant qu'une architecture de dispositif bien pensee remplace la creativite seule. Magnum a structure sa deuxieme campagne non en innovation conceptuelle mais en consolidation d'une plateforme visuelle installee (noir/blanc, silhouettes, metaphores saisonnelles), multipliant le rendement des investissements semantiques. Source: Vingt Deux (avril 2026)",
+        "source_name": "Vingt Deux",
+        "source_url": "https://vingtdeux.fr/campagnes-publicitaires-2026/",
+        "agent_id": "copywriting",
+        "og_image": ""
+      },
+      {
+        "title": "Identite imperfecte et materielle prime lisse",
+        "tldr": "52% des consommateurs ignorent le contenu genere par IA et 52% moins engagent. L'authenticite redevient levier competitif.",
+        "detail": "Les marques qui dominent en 2026 abandonnent la surpolissage des annees 2010. L'imperfection, le geste et la materialite renforcent la credibilite alors que la fatigue du trop lisse s'amplifie portee par une exposition reduite aux reseaux. Les productions IA restent detectable et produisent de l'apathie. Source: La Reclame (janvier 2026) et ols.design (2025)",
+        "source_name": "La Reclame",
+        "source_url": "https://lareclame.fr/tendances-creation-publicitaire-2026-328355",
+        "agent_id": "copywriting",
+        "og_image": ""
+      },
+      {
+        "title": "Apathie record des Francais envers les marques",
+        "tldr": "92% des Francais jugent que les marques disparaitraient sans impact personnel. L'indice meaningfulness s'effondre de 1,5 point.",
+        "detail": "Selon Havas Meaningful Brands 2025-2026, 85% des marques reculent en utilite perçue. Le battle pour l'attention se deplance vers la presence en reponses d'IA generatives (Generative Engine Optimization) et les signals faibles. Les CMO doivent jouer la dynamic adaptability: reperer vite, reagir vite, ajuster offre et discours. Source: Havas Meaningful Brands et Influencia (decembre 2025)",
+        "source_name": "Influencia / Havas",
+        "source_url": "https://www.influencia.net/meaningful-brands-2025-2026-pourquoi-les-francais-necoutent-plus-les-marques-et-comment-les-regagner/",
+        "agent_id": "copywriting",
+        "og_image": ""
+      },
+      {
+        "title": "Typographies animées et modulables comme identité",
+        "tldr": "Les marques utilisent désormais la typographie expressive et les animations de mots comme systèmes identitaires, enregistrant jusqu'à 25% d'amélioration d'engagement par l'interaction dynamique des lettres.",
+        "detail": "En 2026, les mots ne restent plus figés sur les supports : ils rebondissent, s'étirent, interagissent avec les éléments visuels et s'animent selon les contextes. Les fontes customisées deviennent aussi reconnaissables qu'un logo. La typographie devient un puissant système modulable et narrative, renforçant l'unicité d'une marque bien au-delà du simple choix de caractères. C'est un signal fort d'BRASSART et GenContact, que confirment les agences opérationnelles depuis janvier 2026.",
+        "source_name": "BRASSART et GenContact",
+        "source_url": "https://www.brassart.fr/ecole/actualites/graphisme-communication-visuelle-les-tendances-creatives-a-suivre-en-2026",
+        "agent_id": "visuals",
+        "og_image": ""
+      },
+      {
+        "title": "Authenticité par la preuve contre les contenus IA génériques",
+        "tldr": "94% des consommateurs doutent de la fiabilité de ce qu'ils voient en ligne, forçant les marques à montrer des preuves tangibles plutôt que des promesses visuelles lisses et homogénéisées.",
+        "detail": "La production instantanée de contenu visuel par IA a créé une saturation que les publics qualifient désormais de slop, terme dont les mentions ont bondi de 200% en 2025. Les marques doivent justifier leur authenticité par des détails concrets et un engagement visible, moins raffiné mais plus humain, plutôt que par des images génériques qui tous se ressemblent. Le Human Clarity Institute confirme que 91% des publics peinent à distinguer le réel du faux, ce qui redéfinit les codes visuels acceptables.",
+        "source_name": "Human Clarity Institute et Brandwatch",
+        "source_url": "https://comarketing-news.fr/marketing-2026-la-marque-dernier-rempart-face-au-slop/",
+        "agent_id": "visuals",
+        "og_image": ""
+      },
+      {
+        "title": "Durabilité visuelle ancrée dans le réel et le local",
+        "tldr": "Les visuels d'impact environnemental perdent leurs codes abstraits et verts génériques pour montrer des preuves locales et du progrès concret, avec focus sur les personnes plutôt que les symboles.",
+        "detail": "Getty Images observe depuis mai 2026 que les audiences rejettent les futures idéalisées et les palettes vertes lisses au profit de visuels ancrés en place, communauté et action réelle. Les marques doivent documenter l'effort visible et les résultats mesurables plutôt que le scénario parfait de demain. Cette évolution oblige à raconter des histoires durables enracinées dans le contexte local et la traçabilité, pas seulement dans un symbole ou une couleur.",
+        "source_name": "Getty Images Visual GPS",
+        "source_url": "https://www.gettyimages.com/visualgps/creative-trends/technology/2026-visual-trends-were-tracking",
+        "agent_id": "visuals",
+        "og_image": ""
+      }
+    ]
+  },
+  {
     "date_iso": "2026-07-06",
     "date_fr": "Lundi 6 Juillet 2026",
     "cards": [
