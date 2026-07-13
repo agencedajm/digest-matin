@@ -1,5 +1,92 @@
 [
   {
+    "date_iso": "2026-07-13",
+    "date_fr": "Lundi 13 Juillet 2026",
+    "cards": [
+      {
+        "title": "Slop détruit la confiance, authenticité devient arme",
+        "tldr": "Les mentions de contenu IA médiocre ont bondi 200 % en 2025, dont 82 % négatives. L'authenticité redevient avantage compétitif majeur.",
+        "detail": "Brandwatch a analysé plus de 18 millions de conversations en ligne et interrogé plus de 1 000 marketeurs. La saturation de contenus générés par IA sans substance force les marques à démontrer une attention sincère et assumée. Les audiences détectent immédiatement le vernis superficiel et attendent désormais des marques capables d'apporter une contribution réelle aux conversations plutôt que du trendjacking artificiel. Cette défiance pousse un repositionnement radical vers l'imperfection comme preuve de responsabilité créative, selon Brandwatch Digital Marketing Trends 2026.",
+        "source_name": "Brandwatch / Comarketing-News",
+        "source_url": "https://comarketing-news.fr/marketing-2026-la-marque-dernier-rempart-face-au-slop/",
+        "agent_id": "strategy",
+        "og_image": ""
+      },
+      {
+        "title": "Récit incarné remplace diffusion pure, figures humaines dominantes",
+        "tldr": "Marques abandonnent standardisation contenu pour mobiliser figures culturelles identifiables. Valeur humaine prime sur viralité.",
+        "detail": "Adidas déploie campagne mondiale avec Timothée Chalamet, Lionel Messi et Zinédine Zidane, illustrant un basculement structurel. Dans un contexte où la production de contenus devient standardisée, les marques performantes mobilisent des figures humaines porteuses de sens culturel plutôt que de rechercher la simple créativité visuelle. Cette stratégie signale que la capacité à incarner un message de manière humaine et mémorable remplace la logique de pure diffusion, selon Biggie et SportsMarketing.fr.",
+        "source_name": "Biggie / SportsMarketing.fr",
+        "source_url": "https://www.biggie.co/fr-article/5-actus-tendances-marketing-biggie",
+        "agent_id": "strategy",
+        "og_image": "https://cdn.prod.website-files.com/662e6343a8fcecc7a0385e3f/6a0ec6f22570e1d0fb4a9b1d_BIGGIE_PULSE.png"
+      },
+      {
+        "title": "Imperfection acceptée, geste humain érigé en signal qualité",
+        "tldr": "Gen Z est 3,4 fois plus susceptible de soutenir marques assumant leurs imperfections. Geste imparfait devient preuve de responsabilité.",
+        "detail": "L'imperfection devient paradoxalement signe de qualité, non pas amateurisme mais preuve que la marque a pris risque et responsabilité. Gen Z valorise visiblement les marques capables d'afficher leurs défauts plutôt que des univers parfaits retouchés. Cette inversion des critères d'excellence bouscule les normes de création publicitaire où la sobriété calculée et le geste assumé priment désormais sur le raffinement formel du perfectionnisme designer, selon Viuz et La Réclame.",
+        "source_name": "Viuz / La Réclame",
+        "source_url": "https://viuz.com/2026/07/03/perspectives-49-chiffres-quil-fallait-retenir-de-mai-a-juin-2026/",
+        "agent_id": "strategy",
+        "og_image": "http://viuz.com/app/uploads/2026/06/VIUZ-chiffres-mai-juin-2026-Photo-de-Rana-Kaname-sur-Unsplash-.png"
+      },
+      {
+        "title": "Plateforme de campagne bâtie sur continuité",
+        "tldr": "Les marques construisent deux campagnes liées plutôt que d'abandonner à chaque cycle. 40 millions d'impressions pour Celio.",
+        "detail": "Magnum a d'abord posé un insight durable puis construit dessus l'année suivante. Celio a déployé un dispositif en trois actes physique, social, révélation passant par Duolingo et le créateur Arkunir. Cette logique de plateforme plutôt que de page blanche devient rare mais structurante. Vingt Deux mai 2026.",
+        "source_name": "Vingt Deux",
+        "source_url": "https://vingtdeux.fr/campagnes-publicitaires-2026/",
+        "agent_id": "copywriting",
+        "og_image": "https://vingtdeux.fr/wp-content/uploads/2026/04/IKEA_TOP-CHEF_VISUEL_1.jpg"
+      },
+      {
+        "title": "Médias deviennent talents influence avec KPIs hybrides",
+        "tldr": "Grazia rejoint Follow Media pour fusionner codes éditoriaux et influence. 4 critères hybrides mesure engagement et sentiment.",
+        "detail": "Les titres de presse abandonnent la seule diffusion pour activer eux-mêmes la production de contenu engagé. Grazia déploie briefs créatifs hybrides et KPIs croisant engagement, sentiment, trafic qualifié et conversion. Ce modèle médias-talents inverse la tendance où créateurs copiaient les journalistes. comdigitale.blog juillet 2026.",
+        "source_name": "comdigitale.blog",
+        "source_url": "https://comdigitale.blog/grazia-chez-follow-media-comme-influenceur-revolution",
+        "agent_id": "copywriting",
+        "og_image": "https://comdigitale.blog/wp-content/uploads/2026/07/grazia-chez-follow-media-comme-influenceur-revolution-765x1024.jpeg"
+      },
+      {
+        "title": "Affichage OOH minimaliste outperformé par digital",
+        "tldr": "KitKat remplace smartphones par chocolat zéro texte sur affiches. Grand Prix Outdoor Cannes Lions 2025.",
+        "detail": "La vraie innovation n'est plus dans le message mais dans l'absence de message. Campagne 100 pour cent physique sans un centime digital qui prouve qu'une idée parfaite sur panneau bien placé bat une campagne digitale massive quand le minimalisme visuel trouve l'insight universel. Insitis mai 2026.",
+        "source_name": "Insitis",
+        "source_url": "https://www.insitis.com/nos-actualites/top-10-meilleures-campagnes-publicitaires",
+        "agent_id": "copywriting",
+        "og_image": ""
+      },
+      {
+        "title": "Distorsion volontaire et Reality Warp",
+        "tldr": "Les marques distordent intentionnellement la perception visuelle pour créer une friction cognitive mémorable, 220 % d'augmentation de recherches sur les esthétiques liminales.",
+        "detail": "Les visuels jouent avec les proportions altérées, perspectives impossibles et mises en scène surréalistes pour créer un arrêt visuel. Cette distorsion du réel devient levier de différenciation face à l'uniformité des visuels générés par l'IA, transformant une legère perturbation en expérience mémorable plutôt que du bizarre gratuit.",
+        "source_name": "Unicorp et Canva Design Trends",
+        "source_url": "https://www.unicorp.fr/blog/design-2026-5-tendances-incontournables-pour-booster-vos-communications/",
+        "agent_id": "visuals",
+        "og_image": "https://www.unicorp.fr/media/2026/03/Site-UNICORP_Article-Design.png"
+      },
+      {
+        "title": "Imperfection assumée contre la synthèse IA",
+        "tldr": "Le grain, le flou volontaire et les erreurs brutes retrouvent une crédibilité face au polissage excessif, 64 % des designers privilégient l'humain.",
+        "detail": "Les mises en scène photographiques capturent des lumières brutes, des cadrages décalés, des ratures et des imperfections intentionnelles. Cette tendance est une réaction directe à la perfection excessive des visuels générés par l'IA, redonnant une valeur de proximité et d'authenticité aux contenus imparfaits.",
+        "source_name": "Canva et Veoprint",
+        "source_url": "https://blog.veoprint.com/les-tendances-design-et-graphisme-2026/",
+        "agent_id": "visuals",
+        "og_image": "https://s3.fr-par.scw.cloud/wp-veoprint-blog/2026/01/Article-tendances-2026-couv-V4.jpg"
+      },
+      {
+        "title": "Typographie comme identité narrative incarnée",
+        "tldr": "Les lettres deviennent des éléments visuels autonomes avec mouvement et déformation, redéfinissant l'identité visuelle aussi fortement qu'un logotype.",
+        "detail": "La typographie animée se déplace, rebondit, s'étire et interagit avec les éléments visuels environnants. Les fonts customisées et les caractères modulables s'imposent comme des actifs de marque identitaires à part entière, dépassant leur simple fonction de support textuel pour devenir moteurs de storytelling.",
+        "source_name": "BRASSART et PrintOblog",
+        "source_url": "https://www.brassart.fr/ecole/actualites/graphisme-communication-visuelle-les-tendances-creatives-a-suivre-en-2026",
+        "agent_id": "visuals",
+        "og_image": "https://www.brassart.fr/data/news/389/listing.1764152719.png"
+      }
+    ]
+  },
+  {
     "date_iso": "2026-07-08",
     "date_fr": "Mercredi 8 Juillet 2026",
     "cards": [
