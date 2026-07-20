@@ -30,7 +30,12 @@ GMAIL_USER    = "arnaud.dajm@gmail.com"
 GMAIL_PASS    = os.environ.get("GMAIL_APP_PASSWORD", "")
 ANTHROPIC_KEY = os.environ.get("ANTHROPIC_API_KEY", "")
 FEED_WEB_URL  = os.environ.get("FEED_WEB_URL", "https://mellifluous-crostata-69725a.netlify.app/")
-TO_EMAIL      = "arnaud.dajm@gmail.com"
+TO_EMAILS     = [
+    "arnaud.dajm@gmail.com",
+    "aurelie.delettre@dajm.fr",
+    "pierre.deman@dajm.fr",
+    "guillaume.juliot@dajm.fr",
+]
 
 _JOURS = ["Lundi","Mardi","Mercredi","Jeudi","Vendredi","Samedi","Dimanche"]
 _MOIS  = ["","Janvier","Février","Mars","Avril","Mai","Juin",
@@ -750,11 +755,11 @@ def send_email(cards, agents_map):
     msg = MIMEMultipart("alternative")
     msg["Subject"] = f"Digest Matin — {TODAY_SHORT}"
     msg["From"] = GMAIL_USER
-    msg["To"] = TO_EMAIL
+    msg["To"] = ", ".join(TO_EMAILS)
     msg.attach(MIMEText(html, "html", "utf-8"))
     with smtplib.SMTP_SSL("smtp.gmail.com", 465) as s:
         s.login(GMAIL_USER, GMAIL_PASS)
-        s.sendmail(GMAIL_USER, TO_EMAIL, msg.as_string())
+        s.sendmail(GMAIL_USER, TO_EMAILS, msg.as_string())
     print("  Email envoye")
 
 
