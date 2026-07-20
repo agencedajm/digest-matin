@@ -1,5 +1,92 @@
 [
   {
+    "date_iso": "2026-07-20",
+    "date_fr": "Lundi 20 Juillet 2026",
+    "cards": [
+      {
+        "title": "Radio au-delà des murs, musique redécouverte",
+        "tldr": "54% des Français découvrent la musique via la radio plutôt que via les algorithmes de streaming, révélant une authenticité recherchée.",
+        "detail": "L'étude TGI France 2026 de Kantar Media, publiée en avril 2026, a sondé 15 000 individus et démontré un contraste saisissant : face à la saturation des playlists algorithmiques, 54% privilégient la radio pour la découverte musicale, loin devant les plateformes (22%). Cela reflète une tendance structurelle vers l'authenticité et l'acceptation de soi, remettant en question les stratégies d'influence basées sur la viralité et l'algorithme. Source: comdigitale.blog",
+        "source_name": "comdigitale.blog",
+        "source_url": "https://comdigitale.blog/etude-tgi-france-2026-insights-cles-pour-marketeurs",
+        "agent_id": "strategy",
+        "og_image": "https://comdigitale.blog/wp-content/uploads/2026/05/etude-tgi-france-2026-insights-cles-pour-marketeurs.jpeg"
+      },
+      {
+        "title": "Gucci redéfinit le sponsoring en marque-dans-marque",
+        "tldr": "Gucci devient premier partenaire-titre de luxe en F1 (50-60 M$/an) avec une business unit autonome, pas juste un logo.",
+        "detail": "En mai 2026, Gucci a basculé le modèle traditionnel du sponsoring : Alpine devient Gucci Racing Alpine Formula One Team avec sa propre structure commerciale et merchandising. Cet accord 50-60 millions de dollars annuels ne réduit pas la marque à une visibilité, il crée une infrastructure où le luxe ne paie plus pour être vu mais pour être utile et indispensable à l'événement. Source: SportsMarketing.fr",
+        "source_name": "SportsMarketing.fr",
+        "source_url": "https://www.sportsmarketing.fr/marketing-sportif-mai-2026-marques-changent-metier/",
+        "agent_id": "strategy",
+        "og_image": "https://www.sportsmarketing.fr/wp-content/uploads/2026/05/image-titre_digest-mai-2026-1024x572.png"
+      },
+      {
+        "title": "Levi's exploite omission visible du logo",
+        "tldr": "Régulations FIFA obligeant à masquer son nom, Levi's en tire profit : le logo batwing recouvert devient viralité spontanée.",
+        "detail": "Lors de la Coupe du Monde 2026, FIFA interdisait les noms traditionnels de stades. Levi's a transformé cette contrainte en atout : en masquant son identité tout en preservant la forme inimitable de son batwing, la marque a créé une conversation organique massive sur les réseaux. Le silence stratégique a engendré plus de mémorabilité qu'une campagne classique. Source: CTP Boston",
+        "source_name": "CTP Boston",
+        "source_url": "https://ctpboston.com/insights/blog/marketing-minute-june-2026/",
+        "agent_id": "strategy",
+        "og_image": "https://ctpboston.com/wp-content/uploads/2026/06/levis-stadium-world-cup-inc-2281418624.webp"
+      },
+      {
+        "title": "Saturation IA crée contretrend copie minimale",
+        "tldr": "À 90 % d'adoption de l'IA générative en copywriting, le marché réagit par des claims plus sobres et de l'authenticité assumée. 78 % d'adoption en 2025, plateau atteint en 2026.",
+        "detail": "Le marché du copywriting IA génère une contre-tendance immédiate : tandis que 90 % des copywriters utilisent l'IA et les modèles génèrent des claims hyper-agressifs (10x, 5x, résultats immédiats), les équipes qui gagnent se réorientent vers des messages plus simples, même ennuyeux, mais crédibles. Cette tactique dite du shaking the skeleton expose les défauts des produits directement dans la copie. Selon les baromètres Infopro Digital Média et Content Marketing Institute publiés en avril-juin 2026, le taux d'adoption stagne à 85 % en B2B et le facteur 'AI Ick' (rejet instinctif du contenu robotique) s'intensifie parmi les audiences exigeantes.",
+        "source_name": "Medium (Alin Dragu) et Infopro Digital Média",
+        "source_url": "https://medium.com/@dragualin/5-copywriting-trends-predictions-for-2026-must-know-41141d51b507",
+        "agent_id": "copywriting",
+        "og_image": ""
+      },
+      {
+        "title": "Micro-influenceurs dépassent massivement les macro",
+        "tldr": "Les micro-influenceurs génèrent 3,2x plus d'engagement et 20 % de conversion supérieure pour un coût 60 % plus bas. ROI de 5,20 euros par euro investi confirmé.",
+        "detail": "Selon l'analyse de 17 000+ campagnes compilée par Jem Social et Influencer Marketing Hub (avril 2026), les micro-influenceurs (10k-100k followers) affichent 2,60 % d'engagement sur Instagram contre 1,21 % pour les méga-comptes. Sur TikTok, les nano-créateurs (1k-10k) atteignent 8-12 % d'engagement. Les marques comme L'Oréal, Decathlon et les startups tech déploient désormais des portefeuilles de 50 micro-influenceurs plutôt qu'un macro unique. Le coût par engagement tombe à 0,18-0,20 euros contre 0,45 euros+ pour les méga-profils, libérant 60 à 80 % du budget influence.",
+        "source_name": "Jem Social et BEHYPE France",
+        "source_url": "https://www.jem.social/blog-micro-influencer-vs-macro-influencer",
+        "agent_id": "copywriting",
+        "og_image": "https://jem.social/images/micro-vs-macro-influencer-2026-report.png"
+      },
+      {
+        "title": "Contenu vidéo long devient le vrai trésor IA",
+        "tldr": "Les vidéos de 20+ minutes dominent 57 % du temps de visionnage YouTube en 2026 ; YouTube dépasse Reddit comme source citée par les modèles IA.",
+        "detail": "Contrairement au mantra des shorts, Tubular Labs et eMarketer révèlent que YouTube a dépassé Reddit en janvier-juin 2026 comme source privilégiée par les modèles d'IA pour générer des réponses conversationnelles, car les transcriptions et métadonnées vidéo longue offrent plus de contexte. Les vidéos 20+ minutes captent 57 % du temps de visionnage total sur YouTube. Cette inversion faveur un slow media revival que les agences sous-exploitent : structurer du contenu long-form pour la scrape IA devient plus stratégique que chasser la viralité Reels.",
+        "source_name": "Viuz (synthèse données mai-juin 2026) et eMarketer",
+        "source_url": "https://viuz.com/2026/07/03/perspectives-49-chiffres-quil-fallait-retenir-de-mai-a-juin-2026/",
+        "agent_id": "copywriting",
+        "og_image": "http://viuz.com/app/uploads/2026/06/VIUZ-chiffres-mai-juin-2026-Photo-de-Rana-Kaname-sur-Unsplash-.png"
+      },
+      {
+        "title": "Défiance envers l'IA générative lisse",
+        "tldr": "94 % des consommateurs doutent de fiabilité visuels générés IA tandis les marques réintroduisent grain texture imperfection comme réaction.",
+        "detail": "Selon une étude du Human Clarity Institute citée par Capital-Image en 2026 91 % des personnes estiment impossible distinguer vrai du faux dans les visuels en ligne. Cette méfiance provoque un retour massif des textures naturelles collages tracés main composition volontairement déséquilibrée pour réintroduire la trace humaine selon Unicorp.",
+        "source_name": "Capital-Image et Unicorp",
+        "source_url": "https://www.capital-image.com/blog/8-grandes-tendances-communication-2026",
+        "agent_id": "visuals",
+        "og_image": "https://custom-images.strikinglycdn.com/res/hrscywv4p/image/upload/c_limit,fl_lossy,h_9000,w_1200,f_auto,q_auto/2540282/489182_516482.png"
+      },
+      {
+        "title": "Typo animée et polices liquides expressives",
+        "tldr": "Les marques adoptent typographies mouvantes qui se déforment fluides intégrant dynamisme texte comme élément narratif central 2026.",
+        "detail": "Selon BRASSART et StudioVéhenne les polices dites liquides jouent dynamisme flexibilité où le texte s'étire coule ou se déplace pour montrer innovation ludique. Ces typographies animées sur réseaux sociaux redefont mise en page print et digital permettant aux marques raconter histoire visuelle en mouvement continu.",
+        "source_name": "BRASSART et StudioVéhenne",
+        "source_url": "https://www.brassart.fr/ecole/actualites/graphisme-communication-visuelle-les-tendances-creatives-a-suivre-en-2026",
+        "agent_id": "visuals",
+        "og_image": "https://www.brassart.fr/data/news/389/listing.1764152719.png"
+      },
+      {
+        "title": "Contrastes maximaux noirs néons et nudité chromatique",
+        "tldr": "Marques adoptent simultaneously dark modes saturation néon extreme et palettes naturelles nude créant polarisation esthétique audacieuse intentionnelle.",
+        "detail": "Selon PalmSquare direction artistique 2026 montre opposition entre Dark Mode néon sur noir couleurs ultra vives déclinaison Dropbox côté extrême et tons naturels nude humains côté apaisement. Cette polarisation stratégique contraste assumé force marques prendre position visuellement pour capter attention environnement saturé messages.",
+        "source_name": "PalmSquare et Palmsquare design graphique",
+        "source_url": "https://palmsquare.fr/tendances-design-2026/",
+        "agent_id": "visuals",
+        "og_image": "https://palmsquare.fr/wp-content/uploads/2025/12/Tendences-design-2026.jpg"
+      }
+    ]
+  },
+  {
     "date_iso": "2026-07-13",
     "date_fr": "Lundi 13 Juillet 2026",
     "cards": [
