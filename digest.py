@@ -183,14 +183,18 @@ def clean_text(t: str) -> str:
     return t
 
 
-def research_agent(agent: dict) -> list:
+def research_agent(agent: dict, avoid_titles: list = None) -> list:
     print(f"  {agent['label']}...")
+    prompt = agent["prompt"]
+    if avoid_titles:
+        avoid_block = "Sujets deja traites recemment a eviter absolument : " + " | ".join(avoid_titles)
+        prompt = prompt + "\n" + avoid_block
     client = anthropic.Anthropic(api_key=ANTHROPIC_KEY)
     resp = client.messages.create(
         model="claude-haiku-4-5-20251001",
         max_tokens=1200,
         tools=[{"type": "web_search_20250305", "name": "web_search"}],
-        messages=[{"role": "user", "content": agent["prompt"]}],
+        messages=[{"role": "user", "content": prompt}],
     )
     text = "".join(b.text for b in resp.content if hasattr(b, "text"))
     m = re.search(r'\[.*?\]', text, re.DOTALL)
@@ -783,8 +787,17 @@ def main():
     agents_map = {a["id"]: a for a in AGENTS}
     all_cards  = []
 
+    # Titres des 2 dernières éditions → injectés dans les prompts pour éviter les redites
+    past_feed   = load_feed()
+    avoid_titles = [
+        c.get("title", "")
+        for entry in past_feed[:2]
+        for c in entry.get("cards", [])
+        if c.get("title")
+    ]
+
     for agent in AGENTS:
-        cards = research_agent(agent)
+        cards = research_agent(agent, avoid_titles)
         for c in cards:
             c["agent_id"] = agent["id"]
             c["og_image"] = fetch_image(c.get("source_url",""))
