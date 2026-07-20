@@ -27,13 +27,15 @@ jobs:
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
           GMAIL_APP_PASSWORD: ${{ secrets.GMAIL_APP_PASSWORD }}
-          FEED_WEB_URL: https://mellifluous-crostata-69725a.netlify.app/
+          FEED_WEB_URL: https://agencedajm.github.io/digest-matin/
         run: python digest.py
 
       - name: Publier sur GitHub Pages
         run: |
           git config user.name "Digest Bot"
           git config user.email "bot@dajm.fr"
-          git add index.html feed.json
+          mkdir -p docs
+          cp index.html docs/index.html
+          git add docs/index.html feed.json
           git diff --staged --quiet || git commit -m "Digest $(date +%Y-%m-%d)"
           git push
