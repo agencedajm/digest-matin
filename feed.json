@@ -1,5 +1,92 @@
 [
   {
+    "date_iso": "2026-07-27",
+    "date_fr": "Lundi 27 Juillet 2026",
+    "cards": [
+      {
+        "title": "Employee advocacy dépasse la visibilité simple engagement",
+        "tldr": "Contenu partagé par employés génère 8 fois plus d'engagement que canaux corporate, conversions 7x supérieures.",
+        "detail": "MSLGroup démontre qu'un même contenu distribué via collaborateurs plutôt que page marque crée 8x plus d'interactions. LinkedIn confirme qu'en cycles B2B longs, représentants sociaux qui utilisent advocacy ferment 45% de deals supplémentaires versus pairs inactifs. Cet effet dépasse toute campagne payante classique.",
+        "source_name": "MSLGroup, LinkedIn, Hinge Research Institute",
+        "source_url": "https://www.oktopost.com/blog/employee-advocacy-statistics-2026/",
+        "agent_id": "strategy",
+        "og_image": ""
+      },
+      {
+        "title": "Marques sport deviennent fournisseurs indispensables utilité",
+        "tldr": "48% objectifs luxe 2026 visent momentum instant, sponsors convertis en producteurs événementiel réel solutions.",
+        "detail": "Visa transforme chaque but en activation Coupe du Monde avec campagne Tap In incarnée par athlètes réels. Verizon offre 2500 billets abonnés, Lay's convertit WhatsApp en plateforme d'activation majeure. Le sponsor-fournisseur devient norme juin 2026 car marques qui livrent utilité concrète sortent renforcées versus affichage simple.",
+        "source_name": "SportsMarketing.fr, Journal du Luxe Kantar BrandZ",
+        "source_url": "https://www.sportsmarketing.fr/marketing-sportif-juin-2026-logo-mort/",
+        "agent_id": "strategy",
+        "og_image": "https://www.sportsmarketing.fr/wp-content/uploads/2026/07/digest_juin-2026_image-titre.jpg"
+      },
+      {
+        "title": "Quiet luxury réoriente KPI vers perception artisanat imperceptible",
+        "tldr": "76% acheteurs luxe considèrent savoir-faire essentiel, momentum replaceValue Brand en métrique pilotage.",
+        "detail": "IDHL News avril 2026 révèle artisanat détrône visibilité brute luxe. Loro Piana croissance à deux chiffres masquant baisse -8% Top 10 Kantar BrandZ, car momentum mesuré via sémantique fine reconnaissance circles d'initiés plutôt que notoriété masse. Signature sensorielle remplace logo texte talon cuir odeur spécifique devient patrimoine.",
+        "source_name": "IDHL News & Insight, Omedia Paris, Kantar BrandZ",
+        "source_url": "https://www.omediaparis.com/fr/indicateurs-de-performance-branding-luxe-piloter-limmateriel-en-2026/",
+        "agent_id": "strategy",
+        "og_image": "https://www.omediaparis.com/wp-content/uploads/2026/07/article_2146269_1783658033.jpg"
+      },
+      {
+        "title": "Météo réelle devient levier de conversion directe",
+        "tldr": "Magnum automatise notifications soleil pour déduits hivernales, générant rituels d'achat géolocalisés 38.9% croissance Q1 2024.",
+        "detail": "Magnum transforme les alertes météorologiques en mécanique de réservation calendaire. Quand le soleil est prévu dans la zone de l'utilisateur, un événement s'ajoute au calendrier avec réduction associée, convertissant une aspiration diffuse en acte planifié. Cette évolution empiriquement documentée valorise l'absence de choix créatif flamboyant, privilégiant plutôt le comportement rituel.",
+        "source_name": "DesignRush, LOLA Madrid",
+        "source_url": "https://news.designrush.com/magnum-schedule-the-sun-winter-campaign",
+        "agent_id": "copywriting",
+        "og_image": ""
+      },
+      {
+        "title": "Tabou comme matière première pour adhérence mémorable",
+        "tldr": "Ligue contre cancer reconduisait Va Chier deux années consécutives, incarnée de 8 célébrités, prenant l'interdit comme levier.",
+        "detail": "L'expression circule car elle se parle à l'oral entre proches, y compris avec humour. Plutôt que de renouveler l'angle chaque année, la campagne 2026 double la mise avec présence visible d'ambassadeurs posant aux toilettes. L'étude ARC révèle que 54% des Français considèrent les selles comme un tabou : la campagne capitalise sur cette résistance plutôt que de l'esquiver.",
+        "source_name": "Vingt-Deux, BBDO Paris, Euronews",
+        "source_url": "https://vingtdeux.fr/campagnes-publicitaires-2026/",
+        "agent_id": "copywriting",
+        "og_image": "https://vingtdeux.fr/wp-content/uploads/2026/04/IKEA_TOP-CHEF_VISUEL_1.jpg"
+      },
+      {
+        "title": "Trois mots modifient contrat, dépassent communication déclarative",
+        "tldr": "AXA ajoute trois mots au contrat habitation, garantissant relogement urgence violences conjugales et gagnant 3 Grand Prix.",
+        "detail": "La campagne Three Words illustre le basculement d'une ère : plutôt que de communiquer sur l'engagement, AXA le rend tangible dans l'acte juridique lui-même. Cette modification concrète du produit remplace l'effort créatif classique, transformant l'assureur institutionnel en acteur de solution. Minimalisme comme symbole d'action réelle, pas de discours.",
+        "source_name": "Publicis Conseil, WARC 100, Stratégies",
+        "source_url": "https://www.strategies.fr/actualites/agences/LQ5909832C/warc-100-three-words-daxa-et-publicis-conseil-paris-campagne-la-plus-creative.html",
+        "agent_id": "copywriting",
+        "og_image": ""
+      },
+      {
+        "title": "Contenu éditorial continu supplante la campagne ponctuelle",
+        "tldr": "70% des newsletters performantes adoptent le modèle magazine, abandonnant la promotion au profit du storytelling profond.",
+        "detail": "Glossier traite ses emails comme un média à part entière avec design épuré et narratif lifestyle, pas comme catalogue promo. De son côté, les marques B2C construisent des univers éditoriaux structurés sur trois à cinq territoires thématiques, privilégiant newsletter plus vidéo courte et contenu de marque que campagnes isolées, signalant un passage du modèle push-promo au modèle de relation continue.",
+        "source_name": "GenContact, E-marketing.fr",
+        "source_url": "https://digitiz.fr/exemples-newsletters/",
+        "agent_id": "visuals",
+        "og_image": "https://digitiz.fr/wp-content/uploads/2026/06/exemples-newsletters-cover.png"
+      },
+      {
+        "title": "Packaging tactile et geste humain blessent les visuels IA lisse",
+        "tldr": "DIELINE Awards 2026 valorise trace, relief, toucher : kintsugi-stoneware et typographies griffées au fusain écrasent la perfection algorithmique.",
+        "detail": "Le Trend Report 2026 de The Dieline confirme que le retour assumé de la main humaine domine : typographies griffées au fusain, traits à la plume, étiquettes machine à écrire, gaufrage qui creuse la matière, dorure à chaud. Les marques abandonnent la perfection lisse pour l'imperfection maîtrisée, le relief et le tirage court signé, ce qu'un écran ne peut pas reproduire et ce qu'une IA ne peut pas générer en volume. Aruliden remporte Gold pour Mienne avec packaging physique traçant les courbes du corps, non pas image plate.",
+        "source_name": "The Dieline, Impression-expert.fr",
+        "source_url": "https://www.impression-expert.fr/post/tendances-design-packaging-2026",
+        "agent_id": "visuals",
+        "og_image": ""
+      },
+      {
+        "title": "Surréalisme hybride et absurde libère marques du minimalisme sage",
+        "tldr": "Pinterest Predicts détecte 88% de concrétisation sur six ans : le surréalisme devient stratégie. Objets détournés, proportions impossibles, personnages hybrides.",
+        "detail": "Adobe signale le surréalisme comme grande tendance créative 2026 invitant à brouiller conventions et jouer avec l'étrangeté. Pinterest Predicts confirme l'adoption massive : univers qui flirtent avec le kitsch, l'humour, la légèreté assumée. Les marques osent enfin s'autoriser l'absurde, le jeu, l'inattendu, reprenant liberté créative souvent bridée par les standards de design. Cette esthétique permet aux petites entreprises de s'exprimer enfin : singularité et audace visuelle deviennent différenciation.",
+        "source_name": "Adobe, Pinterest Predicts 2026, Floramedia",
+        "source_url": "https://www.tendancesandco.fr/271140/article/2025-12-16/mode-beaute-deco-quelles-tendances-pour-2026-selon-pinterest",
+        "agent_id": "visuals",
+        "og_image": ""
+      }
+    ]
+  },
+  {
     "date_iso": "2026-07-20",
     "date_fr": "Lundi 20 Juillet 2026",
     "cards": [
