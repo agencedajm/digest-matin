@@ -140,10 +140,22 @@ ARROW = '<svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http
 
 # ─── Agents experts ───────────────────────────────────────────────────────────
 
-RULES = """Reponds UNIQUEMENT en francais. Pas de generalites connues. Uniquement des insights non-evidents : etudes recentes avec chiffres, decisions de marques peu mediatisees, signaux faibles.
-Aucune balise HTML. Aucun markdown. Aucun caractere d'echappement. Du texte brut uniquement, des phrases completes et naturelles.
+RULES = """Reponds UNIQUEMENT en francais courant, clair et grammaticalement correct.
+Uniquement des insights non-evidents : etudes recentes, decisions de marques peu mediatisees, signaux faibles. Pas de generalites.
+Aucune balise HTML, aucun markdown, aucun caractere d'echappement. Texte brut uniquement.
+
+Chaque phrase doit etre complete : sujet + verbe + complement. Jamais de style telegraphique.
+
+EXEMPLE CORRECT :
+title : "Nike supprime ses agences creatives internes"
+tldr : "Nike a licencie 80% de ses equipes creatives in-house pour confier l'ensemble de sa production a WPP, une decision qui touche 300 postes."
+detail : "Ce pivot marque la fin d'une decennie d'internalisation du marketing chez les grandes marques. Selon le Financial Times, Nike economise ainsi 400 millions de dollars par an en couts fixes."
+
+EXEMPLE INCORRECT (trop compresse, incomprehensible) :
+tldr : "Nike externalise creatives WPP reduisant 300 postes optimisation couts 2024."
+
 JSON strict, 3 objets, rien d'autre :
-[{"title":"max 8 mots, phrase nominale","tldr":"1 phrase affirmative complete + 1 chiffre cle (max 15 mots)","detail":"2 phrases concretes et lisibles avec la source nommee a la fin","source_name":"nom du media ou de l'institution","source_url":"URL reelle et accessible"}]"""
+[{"title":"titre court et percutant, 6 a 9 mots","tldr":"une seule phrase complete et fluide, avec un chiffre ou fait concret si disponible","detail":"deux phrases completes et lisibles, la source nommee naturellement dans le texte","source_name":"nom du media ou de l institution","source_url":"URL reelle et accessible"}]"""
 
 AGENTS = [
     {
