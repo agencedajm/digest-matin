@@ -1,5 +1,92 @@
 [
   {
+    "date_iso": "2026-08-03",
+    "date_fr": "Lundi 3 Août 2026",
+    "cards": [
+      {
+        "title": "Marques de luxe se cèdent entre elles actifs beauté déficitaires",
+        "tldr": "En mai 2026, ELC cède Too Faced et Dr Jart+ pour un prix réduit de 100 à 200 millions de dollars, tandis que LVMH étudie la cession de Make Up For Ever et Fresh. Cette logique répond à une concentration budgétaire sur les seules marques à marge de leadership.",
+        "detail": "Le phénomène révèle une rupture stratégique dans le secteur du luxe. Selon une analyse Klartis publiée en juin 2026, Dr Jart+ génère à peine 150 millions de dollars de revenus contre les 500 millions d'objectif fixé lors de son acquisition en 2019, une perte cumulée dépassant 460 millions. LVMH concentre ses investissements sur MAC, Clinique, Tom Ford Beauty et Le Labo selon son plan Beauty Reimagined, abandonnant une stratégie de portefeuille diversifié pour un modèle de pure performance financière.",
+        "source_name": "Klartis et Financial Times relayé par The Silent Luxury",
+        "source_url": "https://www.klartis.fr/post/beaute-2026-recomposition-secteur-dirigeants-mode-luxe",
+        "agent_id": "strategy",
+        "og_image": ""
+      },
+      {
+        "title": "Sports sponsoring cesse d'être canal publicitaire pour devenir produit marchand",
+        "tldr": "Airbnb, Pepsi et Accor transforment le sponsoring événementiel en lignes de revenus directes avec produits vendus. Airbnb commercialise des expériences VIP à la Coupe du Monde, tandis qu'Accor thématise ses hôtels à Tokyo et Shanghai autour de Roland-Garros, générant du chiffre au-delà du simple display publicitaire.",
+        "detail": "Selon Sports Marketing relayé en juin 2026, ce glissement marque la fin du sponsoring traditionnel comme outil de visibilité passive. Airbnb vend des expériences VIP avec légendes du football à prix premium, certaines affichant déjà complet. Accor utilise Roland-Garros non pas comme support publicitaire mais comme concept produit : thématisation d'établissements mondiaux et enchères de finales via le programme de fidélité. Pepsi a transformé l'avant-match de la finale Champions League en show de 450 millions de téléspectateurs avec The Killers et Beckham.",
+        "source_name": "Sports Marketing France",
+        "source_url": "https://www.sportsmarketing.fr/marketing-sportif-mai-2026-marques-changent-metier",
+        "agent_id": "strategy",
+        "og_image": "https://www.sportsmarketing.fr/wp-content/uploads/2026/05/image-titre_digest-mai-2026-1024x572.png"
+      },
+      {
+        "title": "Génération de contenu IA rechute de 21 points en marketing B2B",
+        "tldr": "En 2026, 65 pour cent des équipes marketing B2B utilisent encore l'IA générative pour produire du contenu, mais cette utilisation accuse sa plus forte chute annuelle de 21 points. Les acheteurs B2B ont désormais clairement identifié les tics rédactionnels de l'IA et la recherche s'oriente vers la branding singularité plutôt que l'automatisation.",
+        "detail": "Une enquête Anjuna d'avril 2026 révèle que la génération assistée par IA recule davantage que tout autre usage marketing parce que le contenu générique ne crée plus de valeur différenciatrice. Les équipes B2B réorientent l'IA vers des usages moins visibles : analyse e-réputation, détection de signaux faibles, enrichissement CRM et automatisation multicanale. Parallèlement, le branding progresse car la singularité d'une marque ne s'imite pas par algorithme, redonnant du poids à la créativité humaine assumée.",
+        "source_name": "Anjuna et baromètre marketing B2B 2026",
+        "source_url": "https://www.anjuna.fr/tendances-marketing-b2b-2026/",
+        "agent_id": "strategy",
+        "og_image": ""
+      },
+      {
+        "title": "Celio efface le L pour conquérir le féminin",
+        "tldr": "Celio a généré plus de 40 millions d'impressions cross-plateforme en faisant physiquement disparaître la lettre L de ses enseignes en France et Belgique, révélant après plusieurs jours que ce teasing annonçait le lancement de sa première ligne féminine.",
+        "detail": "L'agence Havas Paris a construit une mécanique visuelle immédiate : en faisant disparaître la lettre L des enseignes puis en la faisant réapparaître dans le geste des égéries, on crée un symbole qui raconte en un instant l'arrivée des femmes chez celio. En deux jours sur X uniquement, cette opération a généré 20 millions d'impressions.",
+        "source_name": "E-marketing",
+        "source_url": "https://www.e-marketing.fr/marques-1296/strategie-de-marque-2250/celio-fait-disparaitre-la-lettre-l-de-ses-enseignes-pour-annoncer-le-lancement-de-sa-ligne-feminine-169773",
+        "agent_id": "copywriting",
+        "og_image": "https://www.e-marketing.fr/wp-content/uploads/2026/03/Celio-Women-1024x752.png"
+      },
+      {
+        "title": "Nespresso passe le relais à Dua Lipa sans effacer Clooney",
+        "tldr": "Après vingt ans avec McCann et George Clooney, Nespresso a confié la nouvelle campagne Vertuo World à l'agence Leo Constellation et à Dua Lipa en tant que nouvelle ambassadrice mondiale, tout en maintenant Clooney présent dans le film.",
+        "detail": "La campagne ne cherche pas à tourner la page de l'ère Clooney mais s'appuie sur cet héritage assumé pour passer le relais en douceur, avec la brève apparition de Clooney qui fonctionne comme un signe discret reliant l'ancien visage de la marque à cette nouvelle phase plus moderne. Dua Lipa ajoute une touche légère et complice en glissant un Quoi d'autre en français, redonnant de la fraîcheur à une réplique que tout le monde connaît par cœur.",
+        "source_name": "Paulwne Latte",
+        "source_url": "https://paulwnelatte.com/musique/chanteuses/dua-lipa-nespresso-campagne-vertuo-world/",
+        "agent_id": "copywriting",
+        "og_image": "https://paulwnelatte.com/wp-content/uploads/2026/04/dua-lipa-nespresso-campagne-vertuo-world.jpg"
+      },
+      {
+        "title": "Back Market attaque Apple en détournant Shot on iPhone",
+        "tldr": "Back Market a déployé des panneaux d'affichage monumentaux détournant le code visuel Shot on iPhone d'Apple à Paris Place des Vosges New York Londres Madrid et Hambourg, montrant à la place d'un iPhone les conséquences environnementales de l'obsolescence programmée.",
+        "detail": "Les visuels avant après ne vantent pas la qualité photo d'un appareil mais montrent les ravages écologiques entre deux générations de smartphone : glaciers disparus, forêts calcinées, inondations spectaculaires. Le détournement fonctionne uniquement parce qu'il est visible dans l'espace physique où Apple domine, créant un choc visuel immédiat placé aux côtés de la publicité originale.",
+        "source_name": "Insitis",
+        "source_url": "https://www.insitis.com/nos-actualites/top-10-meilleures-campagnes-publicitaires",
+        "agent_id": "copywriting",
+        "og_image": ""
+      },
+      {
+        "title": "Typo customisée devient élément identitaire plus fort que logo",
+        "tldr": "Les marques remplacent progressivement les logos statiques par des typographies sur mesure animées, où chaque caractère personnalisé agit comme signature visuelle narrative. Des polices variables adaptatives permettent des déclinaisons infinies sans perdre la cohérence identitaire.",
+        "detail": "En 2026, les typographies expressives et les fonts customisées se multiplient chez les marques pour dépasser la simple lisibilité. Selon les analyses de tendances de BRASSART et d'agences spécialisées, les caractères deviennent des éléments narratifs à part entière, capables de définir un univers complet en une ligne. Cette mutation représente le passage d'une typographie utilitaire à une typographie stratégique qui assume la transgression et le brutalisme maîtrisé. Balenciaga, Acne Studios et le New York Times Magazine exemplifient déjà cette adoption commerciale des ruptures de grille et des casses mélangées.",
+        "source_name": "BRASSART, Zetruc Studio, Cerpeg",
+        "source_url": "https://www.brassart.fr/ecole/actualites/graphisme-communication-visuelle-les-tendances-creatives-a-suivre-en-2026",
+        "agent_id": "visuals",
+        "og_image": "https://www.brassart.fr/data/news/389/listing.1764152719.png"
+      },
+      {
+        "title": "Imperfection maîtrisée et artisanat graphique remplacent lisse IA",
+        "tldr": "Face à l'uniformisation visuelle générée par l'IA, les marques intentionnalisent le grain, les tracés irréguliers et les asymétries comme marqueur de présence humaine. Cette esthétique du défaut devient critère de luxe et d'authenticité, notamment dans le segment premium.",
+        "detail": "Les agences observent depuis juin 2026 un rejet progressif des visuels ultra-lisses et parfaits générés par algorithmes. En luxe notamment, l'imperfection maîtrisée (grain d'image, asymétrie de tracé manuel, texture visible) signale l'intervention humaine et renforce la crédibilité de marque. Chez Zetruc et les studios de direction artistique, cette approche hybride utilise l'IA pour exploration rapide, puis le graphiste humain affine et insuffle la personnalité différenciatrice.",
+        "source_name": "Zetruc Blog, Alineacom, Omedia Paris",
+        "source_url": "https://blog.zetruc.fr/design-graphique/tendances-design-graphique-2026-lere-de-lapres-perfection/",
+        "agent_id": "visuals",
+        "og_image": "https://blog.zetruc.fr/content/uploads/2026/02/Visuel-0-Couverture.jpg"
+      },
+      {
+        "title": "Identités visuelles modulables remplacent chartes figées",
+        "tldr": "Les chartes graphiques statiques deviennent obsolètes. Les marques structurent maintenant des systèmes visuels évolutifs avec base forte, éléments variables validés et logique de déclinaison pensée dès la conception, permettant adaptation TikTok ou flagship store sans perte de cohérence.",
+        "detail": "Le concept de charte graphique immuable disparait au profit de systèmes d'identité flexibles et responsifs. GenContact et d'autres agences observent que les identités modulaires reposent désormais sur une base graphique forte avec des éléments variables maîtrisés et une logique de déclinaison stratégique dès l'origine. Cette approche résout directement le défi des marques présentes sur plusieurs canaux simultanément, où la rigidité devient obstacle plutôt que garantie. Konbini exemplifie ce modèle avec services distincts, éléments fixes et variables homogènes.",
+        "source_name": "GenContact, Imalive, LAREF, Tchak Studio",
+        "source_url": "https://www.gencontact.fr/blog-les-tendances-de-la-communication-visuelle-a-suivre-en-2026-i23.html",
+        "agent_id": "visuals",
+        "og_image": "https://www.gencontact.fr/img/fond_bloc/agence.jpg"
+      }
+    ]
+  },
+  {
     "date_iso": "2026-07-27",
     "date_fr": "Lundi 27 Juillet 2026",
     "cards": [
