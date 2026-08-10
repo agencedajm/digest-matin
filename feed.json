@@ -1,5 +1,74 @@
 [
   {
+    "date_iso": "2026-08-10",
+    "date_fr": "Lundi 10 Août 2026",
+    "cards": [
+      {
+        "title": "Veille",
+        "tldr": "Je vais rechercher les insights récents en stratégie de marque des 90 derniers jours.Je dois affiner ma recherche pour t",
+        "detail": "Je vais rechercher les insights récents en stratégie de marque des 90 derniers jours.Je dois affiner ma recherche pour trouver des insights plus pointus et inattendus, moins génériques.Excellent, j'ai maintenant 3 insights solides et non-évidents. Laissez-moi finaliser ma réponse avec un dernier app",
+        "source_name": "",
+        "source_url": "",
+        "agent_id": "strategy",
+        "og_image": ""
+      },
+      {
+        "title": "Plateforme cumulative dépasse la campagne annuelle réinitialisée",
+        "tldr": "Magnum a lancé Schedule the Sun en mars 2026 comme continuation de sa plateforme Find Your Summer de 2024, générant 38,9 pourcent de croissance additionnelle sur le marché britannique en capitalisant sur l'identité visuelle existante plutôt que de repartir de zéro chaque année.",
+        "detail": "La stratégie de Magnum inverse le modèle habituel du marketing où chaque exercice repart d'une page blanche. En maintenant le code visuel noir et blanc, les jeux de lumière et la silhouette iconique d'une campagne précédente, la marque crée un rendement multiplicatif: les consommateurs comprennent déjà l'insight psychologique et reconnaissent immédiatement le territoire, ce qui réduit le coût cognitif d'entrée. Selon la couverture médiatisée par Design Rush, cette approche représente un choix architectural fondamental souvent ignoré, où la vraie valeur n'est pas l'idée créative mais le choix d'architecture du dispositif de communication.",
+        "source_name": "Design Rush et Roastbrief US",
+        "source_url": "https://creativebrandsmag.com/magnum-invites-britain-to-schedule-the-sun-in-bold-winter-sales-push/",
+        "agent_id": "copywriting",
+        "og_image": "https://creativebrandsmag.com/wp-content/uploads/2026/03/MAGNUM.jpg"
+      },
+      {
+        "title": "Rôle conseiller spécial remplace ambassadeur conventionnel en juin 2026",
+        "tldr": "Citroën a proposé à Omar Sy de devenir conseiller spécial plutôt qu'ambassadeur classique en juin 2026, marquant une rupture où l'acteur transforme symboliquement le nom de la marque en Sytroën pour incarner une influence réelle sur les décisions stratégiques.",
+        "detail": "Cette distinction entre ambassadeur et conseiller spécial porte une charge stratégique précise: un ambassadeur représente, tandis qu'un conseiller transforme. Citroën a matérialisé cette différence en autorisant Omar Sy à modifier le nom de la marque dans le film de lancement, signalant publiquement que sa collaboration dépasse le visage sur une affiche. Selon les sources officielles, cette mécanique narrative prédécide que le personnage exerce une autorité réelle, fusionnant l'authenticité perçue d'une personnalité avec le pouvoir déclaré d'infléchir la marque, ce qui crée une adhérence différente chez le spectateur.",
+        "source_name": "Stellantis Media et La Réclame",
+        "source_url": "https://www.media.stellantis.com/fr-fr/citroen/press/citroen-devient-sytroen-decouvrez-le-1er-film-de-la-campagne-du-nouveau-conseiller-special-de-la-marque-citroen-omar-sy",
+        "agent_id": "copywriting",
+        "og_image": ""
+      },
+      {
+        "title": "AI Act impose étiquetage visible contenu généré sans exception rétroactive",
+        "tldr": "Depuis le 2 août 2026, l'article 50 de l'AI Act européen oblige les marques à étiqueter tout contenu textuel, visuel ou vidéo généré par IA avec des mentions visibles et un marquage technique, avec zéro report pour les contenus non éditorialisés et zéro exemption rétroactive.",
+        "detail": "L'étiquetage visible entre en force immédiate sans délai de grâce contrairement aux croyances répandues. Seul le marquage technique lisible par machine bénéficie d'un report au 2 décembre 2026 pour les systèmes mis sur le marché avant le 2 août. Toute image, tout texte informatif ou tout deepfake publié sans contrôle éditorial humain désigné doit porter une icône officielle de la Commission avec texte explicatif dès la première exposition. Selon les sources juridiques spécialisées, cette obligation frappe déjà les agences de publicité qui industrialisent la créa IA en juin 2026 avant même l'entrée en vigueur officielle, créant une fragilité légale immédiate sur tous les contenus en production.",
+        "source_name": "OIA et Léto Legal",
+        "source_url": "https://www.oia.fr/actualites/ai-act-etiquetage-contenus-ia",
+        "agent_id": "copywriting",
+        "og_image": "https://www.oia.fr/assets/img/articles/ai-act-etiquetage-contenus-ia.jpg?v=1785833001"
+      },
+      {
+        "title": "Distorsion du réel et esthétiques liminales saturent la communication visuelle",
+        "tldr": "Les recherches Google liées aux espaces liminaux et univers étranges ont explosé de deux cents pour cent en douze mois, transformant cette esthétique en signal majeur de différenciation plutôt que simple curiosité passagère selon Canva qui analyse douze milliards de créations annuelles.",
+        "detail": "Les marques adoptent désormais des compositions hyperréalistes légèrement décalées, des proportions altérées et des mises en scène surréalistes non pour créer du bizarre gratuit mais pour produire un arrêt visuel qui crée mémorisation immédiate. Cette tendance reflète notre rapport ambigu aux images générées par intelligence artificielle : les visuels jouent avec la perception en explorant les zones intermédiaires entre le réel et le synthétique, devenant un véritable langage visuel d'une époque marquée par l'automatisation et la quête parallèle d'authenticité. Selon la plateforme de design Canva citée par plusieurs sources spécialisées dans le secteur créatif, cette esthétique liminale résonne profondément avec les attentes actuelles des audiences.",
+        "source_name": "Canva Trends Report 2026 et Blog du Modérateur",
+        "source_url": "https://www.blogdumoderateur.com/canva-tendances-design-2026/",
+        "agent_id": "visuals",
+        "og_image": ""
+      },
+      {
+        "title": "Typographie liquide et organique redéfinit l'identité des marques en trois mois",
+        "tldr": "Les lettrages qui se déforment, s'étirent et réagissent au mouvement gagnent du terrain par la généralisation du motion design sur les réseaux sociaux, transformant la typographie d'élément de lisibilité en sculpture abstraite qui semble couler sur les écrans.",
+        "detail": "Les polices ultra-grasses fluides avec formes organiques qui semblent gonfler et se déformer explosent partout en communication visuelle depuis mai dernier, incarnant le mouvement vers des identités plus expressives où la sensation prime sur la lisibilité parfaite. Cette typographie liquide emprunte aux logiciels de simulation physique des effets de fluidité et de fusion entre lettres, fonctionnant tant en animation qu'en statique sur papier et digital. Les marques conçoivent désormais leurs éléments graphiques pour qu'ils soient animables dès l'origine, plaçant le motion design comme langage de base plutôt que détail cosmétique, avec des créateurs réservant cette approche aux éléments de signature tels que logos animés et pages d'accueil.",
+        "source_name": "Zetruc et Alhena Conseil",
+        "source_url": "https://blog.zetruc.fr/design-graphique/tendances-design-graphique-2026-lere-de-lapres-perfection/",
+        "agent_id": "visuals",
+        "og_image": "https://blog.zetruc.fr/content/uploads/2026/02/Visuel-0-Couverture.jpg"
+      },
+      {
+        "title": "Dark social et contenu privé suppriment la mesurabilité publique du marketing de marque",
+        "tldr": "Les contenus à forte valeur ajoutée migrent massivement vers des espaces privés ou semi-privés tels que Discord, Slack, WhatsApp et newsletters restreintes, créant une viralité invisible aux outils d'analyse traditionnels mais avec taux de conversion redoutable reposant sur confiance entre pairs.",
+        "detail": "Les grandes plateformes publiques montrent des signes d'essoufflement pour les conversations pertinentes, tandis que les annonceurs adoptent les canaux de discussion privés pour communiquer authentiquement avec leurs communautés, abandonnant le mégaphone pour construire des micro-communautés engagées autour de leur expertise. Meta déploie actuellement les canaux de diffusion sur Facebook et Messenger en France, tandis que WhatsApp lance les salons vocaux partageant des similitudes avec Discord et Slack, selon les sources de décembre dernier. Cette transformation représente un basculement stratégique où la taille de l'audience importe moins que la qualité des échanges et l'engagement réel des membres, rendant impossible la mesure conventionnelle du succès marketing tout en produisant des résultats de conversion supérieurs.",
+        "source_name": "Keyade et CBC35",
+        "source_url": "https://www.keyade.com/fr/blog/dark-social-marketing-digital/",
+        "agent_id": "visuals",
+        "og_image": "https://www.keyade.com/fr/wp-content/uploads/2023/12/dark-social.png"
+      }
+    ]
+  },
+  {
     "date_iso": "2026-08-03",
     "date_fr": "Lundi 3 Août 2026",
     "cards": [
