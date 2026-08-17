@@ -1,5 +1,74 @@
 [
   {
+    "date_iso": "2026-08-17",
+    "date_fr": "Lundi 17 Août 2026",
+    "cards": [
+      {
+        "title": "Veille",
+        "tldr": "Je vais rechercher les derniers insights en stratégie de marque des 90 derniers jours.[{\"title\":\"Les marques quittent l'",
+        "detail": "Je vais rechercher les derniers insights en stratégie de marque des 90 derniers jours.[{\"title\":\"Les marques quittent l'IA générative pour l'authenticité tangible\",\"tldr\":\"Après une adoption massive de ChatGPT et des outils génératives en 2025, une fatigue synthétique gagne les audiences en 2026, po",
+        "source_name": "",
+        "source_url": "",
+        "agent_id": "strategy",
+        "og_image": ""
+      },
+      {
+        "title": "Copyrighting authentique devient actif de rareté face au content IA",
+        "tldr": "La mention contenu produit par IA sur une publicité crée une distinction de valeur perçue similaire à celle d'un produit artisanal face à un produit usiné, ce qui positionne les marques cultivant une voix éditoriale tracée comme bénéficiaires d'un avantage de confiance mesurable.",
+        "detail": "Le copywriting authentique en 2026 produit une réelle adéquation entre ce que l'entreprise fait et ce qu'elle dit faire plutôt que de l'imperfection calculée, notamment en assumant les limites d'un produit et en citant des retours clients nuancés. Les annonceurs français expriment des attentes fortes en matière de transparence sur l'usage de l'IA par leurs agences partenaires.",
+        "source_name": "Tendances Copywriting 2026 (Freelance Sandra Doucet) et Union des Marques",
+        "source_url": "https://freelance-sandra-doucet.fr/tendances-copywriting-2024/",
+        "agent_id": "copywriting",
+        "og_image": "https://freelance-sandra-doucet.fr/wp-content/uploads/2025/02/computer-keyboard-with-copywriting-key-2023-11-27-05-18-39-utc-scaled-1-1024x683.webp"
+      },
+      {
+        "title": "Réaffichage urbain reprend l'espace de rareté devant saturation digitale",
+        "tldr": "Les campagnes les plus récompensées en 2026 ne misent pas tout sur le digital mais investissent l'espace physique, occupent la rue et interpellent le passant, transformant l'affichage grand format en médium où l'attention n'est plus fragmentée.",
+        "detail": "Quand tout le monde communique en digital, l'espace urbain devient le territoire de la rareté et une affiche bien placée dans le métro ou un panneau grand format en plein Paris joue l'attention en 2026. Cette réinvention du média urbain reflète un arbitrage stratégique où la rareté créée par la saturation digitale redonne valeur à la visibilité physique mesurable.",
+        "source_name": "Insitis (spécialiste impression numérique grand format)",
+        "source_url": "https://www.insitis.com/nos-actualites/top-10-meilleures-campagnes-publicitaires",
+        "agent_id": "copywriting",
+        "og_image": ""
+      },
+      {
+        "title": "Capital éditorial de marque devient actif nécessitant une gouvernance IA continue",
+        "tldr": "Les directions marketing cherchent des environnements capables d'orchestrer les assets, les chartes et les règles de diffusion et l'IA s'invite au cœur des systèmes de brand management avec auto-tagging des visuels et contrôle automatisé de la conformité aux guidelines.",
+        "detail": "La plateforme de marque se nourrit des retours du terrain, la ligne éditoriale évolue avec les usages, et les dispositifs de mesure s'affinent à mesure que la marque gagne en maturité, l'enjeu n'étant pas d'atteindre un modèle figé mais de mettre en place un pilotage cohérent. Une page maîtresse désignée traitant du capital de marque et de la stratégie de contenu est entourée de satellites différenciés.",
+        "source_name": "Idée Marketing et We Are The Words",
+        "source_url": "https://idee-marketing.fr/meilleures-plateformes-brand-content-marque-2026/",
+        "agent_id": "copywriting",
+        "og_image": "https://idee-marketing.fr/wp-content/uploads/2026/05/meilleures-plateformes-brand-content-marque-2026.webp"
+      },
+      {
+        "title": "GenUI redéfinit la marque sans logo fixe",
+        "tldr": "L'interface générative adapte dynamiquement son agencement à chaque utilisateur plutôt que d'afficher une mise en page statique, transformant l'identité de marque d'une logique visuelle en une logique comportementale et tonale.",
+        "detail": "Selon Polara Studio, le déploiement massif de GenUI en 2026 remplace la marque définissable par ses pixels par une identité incarnée dans la courtoisie des agents, la fluidité des transitions et la prévenance des suggestions. La plateforme Stan.vision a réduit ses support tickets de 27% en remplaçant six vues de tableau de bord statiques par une interface adaptatrice, preuve concrète d'efficacité commerciale au-delà de la simple esthétique.",
+        "source_name": "Polara Studio et ZeeFrames",
+        "source_url": "https://www.polarastudio.fr/blog/les-10-tendances-ui-ux-et-product-qui-vont-bouleverser-2026",
+        "agent_id": "visuals",
+        "og_image": ""
+      },
+      {
+        "title": "Photographie brute et grain volontaire contrent la satiété IA",
+        "tldr": "Les marques abandonnent la perfection technique pour adopter des visuels avec flash cru, grain intentionnel et flou artistique, directement positionné comme réaction à la surcharge d'images générées par intelligence artificielle.",
+        "detail": "Pixfan rapporte que face à l'overdose d'images synthétiques trop lisses, le public développe une soif presque violente de réalité et d'émotion brute. La campagne Leroy Merlin de mars 2026 incarne cette tendance avec du modélisme et du fait main, tandis que la Grand Prix Picto récompense le photographe Arash Khaksari pour sa signature imperfection assumant grain, flou et émotions non retouchées.",
+        "source_name": "Pixfan et Men Magazine",
+        "source_url": "https://www.pixfan.com/tendances-photographie-2026/",
+        "agent_id": "visuals",
+        "og_image": ""
+      },
+      {
+        "title": "Typographies monospace conquièrent l'identité de marque au-delà du code",
+        "tldr": "Les fontes monospaces, autrefois limitées aux éditeurs de code, envahissent les couvertures de magazines, les logos et les identités de marques pour signaler précision, autorité technique et nostalgie informatique analogique.",
+        "detail": "Selon Made Good Designs, le phénomène mono everywhere expose monospace dans les magazines, le branding indie, les mises en page éditoriales et la documentation système de design. Berkeley Mono, la fonte payante la plus convoitée, dépasse les 75 dollars car elle allie clarté fonctionnelle du code à raffinement typographique haute-gamme, rendant obsolète la frontière entre interface développeur et identité de marque.",
+        "source_name": "Made Good Designs et FontFabric",
+        "source_url": "https://madegooddesigns.com/monospace-font/",
+        "agent_id": "visuals",
+        "og_image": "https://madegooddesigns.com/wp-content/uploads/2026/03/monospace-font-featured.jpg"
+      }
+    ]
+  },
+  {
     "date_iso": "2026-08-10",
     "date_fr": "Lundi 10 Août 2026",
     "cards": [
