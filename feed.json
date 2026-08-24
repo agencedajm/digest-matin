@@ -1,5 +1,92 @@
 [
   {
+    "date_iso": "2026-08-24",
+    "date_fr": "Lundi 24 Août 2026",
+    "cards": [
+      {
+        "title": "Quarante-sept pour cent des marques ignorent encore le GEO",
+        "tldr": "Seule une minorité de marques optimise sa présence dans les réponses des IA génératives, créant une vulnérabilité critique alors que le trafic vers les chatbots augmente de 527% en six mois.",
+        "detail": "Entre janvier et mai 2025, le trafic généré par les IA conversationnelles comme ChatGPT, Perplexity et Claude a bondi de 527% selon l'analyse de 19 propriétés Google Analytics 4. Pendant ce temps, Gartner prédisait une chute de 25% du trafic organique classique d'ici fin 2026, transformant en profondeur la visibilité des marques. Code Design publie que 47% des marques demeurent dépourvues de stratégie GEO délibérée, exposant celles-ci à une invisibilité majeure auprès des utilisateurs qui interrogent d'abord les moteurs de réponse et acceptent les synthèses IA sans consulter les liens bleus.",
+        "source_name": "Code Design",
+        "source_url": "https://codedesign.org/generative-engine-optimization-geo-complete-strategy-guide-2026-invisible-crisis-reshaping-digital-marketing/",
+        "agent_id": "strategy",
+        "og_image": "https://codedesign.org/storage/app/uploads/public/68f/28b/f7e/thumb_1606_600_250_0_0_crop.jpg"
+      },
+      {
+        "title": "Lowe's crée un réseau de 17000 créateurs vérifiés par catégorie",
+        "tldr": "La deuxième enseigne de bricolage américaine a lancé en avril 2026 un système structuré de collaboration avec des créateurs locaux, signalant un virage stratégique vers la précision géographique plutôt que la portée globale.",
+        "detail": "Lowe's a déployé en avril 2026 son Creator Network reposant sur 17000 créateurs vérifiés et triés par catégorie, avec un support personnalisé selon la taille de leur audience. Cette stratégie rompt avec la logique traditionnelle du méga-influenceur pour valoriser l'ancrage local et l'authenticité relationnelle. Le signal sous-jacent que capture cette décision indique un basculement du marketing de marque vers un modèle de distribution communautaire hyper-spécialisé, où l'enjeu stratégique devient la ressemblance et la localité plutôt que l'exposition maximale.",
+        "source_name": "Je Bosse en Grande Distribution",
+        "source_url": "https://www.jebosseengrandedistribution.fr/2026/05/30/signaux-faibles-quand-les-certitudes-du-rayon-vacillent-2/",
+        "agent_id": "strategy",
+        "og_image": ""
+      },
+      {
+        "title": "L'email demeure le seul canal véritablement maîtrisé par la marque",
+        "tldr": "Alors que les marques diversifient leurs points de contact, l'email reste l'unique canal exempt d'algorithme tiers, créant une asymétrie stratégique souvent oubliée des évaluations de performance.",
+        "detail": "La fragmentation multicanal des trois dernières années a masqué une réalité asymétrique : la marque ne possède que sa liste d'emails, c'est le seul canal où aucun algorithme intermédiaire ne peut couper l'accès du jour au lendemain. Badsender et Jonathan Loriaux soulignent que c'est un actif stratégique dont les autres canaux sont totalement dépourvus. Cette distinction explique pourquoi 43% des marques découvrent trop tard que leurs budgets SMS ou WhatsApp se sont dilapidés dans des canaux volatiles sans propriété directe, tandis que l'email, peu coûteux et ultra-personnalisable, conserve une valeur de rétention inégalée.",
+        "source_name": "Badsender",
+        "source_url": "https://www.blogdumoderateur.com/email-marketing-whatsapp-sms-quels-canaux-choisir-fideliser-clients-2026/",
+        "agent_id": "strategy",
+        "og_image": ""
+      },
+      {
+        "title": "Celio désactive le logo pour forcer le buzz social",
+        "tldr": "Celio a fait disparaître la lettre L de ses enseignes en mars 2026 dans une campagne Havas Paris qui a généré 40 millions d'impressions cross-plateforme, en structurant la mécanique comme une énigme en plusieurs actes plutôt que comme un simple concept créatif.",
+        "detail": "Le premier acte était physique avec des façades manipulées en magasin pour ancrer l'opération dans le monde tangible. La mécanique narrative a produit une idée appropriable que la communauté a co-construite spontanément plutôt qu'un contenu consommable passif.",
+        "source_name": "Vingt Deux et Agence Smardia",
+        "source_url": "https://vingtdeux.fr/campagnes-publicitaires-2026/",
+        "agent_id": "copywriting",
+        "og_image": "https://vingtdeux.fr/wp-content/uploads/2026/04/IKEA_TOP-CHEF_VISUEL_1.jpg"
+      },
+      {
+        "title": "Copywriting humain devient indispensable face aux agents IA acheteurs",
+        "tldr": "Le GEO (Generative Engine Optimization) désigne l'optimisation pour que les contenus soient cités et recommandés par les moteurs IA génératifs comme ChatGPT, Perplexity et Gemini, redéfinissant complètement les règles de visibilité marque.",
+        "detail": "Les missions de reformulation et de contenu informatif standard ont été absorbées par l'IA, tandis que les copywriters apportant une compréhension stratégique, une voix éditoriale distincte et une cohérence de marque sont plus demandés que jamais. La structure du contenu pour les LLM exige des éléments quantifiables et une définition claire facilitant la citation automatique.",
+        "source_name": "Freelance Sandra Doucet et Vlad Cerisier",
+        "source_url": "https://freelance-sandra-doucet.fr/tendances-copywriting-2024/",
+        "agent_id": "copywriting",
+        "og_image": "https://freelance-sandra-doucet.fr/wp-content/uploads/2025/02/computer-keyboard-with-copywriting-key-2023-11-27-05-18-39-utc-scaled-1-1024x683.webp"
+      },
+      {
+        "title": "Va chier transforme le tabou en mécanique de conversation naturelle",
+        "tldr": "La Ligue contre le cancer relance en mars 2026 sa campagne Va Chier en saison 2 signée BBDO Paris, franchissant une étape supplémentaire dans la construction de marque en consolidant le slogan comme propriété verbale à circuler oralement.",
+        "detail": "La stratégie prend le tabou comme matière première plutôt que de l'éviter, car l'expression force le sujet dans la bouche des gens précisément parce qu'une phrase qu'on peut dire à un proche, y compris en rigolant, est une phrase qui circule naturellement. L'édition 2026 ajoute huit personnalités incarnant le message et introduit une boutique solidaire prolongeant le slogan dans le quotidien.",
+        "source_name": "BBDO Paris et Creapills",
+        "source_url": "https://vingtdeux.fr/campagnes-publicitaires-2026/",
+        "agent_id": "copywriting",
+        "og_image": "https://vingtdeux.fr/wp-content/uploads/2026/04/IKEA_TOP-CHEF_VISUEL_1.jpg"
+      },
+      {
+        "title": "Certification d'origine humaine devient différenciateur commercial clé",
+        "tldr": "Face à la saturation de contenu généré par IA, des marques testent des étiquetages volontaires C2PA et des certifications Human Made pour signifier la création exclusivement humaine, avec au moins huit organismes concurrents qui standardisent ces marquages depuis juin 2026.",
+        "detail": "Le C2PA s'intègre nativement dans Samsung Galaxy S25, donnant aux marques une opportunité de labelliser transparemment leurs productions comme d'origine humaine ou assistée. Selon Pubosphere, cette labellisation peut devenir un différenciateur crédible auprès de publics méfiants envers le contenu synthétique. En parallèle, des certifications comme Books by People au Royaume-Uni ou Humanable aux États-Unis ont certifié 3,4 millions de titres musicaux à mi-2025, créant un nouvel actif de confiance qu'aucune tendance antérieure ne couvrait.",
+        "source_name": "Pubosphere et Agence Redaction Web",
+        "source_url": "https://pubosphere.fr/strategies-visibilite-marques-2026-confiance-ia",
+        "agent_id": "visuals",
+        "og_image": ""
+      },
+      {
+        "title": "Monoculture visuelle web se fissure en deux extrêmes irréconciliables",
+        "tldr": "Une décennie de flat design a créé une uniformité étouffante. En 2026, les marques abandonnent les palettes sûres pour deux pôles opposés : soit une saturation totale vert acide et violet électrique, soit un minimalisme émotionnel dépouillé mais habité, créant une polarisation esthétique inédite.",
+        "detail": "Selon MPOUCK, le flat design et material design imposaient une monotonie garantissant accessibilité au prix d'une certaine monotonie, mais en 2026 cette monoculture se fissure. Les palettes safe laissent place à deux extrêmes : soit des combinaisons saturées vert acide, violet, orange cobalt, soit du monochrome strict. Cette polarisation reflète une prise de position claire des marques, abandonnant la neutralité perçue pour affirmer une identité visuellement distinctive. Les sites web qui attirent l'attention misent désormais sur la tension visuelle, la typographie expressive et des structures modulaires radicales plutôt que sur les templates interchangeables.",
+        "source_name": "MPOUCK et AskOptimize",
+        "source_url": "https://mpouck.github.io/article-tendances-design-interfaces-2026.html",
+        "agent_id": "visuals",
+        "og_image": "https://mpouck.github.io/iaspecial2.jpg"
+      },
+      {
+        "title": "Palettes chromatiques territorialisées et contextuvielles remplacent les codes universels",
+        "tldr": "Les marques cessent d'utiliser des palettes globales unifiées pour adopter des schémas chromatiques optimisés par géographie, culture et contexte d'usage, ce qu'aucun rapport sur les tendances 2026 ne documente systématiquement avant 2024.",
+        "detail": "Une étude menée par Jasmine Directory démontre que les campagnes réussies en 2026 utilisent le géo-targeting non seulement pour la langue mais pour les schémas chromatiques optimisés à chaque association culturelle. Le même produit déploie des combinaisons rouge-or en marchés asiatiques et bleu-blanc en marchés européens. Amazon a révolutionné cet usage en territorialisant l'orange pour signifier l'efficacité logistique plutôt que la créativité artistique. Cette contextualisation visuelle devient un avantage compétitif majeur, transformant la couleur d'un élément universel d'identité en actif de pertinence culturelle.",
+        "source_name": "Jasmine Directory et Gestion Proxima Centauri",
+        "source_url": "https://www.jasminedirectory.com/blog/the-psychology-of-color-in-2026-digital-advertising/",
+        "agent_id": "visuals",
+        "og_image": "https://www.jasminedirectory.com/blog/wp-content/uploads/2025/12/Jasmine-Business-Directory-december-2025-47.jpg"
+      }
+    ]
+  },
+  {
     "date_iso": "2026-08-17",
     "date_fr": "Lundi 17 Août 2026",
     "cards": [
