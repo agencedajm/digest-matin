@@ -1,5 +1,74 @@
 [
   {
+    "date_iso": "2026-08-31",
+    "date_fr": "Lundi 31 Août 2026",
+    "cards": [
+      {
+        "title": "Delocaliser l'authentique remplace les budgets creativite centralisee",
+        "tldr": "Une vendeuse Staples de 23 ans, Kaeden Rowland, a generé plus de 7 millions de vues en filmant simplement son quotidien en magasin avec ses ongles manucurés et son argot Gen Z, forçant la detente : les marques mesurent désormais le ROI de l'autonomie accordée aux employés plutot que la conformité aux guidelines.",
+        "detail": "Kaeden Rowland a commencé en janvier 2026 à poster des vidéos authentiques sur ses services de print specialist chez Staples, sans formation marketing ni budget dédié. En quelques semaines, elle a transformé un magasin déclinant en destination shopping virale, tandis que les commandes internes reproduisaient sa recette partout aux États-Unis. Selon les observateurs, cela demonstre que vous ne pouvez pas fabriquer cette vitality : les marques doivent maintenant permettre aux employés de garder leur personnalité complète plutôt que de les transformer en porte-parole corporatisés.",
+        "source_name": "CNN, Daily Dot, Marketing Brew",
+        "source_url": "https://edition.cnn.com/2026/03/02/business/staples-baddie-tiktok-sales-nyc-cec",
+        "agent_id": "strategy",
+        "og_image": ""
+      },
+      {
+        "title": "L'eau radicale concurrence l'energie au lieu de l'eau conventionnelle",
+        "tldr": "Liquid Death, valorisée 1,4 milliard de dollars, redéfinit sa categorie en posant l'eau minérale non pas contre d'autres eaux mais contre les sodas et boissons énergisantes, changeant fondamentalement les occasions de consommation et les points de vente.",
+        "detail": "Liquid Death a lancé une ligne d'eau pétillante énergisante en janvier 2026, une décision stratégique qui positionne 100 mg de caféine sans sucre en concurrence directe avec les boissons énergétiques plutôt que de combattre les autres marques d'eau. Le fondateur Mike Cessario explique à la conférence ThreadX 2026 que si une marque peut facilement être copiée sur ses attributs produit, son identité et son authenticité ne peuvent pas être dupliquées : c'est pourquoi le marketing doit fonctionner comme du divertissement pur.",
+        "source_name": "Opensend, BevNET, ASI Central",
+        "source_url": "https://www.opensend.com/post/liquid-death-marketing-strategy",
+        "agent_id": "strategy",
+        "og_image": "https://www.opensend.com/uploads/liquid-death-marketing-strategy-2026-.jpg"
+      },
+      {
+        "title": "Les marques reversent X comme terrain de rareté apres trois ans d'absences",
+        "tldr": "Depuis debut 2026, Oreo et d'autres marques américaines reinvestissent progressivement sur X après l'avoir massivement déserté post-2022, signalant un retournement clandestin des budgets médias vers une plateforme où la concurrence visuelle s'est effondrée.",
+        "detail": "Les revenus publicitaires de X ont chuté de 40 pour cent après le rachat d'Elon Musk, forçant le départ de milliers de marques. En 2026, cette désertion crée un paradoxe : moins de marques concurrentes signifie plus de rareté attentionnelle. Oreo a rouvert son engagement stratégique sur X discrètement, tandis que les analystes observent que le coût par clic reste inférieur à Meta ou TikTok, mais surtout, que les audiences décideuses redeviennent concentrées sur la plateforme. Ce n'est pas une résurrection, mais une redécouverte du vide concurrentiel.",
+        "source_name": "Je Bosse en Grande Distribution, Rezo Actif, Onclusive",
+        "source_url": "https://www.jebosseengrandedistribution.fr/2026/05/30/signaux-faibles-quand-les-certitudes-du-rayon-vacillent-2/",
+        "agent_id": "strategy",
+        "og_image": ""
+      },
+      {
+        "title": "Veille",
+        "tldr": "Je vais rechercher les dernières insights en copywriting et publicité des 90 derniers jours.Laissez-moi rechercher des i",
+        "detail": "Je vais rechercher les dernières insights en copywriting et publicité des 90 derniers jours.Laissez-moi rechercher des insights plus pointus et non-évidents.Je n'ai pas trouvé des insights suffisamment pointus et non-évidents. Je vais faire une recherche plus ciblée sur les décisions peu médiatisées",
+        "source_name": "",
+        "source_url": "",
+        "agent_id": "copywriting",
+        "og_image": ""
+      },
+      {
+        "title": "Réallocation drastique des budgets vers l'affichage urbain immersif",
+        "tldr": "Neuf campagnes récompensées sur dix en été 2026 intègrent un ancrage OOH fort, contredisant une décennie de migration digital. Les marques réinvestissent massivement dans l'espace urbain réel comme contrepoids à la saturation des flux digitaux, avec Lenovo transformant Paris en fan zone et Nespresso créant une plage entière à Cannes.",
+        "detail": "Ce mouvement répond à une saturation documentée des publicités numériques et une méfiance croissante envers les métriques des plateformes. Selon les données de marché, neuf des dix campagnes d'été les plus récompensées activent des dispositifs d'affichage grand format et d'expériences urbaines physiques. Cette stratégie crée des millions d'impressions organiques par le bouche-à-oreille et les partages sociaux, convertissant le manque de contrôle numérique en avantage qualitatif.",
+        "source_name": "ESP (École de Communication)",
+        "source_url": "https://espub.org/actualites/le-marketing-de-l-ete-2026-campagnes-collabs-surprises-et-tendances-creatives/",
+        "agent_id": "visuals",
+        "og_image": ""
+      },
+      {
+        "title": "Pixel art et esthétique lo-fi comme rebellion délibérée contre l'IA lissée",
+        "tldr": "L'esthétique pixel art domine le design de communication en 2026 non comme nostalgie, mais comme stratégie identitaire nette. Les marques adoptent des grilles visuelles contraintes, des palettes limitées et du tramage intentionnel pour affirmer l'absence de génération automatique par intelligence artificielle.",
+        "detail": "Cette tendance s'oppose frontalement aux visuels générés par IA qui saturent les flux. Les designers utilisent délibérément des pixels, des polices pixelisées et des arêtes nettes pour signifier le travail humain intentionnel. Cette approche fonctionne comme certification d'authenticité sans affichage explicite, créant une discrimination visuelle immédiate entre contenu fabriqué à la main et contenu algorithmique. L'effet est particulièrement remarqué dans le branding, les en-têtes de réseaux sociaux et les assets promotionnels.",
+        "source_name": "Jenova AI et Din Studio",
+        "source_url": "https://www.jenova.ai/fr/resources/ai-pixel-art-202605",
+        "agent_id": "visuals",
+        "og_image": "https://cdn.boost.pictures/blog/pixel-art-reinvented-unlock-the-power-of-ai-boost-s-game-changing-image-feature/pixel-art-effect-3.jpg"
+      },
+      {
+        "title": "Typographies monospace et modulation contextualisée quittent le code pour le branding",
+        "tldr": "Les polices monospace et monographe, historiquement réservées à l'interface de développement, deviennent des éléments de signature d'identité visuelle pour les marques en communication classique. Elles signifient la tecnicité, la transparence et l'absence de détour de la marque.",
+        "detail": "Entre juin et août 2026, la typographie narrative gagne une place centrale dans les campagnes de marque premium et tech-forward. Les marques utilisent la modulation dynamique des caractères pour créer des univers visuels narratifs et engageants. Le mouvement du texte, l'interaction entre lettres et éléments visuels, et l'adaptation contextuelle de la typographie à différents supports remplacent les hiérarchies statiques. Cette évolution fait de la typographie un langage autonome plutôt qu'un simple habillage de message.",
+        "source_name": "Groupe ECHO et BRASSART",
+        "source_url": "https://groupe-echo.fr/blog-agence-communication-echo/tendances-design-communication-2026/",
+        "agent_id": "visuals",
+        "og_image": ""
+      }
+    ]
+  },
+  {
     "date_iso": "2026-08-24",
     "date_fr": "Lundi 24 Août 2026",
     "cards": [
