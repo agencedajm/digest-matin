@@ -1,5 +1,92 @@
 [
   {
+    "date_iso": "2026-09-07",
+    "date_fr": "Lundi 7 Septembre 2026",
+    "cards": [
+      {
+        "title": "Semrush abandonne le positionnement SEO pour se redéfinir comme moteur IA",
+        "tldr": "Le 12 mars 2026, Semrush opère un repositionnement majeur avec une nouvelle identité de marque pensée pour répondre à une transformation profonde du web : le passage du SEO classique à la visibilité dans les environnements pilotés par l'intelligence artificielle.",
+        "detail": "Historiquement connu comme une suite d'outils SEO, Semrush évolue désormais vers une plateforme unifiée de brand visibility, capable d'analyser et d'optimiser la présence des marques non seulement sur Google, mais aussi dans les réponses générées par les IA, les réseaux sociaux ou encore les interfaces conversationnelles : c'est l'avènement du SEO IA et du GEO. Ce rebranding symbolise un pivot stratégique où la marque n'optimise plus des classements mais redéfinit comment les entreprises se rendent visibles dans un écosystème fragmenté et dominé par les réponses génératives.",
+        "source_name": "Addictic",
+        "source_url": "https://addictic.fr/article/rebranding-2026-les-transformations-de-marques-qui-font-debat",
+        "agent_id": "strategy",
+        "og_image": ""
+      },
+      {
+        "title": "Coca-Cola transforme le sponsoring sportif en machine de conversion rayons",
+        "tldr": "Le sponsoring y devient une machine à vendre en rayon avant d'être un dispositif d'image. Coca-Cola applique la même grille à l'échelle d'un club sur un bassin de 12 millions d'habitants. Le choix d'un lancement au 12 octobre confirme cette analyse car il s'agit d'un calendrier de distribution calé sur l'entrée dans l'automne et la reprise de la consommation à domicile.",
+        "detail": "Produite à 400 000 exemplaires, cette édition limitée sera disponible à partir du 12 octobre dans plus de 650 magasins Carrefour en Île-de-France. Ce support iconique devient un point de contact puissant, à la fois en grande distribution, dans les lieux de consommation et autour du stade. L'objectif est de transformer un produit du quotidien en vecteur d'appartenance à la communauté PSG. Le partenariat PSG-Coca-Cola révèle une mutation : le sponsoring abandon l'amplification de marque pour devenir un moteur d'activation commerciale précise en grande surface.",
+        "source_name": "Sports Marketing",
+        "source_url": "https://www.sportsmarketing.fr/coca-cola-psg-partenariat-2026-canettes-carrefour/",
+        "agent_id": "strategy",
+        "og_image": "https://www.sportsmarketing.fr/wp-content/uploads/2026/08/psg-coca-cola-back-in-paris.jpg"
+      },
+      {
+        "title": "La nostalgie s'active en mécanisme de dopamine cérébrale plutôt qu'en appel émotionnel",
+        "tldr": "Online chatter about nostalgia grew 18% in 2025, reaching over 43 million conversations. Nostalgia activates the brain's reward systems, releasing dopamine and generating positive emotions that make people more likely to engage and decide. A 2025 study published in Psychology & Marketing found that nostalgic ads improve brand name recall more effectively than factual ads by reactivating brand-related autobiographical memories.",
+        "detail": "Nostalgia marketing isn't new, but it's running on two different psychological mechanisms right now depending on who's looking at it — and most brands collapse them into one strategy when they shouldn't. For millennials, it's identity continuity. Psychologists describe nostalgia as a way the brain stabilizes a sense of self when the present feels uncertain. It's not really about the object — the cereal, the show, the toy — it's about reconnecting to a version of yourself that felt more solid. Les marques performantes comprennent que la nostalgie n'est plus un levier créatif mais un système neurobiologique : chaque activation doit déclencher une mécanique de stabilisation identitaire plutôt qu'un simple rappel émotionnel.",
+        "source_name": "Creative Ghost",
+        "source_url": "https://www.creative-ghost.com/post/2026-marketing-trends-small-business",
+        "agent_id": "strategy",
+        "og_image": ""
+      },
+      {
+        "title": "Passation de génération comme continuité stratégique plutot que rupture",
+        "tldr": "Nespresso a changé d'agence et d'égérie en avril 2026 avec une campagne signée Leo Constellation où Dua Lipa reprend le signal de George Clooney qui reste présent dans le film. Cette passation assumée résout le problème stratégique réel : renouveler une image sans aliéner une base de clients construite autour de cette image.",
+        "detail": "Le problème que Nespresso devait résoudre était réel : comment renouveler une image installée sur une décennie sans aliéner une base de clients qui s'est construite précisément autour de cette image. La réponse n'était pas de faire table rase mais de construire une continuité visible. Cette approche redéfinit le cycle des changements d'égérie, d'ordinaire punitifs pour la marque. La campagne signée Havas Paris a généré 40 millions d'impressions cross-plateforme.",
+        "source_name": "Vingt Deux",
+        "source_url": "https://vingtdeux.fr/campagnes-publicitaires-2026/",
+        "agent_id": "copywriting",
+        "og_image": "https://vingtdeux.fr/wp-content/uploads/2026/04/IKEA_TOP-CHEF_VISUEL_1.jpg"
+      },
+      {
+        "title": "Le contenu concret sur l'IA remplace le slop genéré en masse sur LinkedIn",
+        "tldr": "Le contenu générique meurt sur LinkedIn tandis que le contenu qui montre du concret tient. La mort du slop est déjà une réalité : les audiences ferment les yeux sur le contenu généré à la chaîne et ça se voit dans les taux d'engagement.",
+        "detail": "La prospection automatisée façon copier-coller est morte depuis juin 2026 confirmé par le terrain, mais le contenu qui montre comment utiliser l'IA concrètement continue de cartonner avec des séries sur Claude et LinkedIn restant parmi les pages les plus lues. Intermarché a transformé la non-utilisation de l'IA en argument marketing authentique qui devient un élément central du branding et renforce la crédibilité de la marque.",
+        "source_name": "Captain Marketing",
+        "source_url": "https://blog.captainmarketing.io/tendances-marketing-2026/",
+        "agent_id": "copywriting",
+        "og_image": "https://storage.ghost.io/c/e5/41/e541e6f1-2472-491c-b8a6-93367cf6359a/content/images/size/w1200/2025/12/Tendances-Marketing-2026-1.png"
+      },
+      {
+        "title": "L'accroche des trois premières secondes devient mécanique de mesure objectivable et prédictive",
+        "tldr": "En 2026 les vidéos de moins de 60 secondes dominent les algorithmes, avec 78% de l'engagement final se jouant dans les trois premières secondes selon Digital Applied. La structure qui fonctionne suit une logique de pyramide inversée où on commence par la conclusion puis on développe.",
+        "detail": "Les marques qui publient des vidéos sans structure perdent leurs trois premières secondes et avec elles la quasi-totalité de leur audience potentielle. La structure d'accroche recommandée serait une affirmation contre-intuitive, un chiffre surprenant ou une question ouverte aux secondes 0-3. Cette mécanique transforme la rédaction vidéo en discipline mesurable et non en art, rendant reproductible ce qui était autrefois du talent.",
+        "source_name": "Phenix Web",
+        "source_url": "https://www.phenixweb.net/content-marketing-reseaux-sociaux-2026-strategies-gagnantes/",
+        "agent_id": "copywriting",
+        "og_image": ""
+      },
+      {
+        "title": "Obligation légale du marquage IA transforme la stratégie visuelle",
+        "tldr": "Depuis le 2 août 2026, le règlement européen sur l'IA impose de signaler tout contenu généré ou modifié par intelligence artificielle avec une mention visible ou un marquage technique. Cette obligation remodèle les stratégies visuelles des marques qui redécouvrent la valeur du processus créatif humain documenté pour se protéger juridiquement.",
+        "detail": "Ce pivot régulateur force les agences et les marques à repenser leur rapport à la production visuelle. Alors que l'IA générait en masse du contenu standardisé, le cadre légal rend désormais critiquement visible ce qui est produit par humains versus par machine. Selon Alhéna Conseil, cela constitue une preuve de légitimité commerciale pour celui qui démontre un apport créatif réel à chaque étape, documenté comme preuve en cas de litige.",
+        "source_name": "Alhéna Conseil",
+        "source_url": "https://www.alhena-conseil.com/tendances-design-graphique/",
+        "agent_id": "visuals",
+        "og_image": "https://www.alhena-conseil.com/wp-content/uploads/2026/08/Tendances-design-graphique-2026.avif"
+      },
+      {
+        "title": "Stratégies visuelles radicales remplacent l'optimisation créative pure",
+        "tldr": "Les marques abandonnent graduellement la logique d'exécution parfaite pour adopter des univers visuels identifiables par la rupture assumée, comme design sombre, imagerie heavy metal ou typographies expressives délibérément provocatrices. Cette posture stratégique compense la saturation du marché en générant du contraste immédiat.",
+        "detail": "Talents Mana décrit comment certaines marques brisent les codes établis de leur catégorie en choisissant des univers radicaux au lieu de viser l'optimisation technique. Là où la concurrence mise sur la pureté, elles adoptent un ton sombre et disruptif qui crée de la lisibilité par le contraste plutôt que par la perfection. Ce mouvement révèle que la vraie différenciation en 2026 repose sur le courage stratégique, pas sur l'excellence d'exécution seule.",
+        "source_name": "Talents Mana",
+        "source_url": "https://www.talentsmana.com/blog/les-marques-qui-cassent-les-codes-en-2026",
+        "agent_id": "visuals",
+        "og_image": "https://framerusercontent.com/images/iLQVxj5gU9Jmb5WskimCyANLLjs.png"
+      },
+      {
+        "title": "Recul de la viralité massive vers le marketing ciblé par micro-audiences",
+        "tldr": "Le marketing abandonne l'objectif de buzz viral généralisé pour privilégier la précision de micro-cibles avec adaptation de messages spécifiques. Les marques qui performent ne sont plus celles qui publient le plus, mais celles qui écoutent le mieux les signaux faibles de leurs audiences fragmentées et remplacent la portée par la densité relationnelle.",
+        "detail": "Oh Médias et Kozman notent que cette transformation rend le marketing plus chirurgical et plus intelligent. Le passage d'une logique de performance quantitative vers la qualité d'engagement signifie que les petits audiences hypercibles valent désormais plus que les audiences géantes sans engagement réel. Cette transition marque l'abandon de la recette virale universelle au profit du ciblage stratégique et de l'écoute continue des signaux faibles du marché.",
+        "source_name": "Oh Médias",
+        "source_url": "https://ohmedias.com/reflexions/quelles-sont-les-tendances-2026-en-communication-web-graphisme-marketing/",
+        "agent_id": "visuals",
+        "og_image": ""
+      }
+    ]
+  },
+  {
     "date_iso": "2026-08-31",
     "date_fr": "Lundi 31 Août 2026",
     "cards": [
