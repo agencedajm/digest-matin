@@ -1,5 +1,74 @@
 [
   {
+    "date_iso": "2026-09-14",
+    "date_fr": "Lundi 14 Septembre 2026",
+    "cards": [
+      {
+        "title": "Le Vibe Marketing remplace le departement creatif traditionnel",
+        "tldr": "Le Vibe Marketing redéfinit les rôles internes : un seul humain pose la direction émotionnelle et culturelle tandis que l'IA génère automatiquement variantes, tests et déploiements à l'échelle, transformant les marketeurs en directeurs créatifs plutôt qu'en exécutants.",
+        "detail": "Selon les analyses de Hostinger et de Digital Surgeons, cette approche s'est établie entre juillet et août 2026 comme un framework dominant en agences. Elle demande un jugement humain accru sur la saveur émotionnelle et la validité culturelle, tandis que l'IA gère la production massive. Ce modèle crée une tension intéressante : plus de contenu ne signifie plus de succès, seul le bon jugement compte.",
+        "source_name": "Hostinger, Digital Surgeons",
+        "source_url": "https://www.hostinger.com/blog/vibe-marketing-statistics/",
+        "agent_id": "strategy",
+        "og_image": "https://imagedelivery.net/LqiWLm-3MGbYHtFuUbcBtA/wp-content/uploads/sites/4/2026/04/Tutorial-Cover-Web-app-3.jpg/public"
+      },
+      {
+        "title": "Lowe's internalise les créateurs majeurs avec contrats d'exclusivité long terme",
+        "tldr": "Lowe's a intégré MrBeast dans un Creator Network structuré depuis mai 2026 avec atelier en magasin, storefronts curatés et jouets exclusifs, signalant que les retailers abandonnent les partenariats ponctuels pour des arrangements organisationnels profonds avec les plus grands créateurs.",
+        "detail": "Cette stratégie représente une rupture avec le sponsoring traditionnel, rapporte Hardware Retailing en mai 2026. Lowe's n'achète plus des campagnes isolées mais embauche MrBeast comme ambassadeur structurel, ce qui génère du contenu en continu pour 1750 magasins physiques. Beast Industries refusant régulièrement les contrats multimillionnaires, cette sélectivité signale que l'authentification créateur devient un actif rare concerté entre marques et créateurs, bien loin de l'achat au volume.",
+        "source_name": "Hardware Retailing, Chain Store Age",
+        "source_url": "https://hardwareretailing.com/lowes-announces-creator-network-mrbeast-partnership/",
+        "agent_id": "strategy",
+        "og_image": "https://hardwareretailing.com/wp-content/uploads/2025/06/Lowes_creator_MrBeast-660x330.jpg"
+      },
+      {
+        "title": "Anti-Enshittification devient doctrine de différenciation marque",
+        "tldr": "Entre avril et juin 2026, les marques se positionnent activement contre la dégradation des expériences numériques et des plateformes, avec une critique frontale de la perfection artificielle et des avis gonflés, posant l'authenticité imparfaite comme avantage concurrentiel.",
+        "detail": "Famous Campaigns et LBB Online documentent cette posture depuis juin 2026 : les marques qui gagnent sont celles qui acceptent les notes imparfaites, rejettent les badges de confiance gonflés et communiquent sur leur intégrité face aux algorithmes dégradés. Cette stance représente un retournement profond car seules les maisons de luxe osaient auparavant cette transparence mesurée. Elle s'oppose directement à la logique capitaliste de courte durée qui caractérisait l'e-commerce depuis 2015, pourtant validée par WARC comme mouvement structurel.",
+        "source_name": "Famous Campaigns, LBB Online, WARC",
+        "source_url": "https://www.famouscampaigns.com/2026/06/the-12-trends-that-defined-brand-marketing-in-2026-so-far/",
+        "agent_id": "strategy",
+        "og_image": "https://www.famouscampaigns.com/wp-content/uploads/2026/06/2026-marketing-trends-800x440.png"
+      },
+      {
+        "title": "Veille",
+        "tldr": "Je vais rechercher les insights récents en copywriting et publicité des 90 derniers jours.Laissez-moi affiner ma recherc",
+        "detail": "Je vais rechercher les insights récents en copywriting et publicité des 90 derniers jours.Laissez-moi affiner ma recherche pour trouver des insights plus pointus et non-évidents.[{\"title\":\"Celio construit le teasing comme architecture narrative avant la révélation\",\"tldr\":\"",
+        "source_name": "",
+        "source_url": "",
+        "agent_id": "copywriting",
+        "og_image": ""
+      },
+      {
+        "title": "Le brutalisme typographique sort de la clandestinité galeriste",
+        "tldr": "Balenciaga, Acne Studios et le New York Times Magazine adoptent en 2026 le brutalisme typographique dans leurs campagnes, passant d'une esthétique disruptive à une norme commerciale codifiée avec 22 pour cent des sites e-commerce mode utilisant un élément brutaliste dans leur header selon le Commerce Design Report 2025.",
+        "detail": "Ce mouvement caractérisé par des ruptures de grille, des casses mélangées et des chevauchements assumés signale une acceptation mainstream du chaos visuel contrôlé. Le brutalisme tactile 2026 privilégie les contrastes marqués, les bordures nettes, les arrière-plans noirs ou crème et les typographies serif condensées en très grand, transformant ce qui était autrefois réservé aux fanzines numériques en langage légitime de communication premium.",
+        "source_name": "Cerpeg - Guide Typographique 2026 et InOut Design",
+        "source_url": "https://www.j4.cerpeg.fr/images/savoirs/typographie/tendances",
+        "agent_id": "visuals",
+        "og_image": ""
+      },
+      {
+        "title": "Le tactile maximaliste fait revenir l'imperfection comme matière première",
+        "tldr": "La grande bascule 2026 marque un retour au tactile avec grain, papier, relief et imperfections assumées, réintroduisant chaleur et impression d'objet réel après une décennie d'aplats parfaitement lisses.",
+        "detail": "Le Tactile Maximalism explose dans le design 2026 avec des interfaces devenant physiques après dix ans d'expériences frictionless, où les arrière-plans reçoivent du grain, de la profondeur et une présence matérielle. Les designers se penchent sur texture, collage, ornemental et bizarrerie comme rébellion silencieuse contre l'uniformité artificielle, affectant image de marque, emballage, social, édition et illustration par le fait-main manifeste.",
+        "source_name": "Medium et Studio Vehenne",
+        "source_url": "https://medium.com/@Rythmuxdesigner/tactile-maximalism-why-2026-s-hottest-design-trend-feels-like-you-can-touch-the-screen-ab9fa8f3b5e3",
+        "agent_id": "visuals",
+        "og_image": ""
+      },
+      {
+        "title": "La distorsion surréaliste remplace le lissé généré pour explorer des territoires visuels impossibles",
+        "tldr": "Canva identifie la distorsion du réel avec hyperréalisme et esthétiques étranges, ainsi que le retour de l'esthétique zine réinterprétée à l'ère numérique, comme tendances design majeures de 2026 basé sur l'analyse d'un milliard de compositions.",
+        "detail": "Les outils IA comme Canva Magic Studio, Midjourney ou Firefly ne servent plus à produire en masse mais à explorer des territoires visuels jamais vus, avec le prompt devenant un pinceau et l'image générée un matériau brut que l'on retravaille, déforme et superpose. Cette folie surréaliste invite à jouer avec les codes visuels, à brouiller les conventions et à provoquer l'attention par l'étrangeté, transformant le visuel en terrain de jeu avec objets détournés, proportions impossibles et personnages hybrides.",
+        "source_name": "Canva Design Trends et Floramedia",
+        "source_url": "https://www.blogdumoderateur.com/canva-tendances-design-2026/",
+        "agent_id": "visuals",
+        "og_image": "https://f.hellowork.com/blogdumoderateur/2025/12/canva-tendances-design-2026-1200x628.jpg"
+      }
+    ]
+  },
+  {
     "date_iso": "2026-09-07",
     "date_fr": "Lundi 7 Septembre 2026",
     "cards": [
