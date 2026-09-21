@@ -1,5 +1,92 @@
 [
   {
+    "date_iso": "2026-09-21",
+    "date_fr": "Lundi 21 Septembre 2026",
+    "cards": [
+      {
+        "title": "AXA redéfinit l'assurance habitation comme outil social",
+        "tldr": "AXA a transformé son offre d'assurance habitation pour soutenir les victimes de violences domestiques en France en ajoutant la clause 'et violences domestiques' dans ses contrats, permettant les relocalisations d'urgence pour les personnes en danger.",
+        "detail": "Cette campagne primée à Cannes Lions 2026 illustre que l'intégration stratégique d'insights culturels, d'expériences interactives et de partenariats créatifs sont des moteurs clés de succès commercial. Cette décision positionne l'assurance non comme un produit financier mais comme un acteur de transformation sociale, redéfinissant le rôle de la marque dans la société.",
+        "source_name": "WARC / Cannes Lions 2026",
+        "source_url": "https://ethicalmarketingnews.com/warc-reveals-insights-from-the-winners-of-the-cannes-creative-effectiveness-lions-2026",
+        "agent_id": "strategy",
+        "og_image": ""
+      },
+      {
+        "title": "Coca-Cola refuse de se rebrander pour rester plus Coca-Cola",
+        "tldr": "Le 20 juillet 2026, Coca-Cola a annoncé son rebranding en décidant de ne rien changer : pas de nouveau logo, pas de palette repensée, pas de manifeste.",
+        "detail": "Le principe stratégique qui a guidé ce chantier mené avec l'agence Jones Knowles Ritchie se résume à rendre Coca-Cola encore plus Coca-Cola. Voilà un rebranding qui commence par affirmer qu'il n'y a rien à réinventer, et derrière cette apparente paresse se cache une décision autrement plus intéressante que n'importe quel logo redessiné.",
+        "source_name": "Hypersthène",
+        "source_url": "https://www.hypersthene.fr/actualites/rebranding-coca-cola-nouvelle-identite-visuelle",
+        "agent_id": "strategy",
+        "og_image": "https://www.hypersthene.fr/static/uploads/news-single/_1200x630_crop_center-center_82_none/2026_PP_Article_CocaCola2026_2026-09-09-135338_ztne.webp?mtime=1788962018"
+      },
+      {
+        "title": "Creator economy devient secteur sélectif avec concentration de revenus extrême",
+        "tldr": "En 2025, les 10 pour cent supérieurs de créateurs ont reçu 62 pour cent des paiements publicitaires, contre 53 pour cent en 2023, intensifiant significativement la concentration des revenus.",
+        "detail": "En 2026, la creator economy devient plus sélective : seuls les créateurs capables de se professionnaliser, diversifier leurs revenus et bâtir une vraie marque peuvent vraiment durer. Les créateurs les plus solides fonctionnent désormais comme de petites entreprises médiatiques avec ligne éditoriale, calendrier de publication, monteur, agent, société, comptable, contrats types et stratégie de monétisation diversifiée.",
+        "source_name": "Archive & Journal du Net",
+        "source_url": "https://archive.com/blog/creator-economy-income-statistics",
+        "agent_id": "strategy",
+        "og_image": "https://cdn.prod.website-files.com/656081cd61f8e16e23add9c7/696fa488bd8535e1b38f417b_27%20Creator%20Economy%20Income%20Distribution%20Statistics%20Every%20Brand%20Should%20Know%20in%202026.jpg"
+      },
+      {
+        "title": "La soustraction typographique remplace le teasing verbal classique",
+        "tldr": "Celio a généré plus de 40 millions d'impressions cross-plateforme en supprimant simplement la lettre L de ses enseignes, puis en révélant une ligne féminine par un jeu de mots sur le son elles. Cette stratégie a prouvé que la soustraction crée plus d'engagement organique que l'accumulation de messages, forçant les internautes à s'arrêter, questionner et partager.",
+        "detail": "La marque n'a pas produit un contenu consommable mais une idée appropriable que la communauté a elle-même co-construite avec spontanéité, ce qui aurait été impossible avec un budget publicitaire classique. Le concept reposait sur un signe extrêmement simple permettant de créer une mécanique visuelle immédiate transformant un break graphique en donné stratégique.",
+        "source_name": "E-marketing et Creapills",
+        "source_url": "https://www.e-marketing.fr/marques-1296/strategie-de-marque-2250/celio-fait-disparaitre-la-lettre-l-de-ses-enseignes-pour-annoncer-le-lancement-de-sa-ligne-feminine-169773",
+        "agent_id": "copywriting",
+        "og_image": "https://www.e-marketing.fr/wp-content/uploads/2026/03/Celio-Women-1024x752.png"
+      },
+      {
+        "title": "La conversation remplace le ciblage traditionnel en publicité programmatique",
+        "tldr": "Plus de 2000 marques font maintenant de la publicité dans ChatGPT via Criteo avec adaptation dynamique à l'intention de chaque requête utilisateur. Les consommateurs provenant d'agents conversationnels affichent un taux de conversion 1,5 fois supérieur aux autres canaux de référence selon Criteo.",
+        "detail": "Le système de Prompt Smart Ads intègre le contenu réel et l'intention de la requête conversationnelle pour adapter à la fois la sélection de produits et le texte descriptif à ce que l'utilisateur demande activement. Ces moments conversationnels représentent une intention acheteur unique où les recommandations bien ciblées influencent significativement la considération.",
+        "source_name": "La Réclame et Criteo",
+        "source_url": "https://lareclame.fr/criteo-chatgpt-330734",
+        "agent_id": "copywriting",
+        "og_image": ""
+      },
+      {
+        "title": "Le test émotionnel prédictif remplace la validation post-lancement",
+        "tldr": "Les publicités atteignant un score de résonance émotionnelle supérieur à 75 sur 100 se convertissent à 73,2% tandis que celles sous 40 ne convertissent qu'à 19,8% selon l'étude Kantar BrandZ Global. Les créatifs optimisés par EEG génèrent en moyenne 26,8% d'engagement supplémentaire comparé aux tests traditionnels.",
+        "detail": "Pour qu'une pub persuade, elle doit d'abord être vue, d'où l'émergence de modèles prédictifs testant l'attention visuelle avant le media spend via heatmaps de regard et score d'attention de marque. Les équipes éliminent les assets bas scores et affinent le pool jusqu'à trois ou quatre candidats haute potentialité avant d'investir sur les placements payants.",
+        "source_name": "Kantar et Amraan Elma",
+        "source_url": "https://www.amraandelma.com/emotional-marketing-statistics/",
+        "agent_id": "copywriting",
+        "og_image": ""
+      },
+      {
+        "title": "Chartes graphiques adaptataves transforment identité en temps réel",
+        "tldr": "Les marques déploient des systèmes d'identité visuelle capables de se reconfigurer automatiquement selon la plateforme, l'audience ou le contexte grâce à l'IA, remplaçant les guidelines statiques par des protocoles dynamiques de personnalisation de masse.",
+        "detail": "Adobe et Canva signalent en 2026 une mutation structurelle : au lieu d'appliquer une charte figée, les marques génèrent des variations de couleurs, typographies et compositions adaptées en continu. Selon les données d'utilisation chez Dropbox, les systèmes de design interactifs permettent de varier l'expressivité visuelle du minimalisme sobre jusqu'à des palettes vibrantes selon que l'utilisateur est en contexte de travail ou de création. Cela redéfinit le rôle du directeur artistique, qui passe de prescripteur de règles à architecte de systèmes.",
+        "source_name": "Adobe Creative Predictions 2026, Canva Design Trends, Dropbox Brand Guidelines",
+        "source_url": "https://brand.dropbox.com/color",
+        "agent_id": "visuals",
+        "og_image": "https://cdn.prod.website-files.com/66c503d081b2f012369fc5d2/67586501f2fcd490c516a443_Color.png"
+      },
+      {
+        "title": "Reality Crisis oblige marques à certifier authenticité visuelle par C2PA",
+        "tldr": "Face à la saturation de contenus synthétiques, les marques et éditeurs adoptent massivement le standard C2PA pour certifier l'origine des images, transformant la provenance documentée en avantage compétitif de différenciation.",
+        "detail": "Adobe Stock déploie le terme Reality Crisis pour décrire la crise perceptuelle créée par l'excès d'images IA génériques. Depuis février 2026, Microsoft intègre les métadonnées C2PA sur tout contenu M365, TikTok a certifié 1,3 milliard de vidéos, et l'Union des Photographes Professionnels a rejoint la Content Authenticity Initiative. Pour les marques, certifier que leurs visuels sont photographie réelle retouchée, génération IA transparente ou capture hybride devient un élément de confiance et de positionnement réputationnel.",
+        "source_name": "Adobe Stock, RightsDocket, Content Authenticity Initiative",
+        "source_url": "https://www.rightsdocket.com/insights/what-is-c2pa",
+        "agent_id": "visuals",
+        "og_image": "https://www.rightsdocket.com/api/og/home"
+      },
+      {
+        "title": "Motion-first redéfinit la conception d'identité avant les éléments statiques",
+        "tldr": "Les marques inversent l'ordre de création : elles dessinent d'abord les éléments animables par défaut, les logos pulsent et se décomposent, et la typographie s'utilise cinétique avant tout, transformant l'animation du simple complément en langue première du design.",
+        "detail": "Selon les observations de Canva et des agences comme Graphitéine, le motion design ne garnit plus une identité construite. Au contraire, les marques conçoivent les logos, typographies et icônes pour être animables dès l'origine, chaque mouvement servant une intention narrative. En 2026, 81% des entreprises B2B budgètent la vidéo non comme supplément mais comme média constitutif. Cette approche transforme surtout la typographie cinétique en élément d'accessibilité : le texte animé remplace la voix off sur réseaux sociaux, rendant les messages lisibles sans son.",
+        "source_name": "Graphitéine, Canva Trends, HubSpot, Blog du Modérateur",
+        "source_url": "https://www.graphiteine.fr/blog/video-motion-design",
+        "agent_id": "visuals",
+        "og_image": ""
+      }
+    ]
+  },
+  {
     "date_iso": "2026-09-14",
     "date_fr": "Lundi 14 Septembre 2026",
     "cards": [
