@@ -1,5 +1,92 @@
 [
   {
+    "date_iso": "2026-09-28",
+    "date_fr": "Lundi 28 Septembre 2026",
+    "cards": [
+      {
+        "title": "Semrush se repositionne en moteur d'intelligence unifié pour l'ère de la recherche par agents IA",
+        "tldr": "Le 12 mars 2026, Semrush opère un repositionnement majeur avec une nouvelle identité de marque pensée pour répondre au passage du SEO classique à la visibilité dans les environnements pilotés par l'IA et le moteur de réponse agentic search.",
+        "detail": "Semrush modernise son interface et son positionnement produit pour devenir un véritable moteur d'intelligence capable de centraliser les données et d'offrir une lecture globale de la performance digitale. La marque adopte un design plus épuré et moderne, avec une palette revisitée et des contrastes renforcés facilitant la lisibilité sur tous les supports numériques, et le logo a été légèrement simplifié pour gagner en impact et en reconnaissance.",
+        "source_name": "Addictic",
+        "source_url": "https://addictic.fr/article/rebranding-2026-les-transformations-de-marques-qui-font-debat",
+        "agent_id": "strategy",
+        "og_image": ""
+      },
+      {
+        "title": "Les agents IA deviennent les nouveaux gardiens contrôlant la découverte produit et les relations clients",
+        "tldr": "Les programmes de fidélité ne peuvent plus compter sur la complexité ou l'inertie des consommateurs : les marques doivent désormais séduire l'algorithme IA en offrant une valeur transparente et accessible, ainsi que l'humain par des expériences supérieures et la confiance.",
+        "detail": "Au lieu de naviguer sur des pages et comparer les prix, les acheteurs vont de plus en plus recourir à des canaux d'IA générative pour trouver et acheter des produits, ce qui change non seulement la manière dont les consommateurs font leurs achats, mais aussi la façon dont les détaillants structurent leurs données produit et leurs parcours clients. Le trafic d'IA vers les sites de détail américains a augmenté de 805 pour cent d'une année sur l'autre lors du Black Friday 2025.",
+        "source_name": "Forbes et CommerceLTools",
+        "source_url": "https://www.forbes.com/sites/jefffromm/2026/09/16/ai-agents-will-become-the-new-gatekeepers-of-customer-loyalty/",
+        "agent_id": "strategy",
+        "og_image": ""
+      },
+      {
+        "title": "Le contenu IA de faible qualité devient le mot de l'année 2025 avec une augmentation de neuf fois les mentions en ligne",
+        "tldr": "Les internautes ont cité le contenu IA de faible qualité, le slop, 200 pour cent en plus en 2025 dans les mentions en ligne, reflétant une frustration croissante face à la surproduction de contenus sans valeur.",
+        "detail": "Meltwater a constaté que les mentions de slop IA augmentaient neuf fois par rapport à 2024, avec un sentiment négatif atteignant 54 pour cent en octobre 2025. La valeur des canaux marketing engorgés de contenu IA diminuera fortement car les utilisateurs vont simplement partir et chercher ailleurs.",
+        "source_name": "Brandwatch et Meltwater",
+        "source_url": "https://www.brandwatch.com/fr/press/press-releases/marketing-digital-trends-tendances-2026/",
+        "agent_id": "strategy",
+        "og_image": ""
+      },
+      {
+        "title": "Teasing retail transforme le spectateur passif en enquêteur actif",
+        "tldr": "Celio a supprimé la lettre L de ses 300 façades de magasins français pour annoncer sa ligne féminin, générant 40 millions d'impressions organiques et transformant l'acte d'observation en participation collective débordant sur les réseaux sociaux.",
+        "detail": "La mécanique repose sur un principe souvent oublié : le consommateur urbain apprend plus vite qu'on ne le suppose, et l'absence de contexte explicite le pousse à chercher la réponse. Havas Paris a construit cette campagne en trois actes filmés (découverte du mystère, publication d'une vidéo de surveillance montrant une femme retirer les lettres, révélation avec six ambassadrices remettant le L en place) qui transformait un simple détail visuel en enquête collective. Selon les données observées, en deux jours sur les réseaux sociaux, seule la plateforme X a enregistré 20 millions d'impressions, sans investissement média payant initial.",
+        "source_name": "Stratégies et lareclame.fr",
+        "source_url": "https://www.strategies.fr/actualites/marques/LQ5940017C/celio-met-en-scene-le-retour-de-son-l-avec-havas.html",
+        "agent_id": "copywriting",
+        "og_image": ""
+      },
+      {
+        "title": "Super agents IA réduisent le nurturing manuel en optimisant par comportement réel",
+        "tldr": "Les super agents IA permettent de tracker chaque prospect sur tous les touchpoints et adapter la stratégie de nurturing en temps réel sans créer des dizaines de workflows manuels, avec des résultats documentés de 3 à 5 fois plus de clics email et 60 pour cent de cycles de contenu plus rapides.",
+        "detail": "Contrairement à l'automatisation classique basée sur des règles fixes, les super agents fonctionnent selon le comportement réel du prospect. Un visiteur qui télécharge des documentations techniques reçoit une séquence différente de celui qui regarde des démos vidéo, le système identifiant ces patterns et s'adaptant automatiquement sans intervention humaine. Selon les déploiements documentés, les équipes qui adoptent ces agents réduisent le temps de setup initial et augmentent l'accessibilité des stratégies avancées pour les petites structures : le ROI commence à se compenser en trois mois dès que les campagnes très personnalisées deviennent routinières.",
+        "source_name": "The JADA Squad et Influx Juice",
+        "source_url": "https://www.jadasquad.com/blog/ai-agents-in-marketing",
+        "agent_id": "copywriting",
+        "og_image": "https://cdn.prod.website-files.com/66f425d3d990f7eb1ce48e7d/69d5ebafc13c016bfbf613c3_ai-agents-in-marketing.avif"
+      },
+      {
+        "title": "Marques abandonnent le grand concept pour aligner promesse, preuve et distribution",
+        "tldr": "McKinsey et la World Federation of Advertisers constatent qu'en 2026 la construction de marque redevient la priorité n°1 pour les CMO, mais selon une logique non plus de créativité unitaire mais de cohérence multiplicatrice entre discours, preuves visibles et canaux de distribution.",
+        "detail": "La tendance dominante ne procède pas d'une rupture technologique mais d'un changement de posture stratégique : faire moins de choses mais mieux, innover sans perdre le fil directeur. Quatre-vingt-un pour cent des CMO adoptent désormais des activations intégrées en full-funnel, combinant construction de marque long terme et déclencheurs de vente immédiats, alors que seuls quarante-huit pour cent des entreprises traditionnelles compartiementalisaient encore ces deux dimensions avant 2026. Les directions marketing sont maintenant jugées sur leur capacité à démontrer un impact mesurable sur la croissance quantifiée, pas seulement sur la notoriété ou l'image.",
+        "source_name": "Klox et Blog du Modérateur",
+        "source_url": "https://www.klox.fr/blog/tendances-marketing-2026-grandes-etudes",
+        "agent_id": "copywriting",
+        "og_image": ""
+      },
+      {
+        "title": "Agence Change redessine son modèle avec agents IA",
+        "tldr": "L'agence Change a créé un outil de diagnostic et de relance des marques fondé sur des agents IA, redéfinissant son positionnement de conseil stratégique.",
+        "detail": "Cette transformation représente une mutation radicale du modèle des agences créatives face à l'automatisation des tâches. Selon Stratégies, ce pivot fait partie des initiatives majeures du festival Stratégies 2026, où la création sans IA a paradoxalement remporté le Grand Prix avec le film du loup d'Intermarché par l'agence Romance, démontrant que l'IA agentique crée une tension nouvelle : efficacité automatisée versus authenticité humaine.",
+        "source_name": "Stratégies",
+        "source_url": "https://www.strategies.fr/actualites/editos/LQ6628773C/strategies-festival-2026-des-agents-et-des-loups.html",
+        "agent_id": "visuals",
+        "og_image": ""
+      },
+      {
+        "title": "Boîtiers hybrides transforment photographie en assistantat IA invisible",
+        "tldr": "Les appareils photo 2026 intègrent des puces IA capables d'analyser la scène en temps réel, redéfinissant la capture photographique sans intervention manuelle perceptible.",
+        "detail": "Sony A1 II, Nikon Z9 et Canon R5 Mark II embarquent un autofocus à reconnaissance d'objet reconnaissant œil humain, animaux, véhicules et débruitage intelligent permettant de shooter à sensibilités inimaginables cinq ans plus tôt. L'Art de la Photo confirme que ces briques se sont assemblées en workflows complets en 2026, l'IA devenant assistant invisible couvrant l'intégralité de la chaîne photographique.",
+        "source_name": "L'Art de la Photo",
+        "source_url": "https://lartdelaphoto.fr/ia-et-photographie-2026-panorama-usages-outils-limites/",
+        "agent_id": "visuals",
+        "og_image": "https://lartdelaphoto.fr/wp-content/uploads/ia-portrait-firefly-1.webp?v=1777674216"
+      },
+      {
+        "title": "Minimalisme habité remplace épuration géométrique anonyme",
+        "tldr": "Le minimalisme des années 2010 cède la place à une esthétique qui intègre couleurs douces, sérifs vivants et micro-imperfections assumées comme marqueurs d'authenticité.",
+        "detail": "Selon Ennoblir, cette mutation reflète le rejet de l'IA lisse : les marques privilégient désormais l'incarnation sur l'abstraction formelle. Les recherches Canva montrent une progression de 54 pour cent pour les termes clean layout et simple branding, documentant que le moins-reste-plus à condition d'avoir une humanité perceptible dans les formes.",
+        "source_name": "Ennoblir",
+        "source_url": "https://ennoblir.fr/tendances-graphiques-2026",
+        "agent_id": "visuals",
+        "og_image": ""
+      }
+    ]
+  },
+  {
     "date_iso": "2026-09-21",
     "date_fr": "Lundi 21 Septembre 2026",
     "cards": [
