@@ -1,5 +1,92 @@
 [
   {
+    "date_iso": "2026-10-05",
+    "date_fr": "Lundi 5 Octobre 2026",
+    "cards": [
+      {
+        "title": "On entre au football en partageant l'équité",
+        "tldr": "La marque suisse On a signé Kylian Mbappé en septembre 2026 comme ambassadeur mondial et travaillera sur les produits, avec Mbappé entrant possiblement au capital de la marque selon le modèle de Roger Federer en 2019.",
+        "detail": "On réalise environ douze fois moins de chiffre d'affaires que Nike et ne pouvait donc pas gagner au chéquier. Depuis sa création en 2010, On s'est imposée comme un acteur majeur de la course à pied en construisant son identité autour d'une ingénierie suisse, d'un design contemporain et d'une innovation technologique, approche qu'elle veut désormais appliquer au football en travaillant avec une sélection ciblée de joueurs d'élite.",
+        "source_name": "SportsMarketing.fr",
+        "source_url": "https://www.sportsmarketing.fr/marketing-sportif-septembre-2026/",
+        "agent_id": "strategy",
+        "og_image": "https://www.sportsmarketing.fr/wp-content/uploads/2026/10/marketing-sportif-septembre-2026-image-titre-1024x538.png"
+      },
+      {
+        "title": "McDonald's synchronise notification mobile et écrans publicitaires urbains",
+        "tldr": "McDonald's France, avec Starcom et BeReal, a inauguré en juillet 2026 un dispositif appelé The BeReal Hour qui synchronise à l'heure choisie par l'annonceur l'envoi d'une notification quotidienne de BeReal avec une campagne d'affichage digital diffusée simultanément sur plusieurs centaines d'écrans en France.",
+        "detail": "Capitaliser sur le pic d'attention généré par la notification BeReal, à laquelle 40% des utilisateurs réagissent dans les deux minutes. McDonald's a ciblé un moment clé du calendrier lycéen avec la fin des épreuves anticipées du baccalauréat de français, période où les candidats, libérés du stress des examens, se retrouvent pour débriefer et célébrer ensemble.",
+        "source_name": "CB News",
+        "source_url": "https://www.cbnews.fr/medias/mcdonald-s-starcom-bereal-lancent-format-publicitaire-the-bereal-hour",
+        "agent_id": "strategy",
+        "og_image": "https://www.cbnews.fr/sites/cbnews.fr/files/styles/panoramic_w1200/public/2026-07/Capture%20d%E2%80%99e%CC%81cran%202026-07-06%20a%CC%80%2017.11.09.png?itok=dMqP41RV"
+      },
+      {
+        "title": "Biocoop bascule d'enseigne bio à mouvement coopératif",
+        "tldr": "Après 40 ans à défendre une autre vision de la distribution biologique, Biocoop entend désormais faire de ses engagements un véritable mouvement avec The Good Company et The Good Design, dévoilant Pour un monde qui a du cœur comme nouveau territoire de communication.",
+        "detail": "L'identité graphique a été conçue collectivement lors d'un atelier réunissant salariés, gérants de magasins et producteurs, où chaque lettre d'une typographie nouvelle a été dessinée et taillée à la main à partir de pommes de terre biologiques. Le militantisme proposé est engagé sans être moralisateur, ancré dans la rue et dans le quotidien des gens.",
+        "source_name": "JAI UN POTE DANS LA",
+        "source_url": "https://jai-un-pote-dans-la.com/biocoop-de-marque-a-mouvement-the-good-company/",
+        "agent_id": "strategy",
+        "og_image": "https://jai-un-pote-dans-la.com/wp-content/uploads/2026/09/jupdlc-biocoop-the-good-company-manifeste-3.jpg"
+      },
+      {
+        "title": "Le méta-discours publicitaire devient posture de marque",
+        "tldr": "Les marques construisent leur différenciation en commentant ironiquement le médium lui-même. Lidl a tronçonné son propre panneau publicitaire avec une tronçonneuse pour signifier que la vraie valeur existe dans l'objet, pas dans la publicité. Cette posture méta déconstruit les codes sans agresser le prospect.",
+        "detail": "Selon l'agence Vingt Deux qui analyse les campagnes depuis le début 2026, ce mouvement révèle une fatigue profonde face aux formats standardisés. Plutôt que de combattre le scepticisme généralisé vis-à-vis de la publicité, les marques savantes l'intègrent dans leur narrative en assumant que leurs audiences sont conscientes de la manipulation médiatique. Cela crée une complicité plutôt qu'une rupture.",
+        "source_name": "Vingt Deux",
+        "source_url": "https://vingtdeux.fr/campagnes-publicitaires-2026/",
+        "agent_id": "copywriting",
+        "og_image": "https://vingtdeux.fr/wp-content/uploads/2026/04/IKEA_TOP-CHEF_VISUEL_1.jpg"
+      },
+      {
+        "title": "La personnalisation comportementale remplace la segmentation démographique",
+        "tldr": "En 2026, le ciblage par prénom ou par classe d'âge est devenu inefficace. Les marques font basculer le curseur vers la personnalisation basée uniquement sur le comportement réel mesuré : consommation précédente, pages revisitées, sujets d'email ouverts.",
+        "detail": "Une source spécialisée en copywriting note que un visiteur ayant consulté plusieurs fois la même page produit sans convertir reçoit un message distinct de celui qui vient de télécharger un guide. Cette segmentation comportementale produit des résultats mesurables supérieurs aux anciennes approches profilaires. Elle s'aligne aussi sur le durcissement réglementaire du RGPD et de la CNIL qui invalide progressivement les données tierces achetées.",
+        "source_name": "Copy House",
+        "source_url": "https://freelance-sandra-doucet.fr/tendances-copywriting-2024/",
+        "agent_id": "copywriting",
+        "og_image": "https://freelance-sandra-doucet.fr/wp-content/uploads/2025/02/computer-keyboard-with-copywriting-key-2023-11-27-05-18-39-utc-scaled-1-1024x683.webp"
+      },
+      {
+        "title": "L'employee advocacy contourne l'engagement algorithmique en masse",
+        "tldr": "Seuls trois pour cent des employés partagent du contenu corporate, mais ce partage génère trente pour cent d'engagement supplémentaire et deux fois plus de clics que le même message posté par le compte officiel de l'entreprise.",
+        "detail": "Selon le rapport LinkedIn cité par Brandwatch en 2026, cette mécanique transforme une faible adoption (trois pour cent) en levier de performance asymétrique. Les marques investissent massivement dans la formation des équipes pour produire du contenu authentique via des voix humaines plutôt que via des canaux institutionnels saturés par l'algorithme. Cela redonne du poids à la singularité de la parole face à la saturation de contenus synthétiques produits par l'IA.",
+        "source_name": "E-Marketing",
+        "source_url": "https://www.e-marketing.fr/search-1294/contenu-2230/comment-integrer-une-strategie-de-brand-content-et-de-marque-en-2026-171119",
+        "agent_id": "copywriting",
+        "og_image": ""
+      },
+      {
+        "title": "L'IA générative force le retour du directeur artistique en tant que filtre",
+        "tldr": "Contrairement aux craintes de remplacement, la prolifération des outils IA fait remonter massivement le rôle du DA qui doit orchestrer, refuser le bruit et maintenir la cohérence visuelle face à l'uniformisation croissante des marques qui utilisent les mêmes outils et réflexes créatifs.",
+        "detail": "Alors que les outils IA comme Midjourney ou Adobe Firefly ouvrent des possibilités infinies de génération visuelle, une paradoxe majeur émerge en 2026 : plus la machine produit, plus le regard humain devient décisif pour protéger la singularité. Les directeurs artistiques redécouvrent leur fonction première de sélection, de cadrage et de maintien de la tension visuelle utile, en rejetant la standardisation des marques qui converge vers les mêmes esthétiques. Cette tendance s'observe chez tous les studios qui reconnaissent que le danger réel est l'homogénéisation visuelle, pas l'automatisation créative.",
+        "source_name": "DusiroDesign et EDTA Sornas",
+        "source_url": "https://dusiropdesign.com/tendances-design-graphique-ia-2026/",
+        "agent_id": "visuals",
+        "og_image": "https://dusiropdesign.com/wp-content/uploads/2026/06/coktail-des-tendance-ia-creative-et-design-graphique-2026.jpg"
+      },
+      {
+        "title": "La typographie cesse d'être un outil pour devenir une matière vivante",
+        "tldr": "Les marques abandonnent définitivement la typographie comme outil de lisibilité pour transformer la lettre en sculpture abstraite malléable, qu'elle soit figée en polices variables monumentales ou animée en typographie liquide qui s'étire et se déforme à l'écran selon le contexte.",
+        "detail": "En 2026, la typographie expérimente une transformation radicale qui dépasse le mouvement motion-first annoncé antérieurement. Les polices variables permettent désormais une modulation continue de graisse, largeur et inclinaison sur le même caractère, tandis que la typographie liquide émergente privilégie l'expression émotionnelle sur la stricte lisibilité, transformant chaque mot en sculpture abstraite. Cette évolution ne concerne plus seulement l'esthétique statique mais redéfinit la typographie comme un système vivant et adaptatif qui respire et réagit au contexte d'apparition plutôt que de maintenir une forme figée et identique.",
+        "source_name": "PrintoBlog et Agence Tempo",
+        "source_url": "https://www.printoclock.com/blog/tendances-graphiques-2026/",
+        "agent_id": "visuals",
+        "og_image": ""
+      },
+      {
+        "title": "Le design sensible impose la traçabilité visuelle de la main humaine comme marqueur d'authenticité",
+        "tldr": "Face aux visuels ultra-lisses générés par l'IA, les marques valorisent désormais l'imperfection volontaire, le grain de papier numérisé, et la trace humaine visible comme gage d'authenticité et de non-automatisation, transformant l'erreur et la spontanéité en signature créative plutôt qu'en défaut à corriger.",
+        "detail": "Une contretendance majeure de 2026 oppose directement la perfection technologique à l'imperfection humaine assumée. Les designers réintroduisent délibérément les textures papier, les déformations de caractères manuscrits, et les compositions asymétriques pour signaler que le contenu n'a pas été généré automatiquement. Cette approche transforme l'erreur en gage d'authenticité plutôt qu'en dysfonctionnement, une inversion complète par rapport à la décennie précédente. Les utilisateurs recherchent désormais les traces de la main humaine comme preuve de sincérité, particulièrement dans les marques lifestyle, artisanales et premium où cette tactilité visible crée une proximité émotionnelle et renforce la crédibilité.",
+        "source_name": "Veille créative Alineacom et VeoPrint",
+        "source_url": "https://alineacom.fr/veille-creative-les-tendances-visuelles-2026/",
+        "agent_id": "visuals",
+        "og_image": "https://alineacom.fr/wp-content/uploads/2025/12/tendance-2026.jpg"
+      }
+    ]
+  },
+  {
     "date_iso": "2026-09-28",
     "date_fr": "Lundi 28 Septembre 2026",
     "cards": [
