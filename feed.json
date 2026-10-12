@@ -1,5 +1,56 @@
 [
   {
+    "date_iso": "2026-10-12",
+    "date_fr": "Lundi 12 Octobre 2026",
+    "cards": [
+      {
+        "title": "Veille",
+        "tldr": "Je vais rechercher les insights les plus récents en stratégie de marque des 90 derniers jours.Je n'ai pas trouvé trois i",
+        "detail": "Je vais rechercher les insights les plus récents en stratégie de marque des 90 derniers jours.Je n'ai pas trouvé trois insights vraiment pointus et inattendus qui répondent à vos critères stricts d'originalité et de non-évidence. Les résultats contiennent surtout des généralités déjà bien couvertes",
+        "source_name": "",
+        "source_url": "",
+        "agent_id": "strategy",
+        "og_image": ""
+      },
+      {
+        "title": "Veille",
+        "tldr": "Je vais effectuer une recherche pour identifier les insights les plus récents et pointus sur les campagnes publicitaires",
+        "detail": "Je vais effectuer une recherche pour identifier les insights les plus récents et pointus sur les campagnes publicitaires et mécaniques rédactionnelles.Laissez-moi affiner ma recherche pour trouver des insights plus pointus et récents, loin des sujets déjà saturés.Excellent. J'ai suffisamment d'infor",
+        "source_name": "",
+        "source_url": "",
+        "agent_id": "copywriting",
+        "og_image": ""
+      },
+      {
+        "title": "Versace multiplie les directions photographiques pour fragmenter le visuel",
+        "tldr": "Versace abandonne l'unicité du regard créatif pour la saison printemps-été 2026 en confiant sa campagne à trois photographes distincts (Steven Meisel, Frank Lebon, Tania Franco Klein), transformant l'image de marque en mosaïque d'approches plutôt que vecteur unique.",
+        "detail": "Cette stratégie inverse la tradition du directeur artistique qui unifie l'esthétique. En confiant trois points de vue photographiques différents à des signatures établies, Versace reconnaît que l'autorité créative monolithique n'est plus lisible dans un environnement saturé. Selon FashionNetwork, la campagne rassemble un casting dynamique d'artistes et d'athlètes capturés par des sensibilités distinctes, ce qui fragmente volontairement le langage visuel pour créer une friction créative. Cette approche teste si la pluralité des regards renforce ou affaiblit l'identité de marque en 2026.",
+        "source_name": "FashionNetwork France",
+        "source_url": "https://fr.fashionnetwork.com/news/Les-dernieres-campagnes-de-luxe-du-printemps-2026-confirment-que-le-storytelling-est-essentiel,1807318.html",
+        "agent_id": "visuals",
+        "og_image": ""
+      },
+      {
+        "title": "Le grain vidéo documentaire remplace l'hyper-lissage comme marqueur d'authenticité",
+        "tldr": "Les campagnes performantes de 2026 adoptent des micro-mouvements et des esthétiques documentaire premium plutôt que des visuels générés par intelligence artificielle, plaçant la texture brute au centre de la différenciation.",
+        "detail": "Selon l'analyse des agences créatives, l'industrie pivote d'une perfection désastreuse générée par l'IA vers une intentionnalité textured et matérielle. Strategize Marketing Digital observe que le contenu ultra-créatif s'oppose désormais aux raccourcis numériques en privilégiant les reels dont la narration condensée mime l'imperfection du documentaire urbain. Cela redéfinit l'authenticité non pas comme l'absence d'artifice, mais comme la visibilité de l'effort créatif et du soin apporté à chaque détail.",
+        "source_name": "Strategize Marketing Digital 2026",
+        "source_url": "https://www.agence-smardia.com/strategies-marketing-digital-2026-marche-sature/",
+        "agent_id": "visuals",
+        "og_image": ""
+      },
+      {
+        "title": "Le quiet luxury se traduit visuellement par un marquage ton-sur-ton et discret",
+        "tldr": "Les supports promotionnels et les objets de marque abandonnent le logo centré éclatant pour une signalétique invisible ou monochromatique, incarnant stratégiquement le quiet luxury par la subtilité du marquage.",
+        "detail": "En 2026, les directeurs artistiques choisissent des broderies ton-sur-ton, des patchs tissés et des embossages discrets pour transformer l'objet publicitaire en vecteur de prestige silencieux. Rue des Goodies et Advertiz confirment que le simple logo centré n'est plus acceptable esthétiquement pour les marques cherchant une valeur perçue premium. Cette inversion du marquage visible reflète le passage du quiet luxury luxe ostentatoire à une élégance qui murmure son statut exclusif sans jamais crier.",
+        "source_name": "Advertiz et Rue des Goodies",
+        "source_url": "https://guide.ruedesgoodies.com/feed-63/",
+        "agent_id": "visuals",
+        "og_image": ""
+      }
+    ]
+  },
+  {
     "date_iso": "2026-10-05",
     "date_fr": "Lundi 5 Octobre 2026",
     "cards": [
