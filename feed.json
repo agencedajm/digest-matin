@@ -1,5 +1,92 @@
 [
   {
+    "date_iso": "2026-10-19",
+    "date_fr": "Lundi 19 Octobre 2026",
+    "cards": [
+      {
+        "title": "British Airways fractionne le reward pour accélérer la fidélité présente",
+        "tldr": "British Airways a restructuré son programme Avios en remplaçant les grandes récompenses éloignées par des paliers intermédiaires fréquents, créant ainsi un sentiment immédiat de progression plutôt qu'une attente lointaine.",
+        "detail": "Ce pivot répond à une tendance inverse aux stratégies d'accumulation classiques : au lieu d'inciter les clients à dépenser plus pour atteindre un seuil important, la marque valorise chaque micro-engagement pour fournir de l'immédiateté. Cette approche convertit la métrique de fidélité en expérience comportementale quotidienne. Think with Google rapporte que cette stratégie répond à la demande croissante de satisfaction instantanée chez les voyageurs.",
+        "source_name": "Think with Google",
+        "source_url": "https://business.google.com/fr/think/consumer-insights/tendances-marketing-digital-2026-google-ia-nostalgie-rse-search/",
+        "agent_id": "strategy",
+        "og_image": "https://www.gstatic.com/marketing-cms/assets/images/ads/75/ec/ce29011d465c892a008c00139aa4/twg-content-images-th-4racruu-width-1200.webp=n-w1200-h675-fcrop64=1,00000000ffffffff-rw"
+      },
+      {
+        "title": "Kering centralise la production de luxe en Italie pour contourner la dilution de marque",
+        "tldr": "Le groupe Kering a convoqué ses marques à Florence pour un recentrage stratégique et une mutualisation de la chaîne d'approvisionnement, abandonnant le modèle de collaborations masstige qui avait endommagé les marques durant la crise 2009.",
+        "detail": "Cette décision structurelle, invisible dans les rapports trimestriels immédiats, représente un retrait délibéré de la compétition de volume pour reconstruire la rareté. Crimaz.com observe que plutôt que de diluer l'équité des marques par des diffusion lines et collaborations bon marché, Kering consolide verticalement autour d'un pôle italien, replaçant la maîtrise créative au cœur de la proposition.",
+        "source_name": "Crimaz",
+        "source_url": "https://www.crimaz.com/post/the-2026-luxury-strategy-reset-kerings-florence-pivot-and-the-78b-circularity-bottleneck",
+        "agent_id": "strategy",
+        "og_image": "https://www.crimaz.com/assets/images/no-image.jpg"
+      },
+      {
+        "title": "Hermès et Brunello Cucinelli adoptent le silence communicationnel comme arme stratégique contre la surinformation",
+        "tldr": "Les maisons de luxe de référence abandonnent les stratégies explicatives pour maintenir un mutisme délibéré sur leurs décisions créatives et repositionnements, transformant l'absence de discours en marqueur de désirabilité.",
+        "detail": "Selon The Silent Luxury, cette stratégie inverse la logique hypercontemporaine de narration de marque constante. En Q1 2026, les maisons qui se sont abstenues de communiquer sur leurs ajustements stratégiques ont enregistré une croissance plus robuste que celles qui justifiaient publiquement leurs choix. Le silence devient un signal de confiance interne et de refus du commentaire permanent qui caractérise les marques moins établies.",
+        "source_name": "The Silent Luxury",
+        "source_url": "https://the-silent-luxury.com/why-luxury-brands-losing-relevance-2026/",
+        "agent_id": "strategy",
+        "og_image": ""
+      },
+      {
+        "title": "Micro-influenceurs triplent leur prix en un an",
+        "tldr": "Entre 2025 et le premier semestre 2026, le prix médian des collaborations avec des micro-influenceurs a explosé de 200 pour cent, passant de 1000 à 3000 euros, selon l'étude Matriochka Influences.",
+        "detail": "Cette inflation inverse est la plus spectaculaire du secteur selon Matriochka Influences. Les marques réduisent le nombre de partenaires influenceurs mais paient davantage ceux qu'elles jugent performants, ce qui restructure complètement la démographie des collaborations. Les algorithmes ont changé la donne : un contenu peut désormais toucher une audience massive sans disposer d'une large communauté en amont, réduisant la valeur du nombre d'abonnés comme étalon de performance.",
+        "source_name": "Matriochka Influences et CB News",
+        "source_url": "https://www.cbnews.fr/etudes/creator-economy-prix-median-collaborations-grimpe-30-an",
+        "agent_id": "copywriting",
+        "og_image": "https://www.cbnews.fr/sites/cbnews.fr/files/styles/panoramic_w1200/public/2026-09/creator.png?itok=6OWVOzAd"
+      },
+      {
+        "title": "Carglass produit une riposte en quatre jours sans agence",
+        "tldr": "Après que Burger King parodie les codes anxiogènes des pubs automobiles dans Drive Roulette, Carglass produit un spot de réponse en seulement quatre jours sans passer par une agence externe.",
+        "detail": "Cette réaction produite en interne transforme la pique en complicité publique plutôt qu'en conflit frontal. Le mécanisme rédactionnel repose sur l'autodérision assumée et l'humour partagé : Carglass reprend ses codes historiques pour affirmer son identité tout en validant la pertinence de la parodie. Cette agibilité interne des équipes marketing, capable de produire du contenu multicanal en quelques jours, marque une rupture avec les cycles de production traditionnels et l'externalisation systématique de la création.",
+        "source_name": "Auto Infos, Lareclame, Creapills",
+        "source_url": "https://lareclame.fr/carglass-burgerking-riposte-330340",
+        "agent_id": "copywriting",
+        "og_image": ""
+      },
+      {
+        "title": "Google AI Max impose un filtrage copywriting par instructions naturelles",
+        "tldr": "Google AI Max pour Search force les annonceurs à rédiger des restrictions en langage naturel plutôt qu'en logique booléenne pour garder le contrôle sur leur copy générée automatiquement.",
+        "detail": "Au lieu de construire des règles complexes, les copywriters écrivent désormais les consignes comme ils les donneraient à un humain : ne pas impliquer que les produits sont remisés, éviter les noms de villes ou maintenir un ton professionnel clair. L'IA interprète ces instructions et ajuste le copy généré en conséquence. Cette mécanique force une réinvention du métier : le copywriter devient documentaliste de marque et superviseur de l'IA plutôt que producteur de textes, et doit rédiger des directives assez précises pour guider une machine tout en restant compréhensibles par une IA imparfaite.",
+        "source_name": "Almcorp et Auditsocials",
+        "source_url": "https://almcorp.com/blog/google-ai-max-text-guidelines-all-advertisers-2026/",
+        "agent_id": "copywriting",
+        "og_image": "https://almcorp.com/wp-content/uploads/2026/03/Google-AI-Max-Text-Guidelines.webp"
+      },
+      {
+        "title": "Les interfaces prédictives adaptent les couleurs en temps réel aux utilisateurs",
+        "tldr": "Plusieurs studios développent des algorithmes qui génèrent des palettes de couleurs dynamiques selon les données en temps réel : météo, humeur détectée, rythmes financiers ou heures de la journée, transformant le design d'interface en expérience véritablement personnalisée.",
+        "detail": "Selon Etapes, le magazine de référence en design graphique, les algorithmes créatifs cessent d'être des outils génériques pour devenir des systèmes adaptatifs où les couleurs varient en fonction de signaux contextuels mesurables. Google I/O 2026 a consolidé cette approche avec Material Design 3, privilégiant les composants adaptatifs et la logique de design system plus personnalisée. Cette mutation répond à une fatigue face aux interfaces statiques et marque le passage du design figé au design comportemental.",
+        "source_name": "Etapes magazine",
+        "source_url": "https://www.etapes.com/2025/10/03/les-couleurs-de-demain-pigments-post-industriels-et-intelligence-artificielle/",
+        "agent_id": "visuals",
+        "og_image": "https://www.etapes.com/wp-content/uploads/2024/04/miniature-etapes-petit.png"
+      },
+      {
+        "title": "Le design lo-fi retro détourne les interfaces obsolètes en langage expressif",
+        "tldr": "Les recherches pour esthétiques lo-fi ont explosé de plus de 500% en 2026, transformant les menus déroulants, feuilles de calcul et outils numériques rétro en éléments visuels expressifs, particulièrement auprès des marques qui ciblent les créateurs.",
+        "detail": "Influencia a relevé que les interfaces rétro-tech simplifiées ne relèvent plus de la nostalgie naive mais d'une stratégie délibérée : signifier l'authenticité par le détournement du familier. Gumroad en incarne le prototype avec ses bordures épaisses, couleurs plates et typographie sans compromis qui communique instantanément à une communauté de créateurs indépendants. Les termes « animation de visualisation des données » et « overlay vidéo » accompagnent cette tendance, confirmant qu'il ne s'agit pas juste d'esthétique mais d'une refonte fonctionnelle qui privilégie l'accès au spectacle.",
+        "source_name": "Influencia",
+        "source_url": "https://www.influencia.net/design-2026-chic-desorganise-appel-de-la-matiere-esthetique-theatralisee-7-tendances-qui-vont-compter-cette-annee/",
+        "agent_id": "visuals",
+        "og_image": "https://www.influencia.net/app/uploads/2025/12/France-Designs-et-tendances-Hero-asset.png"
+      },
+      {
+        "title": "Etro fusionne textiles recyclés et imagerie spatiale immersive dans ses campagnes",
+        "tldr": "Etro a lancé sa campagne printemps-été 2026 en collaboration avec le spécialiste du Space Art David Curtis-Ring, transformant les textiles recyclés en paysages immersifs multisensoriels qui dépassent l'image statique et créent une utopie onirique.",
+        "detail": "Selon le reportage de FashionNetwork, la direction artistique de Marco De Vincenzo chez Etro incarne un mouvement moins mediatisé : l'intégration des matériaux circulaires comme vecteur de narration visuelle plutôt que comme argument responsable détaché. En collaborant avec Curtis-Ring, Etro remplace le storytelling linéaire par une expérience immersive où les éléments visuels contournent la photographie conventionnelle. Cette approche signale le passage du développement durable comme compliance à son intégration comme langage créatif central, observable dans d'autres maisons mais rarement formulée avec cette cohérence artistique.",
+        "source_name": "FashionNetwork France",
+        "source_url": "https://fr.fashionnetwork.com/news/Les-dernieres-campagnes-de-luxe-du-printemps-2026-confirment-que-le-storytelling-essentiel,1807318.html",
+        "agent_id": "visuals",
+        "og_image": "https://media.fashionnetwork.com/cdn-cgi/image/fit=cover,width=600,height=600,format=auto/m/a5ab/b0c3/4ca0/174c/c8da/9d15/da70/0b6d/a18a/9578/9578.jpg"
+      }
+    ]
+  },
+  {
     "date_iso": "2026-10-12",
     "date_fr": "Lundi 12 Octobre 2026",
     "cards": [
