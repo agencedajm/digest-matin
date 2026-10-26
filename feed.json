@@ -1,5 +1,74 @@
 [
   {
+    "date_iso": "2026-10-26",
+    "date_fr": "Lundi 26 Octobre 2026",
+    "cards": [
+      {
+        "title": "McDonald's verrouille l'attention en couplant notification BeReal et affichage urbain",
+        "tldr": "McDonald's a lancé en juillet 2026 un format publicitaire inédit appelé The BeReal Hour qui synchronise la notification quotidienne de l'application BeReal avec une campagne d'affichage digital national à l'instant exact où quarante pour cent des utilisateurs ouvrent leur téléphone.",
+        "detail": "BeReal a dévoilé le 3 juillet 2026 ce dispositif hybride qui transforme une habitude quotidienne en fenêtre publicitaire prévisible et concentrée. La marque de restauration rapide capture le pic d'engagement maximal en alignant le moment où la notification surgit avec les écrans digitaux des gares, métros et centres commerciaux. Cette stratégie renverse l'équation traditionnelle du marketing de masse en exploitant une micro-temporalité plutôt qu'une démultiplication de canaux classiques.",
+        "source_name": "Métricool et E-Marketing.fr",
+        "source_url": "https://metricool.com/fr/campagne-de-communication-marquante/",
+        "agent_id": "strategy",
+        "og_image": "https://metricool.com/wp-content/uploads/campagne-de-communication-marquante.webp"
+      },
+      {
+        "title": "Les créateurs inversent le rapport de force et filtrent désormais les marques",
+        "tldr": "Entre juillet et septembre 2026, les créateurs rejettent activement plus de collaborations avec les marques, transformant le modèle qui reposait jusqu'ici sur des marques sélectionnant des créateurs pour des campagnes ponctuelles.",
+        "detail": "Les créateurs évaluent aujourd'hui les partenariats selon des critères de valeur long terme et d'alignement de mission plutôt que de simple opportunité monétaire immédiate. CWB, agrégateur majeur de créateurs, mesure une tendance nette d'augmentation des refus de seeding depuis plusieurs mois, indiquant que les talents les plus en demande peuvent désormais dicter les conditions et filtrer les approches generiques. Cette inversion redéfinit le cadre de négociation où les marques doivent justifier leurs offres plutôt que les créateurs de justifier leur valeur.",
+        "source_name": "Master the Culture et Reuters 2026",
+        "source_url": "https://mastertheculture.substack.com/p/les-marques-ont-perdu-la-main-elles",
+        "agent_id": "strategy",
+        "og_image": ""
+      },
+      {
+        "title": "Le Made in France surpasse la durabilité comme moteur de consentement à payer",
+        "tldr": "Selon le baromètre Brand'Gagement de juillet 2026, cinquante-huit pour cent des consommateurs français acceptent de payer un surcoût pour des produits fabriqués en France, dépassant largement la protection environnementale et la juste rémunération producteurs comme justificatifs de prix.",
+        "detail": "Les Français abandonnent les promesses de responsabilité sociétale abstraites au profit d'un critère tangible et vérifiable, la souveraineté économique territoriale. Le baromètre révèle une méfiance croissante envers le purpose-washing et une exigence que l'engagement se transforme en norme vérifiable plutôt qu'en argument de vente. Cette rupture marque la fin de l'adhésion inconditionnelle aux grandes déclarations éthiques et place le Made in France comme nouveau pivot de confiance et de légitimité pour les marques françaises.",
+        "source_name": "E-Marketing.fr",
+        "source_url": "https://www.e-marketing.fr/marques-1296/etude-et-barometre-2252/marques-le-made-in-france-pivot-de-la-confiance-en-2026-173304",
+        "agent_id": "strategy",
+        "og_image": "https://www.e-marketing.fr/wp-content/uploads/2026/07/Consommation.jpg"
+      },
+      {
+        "title": "Veille",
+        "tldr": "Je vais rechercher les derniers insights en copywriting et publicité des 90 derniers jours.Je dois approfondir mes reche",
+        "detail": "Je vais rechercher les derniers insights en copywriting et publicité des 90 derniers jours.Je dois approfondir mes recherches pour trouver des insights vraiment pointus et non-évidents sur les 90 derniers jours.J'ai maintenant les données nécessaires pour produire trois insights pointus. Je vais syn",
+        "source_name": "",
+        "source_url": "",
+        "agent_id": "copywriting",
+        "og_image": ""
+      },
+      {
+        "title": "McDonald's synchronise notification mobile et affichage urbain en temps réel",
+        "tldr": "Le trois juillet deux mille vingt-six, McDonald's France lance avec BeReal et l'agence Starcom un dispositif inédit qui couple la notification quotidienne de l'application au déclenchement simultané d'une campagne sur plusieurs centaines d'écrans numériques en gares et métros, capitalisant sur un pic d'attention où quarante pour cent des utilisateurs réagissent en moins de deux minutes.",
+        "detail": "Cette mécanique médias fractionnée invoque un rituel d'usage existant plutôt que de l'interrompre. Les créations reprennent les codes visuels bruts de BeReal pour assurer une continuité entre l'expérience mobile et l'espace public, transformant la publicité en extension d'un moment autentique du quotidien lycéen. Selon les analyses de Starcom, ce format ouvre une fenêtre vers une nouvelle base publicitaire où l'attention maximalise au moment précis où elle explose.",
+        "source_name": "CB News et Metricool",
+        "source_url": "https://www.cbnews.fr/medias/mcdonald-s-starcom-bereal-lancent-format-publicitaire-the-bereal-hour",
+        "agent_id": "visuals",
+        "og_image": "https://www.cbnews.fr/sites/cbnews.fr/files/styles/panoramic_w1200/public/2026-07/Capture%20d%E2%80%99e%CC%81cran%202026-07-06%20a%CC%80%2017.11.09.png?itok=dMqP41RV"
+      },
+      {
+        "title": "Nutripure internalise sa caméra dans le produit pour contredire la vision sportive exclusive",
+        "tldr": "En août deux mille vingt-six, la marque de compléments alimentaires Nutripure, historiquement ancrée dans la performance athlétique, inaugure sa première grande campagne nationale intitulée Pour toutes les formes de la vie avec l'agence Night Session, en plaçant la caméra à l'intérieur même des sachets et gourdes pour observer le quotidien depuis l'obscurité du packaging.",
+        "detail": "Cette inversion de perspective renverse le rapport entre l'utilisateur et le produit. Au lieu de filmer l'athlete poseur, la marque filme depuis l'intérieur, transformant les moments banals du quotidien en preuves que la forme existe dans tous les rythmes de vie et pas seulement dans la salle. Selon les sources, cette stratégie de pivot territorial signale une rupture délibérée avec une focalisation générationnelle.",
+        "source_name": "J'ai un pote dans la com et OUR(S)",
+        "source_url": "https://jai-un-pote-dans-la.com/nutripure-territoire-de-marque-toutes-formes-vie/",
+        "agent_id": "visuals",
+        "og_image": "https://jai-un-pote-dans-la.com/wp-content/uploads/2026/08/jupdlc-nutripure-night-session-affichage-film-print.jpg"
+      },
+      {
+        "title": "Les marques assument volontairement des déformations surréalistes et des portraits distordus pour capturer l'attention",
+        "tldr": "Entre juillet et septembre deux mille vingt-six, les directions artistiques émergentes adoptent systématiquement le portrait déformé, l'exagération morphologique et la distorsion perspective, inversant la décennie précédente fondée sur la perfection lissée et l'hyperréalisme digital.",
+        "detail": "Cette esthétique de l'absurde assume l'étrange pour rompre avec la fatigue visuelle des contenus générés par intelligence artificielle. Les proportions deviennent intentionnellement impossibles, les scènes oniriques et parfois dérangeantes, en expressant un imaginaire personnel plutôt que de chercher la vraisemblance. Cette stratégie répond directement à la saturation algorithmique et transforme la marque en objet mémorable en seconde partie de scroll, plutôt que en élément ignorable dans un flux homogène.",
+        "source_name": "Canva, Pinterest, Les Prétentieux, Revelia-Conseil",
+        "source_url": "https://gcommeuneidee.com/blog/identite/tendances-design-2026-ce-quil-faut-retenir-pour-communiquer-autrement",
+        "agent_id": "visuals",
+        "og_image": "https://www.gcommeuneidee.com/wp-content/uploads/2026/01/image-1-scaled.jpg"
+      }
+    ]
+  },
+  {
     "date_iso": "2026-10-19",
     "date_fr": "Lundi 19 Octobre 2026",
     "cards": [
