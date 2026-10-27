@@ -1,9 +1,7 @@
 name: Digest Matin
 
 on:
-  workflow_dispatch:        # déclenchement manuel (bouton sur la page)
-  schedule:
-    - cron: '0 7 * * 1'    # chaque lundi à 7h UTC (9h Paris)
+  workflow_dispatch:        # déclenchement manuel uniquement
 
 jobs:
   run:
